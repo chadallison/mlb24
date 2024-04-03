@@ -4,6 +4,8 @@ output: github_document
 knit: (function(input, ...) { rmarkdown::render(input, output_file = "README.md", envir = globalenv()) })
 ---
 
+Work in progress! :)
+
 ```{r fold_code, include = F}
 knitr::knit_hooks$set(source = function(x, options) {
     hook.r = function(x, options) {
@@ -200,7 +202,9 @@ Suppose that the final score of the game is a Cubs victory, 5-3. We would calcul
 
 Of course, there are so many other factors that would play into a team's true expected value, such as any injuries, starting pitchers, weather, and more. That is why I have named it Naive Performance Rating, because it assumes matchup metrics are independent of each other and does not take external factors into account. Which, of course, will lead to flaws in the metric, but is done for the sake of simplicity and interpretability (which is ironic because I expect it is still difficult to interpret for others than myself).
 
+___
 
+*Interested in the underlying code that builds this report?* Check it out on GitHub: [mlb24](https://github.com/chadallison/mlb24){target="_blank"}
 
 
 

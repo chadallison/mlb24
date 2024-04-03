@@ -1,6 +1,8 @@
 Chad’s 2024 MLB Report
 ================
 
+Work in progress! :)
+
 ### Team Standings
 
 ![](README_files/figure-gfm/unnamed-chunk-4-1.png)<!-- -->
@@ -38,7 +40,9 @@ defensive NPR as the Cardinals’ expected score minus their actual score:
 the Cardinals, their offensive NPR is their actual score minus their
 expected score, 3 - 3.5 = -0.5, and their defensive NPR is the Cubs’
 expected score minus their actual score, 3.63 - 5 = -1.37. Notice how
-these numbers are opposite each other.
+these numbers are opposite each other. So each team will have an
+offensive and defensive NPR for each game, which are aggregated in the
+above plot.
 
 Of course, there are so many other factors that would play into a team’s
 true expected value, such as any injuries, starting pitchers, weather,
@@ -48,3 +52,9 @@ take external factors into account. Which, of course, will lead to flaws
 in the metric, but is done for the sake of simplicity and
 interpretability (which is ironic because I expect it is still difficult
 to interpret for others than myself).
+
+------------------------------------------------------------------------
+
+*Interested in the underlying code that builds this report?* Check it
+out on GitHub:
+<a href="https://github.com/chadallison/mlb24" target="_blank">mlb24</a>
