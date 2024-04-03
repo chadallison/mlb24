@@ -1,85 +1,86 @@
-date,game_pk,away_score,away_team,home_team,home_score,venue_name,description,win_team,lose_team,win_score,lose_score
-2024-03-20,745444,5,Los Angeles Dodgers,San Diego Padres,2,Gocheok Sky Dome,"in Seoul, South Korea",Los Angeles Dodgers,San Diego Padres,5,2
-2024-03-21,746175,15,San Diego Padres,Los Angeles Dodgers,11,Gocheok Sky Dome,"in Seoul, South Korea",San Diego Padres,Los Angeles Dodgers,15,11
-2024-03-28,747060,3,Los Angeles Angels,Baltimore Orioles,11,Oriole Park at Camden Yards,Orioles home opener,Baltimore Orioles,Los Angeles Angels,11,3
-2024-03-28,746737,2,Washington Nationals,Cincinnati Reds,8,Great American Ball Park,Reds Home Opener,Cincinnati Reds,Washington Nationals,8,2
-2024-03-28,745445,4,San Francisco Giants,San Diego Padres,6,Petco Park,Padres home opener,San Diego Padres,San Francisco Giants,6,4
-2024-03-28,746165,1,St. Louis Cardinals,Los Angeles Dodgers,7,Dodger Stadium,Dodgers home opener,Los Angeles Dodgers,St. Louis Cardinals,7,1
-2024-03-28,745116,8,Toronto Blue Jays,Tampa Bay Rays,2,Tropicana Field,Rays home opener,Toronto Blue Jays,Tampa Bay Rays,8,2
-2024-03-28,746335,4,Minnesota Twins,Kansas City Royals,1,Kauffman Stadium,Royals home opener,Minnesota Twins,Kansas City Royals,4,1
-2024-03-28,746821,1,Detroit Tigers,Chicago White Sox,0,Guaranteed Rate Field,White Sox home opener,Detroit Tigers,Chicago White Sox,1,0
-2024-03-28,746089,6,Pittsburgh Pirates,Miami Marlins,5,loanDepot park,Marlins home opener,Pittsburgh Pirates,Miami Marlins,6,5
-2024-03-28,746418,5,New York Yankees,Houston Astros,4,Minute Maid Park,Astros home opener,New York Yankees,Houston Astros,5,4
-2024-03-28,745039,3,Chicago Cubs,Texas Rangers,4,Globe Life Field,Rangers home opener,Texas Rangers,Chicago Cubs,4,3
-2024-03-28,745687,8,Cleveland Guardians,Oakland Athletics,0,Oakland Coliseum,Athletics home opener,Cleveland Guardians,Oakland Athletics,8,0
-2024-03-28,747224,1,Colorado Rockies,Arizona Diamondbacks,16,Chase Field,D-backs home opener,Arizona Diamondbacks,Colorado Rockies,16,1
-2024-03-28,745283,6,Boston Red Sox,Seattle Mariners,4,T-Mobile Park,Mariners home opener,Boston Red Sox,Seattle Mariners,6,4
-2024-03-29,745848,3,Milwaukee Brewers,New York Mets,1,Citi Field,Mets home opener; makeup of 3/28 PPD,Milwaukee Brewers,New York Mets,3,1
-2024-03-29,745604,9,Atlanta Braves,Philadelphia Phillies,3,Citizens Bank Park,Phillies home opener; makeup of 3/28 PPD,Atlanta Braves,Philadelphia Phillies,9,3
-2024-03-29,745117,2,Toronto Blue Jays,Tampa Bay Rays,8,Tropicana Field,NA,Tampa Bay Rays,Toronto Blue Jays,8,2
-2024-03-29,746091,7,Pittsburgh Pirates,Miami Marlins,2,loanDepot park,NA,Pittsburgh Pirates,Miami Marlins,7,2
-2024-03-29,746412,7,New York Yankees,Houston Astros,1,Minute Maid Park,NA,New York Yankees,Houston Astros,7,1
-2024-03-29,747223,3,Colorado Rockies,Arizona Diamondbacks,7,Chase Field,NA,Arizona Diamondbacks,Colorado Rockies,7,3
-2024-03-29,745682,6,Cleveland Guardians,Oakland Athletics,4,Oakland Coliseum,NA,Cleveland Guardians,Oakland Athletics,6,4
-2024-03-29,745276,0,Boston Red Sox,Seattle Mariners,1,T-Mobile Park,NA,Seattle Mariners,Boston Red Sox,1,0
-2024-03-29,745435,8,San Francisco Giants,San Diego Padres,3,Petco Park,NA,San Francisco Giants,San Diego Padres,8,3
-2024-03-29,746167,3,St. Louis Cardinals,Los Angeles Dodgers,6,Dodger Stadium,NA,Los Angeles Dodgers,St. Louis Cardinals,6,3
-2024-03-30,745850,7,Milwaukee Brewers,New York Mets,6,Citi Field,NA,Milwaukee Brewers,New York Mets,7,6
-2024-03-30,746818,7,Detroit Tigers,Chicago White Sox,6,Guaranteed Rate Field,NA,Detroit Tigers,Chicago White Sox,7,6
-2024-03-30,747063,4,Los Angeles Angels,Baltimore Orioles,13,Oriole Park at Camden Yards,NA,Baltimore Orioles,Los Angeles Angels,13,4
-2024-03-30,745599,12,Atlanta Braves,Philadelphia Phillies,4,Citizens Bank Park,NA,Atlanta Braves,Philadelphia Phillies,12,4
-2024-03-30,745684,12,Cleveland Guardians,Oakland Athletics,3,Oakland Coliseum,NA,Cleveland Guardians,Oakland Athletics,12,3
-2024-03-30,746736,7,Washington Nationals,Cincinnati Reds,6,Great American Ball Park,NA,Washington Nationals,Cincinnati Reds,7,6
-2024-03-30,745119,1,Toronto Blue Jays,Tampa Bay Rays,5,Tropicana Field,NA,Tampa Bay Rays,Toronto Blue Jays,5,1
-2024-03-30,746333,5,Minnesota Twins,Kansas City Royals,1,Kauffman Stadium,NA,Minnesota Twins,Kansas City Royals,5,1
-2024-03-30,746087,9,Pittsburgh Pirates,Miami Marlins,3,loanDepot park,NA,Pittsburgh Pirates,Miami Marlins,9,3
-2024-03-30,745037,2,Chicago Cubs,Texas Rangers,11,Globe Life Field,NA,Texas Rangers,Chicago Cubs,11,2
-2024-03-30,745436,9,San Francisco Giants,San Diego Padres,6,Petco Park,NA,San Francisco Giants,San Diego Padres,9,6
-2024-03-30,746410,5,New York Yankees,Houston Astros,3,Minute Maid Park,NA,New York Yankees,Houston Astros,5,3
-2024-03-30,747221,9,Colorado Rockies,Arizona Diamondbacks,4,Chase Field,NA,Colorado Rockies,Arizona Diamondbacks,9,4
-2024-03-30,746168,6,St. Louis Cardinals,Los Angeles Dodgers,5,Dodger Stadium,NA,St. Louis Cardinals,Los Angeles Dodgers,6,5
-2024-03-30,745278,3,Boston Red Sox,Seattle Mariners,4,T-Mobile Park,NA,Seattle Mariners,Boston Red Sox,4,3
-2024-03-31,747062,4,Los Angeles Angels,Baltimore Orioles,1,Oriole Park at Camden Yards,NA,Los Angeles Angels,Baltimore Orioles,4,1
-2024-03-31,745602,4,Atlanta Braves,Philadelphia Phillies,5,Citizens Bank Park,NA,Philadelphia Phillies,Atlanta Braves,5,4
-2024-03-31,746739,5,Washington Nationals,Cincinnati Reds,6,Great American Ball Park,NA,Cincinnati Reds,Washington Nationals,6,5
-2024-03-31,745115,9,Toronto Blue Jays,Tampa Bay Rays,2,Tropicana Field,NA,Toronto Blue Jays,Tampa Bay Rays,9,2
-2024-03-31,746090,9,Pittsburgh Pirates,Miami Marlins,7,loanDepot park,NA,Pittsburgh Pirates,Miami Marlins,9,7
-2024-03-31,745845,4,Milwaukee Brewers,New York Mets,1,Citi Field,NA,Milwaukee Brewers,New York Mets,4,1
-2024-03-31,746332,0,Minnesota Twins,Kansas City Royals,11,Kauffman Stadium,NA,Kansas City Royals,Minnesota Twins,11,0
-2024-03-31,746815,3,Detroit Tigers,Chicago White Sox,2,Guaranteed Rate Field,NA,Detroit Tigers,Chicago White Sox,3,2
-2024-03-31,746413,4,New York Yankees,Houston Astros,3,Minute Maid Park,NA,New York Yankees,Houston Astros,4,3
-2024-03-31,745035,9,Chicago Cubs,Texas Rangers,5,Globe Life Field,NA,Chicago Cubs,Texas Rangers,9,5
-2024-03-31,745683,3,Cleveland Guardians,Oakland Athletics,4,Oakland Coliseum,NA,Oakland Athletics,Cleveland Guardians,4,3
-2024-03-31,747222,1,Colorado Rockies,Arizona Diamondbacks,5,Chase Field,NA,Arizona Diamondbacks,Colorado Rockies,5,1
-2024-03-31,745279,5,Boston Red Sox,Seattle Mariners,1,T-Mobile Park,NA,Boston Red Sox,Seattle Mariners,5,1
-2024-03-31,745438,4,San Francisco Giants,San Diego Padres,13,Petco Park,NA,San Diego Padres,San Francisco Giants,13,4
-2024-03-31,746166,4,St. Louis Cardinals,Los Angeles Dodgers,5,Dodger Stadium,NA,Los Angeles Dodgers,St. Louis Cardinals,5,4
-2024-04-01,746817,9,Atlanta Braves,Chicago White Sox,0,Guaranteed Rate Field,NA,Atlanta Braves,Chicago White Sox,9,0
-2024-04-01,746899,0,Colorado Rockies,Chicago Cubs,5,Wrigley Field,Cubs home opener,Chicago Cubs,Colorado Rockies,5,0
-2024-04-01,744875,8,Pittsburgh Pirates,Washington Nationals,4,Nationals Park,Nationals home opener,Pittsburgh Pirates,Washington Nationals,8,4
-2024-04-01,747058,4,Kansas City Royals,Baltimore Orioles,6,Oriole Park at Camden Yards,NA,Baltimore Orioles,Kansas City Royals,6,4
-2024-04-01,745600,6,Cincinnati Reds,Philadelphia Phillies,3,Citizens Bank Park,NA,Cincinnati Reds,Philadelphia Phillies,6,3
-2024-04-01,746085,7,Los Angeles Angels,Miami Marlins,4,loanDepot park,NA,Los Angeles Angels,Miami Marlins,7,4
-2024-04-01,745109,9,Texas Rangers,Tampa Bay Rays,3,Tropicana Field,NA,Texas Rangers,Tampa Bay Rays,9,3
-2024-04-01,745842,5,Detroit Tigers,New York Mets,0,Citi Field,NA,Detroit Tigers,New York Mets,5,0
-2024-04-01,746409,0,Toronto Blue Jays,Houston Astros,10,Minute Maid Park,NA,Houston Astros,Toronto Blue Jays,10,0
-2024-04-01,745675,9,Boston Red Sox,Oakland Athletics,0,Oakland Coliseum,NA,Boston Red Sox,Oakland Athletics,9,0
-2024-04-01,745277,4,Cleveland Guardians,Seattle Mariners,5,T-Mobile Park,NA,Seattle Mariners,Cleveland Guardians,5,4
-2024-04-01,745437,6,St. Louis Cardinals,San Diego Padres,2,Petco Park,NA,St. Louis Cardinals,San Diego Padres,6,2
-2024-04-01,747218,5,New York Yankees,Arizona Diamondbacks,2,Chase Field,NA,New York Yankees,Arizona Diamondbacks,5,2
-2024-04-01,746170,3,San Francisco Giants,Los Angeles Dodgers,8,Dodger Stadium,NA,Los Angeles Dodgers,San Francisco Giants,8,3
-2024-04-02,746009,2,Minnesota Twins,Milwaukee Brewers,3,American Family Field,Brewers home opener,Milwaukee Brewers,Minnesota Twins,3,2
-2024-04-02,747057,4,Kansas City Royals,Baltimore Orioles,1,Oriole Park at Camden Yards,NA,Kansas City Royals,Baltimore Orioles,4,1
-2024-04-02,745598,4,Cincinnati Reds,Philadelphia Phillies,9,Citizens Bank Park,NA,Philadelphia Phillies,Cincinnati Reds,9,4
-2024-04-02,746086,3,Los Angeles Angels,Miami Marlins,1,loanDepot park,NA,Los Angeles Angels,Miami Marlins,3,1
-2024-04-02,745111,2,Texas Rangers,Tampa Bay Rays,5,Tropicana Field,NA,Tampa Bay Rays,Texas Rangers,5,2
-2024-04-02,746898,2,Colorado Rockies,Chicago Cubs,12,Wrigley Field,NA,Chicago Cubs,Colorado Rockies,12,2
-2024-04-02,746814,2,Atlanta Braves,Chicago White Sox,3,Guaranteed Rate Field,NA,Chicago White Sox,Atlanta Braves,3,2
-2024-04-02,746411,2,Toronto Blue Jays,Houston Astros,1,Minute Maid Park,NA,Toronto Blue Jays,Houston Astros,2,1
-2024-04-02,745680,5,Boston Red Sox,Oakland Athletics,4,Oakland Coliseum,NA,Boston Red Sox,Oakland Athletics,5,4
-2024-04-02,745273,5,Cleveland Guardians,Seattle Mariners,2,T-Mobile Park,NA,Cleveland Guardians,Seattle Mariners,5,2
-2024-04-02,745439,5,St. Louis Cardinals,San Diego Padres,2,Petco Park,NA,St. Louis Cardinals,San Diego Padres,5,2
-2024-04-02,747220,0,New York Yankees,Arizona Diamondbacks,7,Chase Field,NA,Arizona Diamondbacks,New York Yankees,7,0
-2024-04-02,746169,4,San Francisco Giants,Los Angeles Dodgers,5,Dodger Stadium,NA,Los Angeles Dodgers,San Francisco Giants,5,4
-2024-04-03,745114,0,Texas Rangers,Tampa Bay Rays,0,Tropicana Field,NA,Texas Rangers,Tampa Bay Rays,0,0
-2024-04-03,746083,0,Los Angeles Angels,Miami Marlins,0,loanDepot park,NA,Los Angeles Angels,Miami Marlins,0,0
+date,game_pk,away_score,away_team,home_team,home_score,win_team,lose_team,win_score,lose_score
+2024-03-20,745444,5,Los Angeles Dodgers,San Diego Padres,2,Los Angeles Dodgers,San Diego Padres,5,2
+2024-03-21,746175,15,San Diego Padres,Los Angeles Dodgers,11,San Diego Padres,Los Angeles Dodgers,15,11
+2024-03-28,747060,3,Los Angeles Angels,Baltimore Orioles,11,Baltimore Orioles,Los Angeles Angels,11,3
+2024-03-28,746737,2,Washington Nationals,Cincinnati Reds,8,Cincinnati Reds,Washington Nationals,8,2
+2024-03-28,745445,4,San Francisco Giants,San Diego Padres,6,San Diego Padres,San Francisco Giants,6,4
+2024-03-28,746165,1,St. Louis Cardinals,Los Angeles Dodgers,7,Los Angeles Dodgers,St. Louis Cardinals,7,1
+2024-03-28,745116,8,Toronto Blue Jays,Tampa Bay Rays,2,Toronto Blue Jays,Tampa Bay Rays,8,2
+2024-03-28,746335,4,Minnesota Twins,Kansas City Royals,1,Minnesota Twins,Kansas City Royals,4,1
+2024-03-28,746821,1,Detroit Tigers,Chicago White Sox,0,Detroit Tigers,Chicago White Sox,1,0
+2024-03-28,746089,6,Pittsburgh Pirates,Miami Marlins,5,Pittsburgh Pirates,Miami Marlins,6,5
+2024-03-28,746418,5,New York Yankees,Houston Astros,4,New York Yankees,Houston Astros,5,4
+2024-03-28,745039,3,Chicago Cubs,Texas Rangers,4,Texas Rangers,Chicago Cubs,4,3
+2024-03-28,745687,8,Cleveland Guardians,Oakland Athletics,0,Cleveland Guardians,Oakland Athletics,8,0
+2024-03-28,747224,1,Colorado Rockies,Arizona Diamondbacks,16,Arizona Diamondbacks,Colorado Rockies,16,1
+2024-03-28,745283,6,Boston Red Sox,Seattle Mariners,4,Boston Red Sox,Seattle Mariners,6,4
+2024-03-29,745848,3,Milwaukee Brewers,New York Mets,1,Milwaukee Brewers,New York Mets,3,1
+2024-03-29,745604,9,Atlanta Braves,Philadelphia Phillies,3,Atlanta Braves,Philadelphia Phillies,9,3
+2024-03-29,745117,2,Toronto Blue Jays,Tampa Bay Rays,8,Tampa Bay Rays,Toronto Blue Jays,8,2
+2024-03-29,746091,7,Pittsburgh Pirates,Miami Marlins,2,Pittsburgh Pirates,Miami Marlins,7,2
+2024-03-29,746412,7,New York Yankees,Houston Astros,1,New York Yankees,Houston Astros,7,1
+2024-03-29,747223,3,Colorado Rockies,Arizona Diamondbacks,7,Arizona Diamondbacks,Colorado Rockies,7,3
+2024-03-29,745682,6,Cleveland Guardians,Oakland Athletics,4,Cleveland Guardians,Oakland Athletics,6,4
+2024-03-29,745276,0,Boston Red Sox,Seattle Mariners,1,Seattle Mariners,Boston Red Sox,1,0
+2024-03-29,745435,8,San Francisco Giants,San Diego Padres,3,San Francisco Giants,San Diego Padres,8,3
+2024-03-29,746167,3,St. Louis Cardinals,Los Angeles Dodgers,6,Los Angeles Dodgers,St. Louis Cardinals,6,3
+2024-03-30,745850,7,Milwaukee Brewers,New York Mets,6,Milwaukee Brewers,New York Mets,7,6
+2024-03-30,746818,7,Detroit Tigers,Chicago White Sox,6,Detroit Tigers,Chicago White Sox,7,6
+2024-03-30,747063,4,Los Angeles Angels,Baltimore Orioles,13,Baltimore Orioles,Los Angeles Angels,13,4
+2024-03-30,745599,12,Atlanta Braves,Philadelphia Phillies,4,Atlanta Braves,Philadelphia Phillies,12,4
+2024-03-30,745684,12,Cleveland Guardians,Oakland Athletics,3,Cleveland Guardians,Oakland Athletics,12,3
+2024-03-30,746736,7,Washington Nationals,Cincinnati Reds,6,Washington Nationals,Cincinnati Reds,7,6
+2024-03-30,745119,1,Toronto Blue Jays,Tampa Bay Rays,5,Tampa Bay Rays,Toronto Blue Jays,5,1
+2024-03-30,746333,5,Minnesota Twins,Kansas City Royals,1,Minnesota Twins,Kansas City Royals,5,1
+2024-03-30,746087,9,Pittsburgh Pirates,Miami Marlins,3,Pittsburgh Pirates,Miami Marlins,9,3
+2024-03-30,745037,2,Chicago Cubs,Texas Rangers,11,Texas Rangers,Chicago Cubs,11,2
+2024-03-30,745436,9,San Francisco Giants,San Diego Padres,6,San Francisco Giants,San Diego Padres,9,6
+2024-03-30,746410,5,New York Yankees,Houston Astros,3,New York Yankees,Houston Astros,5,3
+2024-03-30,747221,9,Colorado Rockies,Arizona Diamondbacks,4,Colorado Rockies,Arizona Diamondbacks,9,4
+2024-03-30,746168,6,St. Louis Cardinals,Los Angeles Dodgers,5,St. Louis Cardinals,Los Angeles Dodgers,6,5
+2024-03-30,745278,3,Boston Red Sox,Seattle Mariners,4,Seattle Mariners,Boston Red Sox,4,3
+2024-03-31,747062,4,Los Angeles Angels,Baltimore Orioles,1,Los Angeles Angels,Baltimore Orioles,4,1
+2024-03-31,745602,4,Atlanta Braves,Philadelphia Phillies,5,Philadelphia Phillies,Atlanta Braves,5,4
+2024-03-31,746739,5,Washington Nationals,Cincinnati Reds,6,Cincinnati Reds,Washington Nationals,6,5
+2024-03-31,745115,9,Toronto Blue Jays,Tampa Bay Rays,2,Toronto Blue Jays,Tampa Bay Rays,9,2
+2024-03-31,746090,9,Pittsburgh Pirates,Miami Marlins,7,Pittsburgh Pirates,Miami Marlins,9,7
+2024-03-31,745845,4,Milwaukee Brewers,New York Mets,1,Milwaukee Brewers,New York Mets,4,1
+2024-03-31,746332,0,Minnesota Twins,Kansas City Royals,11,Kansas City Royals,Minnesota Twins,11,0
+2024-03-31,746815,3,Detroit Tigers,Chicago White Sox,2,Detroit Tigers,Chicago White Sox,3,2
+2024-03-31,746413,4,New York Yankees,Houston Astros,3,New York Yankees,Houston Astros,4,3
+2024-03-31,745035,9,Chicago Cubs,Texas Rangers,5,Chicago Cubs,Texas Rangers,9,5
+2024-03-31,745683,3,Cleveland Guardians,Oakland Athletics,4,Oakland Athletics,Cleveland Guardians,4,3
+2024-03-31,747222,1,Colorado Rockies,Arizona Diamondbacks,5,Arizona Diamondbacks,Colorado Rockies,5,1
+2024-03-31,745279,5,Boston Red Sox,Seattle Mariners,1,Boston Red Sox,Seattle Mariners,5,1
+2024-03-31,745438,4,San Francisco Giants,San Diego Padres,13,San Diego Padres,San Francisco Giants,13,4
+2024-03-31,746166,4,St. Louis Cardinals,Los Angeles Dodgers,5,Los Angeles Dodgers,St. Louis Cardinals,5,4
+2024-04-01,746817,9,Atlanta Braves,Chicago White Sox,0,Atlanta Braves,Chicago White Sox,9,0
+2024-04-01,746899,0,Colorado Rockies,Chicago Cubs,5,Chicago Cubs,Colorado Rockies,5,0
+2024-04-01,744875,8,Pittsburgh Pirates,Washington Nationals,4,Pittsburgh Pirates,Washington Nationals,8,4
+2024-04-01,747058,4,Kansas City Royals,Baltimore Orioles,6,Baltimore Orioles,Kansas City Royals,6,4
+2024-04-01,745600,6,Cincinnati Reds,Philadelphia Phillies,3,Cincinnati Reds,Philadelphia Phillies,6,3
+2024-04-01,746085,7,Los Angeles Angels,Miami Marlins,4,Los Angeles Angels,Miami Marlins,7,4
+2024-04-01,745109,9,Texas Rangers,Tampa Bay Rays,3,Texas Rangers,Tampa Bay Rays,9,3
+2024-04-01,745842,5,Detroit Tigers,New York Mets,0,Detroit Tigers,New York Mets,5,0
+2024-04-01,746409,0,Toronto Blue Jays,Houston Astros,10,Houston Astros,Toronto Blue Jays,10,0
+2024-04-01,745675,9,Boston Red Sox,Oakland Athletics,0,Boston Red Sox,Oakland Athletics,9,0
+2024-04-01,745277,4,Cleveland Guardians,Seattle Mariners,5,Seattle Mariners,Cleveland Guardians,5,4
+2024-04-01,745437,6,St. Louis Cardinals,San Diego Padres,2,St. Louis Cardinals,San Diego Padres,6,2
+2024-04-01,747218,5,New York Yankees,Arizona Diamondbacks,2,New York Yankees,Arizona Diamondbacks,5,2
+2024-04-01,746170,3,San Francisco Giants,Los Angeles Dodgers,8,Los Angeles Dodgers,San Francisco Giants,8,3
+2024-04-02,746009,2,Minnesota Twins,Milwaukee Brewers,3,Milwaukee Brewers,Minnesota Twins,3,2
+2024-04-02,747057,4,Kansas City Royals,Baltimore Orioles,1,Kansas City Royals,Baltimore Orioles,4,1
+2024-04-02,745598,4,Cincinnati Reds,Philadelphia Phillies,9,Philadelphia Phillies,Cincinnati Reds,9,4
+2024-04-02,746086,3,Los Angeles Angels,Miami Marlins,1,Los Angeles Angels,Miami Marlins,3,1
+2024-04-02,745111,2,Texas Rangers,Tampa Bay Rays,5,Tampa Bay Rays,Texas Rangers,5,2
+2024-04-02,746898,2,Colorado Rockies,Chicago Cubs,12,Chicago Cubs,Colorado Rockies,12,2
+2024-04-02,746814,2,Atlanta Braves,Chicago White Sox,3,Chicago White Sox,Atlanta Braves,3,2
+2024-04-02,746411,2,Toronto Blue Jays,Houston Astros,1,Toronto Blue Jays,Houston Astros,2,1
+2024-04-02,745680,5,Boston Red Sox,Oakland Athletics,4,Boston Red Sox,Oakland Athletics,5,4
+2024-04-02,745273,5,Cleveland Guardians,Seattle Mariners,2,Cleveland Guardians,Seattle Mariners,5,2
+2024-04-02,745439,5,St. Louis Cardinals,San Diego Padres,2,St. Louis Cardinals,San Diego Padres,5,2
+2024-04-02,747220,0,New York Yankees,Arizona Diamondbacks,7,Arizona Diamondbacks,New York Yankees,7,0
+2024-04-02,746169,4,San Francisco Giants,Los Angeles Dodgers,5,Los Angeles Dodgers,San Francisco Giants,5,4
+2024-04-03,745114,4,Texas Rangers,Tampa Bay Rays,1,Texas Rangers,Tampa Bay Rays,4,1
+2024-04-03,746083,10,Los Angeles Angels,Miami Marlins,2,Los Angeles Angels,Miami Marlins,10,2
+2024-04-03,746008,6,Minnesota Twins,Milwaukee Brewers,3,Minnesota Twins,Milwaukee Brewers,6,3

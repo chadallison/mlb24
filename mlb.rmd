@@ -6,6 +6,14 @@ knit: (function(input, ...) { rmarkdown::render(input, output_file = "README.md"
 
 Work in progress! :)
 
+___
+
+### Contents
+
+- [Team Standings]
+- [Team NPR]
+- [Scorigami]
+
 ```{r fold_code, include = F}
 knitr::knit_hooks$set(source = function(x, options) {
     hook.r = function(x, options) {
@@ -43,8 +51,8 @@ theme_set(theme_custom)
 end_games = mlb_schedule(season = 2024, level_ids = "1") |>
   filter(series_description == "Regular Season") |>
   select(date, game_pk, away_score = teams_away_score, away_team = teams_away_team_name,
-         home_team = teams_home_team_name, home_score = teams_home_score, venue_name, description) |>
-  filter(!is.na(away_score) & !is.na(home_score)) |>
+         home_team = teams_home_team_name, home_score = teams_home_score) |>
+  filter(!is.na(away_score) & !is.na(home_score) & !(home_score == 0 & away_score == 0)) |>
   mutate(win_team = ifelse(home_score > away_score, home_team, away_team),
          lose_team = ifelse(home_score > away_score, away_team, home_team),
          win_score = ifelse(home_score > away_score, home_score, away_score),
@@ -204,7 +212,40 @@ Of course, there are so many other factors that would play into a team's true ex
 
 ___
 
+### Scorigami
+
+```{r echo = F}
+all_final_scores = end_games |>
+  count(win_score, lose_score) |>
+  transmute(final_score = paste0(win_score, "-", lose_score), n)
+
+last_scorigami = end_games |>
+  mutate(final_score = paste0(win_score, "-", lose_score)) |>
+  inner_join(all_final_scores, by = "final_score") |>
+  filter(n == 1) |>
+  slice_max(date, n = 1, with_ties = F) |>
+  mutate(desc = paste0(win_team, " def. ", lose_team, " ", final_score)) |>
+  pull(desc)
+
+end_games |>
+  count(win_score, lose_score) |>
+  arrange(desc(n)) |>
+  ggplot(aes(win_score, lose_score)) +
+  geom_point(size = 9, shape = "square", aes(col = n), show.legend = F) +
+  geom_text(aes(label = n), size = 3.5) +
+  labs(x = "Winning Score", y = "Losing Score",
+       title = "2024 MLB Scorigami",
+       subtitle = paste0("Last Scorigami: ", last_scorigami)) +
+  scale_x_continuous(breaks = seq(0, max(end_games$win_score), by = 1)) +
+  scale_y_continuous(breaks = seq(0, max(end_games$lose_score), by = 1)) +
+  scale_color_gradient(low = "#ABC0A9", high = "#627C61")
+```
+
+___
+
 *Interested in the underlying code that builds this report?* Check it out on GitHub: [mlb24](https://github.com/chadallison/mlb24){target="_blank"}
+
+
 
 
 

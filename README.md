@@ -3,6 +3,14 @@ Chad’s 2024 MLB Report
 
 Work in progress! :)
 
+------------------------------------------------------------------------
+
+### Contents
+
+- [Team Standings](#team-standings)
+- [Team NPR](#team-npr)
+- [Scorigami](#scorigami)
+
 ### Team Standings
 
 ![](README_files/figure-gfm/unnamed-chunk-4-1.png)<!-- -->
@@ -52,6 +60,12 @@ take external factors into account. Which, of course, will lead to flaws
 in the metric, but is done for the sake of simplicity and
 interpretability (which is ironic because I expect it is still difficult
 to interpret for others than myself).
+
+------------------------------------------------------------------------
+
+### Scorigami
+
+![](README_files/figure-gfm/unnamed-chunk-7-1.png)<!-- -->
 
 ------------------------------------------------------------------------
 
