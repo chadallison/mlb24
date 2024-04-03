@@ -81,6 +81,10 @@ team_hex = c(
 )
 
 teams_info = data.frame(team = all_teams, abb = team_abbrevs, hex = team_hex)
+
+better_date = function(dt) {
+  return(paste0(month(dt, label = T, abbr = F), " ", day(dt)))
+}
 ```
 
 ### Team Standings
@@ -224,7 +228,7 @@ last_scorigami = end_games |>
   inner_join(all_final_scores, by = "final_score") |>
   filter(n == 1) |>
   slice_max(date, n = 1, with_ties = F) |>
-  mutate(desc = paste0(win_team, " def. ", lose_team, " ", final_score)) |>
+  mutate(desc = paste0(win_team, " def. ", lose_team, " ", final_score, " (", better_date(date), ")")) |>
   pull(desc)
 
 end_games |>
