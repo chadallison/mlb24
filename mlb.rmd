@@ -262,8 +262,11 @@ cubs_pk = end_games |>
   slice_max(date, n = 1, with_ties = F) |>
   pull(game_pk)
 
-mlb_pbp(game_pk = cubs_pk) |>
-  filter(isPitch == T)
+hit_criteria = c("Double", "Home Run", "Single", "Triple")
+
+ab_criteria = c("Double", "Field Error", "Fielders Choice", "Fielders Choice Out",
+                "Flyout", "Forceout", "Grounded Into DP", "Groundout", "Home Run",
+                "Pop Out", "Sac Fly", "Single", "Strikeout", "Triple")
 ```
 
 
