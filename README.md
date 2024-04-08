@@ -9,7 +9,12 @@ Work in progress! :)
 
 - [Team Standings](#team-standings)
 - [Team NPR](#team-npr)
+- [Total NPR Rankings](#total-npr-rankings)
+- [Offensive NPR Rankings](#offensive-npr-rankings)
+- [Defensive NPR Rankings](#defensive-npr-rankings)
 - [Scorigami](#scorigami)
+
+------------------------------------------------------------------------
 
 ### Team Standings
 
@@ -63,9 +68,27 @@ to interpret for others than myself).
 
 ------------------------------------------------------------------------
 
-### Scorigami
+### Total NPR Rankings
 
 ![](README_files/figure-gfm/unnamed-chunk-7-1.png)<!-- -->
+
+------------------------------------------------------------------------
+
+### Offensive NPR Rankings
+
+![](README_files/figure-gfm/unnamed-chunk-8-1.png)<!-- -->
+
+------------------------------------------------------------------------
+
+### Defensive NPR Rankings
+
+![](README_files/figure-gfm/unnamed-chunk-9-1.png)<!-- -->
+
+------------------------------------------------------------------------
+
+### Scorigami
+
+![](README_files/figure-gfm/unnamed-chunk-10-1.png)<!-- -->
 
 ------------------------------------------------------------------------
 
