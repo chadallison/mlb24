@@ -110,8 +110,8 @@ team_records = end_games |>
 team_records |>
   ggplot(aes(reorder(team, pct), pct)) +
   geom_col(aes(fill = team), show.legend = F) +
-  geom_text(aes(label = record), size = 3, hjust = -0.5) +
-  coord_flip() +
+  geom_text(aes(label = record), size = 3, hjust = -0.2) +
+  coord_flip(ylim = c(0, max(team_records$pct) * 1.05)) +
   scale_fill_manual(values = team_hex) +
   labs(x = NULL, y = NULL, title = "2024 MLB Standings") +
   theme(axis.text.x = element_blank())
