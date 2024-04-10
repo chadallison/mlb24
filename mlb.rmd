@@ -16,6 +16,7 @@ ___
 - [Offensive NPR Rankings]
 - [Defensive NPR Rankings]
 - [Scorigami]
+- [Yesterday's Largest Victories]
 
 ___
 
@@ -321,6 +322,22 @@ end_games |>
 
 ___
 
+```{r echo = F}
+yesterday_blowouts = end_games |>
+  filter(date == Sys.Date() - 1) |>
+  mutate(mv = win_score - lose_score) |>
+  slice_max(mv, n = 3, with_ties = F) |>
+  mutate(desc = paste0(win_team, " def. ", lose_team, " ", win_score, "-", lose_score))
+```
+
+### Yesterday's Largest Victories
+
+1. `r yesterday_blowouts$desc[1]`
+2. `r yesterday_blowouts$desc[2]`
+3. `r yesterday_blowouts$desc[3]`
+
+___
+
 *Interested in the underlying code that builds this report?* Check it out on GitHub: [mlb24](https://github.com/chadallison/mlb24){target="_blank"}
 
 
@@ -342,7 +359,6 @@ ab_criteria = c("Double", "Field Error", "Fielders Choice", "Fielders Choice Out
                 "Flyout", "Forceout", "Grounded Into DP", "Groundout", "Home Run",
                 "Pop Out", "Sac Fly", "Single", "Strikeout", "Triple")
 ```
-
 
 
 

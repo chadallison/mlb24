@@ -13,6 +13,7 @@ Work in progress! :)
 - [Offensive NPR Rankings](#offensive-npr-rankings)
 - [Defensive NPR Rankings](#defensive-npr-rankings)
 - [Scorigami](#scorigami)
+- [Yesterday’s Largest Victories](#yesterdays-largest-victories)
 
 ------------------------------------------------------------------------
 
@@ -89,6 +90,14 @@ to interpret for others than myself).
 ### Scorigami
 
 ![](README_files/figure-gfm/unnamed-chunk-10-1.png)<!-- -->
+
+------------------------------------------------------------------------
+
+### Yesterday’s Largest Victories
+
+1.  Baltimore Orioles def. Boston Red Sox 7-1
+2.  Milwaukee Brewers def. Cincinnati Reds 9-5
+3.  Chicago Cubs def. San Diego Padres 5-1
 
 ------------------------------------------------------------------------
 
