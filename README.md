@@ -95,9 +95,9 @@ to interpret for others than myself).
 
 ### Yesterday’s Largest Victories
 
-1.  Baltimore Orioles def. Boston Red Sox 7-1
-2.  Milwaukee Brewers def. Cincinnati Reds 9-5
-3.  Chicago Cubs def. San Diego Padres 5-1
+1.  Kansas City Royals def. Houston Astros 11-2
+2.  San Diego Padres def. Chicago Cubs 10-2
+3.  San Francisco Giants def. Washington Nationals 7-1
 
 ------------------------------------------------------------------------
 
