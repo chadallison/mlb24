@@ -95,9 +95,9 @@ to interpret for others than myself).
 
 ### Yesterday’s Largest Victories
 
-1.  Kansas City Royals def. Houston Astros 11-2
-2.  San Diego Padres def. Chicago Cubs 10-2
-3.  San Francisco Giants def. Washington Nationals 7-1
+1.  New York Mets def. Atlanta Braves 16-4
+2.  Kansas City Royals def. Houston Astros 13-3
+3.  Baltimore Orioles def. Boston Red Sox 9-4
 
 ------------------------------------------------------------------------
 
