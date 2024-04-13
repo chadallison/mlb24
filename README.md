@@ -95,9 +95,9 @@ to interpret for others than myself).
 
 ### Yesterday’s Largest Victories
 
-1.  New York Mets def. Atlanta Braves 16-4
-2.  Kansas City Royals def. Houston Astros 13-3
-3.  Baltimore Orioles def. Boston Red Sox 9-4
+1.  Milwaukee Brewers def. Baltimore Orioles 11-1
+2.  Cincinnati Reds def. Chicago White Sox 11-1
+3.  Colorado Rockies def. Toronto Blue Jays 12-4
 
 ------------------------------------------------------------------------
 
