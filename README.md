@@ -95,9 +95,9 @@ to interpret for others than myself).
 
 ### Yesterday’s Largest Victories
 
-1.  San Francisco Giants def. Tampa Bay Rays 11-2
-2.  Houston Astros def. Texas Rangers 9-2
-3.  New York Yankees def. Cleveland Guardians 8-2
+1.  Pittsburgh Pirates def. Philadelphia Phillies 9-2
+2.  Cincinnati Reds def. Chicago White Sox 11-4
+3.  Toronto Blue Jays def. Colorado Rockies 5-0
 
 ------------------------------------------------------------------------
 
