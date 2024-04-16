@@ -95,9 +95,9 @@ to interpret for others than myself).
 
 ### Yesterday’s Largest Victories
 
-1.  Pittsburgh Pirates def. Philadelphia Phillies 9-2
-2.  Cincinnati Reds def. Chicago White Sox 11-4
-3.  Toronto Blue Jays def. Colorado Rockies 5-0
+1.  Cleveland Guardians def. Boston Red Sox 6-0
+2.  Seattle Mariners def. Cincinnati Reds 9-3
+3.  Atlanta Braves def. Houston Astros 6-1
 
 ------------------------------------------------------------------------
 
