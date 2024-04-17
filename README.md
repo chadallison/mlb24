@@ -95,9 +95,9 @@ to interpret for others than myself).
 
 ### Yesterday’s Largest Victories
 
-1.  Milwaukee Brewers def. Baltimore Orioles 11-1
-2.  Cincinnati Reds def. Chicago White Sox 11-1
-3.  Colorado Rockies def. Toronto Blue Jays 12-4
+1.  Baltimore Orioles def. Minnesota Twins 11-3
+2.  Philadelphia Phillies def. Colorado Rockies 5-0
+3.  Atlanta Braves def. Houston Astros 6-2
 
 ------------------------------------------------------------------------
 

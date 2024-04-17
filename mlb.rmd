@@ -358,10 +358,6 @@ hit_criteria = c("Double", "Home Run", "Single", "Triple")
 ab_criteria = c("Double", "Field Error", "Fielders Choice", "Fielders Choice Out",
                 "Flyout", "Forceout", "Grounded Into DP", "Groundout", "Home Run",
                 "Pop Out", "Sac Fly", "Single", "Strikeout", "Triple")
-
-who_needs_to_get_some_bitches = function() {
-  return("Standing Fish")
-}
 ```
 
 
