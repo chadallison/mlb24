@@ -248,6 +248,7 @@ date,game_pk,away_score,away_team,home_team,home_score,win_team,lose_team,win_sc
 2024-04-15,745677,3,St. Louis Cardinals,Oakland Athletics,1,St. Louis Cardinals,Oakland Athletics,3,1
 2024-04-15,745268,3,Cincinnati Reds,Seattle Mariners,9,Seattle Mariners,Cincinnati Reds,9,3
 2024-04-15,746158,6,Washington Nationals,Los Angeles Dodgers,4,Washington Nationals,Los Angeles Dodgers,6,4
+<<<<<<< HEAD
 2024-04-16,746486,2,Texas Rangers,Detroit Tigers,4,Detroit Tigers,Texas Rangers,4,2
 2024-04-16,747051,3,Minnesota Twins,Baltimore Orioles,11,Baltimore Orioles,Minnesota Twins,11,3
 2024-04-16,745593,0,Colorado Rockies,Philadelphia Phillies,5,Philadelphia Phillies,Colorado Rockies,5,0
@@ -262,3 +263,5 @@ date,game_pk,away_score,away_team,home_team,home_score,win_team,lose_team,win_sc
 2024-04-16,745270,1,Cincinnati Reds,Seattle Mariners,3,Seattle Mariners,Cincinnati Reds,3,1
 2024-04-16,745674,3,St. Louis Cardinals,Oakland Athletics,2,St. Louis Cardinals,Oakland Athletics,3,2
 2024-04-16,746157,2,Washington Nationals,Los Angeles Dodgers,6,Los Angeles Dodgers,Washington Nationals,6,2
+=======
+>>>>>>> 0d235e325cf3c4f10e0ca91fa6a7bbd54be002e9

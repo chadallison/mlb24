@@ -95,9 +95,15 @@ to interpret for others than myself).
 
 ### Yesterday’s Largest Victories
 
+<<<<<<< HEAD
 1.  Baltimore Orioles def. Minnesota Twins 11-3
 2.  Philadelphia Phillies def. Colorado Rockies 5-0
 3.  Atlanta Braves def. Houston Astros 6-2
+=======
+1.  Cleveland Guardians def. Boston Red Sox 6-0
+2.  Seattle Mariners def. Cincinnati Reds 9-3
+3.  Atlanta Braves def. Houston Astros 6-1
+>>>>>>> 0d235e325cf3c4f10e0ca91fa6a7bbd54be002e9
 
 ------------------------------------------------------------------------
 
