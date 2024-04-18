@@ -95,12 +95,20 @@ to interpret for others than myself).
 
 ### Yesterday’s Largest Victories
 
-1.  Baltimore Orioles def. Minnesota Twins 11-3
-2.  Philadelphia Phillies def. Colorado Rockies 5-0
-3.  Atlanta Braves def. Houston Astros 6-2
+1.  New York Mets def. Pittsburgh Pirates 9-1
+2.  Seattle Mariners def. Cincinnati Reds 5-1
+3.  Oakland Athletics def. St. Louis Cardinals 6-3
 
 ------------------------------------------------------------------------
 
 *Interested in the underlying code that builds this report?* Check it
 out on GitHub:
 <a href="https://github.com/chadallison/mlb24" target="_blank">mlb24</a>
+
+![](README_files/figure-gfm/unnamed-chunk-13-1.png)<!-- -->
+
+### Most Volatile Teams
+
+1.  Chicago Cubs (7.23)
+2.  Colorado Rockies (7.05)
+3.  Houston Astros (6.9)
