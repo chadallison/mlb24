@@ -105,10 +105,24 @@ to interpret for others than myself).
 out on GitHub:
 <a href="https://github.com/chadallison/mlb24" target="_blank">mlb24</a>
 
+![](README_files/figure-gfm/unnamed-chunk-12-1.png)<!-- -->
+
 ![](README_files/figure-gfm/unnamed-chunk-13-1.png)<!-- -->
 
 ### Most Volatile Teams
 
 1.  Chicago Cubs (7.23)
 2.  Colorado Rockies (7.05)
+3.  Houston Astros (6.9)
+
+### Most Volatile Offenses
+
+1.  Kansas City Royals (6.26)
+2.  San Diego Padres (6.8)
+3.  New York Mets (6.87)
+
+### Most Volatile Defenses
+
+1.  Los Angeles Angels (6.3)
+2.  Chicago Cubs (7.23)
 3.  Houston Astros (6.9)
