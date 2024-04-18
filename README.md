@@ -14,6 +14,8 @@ Work in progress! :)
 - [Defensive NPR Rankings](#defensive-npr-rankings)
 - [Scorigami](#scorigami)
 - [Yesterday’s Largest Victories](#yesterdays-largest-victories)
+- [Team Volatility](#team-volatility)
+- [Close Game Performance](#close-game-performance)
 
 ------------------------------------------------------------------------
 
@@ -101,28 +103,36 @@ to interpret for others than myself).
 
 ------------------------------------------------------------------------
 
-*Interested in the underlying code that builds this report?* Check it
-out on GitHub:
-<a href="https://github.com/chadallison/mlb24" target="_blank">mlb24</a>
+### Team Volatility
 
 ![](README_files/figure-gfm/unnamed-chunk-12-1.png)<!-- -->
 
-![](README_files/figure-gfm/unnamed-chunk-13-1.png)<!-- -->
-
-### Most Volatile Teams
+##### Most Volatile Teams
 
 1.  Chicago Cubs (7.23)
 2.  Colorado Rockies (7.05)
 3.  Houston Astros (6.9)
 
-### Most Volatile Offenses
+##### Most Volatile Offenses
 
-1.  Kansas City Royals (6.26)
-2.  San Diego Padres (6.8)
-3.  New York Mets (6.87)
+1.  Kansas City Royals (4.13)
+2.  San Diego Padres (4.03)
+3.  New York Mets (3.79)
 
-### Most Volatile Defenses
+##### Most Volatile Defenses
 
-1.  Los Angeles Angels (6.3)
-2.  Chicago Cubs (7.23)
-3.  Houston Astros (6.9)
+1.  Los Angeles Angels (3.95)
+2.  Chicago Cubs (3.8)
+3.  Houston Astros (3.73)
+
+------------------------------------------------------------------------
+
+### Close Game Performance
+
+![](README_files/figure-gfm/unnamed-chunk-13-1.png)<!-- -->
+
+------------------------------------------------------------------------
+
+*Interested in the underlying code that builds this report?* Check it
+out on GitHub:
+<a href="https://github.com/chadallison/mlb24" target="_blank">mlb24</a>

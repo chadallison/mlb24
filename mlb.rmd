@@ -17,6 +17,8 @@ ___
 - [Defensive NPR Rankings]
 - [Scorigami]
 - [Yesterday's Largest Victories]
+- [Team Volatility]
+- [Close Game Performance]
 
 ___
 
@@ -338,40 +340,7 @@ yesterday_blowouts = end_games |>
 
 ___
 
-*Interested in the underlying code that builds this report?* Check it out on GitHub: [mlb24](https://github.com/chadallison/mlb24){target="_blank"}
-
-
-```{r echo = F}
-end_margins = end_games |>
-  mutate(margin = win_score - lose_score)
-
-get_team_avg_margin = function(team) {
-  x = end_margins |>
-    filter(home_team == team | away_team == team) |>
-    pull(margin)
-  return(round(mean(x), 2))
-}
-
-team_margins = data.frame(team = all_teams) |>
-  mutate(avg_margin = sapply(team, get_team_avg_margin))
-
-margins_records = team_records |>
-  select(team, pct) |>
-  inner_join(team_margins, by = "team")
-
-margins_records |>
-  inner_join(teams_info, by = "team") |>
-  ggplot(aes(avg_margin, pct)) +
-  geom_point(aes(col = team), size = 4, shape = "square", show.legend = F) +
-  ggrepel::geom_text_repel(aes(label = abb), size = 3) +
-  scale_color_manual(values = team_hex) +
-  geom_hline(yintercept = mean(margins_records$pct), linetype = "dashed", alpha = 0.25) +
-  geom_vline(xintercept = mean(margins_records$avg_margin), linetype = "dashed", alpha = 0.25) +
-  scale_x_continuous(breaks = seq(0, 10, by = 0.25)) +
-  scale_y_continuous(breaks = seq(0, 100, by = 5)) +
-  labs(x = "Average Run Margin", y = "Win Percentage",
-       title = "Which teams are winning their close games?")
-```
+### Team Volatility
 
 ```{r echo = F}
 get_scored_sd = function(team) {
@@ -411,49 +380,77 @@ rx = runs_sd |>
 sx = runs_sd |>
   mutate(total_sd = scored_sd + allowed_sd) |>
   slice_max(scored_sd, n = 3, with_ties = F) |>
-  mutate(x = paste0(team, " (", total_sd, ")"))
+  mutate(x = paste0(team, " (", scored_sd, ")"))
 
 ax = runs_sd |>
   mutate(total_sd = scored_sd + allowed_sd) |>
   slice_max(allowed_sd, n = 3, with_ties = F) |>
-  mutate(x = paste0(team, " (", total_sd, ")"))
+  mutate(x = paste0(team, " (", allowed_sd, ")"))
 ```
 
-### Most Volatile Teams
+##### Most Volatile Teams
 
 1. `r rx$x[1]`
 2. `r rx$x[2]`
 3. `r rx$x[3]`
 
-### Most Volatile Offenses
+##### Most Volatile Offenses
 
 1. `r sx$x[1]`
 2. `r sx$x[2]`
 3. `r sx$x[3]`
 
-### Most Volatile Defenses
+##### Most Volatile Defenses
 
 1. `r ax$x[1]`
 2. `r ax$x[2]`
 3. `r ax$x[3]`
 
+___
 
+### Close Game Performance
 
+```{r echo = F}
+end_margins = end_games |>
+  mutate(margin = win_score - lose_score)
 
+get_team_avg_margin = function(team) {
+  x = end_margins |>
+    filter(home_team == team | away_team == team) |>
+    pull(margin)
+  return(round(mean(x), 2))
+}
 
-```{r message = F, warning = F, include = F}
-# new work
-cubs_pk = end_games |>
-  filter(win_team == "Chicago Cubs") |>
-  slice_max(date, n = 1, with_ties = F) |>
-  pull(game_pk)
+team_margins = data.frame(team = all_teams) |>
+  mutate(avg_margin = sapply(team, get_team_avg_margin))
 
-hit_criteria = c("Double", "Home Run", "Single", "Triple")
+margins_records = team_records |>
+  select(team, pct) |>
+  inner_join(team_margins, by = "team")
 
-ab_criteria = c("Double", "Field Error", "Fielders Choice", "Fielders Choice Out",
-                "Flyout", "Forceout", "Grounded Into DP", "Groundout", "Home Run",
-                "Pop Out", "Sac Fly", "Single", "Strikeout", "Triple")
+margins_records |>
+  inner_join(teams_info, by = "team") |>
+  ggplot(aes(avg_margin, pct)) +
+  geom_point(aes(col = team), size = 4, shape = "square", show.legend = F) +
+  ggrepel::geom_text_repel(aes(label = abb), size = 3) +
+  scale_color_manual(values = team_hex) +
+  geom_hline(yintercept = mean(margins_records$pct), linetype = "dashed", alpha = 0.25) +
+  geom_vline(xintercept = mean(margins_records$avg_margin), linetype = "dashed", alpha = 0.25) +
+  scale_x_continuous(breaks = seq(0, 10, by = 0.25)) +
+  scale_y_continuous(breaks = seq(0, 100, by = 5)) +
+  labs(x = "Average Run Margin", y = "Win Percentage",
+       title = "Which teams are winning their close games?")
 ```
+
+___
+
+*Interested in the underlying code that builds this report?* Check it out on GitHub: [mlb24](https://github.com/chadallison/mlb24){target="_blank"}
+
+
+
+
+
+
 
 
 
