@@ -97,9 +97,9 @@ to interpret for others than myself).
 
 ### Yesterday’s Largest Victories
 
-1.  New York Mets def. Pittsburgh Pirates 9-1
-2.  Seattle Mariners def. Cincinnati Reds 5-1
-3.  Oakland Athletics def. St. Louis Cardinals 6-3
+1.  San Francisco Giants def. Arizona Diamondbacks 5-0
+2.  Texas Rangers def. Detroit Tigers 9-7
+3.  Tampa Bay Rays def. Los Angeles Angels 2-1
 
 ------------------------------------------------------------------------
 
