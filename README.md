@@ -97,9 +97,9 @@ to interpret for others than myself).
 
 ### Yesterday’s Largest Victories
 
-1.  San Francisco Giants def. Arizona Diamondbacks 5-0
-2.  Texas Rangers def. Detroit Tigers 9-7
-3.  Tampa Bay Rays def. Los Angeles Angels 2-1
+1.  Arizona Diamondbacks def. San Francisco Giants 17-1
+2.  Cleveland Guardians def. Oakland Athletics 10-2
+3.  Boston Red Sox def. Pittsburgh Pirates 8-1
 
 ------------------------------------------------------------------------
 
@@ -109,21 +109,21 @@ to interpret for others than myself).
 
 ##### Most Volatile Teams
 
-1.  Chicago Cubs (7.23)
-2.  Colorado Rockies (7.05)
-3.  Houston Astros (6.9)
+1.  Arizona Diamondbacks (7.6)
+2.  Chicago Cubs (7.09)
+3.  Colorado Rockies (7.05)
 
 ##### Most Volatile Offenses
 
-1.  Kansas City Royals (4.13)
-2.  San Diego Padres (4.03)
-3.  New York Mets (3.79)
+1.  Arizona Diamondbacks (4.35)
+2.  Kansas City Royals (4.12)
+3.  San Diego Padres (4.04)
 
 ##### Most Volatile Defenses
 
-1.  Los Angeles Angels (3.95)
-2.  Chicago Cubs (3.8)
-3.  Houston Astros (3.73)
+1.  San Francisco Giants (4.16)
+2.  Los Angeles Angels (3.87)
+3.  Chicago Cubs (3.71)
 
 ------------------------------------------------------------------------
 
@@ -136,3 +136,34 @@ to interpret for others than myself).
 *Interested in the underlying code that builds this report?* Check it
 out on GitHub:
 <a href="https://github.com/chadallison/mlb24" target="_blank">mlb24</a>
+
+``` r
+team_npr |>
+  mutate(off_rk = rank(-off_npr),
+         def_rk = rank(-def_npr)) |>
+  filter(off_rk <= 10 & def_rk <= 10)
+```
+
+    ##                   team off_npr def_npr total_npr off_rk def_rk
+    ## 1        New York Mets    0.46    0.53      0.99      7    1.0
+    ## 2    Milwaukee Brewers    0.59    0.28      0.87      4    5.5
+    ## 3 Arizona Diamondbacks    0.43    0.10      0.53      8   10.0
+
+``` r
+team_rspg |>
+  distinct(team, runs_scored_per_game, runs_allowed_per_game) |>
+  mutate(rs_rank = rank(-runs_scored_per_game),
+         ra_rank = rank(runs_allowed_per_game)) |>
+  filter(rs_rank <= 10 & ra_rank <= 10)
+```
+
+    ##                  team runs_scored_per_game runs_allowed_per_game rs_rank
+    ## 1 Cleveland Guardians                 5.60                  3.35       5
+    ## 2  Kansas City Royals                 5.05                  2.80       9
+    ## 3   Milwaukee Brewers                 5.56                  4.11       6
+    ## 4       New York Mets                 5.05                  4.05       9
+    ##   ra_rank
+    ## 1       2
+    ## 2       1
+    ## 3      10
+    ## 4       8

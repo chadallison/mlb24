@@ -451,6 +451,18 @@ ___
 
 
 
+```{r}
+team_npr |>
+  mutate(off_rk = rank(-off_npr),
+         def_rk = rank(-def_npr)) |>
+  filter(off_rk <= 10 & def_rk <= 10)
+
+team_rspg |>
+  distinct(team, runs_scored_per_game, runs_allowed_per_game) |>
+  mutate(rs_rank = rank(-runs_scored_per_game),
+         ra_rank = rank(runs_allowed_per_game)) |>
+  filter(rs_rank <= 10 & ra_rank <= 10)
+```
 
 
 
