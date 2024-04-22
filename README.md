@@ -16,6 +16,7 @@ Work in progress! :)
 - [Yesterday’s Largest Victories](#yesterdays-largest-victories)
 - [Team Volatility](#team-volatility)
 - [Close Game Performance](#close-game-performance)
+- [Runs Scored per Game](#runs-scored-per-game)
 
 ------------------------------------------------------------------------
 
@@ -97,9 +98,9 @@ to interpret for others than myself).
 
 ### Yesterday’s Largest Victories
 
-1.  Milwaukee Brewers def. St. Louis Cardinals 12-5
-2.  Seattle Mariners def. Colorado Rockies 7-0
-3.  San Francisco Giants def. Arizona Diamondbacks 7-3
+1.  Los Angeles Dodgers def. New York Mets 10-0
+2.  Seattle Mariners def. Colorado Rockies 10-2
+3.  Washington Nationals def. Houston Astros 6-0
 
 ------------------------------------------------------------------------
 
@@ -109,21 +110,21 @@ to interpret for others than myself).
 
 ##### Most Volatile Teams
 
-1.  Arizona Diamondbacks (7.51)
-2.  Colorado Rockies (6.97)
-3.  Chicago Cubs (6.87)
+1.  Arizona Diamondbacks (7.35)
+2.  Colorado Rockies (6.98)
+3.  New York Mets (6.91)
 
 ##### Most Volatile Offenses
 
-1.  Arizona Diamondbacks (4.29)
-2.  Kansas City Royals (4.04)
-3.  San Diego Padres (3.99)
+1.  Arizona Diamondbacks (4.19)
+2.  Kansas City Royals (4.09)
+3.  San Diego Padres (3.91)
 
 ##### Most Volatile Defenses
 
-1.  San Francisco Giants (4.09)
-2.  Los Angeles Angels (3.8)
-3.  Houston Astros (3.59)
+1.  San Francisco Giants (3.99)
+2.  Los Angeles Angels (3.73)
+3.  Houston Astros (3.51)
 
 ------------------------------------------------------------------------
 
@@ -133,38 +134,12 @@ to interpret for others than myself).
 
 ------------------------------------------------------------------------
 
+### Runs Scored per Game
+
+![](README_files/figure-gfm/unnamed-chunk-14-1.png)<!-- -->
+
+------------------------------------------------------------------------
+
 *Interested in the underlying code that builds this report?* Check it
 out on GitHub:
 <a href="https://github.com/chadallison/mlb24" target="_blank">mlb24</a>
-
-``` r
-team_npr |>
-  mutate(off_rk = rank(-off_npr),
-         def_rk = rank(-def_npr)) |>
-  filter(off_rk <= 10 & def_rk <= 10)
-```
-
-    ##                  team off_npr def_npr total_npr off_rk def_rk
-    ## 1   Milwaukee Brewers    0.76    0.26      1.02      3    6.0
-    ## 2       New York Mets    0.45    0.55      1.00      6    2.0
-    ## 3 Cleveland Guardians    0.68    0.08      0.76      4    9.0
-    ## 4  Kansas City Royals    0.15    0.45      0.60     10    3.5
-
-``` r
-team_rspg |>
-  distinct(team, runs_scored_per_game, runs_allowed_per_game) |>
-  mutate(rs_rank = rank(-runs_scored_per_game),
-         ra_rank = rank(runs_allowed_per_game)) |>
-  filter(rs_rank <= 10 & ra_rank <= 10)
-```
-
-    ##                  team runs_scored_per_game runs_allowed_per_game rs_rank
-    ## 1 Cleveland Guardians                 5.62                  3.33       5
-    ## 2  Kansas City Royals                 5.14                  3.10       8
-    ## 3   Milwaukee Brewers                 5.89                  4.16       2
-    ## 4       New York Mets                 5.10                  4.05       9
-    ##   ra_rank
-    ## 1       2
-    ## 2       1
-    ## 3       9
-    ## 4       8
