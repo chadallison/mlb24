@@ -98,9 +98,9 @@ to interpret for others than myself).
 
 ### Yesterday’s Largest Victories
 
-1.  Los Angeles Dodgers def. New York Mets 10-0
-2.  Seattle Mariners def. Colorado Rockies 10-2
-3.  Washington Nationals def. Houston Astros 6-0
+1.  Philadelphia Phillies def. Cincinnati Reds 7-0
+2.  Minnesota Twins def. Chicago White Sox 7-0
+3.  Detroit Tigers def. Tampa Bay Rays 7-1
 
 ------------------------------------------------------------------------
 
@@ -110,21 +110,21 @@ to interpret for others than myself).
 
 ##### Most Volatile Teams
 
-1.  Arizona Diamondbacks (7.35)
-2.  Colorado Rockies (6.98)
-3.  New York Mets (6.91)
+1.  Arizona Diamondbacks (7.23)
+2.  Colorado Rockies (6.92)
+3.  New York Mets (6.79)
 
 ##### Most Volatile Offenses
 
-1.  Arizona Diamondbacks (4.19)
-2.  Kansas City Royals (4.09)
-3.  San Diego Padres (3.91)
+1.  Arizona Diamondbacks (4.14)
+2.  Kansas City Royals (4.02)
+3.  San Diego Padres (3.85)
 
 ##### Most Volatile Defenses
 
-1.  San Francisco Giants (3.99)
-2.  Los Angeles Angels (3.73)
-3.  Houston Astros (3.51)
+1.  San Francisco Giants (3.96)
+2.  Los Angeles Angels (3.65)
+3.  Atlanta Braves (3.53)
 
 ------------------------------------------------------------------------
 
