@@ -1,10 +1,6 @@
 Chad’s 2024 MLB Report
 ================
 
-Work in progress! :)
-
-------------------------------------------------------------------------
-
 ### Contents
 
 - [Team Standings](#team-standings)
@@ -98,9 +94,9 @@ to interpret for others than myself).
 
 ### Yesterday’s Largest Victories
 
-1.  Philadelphia Phillies def. Cincinnati Reds 7-0
-2.  Minnesota Twins def. Chicago White Sox 7-0
-3.  Detroit Tigers def. Tampa Bay Rays 7-1
+1.  Arizona Diamondbacks def. St. Louis Cardinals 14-1
+2.  Cincinnati Reds def. Philadelphia Phillies 8-1
+3.  Atlanta Braves def. Miami Marlins 5-0
 
 ------------------------------------------------------------------------
 
@@ -110,21 +106,21 @@ to interpret for others than myself).
 
 ##### Most Volatile Teams
 
-1.  Arizona Diamondbacks (7.23)
-2.  Colorado Rockies (6.92)
-3.  New York Mets (6.79)
+1.  Arizona Diamondbacks (7.5)
+2.  Colorado Rockies (6.87)
+3.  New York Mets (6.72)
 
 ##### Most Volatile Offenses
 
-1.  Arizona Diamondbacks (4.14)
-2.  Kansas City Royals (4.02)
-3.  San Diego Padres (3.85)
+1.  Arizona Diamondbacks (4.39)
+2.  Kansas City Royals (3.95)
+3.  San Diego Padres (3.77)
 
 ##### Most Volatile Defenses
 
-1.  San Francisco Giants (3.96)
-2.  Los Angeles Angels (3.65)
-3.  Atlanta Braves (3.53)
+1.  San Francisco Giants (3.95)
+2.  Atlanta Braves (3.58)
+3.  Los Angeles Angels (3.58)
 
 ------------------------------------------------------------------------
 

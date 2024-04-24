@@ -4,9 +4,6 @@ output: github_document
 knit: (function(input, ...) { rmarkdown::render(input, output_file = "README.md", envir = globalenv()) })
 ---
 
-Work in progress! :)
-
-___
 
 ### Contents
 
