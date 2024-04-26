@@ -13,6 +13,8 @@ Chad’s 2024 MLB Report
 - [Team Volatility](#team-volatility)
 - [Close Game Performance](#close-game-performance)
 - [Runs Scored per Game](#runs-scored-per-game)
+- [One-Run Games](#one-run-games)
+- [NPR and Win Percentage](#npr-and-win-percentage)
 
 ------------------------------------------------------------------------
 
@@ -107,7 +109,7 @@ to interpret for others than myself).
 ##### Most Volatile Teams
 
 1.  Arizona Diamondbacks (7.46)
-2.  Colorado Rockies (6.75)
+2.  Colorado Rockies (6.89)
 3.  New York Mets (6.68)
 
 ##### Most Volatile Offenses
@@ -136,27 +138,18 @@ to interpret for others than myself).
 
 ------------------------------------------------------------------------
 
+### One-Run Games
+
+![](README_files/figure-gfm/unnamed-chunk-15-1.png)<!-- -->
+
+------------------------------------------------------------------------
+
+### NPR and Win Percentage
+
+![](README_files/figure-gfm/unnamed-chunk-16-1.png)<!-- -->
+
+------------------------------------------------------------------------
+
 *Interested in the underlying code that builds this report?* Check it
 out on GitHub:
 <a href="https://github.com/chadallison/mlb24" target="_blank">mlb24</a>
-
-``` r
-team_records |>
-  distinct(team, pct) |>
-  inner_join(team_npr |>
-  distinct(team, total_npr), by = "team") |>
-  inner_join(teams_info, by = "team") |>
-  ggplot(aes(total_npr, pct)) +
-  geom_point(aes(col = team), size = 4, shape = "square", show.legend = F) +
-  ggrepel::geom_text_repel(aes(label = abb), size = 3) +
-  scale_color_manual(values = team_hex) +
-  geom_line(stat = "smooth", formula = y ~ x, method = "lm", se = F,
-            col = "black", linetype = "dashed", alpha = 0.5) +
-  labs(x = "Total NPR", y = "Win Percentage",
-       title = "Scatterplot of NPR and Win Percentage",
-       subtitle = "Teams above/below dashed line are worse/better than their record") +
-  scale_x_continuous(breaks = seq(-5, 5, by = 0.25)) +
-  scale_y_continuous(breaks = seq(0, 100, by = 10))
-```
-
-![](README_files/figure-gfm/unnamed-chunk-15-1.png)<!-- -->
