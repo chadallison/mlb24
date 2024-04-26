@@ -96,9 +96,9 @@ to interpret for others than myself).
 
 ### Yesterday’s Largest Victories
 
-1.  Los Angeles Dodgers def. Washington Nationals 11-2
-2.  Boston Red Sox def. Cleveland Guardians 8-0
-3.  New York Mets def. San Francisco Giants 8-2
+1.  Philadelphia Phillies def. Cincinnati Reds 5-0
+2.  Minnesota Twins def. Chicago White Sox 6-3
+3.  Milwaukee Brewers def. Pittsburgh Pirates 7-5
 
 ------------------------------------------------------------------------
 
@@ -153,3 +153,26 @@ to interpret for others than myself).
 *Interested in the underlying code that builds this report?* Check it
 out on GitHub:
 <a href="https://github.com/chadallison/mlb24" target="_blank">mlb24</a>
+
+``` r
+get_all_games_runs = function(team) {
+  home = end_games |> filter(home_team == team) |> pull(home_score)
+  away = end_games |> filter(away_team == team) |> pull(away_score)
+  return(c(home, away))
+}
+
+xxx = data.frame()
+
+for (team in all_teams) {
+  yyy = data.frame(team = team, runs = get_all_games_runs(team))
+  xxx = rbind(xxx, yyy)
+}
+
+xxx |>
+  ggplot(aes(team, runs)) +
+  geom_boxplot(aes(fill = team), show.legend = F) +
+  coord_flip() +
+  scale_fill_manual(values = team_hex)
+```
+
+![](README_files/figure-gfm/unnamed-chunk-17-1.png)<!-- -->

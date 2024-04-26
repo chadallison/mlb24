@@ -533,6 +533,121 @@ ___
 
 
 
+```{r}
+get_all_games_runs = function(team) {
+  home = end_games |> filter(home_team == team) |> pull(home_score)
+  away = end_games |> filter(away_team == team) |> pull(away_score)
+  return(c(home, away))
+}
+
+xxx = data.frame()
+
+for (team in all_teams) {
+  yyy = data.frame(team = team, runs = get_all_games_runs(team))
+  xxx = rbind(xxx, yyy)
+}
+
+xxx |>
+  ggplot(aes(team, runs)) +
+  geom_boxplot(aes(fill = team), show.legend = F) +
+  coord_flip() +
+  scale_fill_manual(values = team_hex)
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
