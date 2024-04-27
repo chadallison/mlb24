@@ -96,9 +96,9 @@ to interpret for others than myself).
 
 ### Yesterday’s Largest Victories
 
-1.  Philadelphia Phillies def. Cincinnati Reds 5-0
-2.  Minnesota Twins def. Chicago White Sox 6-3
-3.  Milwaukee Brewers def. Pittsburgh Pirates 7-5
+1.  Los Angeles Dodgers def. Toronto Blue Jays 12-2
+2.  Kansas City Royals def. Detroit Tigers 8-0
+3.  Chicago Cubs def. Boston Red Sox 7-1
 
 ------------------------------------------------------------------------
 
@@ -108,21 +108,21 @@ to interpret for others than myself).
 
 ##### Most Volatile Teams
 
-1.  Arizona Diamondbacks (7.46)
+1.  Arizona Diamondbacks (7.41)
 2.  Colorado Rockies (6.89)
-3.  New York Mets (6.68)
+3.  New York Mets (6.58)
 
 ##### Most Volatile Offenses
 
 1.  Arizona Diamondbacks (4.41)
-2.  Kansas City Royals (3.88)
-3.  New York Mets (3.72)
+2.  Kansas City Royals (3.86)
+3.  New York Mets (3.69)
 
 ##### Most Volatile Defenses
 
-1.  San Francisco Giants (3.92)
-2.  Los Angeles Angels (3.51)
-3.  Atlanta Braves (3.5)
+1.  San Francisco Giants (3.96)
+2.  Toronto Blue Jays (3.58)
+3.  Atlanta Braves (3.45)
 
 ------------------------------------------------------------------------
 
