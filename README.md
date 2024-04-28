@@ -57,7 +57,7 @@ expected score, 3 - 3.5 = -0.5, and their defensive NPR is the Cubs’
 expected score minus their actual score, 3.63 - 5 = -1.37. Notice how
 these numbers are opposite each other. So each team will have an
 offensive and defensive NPR for each game, which are aggregated in the
-above plot.
+plot below.
 
 Of course, there are so many other factors that would play into a team’s
 true expected value, such as any injuries, starting pitchers, weather,
@@ -96,9 +96,9 @@ to interpret for others than myself).
 
 ### Yesterday’s Largest Victories
 
-1.  Los Angeles Dodgers def. Toronto Blue Jays 12-2
-2.  Kansas City Royals def. Detroit Tigers 8-0
-3.  Chicago Cubs def. Boston Red Sox 7-1
+1.  Boston Red Sox def. Chicago Cubs 17-0
+2.  New York Yankees def. Milwaukee Brewers 15-3
+3.  Minnesota Twins def. Los Angeles Angels 16-5
 
 ------------------------------------------------------------------------
 
@@ -108,21 +108,21 @@ to interpret for others than myself).
 
 ##### Most Volatile Teams
 
-1.  Arizona Diamondbacks (7.41)
-2.  Colorado Rockies (6.89)
-3.  New York Mets (6.58)
+1.  Arizona Diamondbacks (7.38)
+2.  Chicago Cubs (7.33)
+3.  Colorado Rockies (6.96)
 
 ##### Most Volatile Offenses
 
-1.  Arizona Diamondbacks (4.41)
-2.  Kansas City Royals (3.86)
-3.  New York Mets (3.69)
+1.  Arizona Diamondbacks (4.42)
+2.  Boston Red Sox (3.93)
+3.  Kansas City Royals (3.78)
 
 ##### Most Volatile Defenses
 
-1.  San Francisco Giants (3.96)
-2.  Toronto Blue Jays (3.58)
-3.  Atlanta Braves (3.45)
+1.  Chicago Cubs (4.13)
+2.  Los Angeles Angels (3.99)
+3.  San Francisco Giants (3.89)
 
 ------------------------------------------------------------------------
 
@@ -169,10 +169,15 @@ for (team in all_teams) {
 }
 
 xxx |>
-  ggplot(aes(team, runs)) +
-  geom_boxplot(aes(fill = team), show.legend = F) +
+  inner_join(xxx |>
+  group_by(team) |>
+  summarise(sd = sd(runs)), by = "team") |>
+  ggplot(aes(reorder(team, -sd), runs)) +
+  geom_boxplot(aes(fill = team), show.legend = F, outlier.alpha = 0.25) +
   coord_flip() +
-  scale_fill_manual(values = team_hex)
+  scale_fill_manual(values = team_hex) +
+  labs(x = NULL, y = "Runs Scored SD") +
+  scale_y_continuous(breaks = seq(0, 100, by = 2))
 ```
 
 ![](README_files/figure-gfm/unnamed-chunk-17-1.png)<!-- -->
