@@ -96,9 +96,9 @@ to interpret for others than myself).
 
 ### Yesterday’s Largest Victories
 
-1.  New York Yankees def. Milwaukee Brewers 15-5
-2.  Houston Astros def. Colorado Rockies 8-2
-3.  Minnesota Twins def. Los Angeles Angels 11-5
+1.  Washington Nationals def. Miami Marlins 7-2
+2.  Los Angeles Dodgers def. Arizona Diamondbacks 8-4
+3.  Oakland Athletics def. Pittsburgh Pirates 5-1
 
 ------------------------------------------------------------------------
 
@@ -108,21 +108,21 @@ to interpret for others than myself).
 
 ##### Most Volatile Teams
 
-1.  Arizona Diamondbacks (7.3)
-2.  Milwaukee Brewers (7.27)
-3.  Chicago Cubs (7.21)
+1.  Milwaukee Brewers (7.35)
+2.  Arizona Diamondbacks (7.26)
+3.  Chicago Cubs (7.16)
 
 ##### Most Volatile Offenses
 
-1.  Arizona Diamondbacks (4.36)
+1.  Arizona Diamondbacks (4.29)
 2.  Boston Red Sox (3.86)
-3.  New York Yankees (3.8)
+3.  New York Yankees (3.85)
 
 ##### Most Volatile Defenses
 
-1.  Chicago Cubs (4.06)
-2.  Los Angeles Angels (4.06)
-3.  Milwaukee Brewers (3.86)
+1.  Chicago Cubs (4.04)
+2.  Los Angeles Angels (3.99)
+3.  Milwaukee Brewers (3.85)
 
 ------------------------------------------------------------------------
 
