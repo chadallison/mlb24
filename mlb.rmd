@@ -19,6 +19,7 @@ knit: (function(input, ...) { rmarkdown::render(input, output_file = "README.md"
 - [Runs Scored per Game]
 - [One-Run Games]
 - [NPR and Win Percentage]
+- [Best Records in Last Ten Games]
 
 ___
 
@@ -522,6 +523,33 @@ team_records |>
 
 ___
 
+```{r echo = F}
+get_team_last_10 = function(team) {
+  games = end_games |> filter(home_team == team | away_team == team) |> slice_max(date, n = 10, with_ties = F)
+  wins = games |> filter(win_team == team) |> nrow()
+  losses = games |> filter(lose_team == team) |> nrow()
+  return(paste0(wins, "-", losses))
+}
+
+last10 = data.frame(team = all_teams) |>
+  mutate(last10 = sapply(team, get_team_last_10)) |>
+  separate(last10, into = c("wins", "losses"), sep = "-", convert = T, remove = F) |>
+  mutate(pct = wins / (wins + losses) * 100) |>
+  arrange(desc(pct), team) |>
+  head(5) |>
+  mutate(x = paste0(team, " (", wins, "-", losses, ")"))
+```
+
+### Best Records in Last Ten Games
+
+1. `r last10$x[1]`
+2. `r last10$x[2]`
+3. `r last10$x[3]`
+4. `r last10$x[4]`
+5. `r last10$x[5]`
+
+___
+
 *Interested in the underlying code that builds this report?* Check it out on GitHub: [mlb24](https://github.com/chadallison/mlb24){target="_blank"}
 
 
@@ -558,9 +586,6 @@ xxx |>
   labs(x = NULL, y = "Runs Scored SD") +
   scale_y_continuous(breaks = seq(0, 100, by = 2))
 ```
-
-
-
 
 
 

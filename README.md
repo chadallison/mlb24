@@ -15,6 +15,7 @@ Chad’s 2024 MLB Report
 - [Runs Scored per Game](#runs-scored-per-game)
 - [One-Run Games](#one-run-games)
 - [NPR and Win Percentage](#npr-and-win-percentage)
+- [Best Records in Last Ten Games](#best-records-in-last-ten-games)
 
 ------------------------------------------------------------------------
 
@@ -96,9 +97,9 @@ to interpret for others than myself).
 
 ### Yesterday’s Largest Victories
 
-1.  Milwaukee Brewers def. Tampa Bay Rays 8-2
-2.  Texas Rangers def. Washington Nationals 7-1
-3.  Detroit Tigers def. St. Louis Cardinals 11-6
+1.  Los Angeles Dodgers def. Arizona Diamondbacks 8-0
+2.  Milwaukee Brewers def. Tampa Bay Rays 7-1
+3.  Minnesota Twins def. Chicago White Sox 10-5
 
 ------------------------------------------------------------------------
 
@@ -108,21 +109,21 @@ to interpret for others than myself).
 
 ##### Most Volatile Teams
 
-1.  Milwaukee Brewers (7.29)
-2.  Arizona Diamondbacks (7.15)
-3.  Chicago Cubs (7.08)
+1.  Milwaukee Brewers (7.23)
+2.  Arizona Diamondbacks (7.21)
+3.  Chicago Cubs (7.13)
 
 ##### Most Volatile Offenses
 
-1.  Arizona Diamondbacks (4.22)
-2.  New York Yankees (3.82)
-3.  Boston Red Sox (3.79)
+1.  Arizona Diamondbacks (4.26)
+2.  New York Yankees (3.79)
+3.  Boston Red Sox (3.74)
 
 ##### Most Volatile Defenses
 
-1.  Chicago Cubs (3.97)
-2.  Los Angeles Angels (3.93)
-3.  Milwaukee Brewers (3.81)
+1.  Chicago Cubs (3.99)
+2.  Los Angeles Angels (3.91)
+3.  Milwaukee Brewers (3.8)
 
 ------------------------------------------------------------------------
 
@@ -147,6 +148,16 @@ to interpret for others than myself).
 ### NPR and Win Percentage
 
 ![](README_files/figure-gfm/unnamed-chunk-16-1.png)<!-- -->
+
+------------------------------------------------------------------------
+
+### Best Records in Last Ten Games
+
+1.  Minnesota Twins (10-0)
+2.  Los Angeles Dodgers (8-2)
+3.  Boston Red Sox (7-3)
+4.  Detroit Tigers (7-3)
+5.  Oakland Athletics (7-3)
 
 ------------------------------------------------------------------------
 
@@ -180,4 +191,4 @@ xxx |>
   scale_y_continuous(breaks = seq(0, 100, by = 2))
 ```
 
-![](README_files/figure-gfm/unnamed-chunk-17-1.png)<!-- -->
+![](README_files/figure-gfm/unnamed-chunk-18-1.png)<!-- -->
