@@ -97,9 +97,9 @@ to interpret for others than myself).
 
 ### Yesterday’s Largest Victories
 
-1.  Los Angeles Dodgers def. Arizona Diamondbacks 8-0
-2.  Milwaukee Brewers def. Tampa Bay Rays 7-1
-3.  Minnesota Twins def. Chicago White Sox 10-5
+1.  Texas Rangers def. Washington Nationals 6-0
+2.  Houston Astros def. Cleveland Guardians 8-2
+3.  Baltimore Orioles def. New York Yankees 7-2
 
 ------------------------------------------------------------------------
 
@@ -111,17 +111,17 @@ to interpret for others than myself).
 
 1.  Milwaukee Brewers (7.23)
 2.  Arizona Diamondbacks (7.21)
-3.  Chicago Cubs (7.13)
+3.  Chicago Cubs (7.05)
 
 ##### Most Volatile Offenses
 
 1.  Arizona Diamondbacks (4.26)
-2.  New York Yankees (3.79)
+2.  New York Yankees (3.76)
 3.  Boston Red Sox (3.74)
 
 ##### Most Volatile Defenses
 
-1.  Chicago Cubs (3.99)
+1.  Chicago Cubs (3.95)
 2.  Los Angeles Angels (3.91)
 3.  Milwaukee Brewers (3.8)
 
@@ -155,9 +155,9 @@ to interpret for others than myself).
 
 1.  Minnesota Twins (10-0)
 2.  Los Angeles Dodgers (8-2)
-3.  Boston Red Sox (7-3)
-4.  Detroit Tigers (7-3)
-5.  Oakland Athletics (7-3)
+3.  Detroit Tigers (7-3)
+4.  Oakland Athletics (7-3)
+5.  Philadelphia Phillies (7-3)
 
 ------------------------------------------------------------------------
 
@@ -166,29 +166,36 @@ out on GitHub:
 <a href="https://github.com/chadallison/mlb24" target="_blank">mlb24</a>
 
 ``` r
-get_all_games_runs = function(team) {
-  home = end_games |> filter(home_team == team) |> pull(home_score)
-  away = end_games |> filter(away_team == team) |> pull(away_score)
-  return(c(home, away))
+get_pct_on = function(team, dt) {
+  games = end_games |> filter((home_team == team | away_team == team) & date <= dt)
+  wins = games |> filter(win_team == team) |> nrow()
+  ls = games |> filter(lose_team == team) |> nrow()
+  pct = round(wins / (wins + ls) * 100, 1)
+  return(pct)
 }
 
-xxx = data.frame()
-
-for (team in all_teams) {
-  yyy = data.frame(team = team, runs = get_all_games_runs(team))
-  xxx = rbind(xxx, yyy)
+get_record_on = function(team, dt) {
+  games = end_games |> filter((home_team == team | away_team == team) & date <= dt)
+  if (nrow(games) == 0) return("NO GAMES YET")
+  wins = games |> filter(win_team == team) |> nrow()
+  ls = games |> filter(lose_team == team) |> nrow()
+  str = paste0(wins, "-", ls)
+  return(str)
 }
 
-xxx |>
-  inner_join(xxx |>
-  group_by(team) |>
-  summarise(sd = sd(runs)), by = "team") |>
-  ggplot(aes(reorder(team, -sd), runs)) +
-  geom_boxplot(aes(fill = team), show.legend = F, outlier.alpha = 0.25) +
-  coord_flip() +
-  scale_fill_manual(values = team_hex) +
-  labs(x = NULL, y = "Runs Scored SD") +
-  scale_y_continuous(breaks = seq(0, 100, by = 2))
+all_game_dates = sort(unique(end_games$date))
+
+time_records = crossing(date = all_game_dates, team = all_teams) |>
+  rowwise() |>
+  mutate(win_pct = get_pct_on(team = team, dt = date),
+         record = get_record_on(team = team, dt = date)) |>
+  ungroup() |>
+  filter(record != "NO GAMES YET")
+
+time_records |>
+  ggplot(aes(date, win_pct)) +
+  geom_line(aes(col = team), show.legend = F) +
+  scale_color_manual(values = team_hex)
 ```
 
 ![](README_files/figure-gfm/unnamed-chunk-18-1.png)<!-- -->

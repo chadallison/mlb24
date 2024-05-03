@@ -557,35 +557,43 @@ ___
 
 
 
-
-
-
-
 ```{r}
-get_all_games_runs = function(team) {
-  home = end_games |> filter(home_team == team) |> pull(home_score)
-  away = end_games |> filter(away_team == team) |> pull(away_score)
-  return(c(home, away))
+get_pct_on = function(team, dt) {
+  games = end_games |> filter((home_team == team | away_team == team) & date <= dt)
+  wins = games |> filter(win_team == team) |> nrow()
+  ls = games |> filter(lose_team == team) |> nrow()
+  pct = round(wins / (wins + ls) * 100, 1)
+  return(pct)
 }
 
-xxx = data.frame()
-
-for (team in all_teams) {
-  yyy = data.frame(team = team, runs = get_all_games_runs(team))
-  xxx = rbind(xxx, yyy)
+get_record_on = function(team, dt) {
+  games = end_games |> filter((home_team == team | away_team == team) & date <= dt)
+  if (nrow(games) == 0) return("NO GAMES YET")
+  wins = games |> filter(win_team == team) |> nrow()
+  ls = games |> filter(lose_team == team) |> nrow()
+  str = paste0(wins, "-", ls)
+  return(str)
 }
 
-xxx |>
-  inner_join(xxx |>
-  group_by(team) |>
-  summarise(sd = sd(runs)), by = "team") |>
-  ggplot(aes(reorder(team, -sd), runs)) +
-  geom_boxplot(aes(fill = team), show.legend = F, outlier.alpha = 0.25) +
-  coord_flip() +
-  scale_fill_manual(values = team_hex) +
-  labs(x = NULL, y = "Runs Scored SD") +
-  scale_y_continuous(breaks = seq(0, 100, by = 2))
+all_game_dates = sort(unique(end_games$date))
+
+time_records = crossing(date = all_game_dates, team = all_teams) |>
+  rowwise() |>
+  mutate(win_pct = get_pct_on(team = team, dt = date),
+         record = get_record_on(team = team, dt = date)) |>
+  ungroup() |>
+  filter(record != "NO GAMES YET")
+
+time_records |>
+  ggplot(aes(date, win_pct)) +
+  geom_line(aes(col = team), show.legend = F) +
+  scale_color_manual(values = team_hex)
 ```
+
+
+
+
+
 
 
 
