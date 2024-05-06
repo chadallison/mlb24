@@ -97,9 +97,9 @@ to interpret for others than myself).
 
 ### Yesterday’s Largest Victories
 
-1.  Oakland Athletics def. Miami Marlins 20-4
-2.  San Diego Padres def. Arizona Diamondbacks 13-1
-3.  Philadelphia Phillies def. San Francisco Giants 14-3
+1.  Baltimore Orioles def. Cincinnati Reds 11-1
+2.  Miami Marlins def. Oakland Athletics 12-3
+3.  Boston Red Sox def. Minnesota Twins 9-2
 
 ------------------------------------------------------------------------
 
@@ -109,21 +109,21 @@ to interpret for others than myself).
 
 ##### Most Volatile Teams
 
-1.  Arizona Diamondbacks (7.47)
-2.  Milwaukee Brewers (7.08)
-3.  Chicago Cubs (6.92)
+1.  Arizona Diamondbacks (7.49)
+2.  Milwaukee Brewers (7.09)
+3.  Chicago Cubs (6.89)
 
 ##### Most Volatile Offenses
 
-1.  Arizona Diamondbacks (4.24)
-2.  Boston Red Sox (3.7)
+1.  Arizona Diamondbacks (4.3)
+2.  Boston Red Sox (3.73)
 3.  New York Yankees (3.68)
 
 ##### Most Volatile Defenses
 
-1.  San Francisco Giants (3.96)
-2.  Los Angeles Angels (3.92)
-3.  Chicago Cubs (3.84)
+1.  San Francisco Giants (3.9)
+2.  Los Angeles Angels (3.87)
+3.  Chicago Cubs (3.85)
 
 ------------------------------------------------------------------------
 
@@ -153,54 +153,21 @@ to interpret for others than myself).
 
 ### Best Records in Last Ten Games
 
-1.  Minnesota Twins (10-0)
-2.  Los Angeles Dodgers (8-2)
-3.  Oakland Athletics (8-2)
-4.  Philadelphia Phillies (8-2)
+1.  Minnesota Twins (9-1)
+2.  Philadelphia Phillies (9-1)
+3.  Los Angeles Dodgers (8-2)
+4.  Oakland Athletics (8-2)
 5.  Baltimore Orioles (7-3)
-6.  Kansas City Royals (6-4)
-7.  Milwaukee Brewers (6-4)
-8.  Seattle Mariners (6-4)
-9.  Texas Rangers (6-4)
-10. Washington Nationals (6-4)
+6.  Seattle Mariners (7-3)
+7.  Washington Nationals (7-3)
+8.  Texas Rangers (6-4)
+9.  Boston Red Sox (5-5)
+10. Chicago Cubs (5-5)
 
 ------------------------------------------------------------------------
 
 *Interested in the underlying code that builds this report?* Check it
 out on GitHub:
 <a href="https://github.com/chadallison/mlb24" target="_blank">mlb24</a>
-
-``` r
-get_pct_on = function(team, dt) {
-  games = end_games |> filter((home_team == team | away_team == team) & date <= dt)
-  wins = games |> filter(win_team == team) |> nrow()
-  ls = games |> filter(lose_team == team) |> nrow()
-  pct = round(wins / (wins + ls) * 100, 1)
-  return(pct)
-}
-
-get_record_on = function(team, dt) {
-  games = end_games |> filter((home_team == team | away_team == team) & date <= dt)
-  if (nrow(games) == 0) return("NO GAMES YET")
-  wins = games |> filter(win_team == team) |> nrow()
-  ls = games |> filter(lose_team == team) |> nrow()
-  str = paste0(wins, "-", ls)
-  return(str)
-}
-
-all_game_dates = sort(unique(end_games$date))
-
-time_records = crossing(date = all_game_dates, team = all_teams) |>
-  rowwise() |>
-  mutate(win_pct = get_pct_on(team = team, dt = date),
-         record = get_record_on(team = team, dt = date)) |>
-  ungroup() |>
-  filter(record != "NO GAMES YET")
-
-time_records |>
-  ggplot(aes(date, win_pct)) +
-  geom_line(aes(col = team), show.legend = F) +
-  scale_color_manual(values = team_hex)
-```
 
 ![](README_files/figure-gfm/unnamed-chunk-18-1.png)<!-- -->

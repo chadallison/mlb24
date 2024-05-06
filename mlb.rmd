@@ -557,12 +557,7 @@ ___
 
 *Interested in the underlying code that builds this report?* Check it out on GitHub: [mlb24](https://github.com/chadallison/mlb24){target="_blank"}
 
-
-
-
-
-
-```{r}
+```{r echo = F}
 get_pct_on = function(team, dt) {
   games = end_games |> filter((home_team == team | away_team == team) & date <= dt)
   wins = games |> filter(win_team == team) |> nrow()
@@ -591,8 +586,13 @@ time_records = crossing(date = all_game_dates, team = all_teams) |>
 
 time_records |>
   ggplot(aes(date, win_pct)) +
-  geom_line(aes(col = team), show.legend = F) +
-  scale_color_manual(values = team_hex)
+  geom_line(aes(col = team), linewidth = 1, show.legend = F) +
+  scale_color_manual(values = team_hex) +
+  scale_x_continuous(breaks = seq.Date(from = min(end_games$date), to = max(end_games$date), by = 7)) +
+  labs(x = NULL, y = "Win Percentage",
+       title = "Team Win Percentages over Time")
+
+
 ```
 
 
