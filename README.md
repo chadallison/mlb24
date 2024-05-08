@@ -11,7 +11,6 @@ Chad’s 2024 MLB Report
 - [Scorigami](#scorigami)
 - [Yesterday’s Largest Victories](#yesterdays-largest-victories)
 - [Team Volatility](#team-volatility)
-- [Close Game Performance](#close-game-performance)
 - [Runs Scored per Game](#runs-scored-per-game)
 - [One-Run Games](#one-run-games)
 - [NPR and Win Percentage](#npr-and-win-percentage)
@@ -97,9 +96,9 @@ to interpret for others than myself).
 
 ### Yesterday’s Largest Victories
 
-1.  Tampa Bay Rays def. Chicago White Sox 8-2
-2.  Philadelphia Phillies def. San Francisco Giants 6-1
-3.  Pittsburgh Pirates def. Los Angeles Angels 4-1
+1.  Los Angeles Angels def. Pittsburgh Pirates 9-0
+2.  Philadelphia Phillies def. Toronto Blue Jays 10-1
+3.  Texas Rangers def. Oakland Athletics 15-8
 
 ------------------------------------------------------------------------
 
@@ -109,27 +108,25 @@ to interpret for others than myself).
 
 ##### Most Volatile Teams
 
-1.  Arizona Diamondbacks (7.49)
-2.  Milwaukee Brewers (7.03)
-3.  Chicago Cubs (6.82)
+1.  Arizona Diamondbacks (7.43)
+2.  Oakland Athletics (7.14)
+3.  Milwaukee Brewers (6.93)
 
 ##### Most Volatile Offenses
 
-1.  Arizona Diamondbacks (4.3)
-2.  Boston Red Sox (3.73)
-3.  New York Yankees (3.68)
+1.  Arizona Diamondbacks (4.25)
+2.  Texas Rangers (3.88)
+3.  New York Yankees (3.74)
 
 ##### Most Volatile Defenses
 
-1.  San Francisco Giants (3.85)
-2.  Chicago Cubs (3.81)
-3.  Los Angeles Angels (3.81)
+1.  San Francisco Giants (3.88)
+2.  Los Angeles Angels (3.86)
+3.  Chicago Cubs (3.78)
 
 ------------------------------------------------------------------------
 
 ### Close Game Performance
-
-![](README_files/figure-gfm/unnamed-chunk-13-1.png)<!-- -->
 
 ------------------------------------------------------------------------
 
@@ -153,16 +150,16 @@ to interpret for others than myself).
 
 ### Best Records in Last Ten Games
 
-1.  Minnesota Twins (9-1)
-2.  Philadelphia Phillies (9-1)
-3.  Los Angeles Dodgers (8-2)
+1.  Philadelphia Phillies (9-1)
+2.  Los Angeles Dodgers (8-2)
+3.  Minnesota Twins (8-2)
 4.  Baltimore Orioles (7-3)
-5.  Oakland Athletics (7-3)
-6.  Texas Rangers (7-3)
-7.  Washington Nationals (7-3)
-8.  Seattle Mariners (6-4)
-9.  Boston Red Sox (5-5)
-10. Chicago White Sox (5-5)
+5.  Texas Rangers (7-3)
+6.  Washington Nationals (7-3)
+7.  New York Yankees (6-4)
+8.  Oakland Athletics (6-4)
+9.  Seattle Mariners (6-4)
+10. Tampa Bay Rays (6-4)
 
 ------------------------------------------------------------------------
 
