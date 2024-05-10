@@ -406,10 +406,6 @@ ax = runs_sd |>
 2. `r ax$x[2]`
 3. `r ax$x[3]`
 
-___
-
-### Close Game Performance
-
 ```{r echo = F}
 end_margins = end_games |>
   mutate(margin = win_score - lose_score)
@@ -577,10 +573,7 @@ time_records |>
   scale_x_continuous(breaks = seq.Date(from = min(end_games$date), to = max(end_games$date), by = 7)) +
   labs(x = NULL, y = "Win Percentage",
        title = "Team Win Percentages over Time")
-
-
 ```
-
 
 
 
