@@ -15,6 +15,8 @@ Chad’s 2024 MLB Report
 - [One-Run Games](#one-run-games)
 - [NPR and Win Percentage](#npr-and-win-percentage)
 - [Best Records in Last Ten Games](#best-records-in-last-ten-games)
+- [Early Leads](#early-leads)
+- [First Score Dependence](#first-score-dependence)
 
 ------------------------------------------------------------------------
 
@@ -96,9 +98,9 @@ to interpret for others than myself).
 
 ### Yesterday’s Largest Victories
 
-1.  Milwaukee Brewers def. St. Louis Cardinals 11-2
-2.  Seattle Mariners def. Oakland Athletics 8-1
-3.  Philadelphia Phillies def. Miami Marlins 8-2
+1.  Oakland Athletics def. Seattle Mariners 8-1
+2.  Detroit Tigers def. Houston Astros 8-2
+3.  Los Angeles Angels def. Kansas City Royals 9-3
 
 ------------------------------------------------------------------------
 
@@ -108,20 +110,20 @@ to interpret for others than myself).
 
 ##### Most Volatile Teams
 
-1.  Oakland Athletics (7.42)
-2.  Arizona Diamondbacks (7.17)
-3.  Texas Rangers (7.01)
+1.  Oakland Athletics (7.43)
+2.  Arizona Diamondbacks (7.09)
+3.  Texas Rangers (6.98)
 
 ##### Most Volatile Offenses
 
-1.  Arizona Diamondbacks (4.11)
-2.  Texas Rangers (3.93)
-3.  Boston Red Sox (3.71)
+1.  Arizona Diamondbacks (4.06)
+2.  Texas Rangers (3.89)
+3.  Boston Red Sox (3.67)
 
 ##### Most Volatile Defenses
 
-1.  Los Angeles Angels (3.83)
-2.  San Francisco Giants (3.8)
+1.  San Francisco Giants (3.8)
+2.  Los Angeles Angels (3.79)
 3.  Oakland Athletics (3.79)
 
 ------------------------------------------------------------------------
@@ -146,84 +148,31 @@ to interpret for others than myself).
 
 ### Best Records in Last Ten Games
 
-1.  Baltimore Orioles (8-2)
-2.  Los Angeles Dodgers (8-2)
-3.  Minnesota Twins (8-2)
-4.  Philadelphia Phillies (8-2)
-5.  Kansas City Royals (7-3)
-6.  San Diego Padres (7-3)
-7.  Milwaukee Brewers (6-4)
-8.  New York Yankees (6-4)
-9.  Tampa Bay Rays (6-4)
-10. Texas Rangers (6-4)
+1.  Philadelphia Phillies (9-1)
+2.  Baltimore Orioles (8-2)
+3.  Los Angeles Dodgers (8-2)
+4.  Minnesota Twins (7-3)
+5.  San Diego Padres (7-3)
+6.  Chicago White Sox (6-4)
+7.  Kansas City Royals (6-4)
+8.  Milwaukee Brewers (6-4)
+9.  New York Yankees (6-4)
+10. Tampa Bay Rays (6-4)
+
+------------------------------------------------------------------------
+
+### Early Leads
+
+![](README_files/figure-gfm/unnamed-chunk-19-1.png)<!-- -->
+
+------------------------------------------------------------------------
+
+### First Score Dependence
+
+![](README_files/figure-gfm/unnamed-chunk-20-1.png)<!-- -->
 
 ------------------------------------------------------------------------
 
 *Interested in the underlying code that builds this report?* Check it
 out on GitHub:
 <a href="https://github.com/chadallison/mlb24" target="_blank">mlb24</a>
-
-![](README_files/figure-gfm/unnamed-chunk-18-1.png)<!-- -->
-
-``` r
-get_game_first_score_team = function(pk) {
-  x = mlb_pbp(pk) |>
-    mutate(about.startTime = as_datetime(about.startTime)) |>
-    filter(result.awayScore > 0 | result.homeScore > 0) |>
-    slice_min(about.startTime, n = 1, with_ties = F) |>
-    pull(batting_team) |>
-    unlist()
-  return(x[1])
-}
-
-# end_first_scores = end_games |>
-#   mutate(first_scorer = sapply(game_pk, get_game_first_score_team))
-
-end_first_scores = read_csv("data/first_scorers.csv", show_col_types = F)
-
-new_scores = end_games |>
-  filter(!game_pk %in% end_first_scores$game_pk)
-
-if (nrow(new_scores) > 0) {
-  new_first_scores = new_scores |>
-    mutate(first_scorer = sapply(game_pk, get_game_first_score_team))
-  
-  end_first_scores = rbind(end_first_scores, new_first_scores)
-}
-
-write_csv(end_first_scores, "data/first_scorers.csv")
-```
-
-``` r
-first_score_rates = end_first_scores |>
-  count(first_scorer) |>
-  arrange(desc(n)) |>
-  rename(team = first_scorer, first_scores = n) |>
-  inner_join(team_records |>
-  transmute(team, gp = wins + losses, win_pct = pct), by = "team") |>
-  mutate(first_score_rate = round(first_scores / gp * 100, 1))
-
-get_team_win_pct_when_first_score = function(team) {
-  data = end_first_scores |> filter(first_scorer == team)
-  wins = data |> filter(win_team == team) |> nrow()
-  losses = data |> filter(lose_team == team) |> nrow()
-  return(round(wins / (wins + losses) * 100, 1))
-}
-
-first_score_rates |>
-  mutate(win_pct_on_first_score = sapply(team, get_team_win_pct_when_first_score)) |>
-  inner_join(teams_info, by = "team") |>
-  ggplot(aes(first_score_rate, win_pct_on_first_score)) +
-  geom_point(aes(col = team), shape = "square", size = 4, show.legend = F) +
-  scale_color_manual(values = team_hex) +
-  ggrepel::geom_text_repel(aes(label = abb), size = 3) +
-  geom_line(stat = "smooth", method = "lm", formula = y ~ x, linetype = "dashed", alpha = 0.5) +
-  geom_vline(xintercept = 50, linetype = "dotted", alpha = 0.25) +
-  geom_hline(yintercept = 50, linetype = "dotted", alpha = 0.25) +
-  labs(x = "First Score Rate", y = "Win Percentage When Scoring First",
-       title = "Which teams capitalize on an early lead?") +
-  scale_x_continuous(breaks = seq(0, 100, by = 5)) +
-  scale_y_continuous(breaks = seq(0, 100, by = 5))
-```
-
-![](README_files/figure-gfm/unnamed-chunk-20-1.png)<!-- -->
