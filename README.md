@@ -17,6 +17,7 @@ Chad’s 2024 MLB Report
 - [Best Records in Last Ten Games](#best-records-in-last-ten-games)
 - [Early Leads](#early-leads)
 - [First Score Dependence](#first-score-dependence)
+- [Home Field Advantage](#home-field-advantage)
 
 ------------------------------------------------------------------------
 
@@ -98,9 +99,9 @@ to interpret for others than myself).
 
 ### Yesterday’s Largest Victories
 
-1.  Oakland Athletics def. Seattle Mariners 8-1
-2.  Detroit Tigers def. Houston Astros 8-2
-3.  Los Angeles Angels def. Kansas City Royals 9-3
+1.  Arizona Diamondbacks def. Baltimore Orioles 9-2
+2.  Cleveland Guardians def. Chicago White Sox 7-0
+3.  Houston Astros def. Detroit Tigers 9-3
 
 ------------------------------------------------------------------------
 
@@ -110,21 +111,21 @@ to interpret for others than myself).
 
 ##### Most Volatile Teams
 
-1.  Oakland Athletics (7.43)
-2.  Arizona Diamondbacks (7.09)
-3.  Texas Rangers (6.98)
+1.  Oakland Athletics (7.37)
+2.  Arizona Diamondbacks (7.08)
+3.  Texas Rangers (6.95)
 
 ##### Most Volatile Offenses
 
 1.  Arizona Diamondbacks (4.06)
 2.  Texas Rangers (3.89)
-3.  Boston Red Sox (3.67)
+3.  New York Yankees (3.72)
 
 ##### Most Volatile Defenses
 
-1.  San Francisco Giants (3.8)
-2.  Los Angeles Angels (3.79)
-3.  Oakland Athletics (3.79)
+1.  Oakland Athletics (3.77)
+2.  Los Angeles Angels (3.75)
+3.  San Francisco Giants (3.75)
 
 ------------------------------------------------------------------------
 
@@ -148,16 +149,16 @@ to interpret for others than myself).
 
 ### Best Records in Last Ten Games
 
-1.  Philadelphia Phillies (9-1)
-2.  Baltimore Orioles (8-2)
-3.  Los Angeles Dodgers (8-2)
+1.  Los Angeles Dodgers (8-2)
+2.  Philadelphia Phillies (8-2)
+3.  Baltimore Orioles (7-3)
 4.  Minnesota Twins (7-3)
-5.  San Diego Padres (7-3)
-6.  Chicago White Sox (6-4)
-7.  Kansas City Royals (6-4)
-8.  Milwaukee Brewers (6-4)
-9.  New York Yankees (6-4)
-10. Tampa Bay Rays (6-4)
+5.  New York Yankees (7-3)
+6.  San Diego Padres (7-3)
+7.  Chicago White Sox (6-4)
+8.  Kansas City Royals (6-4)
+9.  Tampa Bay Rays (6-4)
+10. Arizona Diamondbacks (5-5)
 
 ------------------------------------------------------------------------
 
@@ -170,6 +171,24 @@ to interpret for others than myself).
 ### First Score Dependence
 
 ![](README_files/figure-gfm/unnamed-chunk-20-1.png)<!-- -->
+
+------------------------------------------------------------------------
+
+### Home Field Advantage
+
+![](README_files/figure-gfm/unnamed-chunk-22-1.png)<!-- -->
+
+##### Most Home-Dependent Teams
+
+- Colorado Rockies (42.9% home / 15.8% away)
+- Atlanta Braves (76.5% home / 52.6% away)
+- San Francisco Giants (57.9% home / 34.8% away)
+
+##### Better-on-the-Road Teams
+
+- Los Angeles Angels (26.3% home / 45.5% away)
+- San Diego Padres (43.5% home / 60% away)
+- Washington Nationals (41.2% home / 54.5% away)
 
 ------------------------------------------------------------------------
 
