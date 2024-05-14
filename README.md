@@ -99,9 +99,9 @@ to interpret for others than myself).
 
 ### Yesterday’s Largest Victories
 
-1.  Arizona Diamondbacks def. Baltimore Orioles 9-2
-2.  Cleveland Guardians def. Chicago White Sox 7-0
-3.  Houston Astros def. Detroit Tigers 9-3
+1.  Cleveland Guardians def. Texas Rangers 7-0
+2.  Houston Astros def. Oakland Athletics 9-2
+3.  St. Louis Cardinals def. Los Angeles Angels 10-5
 
 ------------------------------------------------------------------------
 
@@ -111,21 +111,21 @@ to interpret for others than myself).
 
 ##### Most Volatile Teams
 
-1.  Oakland Athletics (7.37)
-2.  Arizona Diamondbacks (7.08)
-3.  Texas Rangers (6.95)
+1.  Oakland Athletics (7.36)
+2.  Arizona Diamondbacks (6.99)
+3.  Texas Rangers (6.96)
 
 ##### Most Volatile Offenses
 
-1.  Arizona Diamondbacks (4.06)
-2.  Texas Rangers (3.89)
+1.  Arizona Diamondbacks (4.01)
+2.  Texas Rangers (3.91)
 3.  New York Yankees (3.72)
 
 ##### Most Volatile Defenses
 
-1.  Oakland Athletics (3.77)
-2.  Los Angeles Angels (3.75)
-3.  San Francisco Giants (3.75)
+1.  Oakland Athletics (3.79)
+2.  Los Angeles Angels (3.78)
+3.  San Francisco Giants (3.71)
 
 ------------------------------------------------------------------------
 
@@ -154,11 +154,11 @@ to interpret for others than myself).
 3.  Baltimore Orioles (7-3)
 4.  Minnesota Twins (7-3)
 5.  New York Yankees (7-3)
-6.  San Diego Padres (7-3)
-7.  Chicago White Sox (6-4)
-8.  Kansas City Royals (6-4)
-9.  Tampa Bay Rays (6-4)
-10. Arizona Diamondbacks (5-5)
+6.  Tampa Bay Rays (7-3)
+7.  Arizona Diamondbacks (6-4)
+8.  Atlanta Braves (6-4)
+9.  Chicago White Sox (6-4)
+10. Cleveland Guardians (6-4)
 
 ------------------------------------------------------------------------
 
@@ -180,14 +180,14 @@ to interpret for others than myself).
 
 ##### Most Home-Dependent Teams
 
-- Colorado Rockies (42.9% home / 15.8% away)
-- Atlanta Braves (76.5% home / 52.6% away)
-- San Francisco Giants (57.9% home / 34.8% away)
+- Atlanta Braves (77.8% home / 52.6% away)
+- Colorado Rockies (42.9% home / 20% away)
+- Chicago Cubs (68.4% home / 47.8% away)
 
 ##### Better-on-the-Road Teams
 
-- Los Angeles Angels (26.3% home / 45.5% away)
-- San Diego Padres (43.5% home / 60% away)
+- Los Angeles Angels (25% home / 45.5% away)
+- San Diego Padres (41.7% home / 60% away)
 - Washington Nationals (41.2% home / 54.5% away)
 
 ------------------------------------------------------------------------
