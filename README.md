@@ -99,9 +99,9 @@ to interpret for others than myself).
 
 ### Yesterday’s Largest Victories
 
-1.  Milwaukee Brewers def. Pittsburgh Pirates 10-2
-2.  Colorado Rockies def. San Diego Padres 8-0
-3.  Chicago Cubs def. Atlanta Braves 7-1
+1.  Houston Astros def. Oakland Athletics 8-1
+2.  New York Yankees def. Minnesota Twins 5-0
+3.  Cincinnati Reds def. Los Angeles Dodgers 7-2
 
 ------------------------------------------------------------------------
 
@@ -111,7 +111,7 @@ to interpret for others than myself).
 
 ##### Most Volatile Teams
 
-1.  Oakland Athletics (7.29)
+1.  Oakland Athletics (7.26)
 2.  Arizona Diamondbacks (6.94)
 3.  Texas Rangers (6.91)
 
@@ -119,13 +119,13 @@ to interpret for others than myself).
 
 1.  Arizona Diamondbacks (3.97)
 2.  Texas Rangers (3.83)
-3.  New York Yankees (3.63)
+3.  New York Yankees (3.59)
 
 ##### Most Volatile Defenses
 
 1.  San Francisco Giants (3.75)
 2.  Los Angeles Angels (3.73)
-3.  Oakland Athletics (3.73)
+3.  Oakland Athletics (3.72)
 
 ------------------------------------------------------------------------
 
@@ -150,15 +150,15 @@ to interpret for others than myself).
 ### Best Records in Last Ten Games
 
 1.  New York Yankees (8-2)
-2.  Philadelphia Phillies (8-2)
-3.  Arizona Diamondbacks (7-3)
-4.  Baltimore Orioles (7-3)
-5.  Colorado Rockies (7-3)
-6.  Los Angeles Dodgers (7-3)
+2.  Arizona Diamondbacks (7-3)
+3.  Baltimore Orioles (7-3)
+4.  Colorado Rockies (7-3)
+5.  Houston Astros (7-3)
+6.  Philadelphia Phillies (7-3)
 7.  Atlanta Braves (6-4)
 8.  Chicago White Sox (6-4)
-9.  Houston Astros (6-4)
-10. Kansas City Royals (6-4)
+9.  Kansas City Royals (6-4)
+10. Los Angeles Dodgers (6-4)
 
 ------------------------------------------------------------------------
 
@@ -182,7 +182,7 @@ to interpret for others than myself).
 
 - Chicago White Sox (43.5% home / 20% away)
 - Atlanta Braves (75% home / 52.6% away)
-- Chicago Cubs (68.4% home / 48% away)
+- San Francisco Giants (54.5% home / 34.8% away)
 
 ##### Better-on-the-Road Teams
 
