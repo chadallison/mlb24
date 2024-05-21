@@ -99,9 +99,9 @@ to interpret for others than myself).
 
 ### Yesterday’s Largest Victories
 
-1.  Boston Red Sox def. St. Louis Cardinals 11-3
-2.  San Diego Padres def. Atlanta Braves 9-1
-3.  Philadelphia Phillies def. Washington Nationals 11-5
+1.  Washington Nationals def. Minnesota Twins 12-3
+2.  Toronto Blue Jays def. Chicago White Sox 9-3
+3.  Boston Red Sox def. Tampa Bay Rays 5-0
 
 ------------------------------------------------------------------------
 
@@ -112,20 +112,20 @@ to interpret for others than myself).
 ##### Most Volatile Teams
 
 1.  Oakland Athletics (7.08)
-2.  Arizona Diamondbacks (7.07)
+2.  Arizona Diamondbacks (7)
 3.  Texas Rangers (6.83)
 
 ##### Most Volatile Offenses
 
-1.  Arizona Diamondbacks (3.91)
+1.  Arizona Diamondbacks (3.87)
 2.  Texas Rangers (3.76)
-3.  Boston Red Sox (3.52)
+3.  Boston Red Sox (3.48)
 
 ##### Most Volatile Defenses
 
 1.  Miami Marlins (3.69)
-2.  Los Angeles Angels (3.68)
-3.  San Francisco Giants (3.67)
+2.  San Francisco Giants (3.67)
+3.  Los Angeles Angels (3.66)
 
 ------------------------------------------------------------------------
 
@@ -149,16 +149,16 @@ to interpret for others than myself).
 
 ### Best Records in Last Ten Games
 
-1.  Houston Astros (8-2)
-2.  New York Yankees (8-2)
-3.  Philadelphia Phillies (8-2)
+1.  New York Yankees (8-2)
+2.  Philadelphia Phillies (8-2)
+3.  Cleveland Guardians (7-3)
 4.  Colorado Rockies (7-3)
-5.  Kansas City Royals (7-3)
-6.  Atlanta Braves (6-4)
-7.  Baltimore Orioles (6-4)
-8.  Cleveland Guardians (6-4)
-9.  Los Angeles Dodgers (6-4)
-10. Milwaukee Brewers (6-4)
+5.  Houston Astros (7-3)
+6.  Kansas City Royals (7-3)
+7.  Los Angeles Dodgers (7-3)
+8.  Baltimore Orioles (6-4)
+9.  Miami Marlins (6-4)
+10. San Francisco Giants (6-4)
 
 ------------------------------------------------------------------------
 
@@ -180,15 +180,15 @@ to interpret for others than myself).
 
 ##### Most Home-Dependent Teams
 
-- Chicago White Sox (43.5% home / 17.4% away)
+- Chicago White Sox (43.5% home / 16.7% away)
 - San Francisco Giants (60% home / 34.8% away)
-- Colorado Rockies (42.9% home / 24% away)
+- Kansas City Royals (69.2% home / 50% away)
 
 ##### Better-on-the-Road Teams
 
-- San Diego Padres (38.5% home / 63.6% away)
-- Los Angeles Angels (27.3% home / 48% away)
-- Detroit Tigers (43.5% home / 59.1% away)
+- San Diego Padres (38.5% home / 62.5% away)
+- Los Angeles Angels (27.3% home / 50% away)
+- Detroit Tigers (43.5% home / 56.5% away)
 
 ------------------------------------------------------------------------
 
