@@ -22,6 +22,7 @@ knit: (function(input, ...) { rmarkdown::render(input, output_file = "README.md"
 - [Early Leads]
 - [First Score Dependence]
 - [Home Field Advantage]
+- [Winning and Losing Streaks]
 
 ___
 
@@ -755,12 +756,7 @@ away_dep = home_away_pct |>
 
 ___
 
-*Interested in the underlying code that builds this report?* Check it out on GitHub: [mlb24](https://github.com/chadallison/mlb24){target="_blank"}
-
-
-
-
-```{r}
+```{r echo = F}
 get_win_streak = function(team) {
   games = end_games |> filter(home_team == team | away_team == team) |> mutate(result = ifelse(win_team == team, "W", "L")) |> arrange(desc(date))
   ws = 0
@@ -802,9 +798,18 @@ lose_streaks = win_lose_streaks |>
   arrange(desc(lose_streak)) |>
   pull(x)
 
-win_streaks
+win_streaks = paste(win_streaks, collapse = ", ")
+lose_streaks = paste(lose_streaks, collapse = ", ")
 ```
 
+### Winning and Losing Streaks
+
+- **Winning Streaks**: `r win_streaks`
+- **Losing Streaks**: `r lose_streaks`
+
+___
+
+*Interested in the underlying code that builds this report?* Check it out on GitHub: [mlb24](https://github.com/chadallison/mlb24){target="_blank"}
 
 
 

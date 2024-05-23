@@ -18,6 +18,7 @@ Chad’s 2024 MLB Report
 - [Early Leads](#early-leads)
 - [First Score Dependence](#first-score-dependence)
 - [Home Field Advantage](#home-field-advantage)
+- [Winning and Losing Streaks](#winning-and-losing-streaks)
 
 ------------------------------------------------------------------------
 
@@ -192,56 +193,17 @@ to interpret for others than myself).
 
 ------------------------------------------------------------------------
 
+### Winning and Losing Streaks
+
+- **Winning Streaks**: Cleveland Guardians (W6), Kansas City Royals
+  (W6), Philadelphia Phillies (W5), Boston Red Sox (W4), St. Louis
+  Cardinals (W4), Arizona Diamondbacks (W2), Minnesota Twins (W2)
+- **Losing Streaks**: Baltimore Orioles (L4), Detroit Tigers (L4), Tampa
+  Bay Rays (L4), New York Mets (L3), Texas Rangers (L3), Los Angeles
+  Dodgers (L2), Washington Nationals (L2)
+
+------------------------------------------------------------------------
+
 *Interested in the underlying code that builds this report?* Check it
 out on GitHub:
 <a href="https://github.com/chadallison/mlb24" target="_blank">mlb24</a>
-
-``` r
-get_win_streak = function(team) {
-  games = end_games |> filter(home_team == team | away_team == team) |> mutate(result = ifelse(win_team == team, "W", "L")) |> arrange(desc(date))
-  ws = 0
-  for (i in 1:nrow(games)) {
-    if (games$result[i] == "W") {
-      ws = ws + 1
-    } else {
-      return(ws)
-    }
-  }
-}
-
-get_lose_streak = function(team) {
-  games = end_games |> filter(home_team == team | away_team == team) |> mutate(result = ifelse(win_team == team, "W", "L")) |> arrange(desc(date))
-  ls = 0
-  for (i in 1:nrow(games)) {
-    if (games$result[i] == "L") {
-      ls = ls + 1
-    } else {
-      return(ls)
-    }
-  }
-}
-
-win_lose_streaks = data.frame(team = all_teams) |>
-  mutate(win_streak = sapply(team, get_win_streak),
-         lose_streak = sapply(team, get_lose_streak),
-         streak = ifelse(win_streak > lose_streak, paste0("W", win_streak), paste0("L", lose_streak)))
-
-win_streaks = win_lose_streaks |>
-  filter(win_streak > 1) |>
-  mutate(x = paste0(team, " (", streak, ")")) |>
-  arrange(desc(win_streak)) |>
-  pull(x)
-
-lose_streaks = win_lose_streaks |>
-  filter(lose_streak > 1) |>
-  mutate(x = paste0(team, " (", streak, ")")) |>
-  arrange(desc(lose_streak)) |>
-  pull(x)
-
-win_streaks
-```
-
-    ## [1] "Cleveland Guardians (W6)"   "Kansas City Royals (W6)"   
-    ## [3] "Philadelphia Phillies (W5)" "Boston Red Sox (W4)"       
-    ## [5] "St. Louis Cardinals (W4)"   "Arizona Diamondbacks (W2)" 
-    ## [7] "Minnesota Twins (W2)"
