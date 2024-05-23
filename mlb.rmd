@@ -760,6 +760,50 @@ ___
 
 
 
+```{r}
+get_win_streak = function(team) {
+  games = end_games |> filter(home_team == team | away_team == team) |> mutate(result = ifelse(win_team == team, "W", "L")) |> arrange(desc(date))
+  ws = 0
+  for (i in 1:nrow(games)) {
+    if (games$result[i] == "W") {
+      ws = ws + 1
+    } else {
+      return(ws)
+    }
+  }
+}
+
+get_lose_streak = function(team) {
+  games = end_games |> filter(home_team == team | away_team == team) |> mutate(result = ifelse(win_team == team, "W", "L")) |> arrange(desc(date))
+  ls = 0
+  for (i in 1:nrow(games)) {
+    if (games$result[i] == "L") {
+      ls = ls + 1
+    } else {
+      return(ls)
+    }
+  }
+}
+
+win_lose_streaks = data.frame(team = all_teams) |>
+  mutate(win_streak = sapply(team, get_win_streak),
+         lose_streak = sapply(team, get_lose_streak),
+         streak = ifelse(win_streak > lose_streak, paste0("W", win_streak), paste0("L", lose_streak)))
+
+win_streaks = win_lose_streaks |>
+  filter(win_streak > 1) |>
+  mutate(x = paste0(team, " (", streak, ")")) |>
+  arrange(desc(win_streak)) |>
+  pull(x)
+
+lose_streaks = win_lose_streaks |>
+  filter(lose_streak > 1) |>
+  mutate(x = paste0(team, " (", streak, ")")) |>
+  arrange(desc(lose_streak)) |>
+  pull(x)
+
+win_streaks
+```
 
 
 

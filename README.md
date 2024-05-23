@@ -99,9 +99,9 @@ to interpret for others than myself).
 
 ### Yesterday’s Largest Victories
 
-1.  Minnesota Twins def. Washington Nationals 10-0
-2.  Kansas City Royals def. Detroit Tigers 10-3
-3.  Chicago White Sox def. Toronto Blue Jays 5-0
+1.  Philadelphia Phillies def. Texas Rangers 11-4
+2.  Toronto Blue Jays def. Chicago White Sox 9-2
+3.  Atlanta Braves def. Chicago Cubs 9-2
 
 ------------------------------------------------------------------------
 
@@ -111,21 +111,21 @@ to interpret for others than myself).
 
 ##### Most Volatile Teams
 
-1.  Oakland Athletics (7.01)
-2.  Arizona Diamondbacks (6.96)
-3.  Texas Rangers (6.78)
+1.  Arizona Diamondbacks (6.96)
+2.  Oakland Athletics (6.95)
+3.  Texas Rangers (6.85)
 
 ##### Most Volatile Offenses
 
-1.  Arizona Diamondbacks (3.85)
-2.  Texas Rangers (3.74)
-3.  San Diego Padres (3.49)
+1.  Arizona Diamondbacks (3.81)
+2.  Texas Rangers (3.7)
+3.  San Diego Padres (3.48)
 
 ##### Most Volatile Defenses
 
-1.  Miami Marlins (3.65)
-2.  San Francisco Giants (3.65)
-3.  Los Angeles Angels (3.62)
+1.  Miami Marlins (3.7)
+2.  Los Angeles Angels (3.63)
+3.  Chicago Cubs (3.62)
 
 ------------------------------------------------------------------------
 
@@ -149,16 +149,16 @@ to interpret for others than myself).
 
 ### Best Records in Last Ten Games
 
-1.  Cleveland Guardians (8-2)
-2.  Houston Astros (8-2)
-3.  Philadelphia Phillies (8-2)
-4.  Kansas City Royals (7-3)
-5.  New York Yankees (7-3)
-6.  Baltimore Orioles (6-4)
-7.  Colorado Rockies (6-4)
-8.  Los Angeles Dodgers (6-4)
-9.  Miami Marlins (6-4)
-10. Pittsburgh Pirates (6-4)
+1.  Cleveland Guardians (9-1)
+2.  Kansas City Royals (8-2)
+3.  New York Yankees (8-2)
+4.  Philadelphia Phillies (8-2)
+5.  St. Louis Cardinals (8-2)
+6.  Houston Astros (7-3)
+7.  Miami Marlins (7-3)
+8.  San Francisco Giants (7-3)
+9.  Arizona Diamondbacks (6-4)
+10. Colorado Rockies (6-4)
 
 ------------------------------------------------------------------------
 
@@ -180,18 +180,68 @@ to interpret for others than myself).
 
 ##### Most Home-Dependent Teams
 
-- San Francisco Giants (60% home / 33.3% away)
-- Chicago White Sox (43.5% home / 20% away)
-- Kansas City Royals (70.4% home / 50% away)
+- Chicago White Sox (43.5% home / 19.2% away)
+- San Francisco Giants (60% home / 36% away)
+- Kansas City Royals (71.4% home / 50% away)
 
 ##### Better-on-the-Road Teams
 
-- San Diego Padres (38.5% home / 60% away)
-- Los Angeles Angels (27.3% home / 48.1% away)
-- Boston Red Sox (43.5% home / 57.7% away)
+- San Diego Padres (38.5% home / 61.5% away)
+- Los Angeles Angels (27.3% home / 50% away)
+- Boston Red Sox (43.5% home / 59.3% away)
 
 ------------------------------------------------------------------------
 
 *Interested in the underlying code that builds this report?* Check it
 out on GitHub:
 <a href="https://github.com/chadallison/mlb24" target="_blank">mlb24</a>
+
+``` r
+get_win_streak = function(team) {
+  games = end_games |> filter(home_team == team | away_team == team) |> mutate(result = ifelse(win_team == team, "W", "L")) |> arrange(desc(date))
+  ws = 0
+  for (i in 1:nrow(games)) {
+    if (games$result[i] == "W") {
+      ws = ws + 1
+    } else {
+      return(ws)
+    }
+  }
+}
+
+get_lose_streak = function(team) {
+  games = end_games |> filter(home_team == team | away_team == team) |> mutate(result = ifelse(win_team == team, "W", "L")) |> arrange(desc(date))
+  ls = 0
+  for (i in 1:nrow(games)) {
+    if (games$result[i] == "L") {
+      ls = ls + 1
+    } else {
+      return(ls)
+    }
+  }
+}
+
+win_lose_streaks = data.frame(team = all_teams) |>
+  mutate(win_streak = sapply(team, get_win_streak),
+         lose_streak = sapply(team, get_lose_streak),
+         streak = ifelse(win_streak > lose_streak, paste0("W", win_streak), paste0("L", lose_streak)))
+
+win_streaks = win_lose_streaks |>
+  filter(win_streak > 1) |>
+  mutate(x = paste0(team, " (", streak, ")")) |>
+  arrange(desc(win_streak)) |>
+  pull(x)
+
+lose_streaks = win_lose_streaks |>
+  filter(lose_streak > 1) |>
+  mutate(x = paste0(team, " (", streak, ")")) |>
+  arrange(desc(lose_streak)) |>
+  pull(x)
+
+win_streaks
+```
+
+    ## [1] "Cleveland Guardians (W6)"   "Kansas City Royals (W6)"   
+    ## [3] "Philadelphia Phillies (W5)" "Boston Red Sox (W4)"       
+    ## [5] "St. Louis Cardinals (W4)"   "Arizona Diamondbacks (W2)" 
+    ## [7] "Minnesota Twins (W2)"
