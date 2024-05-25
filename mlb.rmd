@@ -47,6 +47,7 @@ knitr::knit_hooks$set(source = function(x, options) {
 library(tidyverse)
 library(tvthemes)
 library(janitor)
+library(glue)
 library(baseballr)
 
 theme_custom = theme_avatar() +
@@ -811,6 +812,22 @@ ___
 
 *Interested in the underlying code that builds this report?* Check it out on GitHub: [mlb24](https://github.com/chadallison/mlb24){target="_blank"}
 
+```{r}
+days_of_week = c("Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday")
+
+print("WINNERS")
+for (dw in days_of_week) {
+  team = end_games |> filter(weekdays(date) == dw) |> count(win_team) |> slice_max(n, n = 1, with_ties = F) |> pull(win_team)
+  print(glue("{dw}: {team}"))
+}
+
+print("--------------------------")
+print("LOSERS")
+for (dw in days_of_week) {
+  team = end_games |> filter(weekdays(date) == dw) |> count(lose_team) |> slice_max(n, n = 1, with_ties = F) |> pull(lose_team)
+  print(glue("{dw}: {team}"))
+}
+```
 
 
 

@@ -100,9 +100,9 @@ to interpret for others than myself).
 
 ### Yesterday’s Largest Victories
 
-1.  Toronto Blue Jays def. Detroit Tigers 9-1
-2.  New York Yankees def. Seattle Mariners 5-0
-3.  Philadelphia Phillies def. Texas Rangers 5-2
+1.  New York Yankees def. San Diego Padres 8-0
+2.  Kansas City Royals def. Tampa Bay Rays 8-1
+3.  Pittsburgh Pirates def. Atlanta Braves 11-5
 
 ------------------------------------------------------------------------
 
@@ -112,20 +112,20 @@ to interpret for others than myself).
 
 ##### Most Volatile Teams
 
-1.  Oakland Athletics (7.04)
+1.  Oakland Athletics (6.98)
 2.  Arizona Diamondbacks (6.96)
-3.  Texas Rangers (6.8)
+3.  Texas Rangers (6.76)
 
 ##### Most Volatile Offenses
 
-1.  Arizona Diamondbacks (3.81)
-2.  Texas Rangers (3.68)
-3.  Oakland Athletics (3.46)
+1.  Arizona Diamondbacks (3.83)
+2.  Texas Rangers (3.66)
+3.  San Diego Padres (3.47)
 
 ##### Most Volatile Defenses
 
-1.  Miami Marlins (3.7)
-2.  Los Angeles Angels (3.63)
+1.  Miami Marlins (3.74)
+2.  Los Angeles Angels (3.66)
 3.  Chicago Cubs (3.59)
 
 ------------------------------------------------------------------------
@@ -151,15 +151,15 @@ to interpret for others than myself).
 ### Best Records in Last Ten Games
 
 1.  Cleveland Guardians (9-1)
-2.  Philadelphia Phillies (9-1)
-3.  Kansas City Royals (8-2)
-4.  New York Yankees (8-2)
+2.  Kansas City Royals (8-2)
+3.  New York Yankees (8-2)
+4.  Philadelphia Phillies (8-2)
 5.  St. Louis Cardinals (8-2)
 6.  Houston Astros (7-3)
 7.  Miami Marlins (7-3)
 8.  San Francisco Giants (7-3)
-9.  Arizona Diamondbacks (6-4)
-10. Los Angeles Dodgers (6-4)
+9.  Arizona Diamondbacks (5-5)
+10. Baltimore Orioles (5-5)
 
 ------------------------------------------------------------------------
 
@@ -181,32 +181,80 @@ to interpret for others than myself).
 
 ##### Most Home-Dependent Teams
 
-- Chicago White Sox (41.7% home / 19.2% away)
-- San Francisco Giants (60% home / 38.5% away)
-- Kansas City Royals (71.4% home / 50% away)
+- Chicago White Sox (40% home / 19.2% away)
+- Colorado Rockies (45.5% home / 25% away)
+- San Francisco Giants (60% home / 40.7% away)
 
 ##### Better-on-the-Road Teams
 
-- San Diego Padres (38.5% home / 63% away)
-- Los Angeles Angels (27.3% home / 50% away)
-- Boston Red Sox (43.5% home / 59.3% away)
+- San Diego Padres (37% home / 63% away)
+- Los Angeles Angels (26.1% home / 50% away)
+- Boston Red Sox (41.7% home / 59.3% away)
 
 ------------------------------------------------------------------------
 
 ### Winning and Losing Streaks
 
-- **Winning Streaks**: Cleveland Guardians (W6), Kansas City Royals
-  (W6), Philadelphia Phillies (W6), Boston Red Sox (W4), St. Louis
-  Cardinals (W4), Arizona Diamondbacks (W2), Atlanta Braves (W2),
-  Minnesota Twins (W2), New York Yankees (W2), San Diego Padres (W2),
-  San Francisco Giants (W2), Toronto Blue Jays (W2)
-- **Losing Streaks**: Detroit Tigers (L5), Tampa Bay Rays (L4), Texas
-  Rangers (L4), New York Mets (L3), Chicago Cubs (L2), Chicago White Sox
-  (L2), Cincinnati Reds (L2), Los Angeles Dodgers (L2), Pittsburgh
-  Pirates (L2), Seattle Mariners (L2), Washington Nationals (L2)
+- **Winning Streaks**: Cleveland Guardians (W7), Kansas City Royals
+  (W7), St. Louis Cardinals (W4), Minnesota Twins (W3), New York Yankees
+  (W3), San Francisco Giants (W3), Baltimore Orioles (W2), Miami Marlins
+  (W2)
+- **Losing Streaks**: Tampa Bay Rays (L5), Texas Rangers (L5), New York
+  Mets (L4), Chicago White Sox (L3), Los Angeles Dodgers (L3), Seattle
+  Mariners (L3), Chicago Cubs (L2)
 
 ------------------------------------------------------------------------
 
 *Interested in the underlying code that builds this report?* Check it
 out on GitHub:
 <a href="https://github.com/chadallison/mlb24" target="_blank">mlb24</a>
+
+``` r
+days_of_week = c("Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday")
+
+print("WINNERS")
+```
+
+    ## [1] "WINNERS"
+
+``` r
+for (dw in days_of_week) {
+  team = end_games |> filter(weekdays(date) == dw) |> count(win_team) |> slice_max(n, n = 1, with_ties = F) |> pull(win_team)
+  print(glue("{dw}: {team}"))
+}
+```
+
+    ## Sunday: Boston Red Sox
+    ## Monday: Los Angeles Dodgers
+    ## Tuesday: Arizona Diamondbacks
+    ## Wednesday: New York Yankees
+    ## Thursday: Baltimore Orioles
+    ## Friday: Milwaukee Brewers
+    ## Saturday: New York Yankees
+
+``` r
+print("--------------------------")
+```
+
+    ## [1] "--------------------------"
+
+``` r
+print("LOSERS")
+```
+
+    ## [1] "LOSERS"
+
+``` r
+for (dw in days_of_week) {
+  team = end_games |> filter(weekdays(date) == dw) |> count(lose_team) |> slice_max(n, n = 1, with_ties = F) |> pull(lose_team)
+  print(glue("{dw}: {team}"))
+}
+```
+
+    ## Sunday: Colorado Rockies
+    ## Monday: Miami Marlins
+    ## Tuesday: Colorado Rockies
+    ## Wednesday: Pittsburgh Pirates
+    ## Thursday: Boston Red Sox
+    ## Friday: Arizona Diamondbacks
+    ## Saturday: Arizona Diamondbacks
