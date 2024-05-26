@@ -100,9 +100,9 @@ to interpret for others than myself).
 
 ### Yesterday’s Largest Victories
 
-1.  New York Yankees def. San Diego Padres 8-0
-2.  Kansas City Royals def. Tampa Bay Rays 8-1
-3.  Pittsburgh Pirates def. Atlanta Braves 11-5
+1.  San Francisco Giants def. New York Mets 7-2
+2.  Philadelphia Phillies def. Colorado Rockies 8-4
+3.  Pittsburgh Pirates def. Atlanta Braves 4-1
 
 ------------------------------------------------------------------------
 
@@ -112,21 +112,21 @@ to interpret for others than myself).
 
 ##### Most Volatile Teams
 
-1.  Oakland Athletics (6.98)
-2.  Arizona Diamondbacks (6.96)
-3.  Texas Rangers (6.76)
+1.  Oakland Athletics (6.95)
+2.  Arizona Diamondbacks (6.92)
+3.  Texas Rangers (6.7)
 
 ##### Most Volatile Offenses
 
-1.  Arizona Diamondbacks (3.83)
-2.  Texas Rangers (3.66)
+1.  Arizona Diamondbacks (3.8)
+2.  Texas Rangers (3.63)
 3.  San Diego Padres (3.47)
 
 ##### Most Volatile Defenses
 
-1.  Miami Marlins (3.74)
-2.  Los Angeles Angels (3.66)
-3.  Chicago Cubs (3.59)
+1.  Miami Marlins (3.72)
+2.  Los Angeles Angels (3.63)
+3.  Chicago Cubs (3.57)
 
 ------------------------------------------------------------------------
 
@@ -151,15 +151,15 @@ to interpret for others than myself).
 ### Best Records in Last Ten Games
 
 1.  Cleveland Guardians (9-1)
-2.  Kansas City Royals (8-2)
+2.  Kansas City Royals (9-1)
 3.  New York Yankees (8-2)
 4.  Philadelphia Phillies (8-2)
-5.  St. Louis Cardinals (8-2)
-6.  Houston Astros (7-3)
+5.  San Francisco Giants (8-2)
+6.  St. Louis Cardinals (8-2)
 7.  Miami Marlins (7-3)
-8.  San Francisco Giants (7-3)
-9.  Arizona Diamondbacks (5-5)
-10. Baltimore Orioles (5-5)
+8.  Houston Astros (6-4)
+9.  Milwaukee Brewers (6-4)
+10. Pittsburgh Pirates (6-4)
 
 ------------------------------------------------------------------------
 
@@ -181,27 +181,30 @@ to interpret for others than myself).
 
 ##### Most Home-Dependent Teams
 
-- Chicago White Sox (40% home / 19.2% away)
-- Colorado Rockies (45.5% home / 25% away)
-- San Francisco Giants (60% home / 40.7% away)
+- Chicago White Sox (38.5% home / 19.2% away)
+- Colorado Rockies (43.5% home / 25% away)
+- Kansas City Royals (71.4% home / 54.2% away)
 
 ##### Better-on-the-Road Teams
 
-- San Diego Padres (37% home / 63% away)
-- Los Angeles Angels (26.1% home / 50% away)
-- Boston Red Sox (41.7% home / 59.3% away)
+- San Diego Padres (35.7% home / 63% away)
+- Los Angeles Angels (25% home / 50% away)
+- Boston Red Sox (40% home / 59.3% away)
 
 ------------------------------------------------------------------------
 
 ### Winning and Losing Streaks
 
-- **Winning Streaks**: Cleveland Guardians (W7), Kansas City Royals
-  (W7), St. Louis Cardinals (W4), Minnesota Twins (W3), New York Yankees
-  (W3), San Francisco Giants (W3), Baltimore Orioles (W2), Miami Marlins
-  (W2)
-- **Losing Streaks**: Tampa Bay Rays (L5), Texas Rangers (L5), New York
-  Mets (L4), Chicago White Sox (L3), Los Angeles Dodgers (L3), Seattle
-  Mariners (L3), Chicago Cubs (L2)
+- **Winning Streaks**: Cleveland Guardians (W8), Kansas City Royals
+  (W8), St. Louis Cardinals (W5), Minnesota Twins (W4), New York Yankees
+  (W4), San Francisco Giants (W4), Baltimore Orioles (W3), Cincinnati
+  Reds (W2), Detroit Tigers (W2), Milwaukee Brewers (W2), Pittsburgh
+  Pirates (W2), Washington Nationals (W2)
+- **Losing Streaks**: Tampa Bay Rays (L6), Texas Rangers (L6), New York
+  Mets (L5), Chicago White Sox (L4), Los Angeles Dodgers (L4), Seattle
+  Mariners (L4), Chicago Cubs (L3), Atlanta Braves (L2), Boston Red Sox
+  (L2), Los Angeles Angels (L2), San Diego Padres (L2), Toronto Blue
+  Jays (L2)
 
 ------------------------------------------------------------------------
 
@@ -209,20 +212,7 @@ to interpret for others than myself).
 out on GitHub:
 <a href="https://github.com/chadallison/mlb24" target="_blank">mlb24</a>
 
-``` r
-days_of_week = c("Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday")
-
-print("WINNERS")
-```
-
-    ## [1] "WINNERS"
-
-``` r
-for (dw in days_of_week) {
-  team = end_games |> filter(weekdays(date) == dw) |> count(win_team) |> slice_max(n, n = 1, with_ties = F) |> pull(win_team)
-  print(glue("{dw}: {team}"))
-}
-```
+    ## [1] "Most Frequent Winners on Each Day of Week"
 
     ## Sunday: Boston Red Sox
     ## Monday: Los Angeles Dodgers
@@ -232,24 +222,9 @@ for (dw in days_of_week) {
     ## Friday: Milwaukee Brewers
     ## Saturday: New York Yankees
 
-``` r
-print("--------------------------")
-```
-
     ## [1] "--------------------------"
 
-``` r
-print("LOSERS")
-```
-
-    ## [1] "LOSERS"
-
-``` r
-for (dw in days_of_week) {
-  team = end_games |> filter(weekdays(date) == dw) |> count(lose_team) |> slice_max(n, n = 1, with_ties = F) |> pull(lose_team)
-  print(glue("{dw}: {team}"))
-}
-```
+    ## [1] "Most Frequent Losers on Each Day of Week"
 
     ## Sunday: Colorado Rockies
     ## Monday: Miami Marlins
@@ -257,4 +232,8 @@ for (dw in days_of_week) {
     ## Wednesday: Pittsburgh Pirates
     ## Thursday: Boston Red Sox
     ## Friday: Arizona Diamondbacks
-    ## Saturday: Arizona Diamondbacks
+    ## Saturday: New York Mets
+
+### “Groups of Five” Records
+
+![](README_files/figure-gfm/unnamed-chunk-26-1.png)<!-- -->

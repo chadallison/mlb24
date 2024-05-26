@@ -812,21 +812,59 @@ ___
 
 *Interested in the underlying code that builds this report?* Check it out on GitHub: [mlb24](https://github.com/chadallison/mlb24){target="_blank"}
 
-```{r}
+```{r echo = F}
 days_of_week = c("Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday")
 
-print("WINNERS")
+print("Most Frequent Winners on Each Day of Week")
 for (dw in days_of_week) {
   team = end_games |> filter(weekdays(date) == dw) |> count(win_team) |> slice_max(n, n = 1, with_ties = F) |> pull(win_team)
   print(glue("{dw}: {team}"))
 }
 
 print("--------------------------")
-print("LOSERS")
+print("Most Frequent Losers on Each Day of Week")
 for (dw in days_of_week) {
   team = end_games |> filter(weekdays(date) == dw) |> count(lose_team) |> slice_max(n, n = 1, with_ties = F) |> pull(lose_team)
   print(glue("{dw}: {team}"))
 }
+```
+
+### "Groups of Five" Records
+
+```{r echo = F}
+get_seven_group_pct = function(team, group) {
+  data = end_games |>
+    filter(home_team == team | away_team == team) |>
+    mutate(game_num = as.integer(rank(date)),
+           seven_group = cut(game_num, breaks = seq(0, 168, by = 7), labels = F)) |>
+    filter(seven_group == group)
+  
+  if (nrow(data) == 0) return(NA)
+  wins = data |> filter(win_team == team) |> nrow()
+  return(round(wins / nrow(data) * 100, 1))
+}
+
+max_gp = team_records |>
+  transmute(gp = wins + losses) |>
+  slice_max(gp, n = 1, with_ties = F) |>
+  pull(gp)
+
+upper_lim = ceiling(max_gp / 7)
+
+team_sevens = crossing(team = all_teams, seven_group = 1:upper_lim) |>
+  rowwise() |>
+  mutate(pct = get_seven_group_pct(team = team, group = seven_group)) |>
+  ungroup() |>
+  filter(!is.na(pct))
+
+team_sevens |>
+  ggplot(aes(seven_group, 1)) +
+  geom_col(aes(fill = pct), show.legend = F, width = 0.75) +
+  facet_wrap(vars(team)) +
+  scale_fill_gradient(low = "#CF9D9D", high = "#7A9C74") +
+  labs(x = "Group of Seven", y = NULL,
+       title = "Team Records in Groups of Seven") +
+  theme(axis.text = element_blank())
 ```
 
 
