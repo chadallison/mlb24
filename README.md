@@ -100,9 +100,9 @@ to interpret for others than myself).
 
 ### Yesterday’s Largest Victories
 
-1.  San Francisco Giants def. New York Mets 7-2
-2.  Philadelphia Phillies def. Colorado Rockies 8-4
-3.  Pittsburgh Pirates def. Atlanta Braves 4-1
+1.  Atlanta Braves def. Pittsburgh Pirates 8-1
+2.  Seattle Mariners def. Washington Nationals 9-5
+3.  Texas Rangers def. Minnesota Twins 6-2
 
 ------------------------------------------------------------------------
 
@@ -112,21 +112,21 @@ to interpret for others than myself).
 
 ##### Most Volatile Teams
 
-1.  Oakland Athletics (6.95)
-2.  Arizona Diamondbacks (6.92)
-3.  Texas Rangers (6.7)
+1.  Arizona Diamondbacks (6.9)
+2.  Oakland Athletics (6.89)
+3.  Texas Rangers (6.66)
 
 ##### Most Volatile Offenses
 
 1.  Arizona Diamondbacks (3.8)
-2.  Texas Rangers (3.63)
-3.  San Diego Padres (3.47)
+2.  Texas Rangers (3.6)
+3.  San Diego Padres (3.44)
 
 ##### Most Volatile Defenses
 
-1.  Miami Marlins (3.72)
-2.  Los Angeles Angels (3.63)
-3.  Chicago Cubs (3.57)
+1.  Miami Marlins (3.73)
+2.  Los Angeles Angels (3.59)
+3.  Chicago Cubs (3.54)
 
 ------------------------------------------------------------------------
 
@@ -151,15 +151,15 @@ to interpret for others than myself).
 ### Best Records in Last Ten Games
 
 1.  Cleveland Guardians (9-1)
-2.  Kansas City Royals (9-1)
-3.  New York Yankees (8-2)
-4.  Philadelphia Phillies (8-2)
-5.  San Francisco Giants (8-2)
-6.  St. Louis Cardinals (8-2)
-7.  Miami Marlins (7-3)
+2.  Kansas City Royals (8-2)
+3.  San Francisco Giants (8-2)
+4.  St. Louis Cardinals (8-2)
+5.  Miami Marlins (7-3)
+6.  New York Yankees (7-3)
+7.  Philadelphia Phillies (7-3)
 8.  Houston Astros (6-4)
-9.  Milwaukee Brewers (6-4)
-10. Pittsburgh Pirates (6-4)
+9.  Pittsburgh Pirates (6-4)
+10. San Diego Padres (6-4)
 
 ------------------------------------------------------------------------
 
@@ -181,30 +181,25 @@ to interpret for others than myself).
 
 ##### Most Home-Dependent Teams
 
-- Chicago White Sox (38.5% home / 19.2% away)
-- Colorado Rockies (43.5% home / 25% away)
-- Kansas City Royals (71.4% home / 54.2% away)
+- Colorado Rockies (45.8% home / 25% away)
+- Kansas City Royals (71.4% home / 52% away)
+- San Francisco Giants (60% home / 41.4% away)
 
 ##### Better-on-the-Road Teams
 
-- San Diego Padres (35.7% home / 63% away)
-- Los Angeles Angels (25% home / 50% away)
-- Boston Red Sox (40% home / 59.3% away)
+- Los Angeles Angels (24% home / 50% away)
+- San Diego Padres (37.9% home / 63% away)
+- Boston Red Sox (42.3% home / 59.3% away)
 
 ------------------------------------------------------------------------
 
 ### Winning and Losing Streaks
 
-- **Winning Streaks**: Cleveland Guardians (W8), Kansas City Royals
-  (W8), St. Louis Cardinals (W5), Minnesota Twins (W4), New York Yankees
-  (W4), San Francisco Giants (W4), Baltimore Orioles (W3), Cincinnati
-  Reds (W2), Detroit Tigers (W2), Milwaukee Brewers (W2), Pittsburgh
-  Pirates (W2), Washington Nationals (W2)
-- **Losing Streaks**: Tampa Bay Rays (L6), Texas Rangers (L6), New York
-  Mets (L5), Chicago White Sox (L4), Los Angeles Dodgers (L4), Seattle
-  Mariners (L4), Chicago Cubs (L3), Atlanta Braves (L2), Boston Red Sox
-  (L2), Los Angeles Angels (L2), San Diego Padres (L2), Toronto Blue
-  Jays (L2)
+- **Winning Streaks**: Cleveland Guardians (W9), St. Louis Cardinals
+  (W6), Baltimore Orioles (W4), Cincinnati Reds (W3), Detroit Tigers
+  (W3)
+- **Losing Streaks**: Chicago White Sox (L5), Los Angeles Dodgers (L5),
+  Chicago Cubs (L4), Los Angeles Angels (L3), Toronto Blue Jays (L3)
 
 ------------------------------------------------------------------------
 
@@ -226,7 +221,7 @@ out on GitHub:
 
     ## [1] "Most Frequent Losers on Each Day of Week"
 
-    ## Sunday: Colorado Rockies
+    ## Sunday: Chicago White Sox
     ## Monday: Miami Marlins
     ## Tuesday: Colorado Rockies
     ## Wednesday: Pittsburgh Pirates
@@ -235,5 +230,7 @@ out on GitHub:
     ## Saturday: New York Mets
 
 ### “Groups of Five” Records
+
+    ## [1] 50
 
 ![](README_files/figure-gfm/unnamed-chunk-26-1.png)<!-- -->

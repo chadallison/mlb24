@@ -844,6 +844,8 @@ get_seven_group_pct = function(team, group) {
   return(round(wins / nrow(data) * 100, 1))
 }
 
+get_seven_group_pct(team = "San Diego Padres", group = 7)
+
 max_gp = team_records |>
   transmute(gp = wins + losses) |>
   slice_max(gp, n = 1, with_ties = F) |>
@@ -857,13 +859,36 @@ team_sevens = crossing(team = all_teams, seven_group = 1:upper_lim) |>
   ungroup() |>
   filter(!is.na(pct))
 
-team_sevens |>
+sevens_wl = team_sevens |>
+  mutate(wl = case_when(pct > 50 ~ "W",
+                        pct < 50 ~ "L",
+                        pct == 50 ~ "Incomplete"))
+
+sevens_pcts = sevens_wl |>
+  filter(wl == "W") |>
+  count(team) |>
+  rename(sev_wins = n) |>
+  inner_join(sevens_wl |>
+  filter(wl == "L") |>
+  count(team) |>
+  rename(sev_losses = n), by = "team") |>
+  mutate(sev_pct = round(sev_wins / (sev_wins + sev_losses) * 100, 1)) |>
+  inner_join(teams_info, by = "team") |>
+  inner_join(team_records, by = "team") |>
+  arrange(desc(sev_pct), desc(pct), team) |>
+  pull(abb)
+
+sevens_wl |>
+  inner_join(teams_info, by = "team") |>
+  mutate(abb = factor(abb, levels = sevens_pcts),
+         wl = case_when(wl == "W" ~ "Series Win", wl == "L" ~ "Series Loss", wl == "Incomplete" ~ "Series Currently Tied"),
+         wl = factor(wl, levels = c("Series Win", "Series Loss", "Series Currently Tied"))) |>
   ggplot(aes(seven_group, 1)) +
-  geom_col(aes(fill = pct), show.legend = F, width = 0.75) +
-  facet_wrap(vars(team)) +
-  scale_fill_gradient(low = "#CF9D9D", high = "#7A9C74") +
-  labs(x = "Group of Seven", y = NULL,
-       title = "Team Records in Groups of Seven") +
+  geom_col(aes(fill = wl), position = "dodge") +
+  facet_wrap(vars(abb)) +
+  scale_fill_manual(values = c("#90B28D", "#D29F9F", "#A5A5A5")) +
+  labs(x = NULL, y = NULL, fill = NULL,
+       title = "What if the season was split into seven-game series?") +
   theme(axis.text = element_blank())
 ```
 
