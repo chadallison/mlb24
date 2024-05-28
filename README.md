@@ -100,9 +100,9 @@ to interpret for others than myself).
 
 ### Yesterday’s Largest Victories
 
-1.  Atlanta Braves def. Pittsburgh Pirates 8-1
-2.  Seattle Mariners def. Washington Nationals 9-5
-3.  Texas Rangers def. Minnesota Twins 6-2
+1.  Baltimore Orioles def. Boston Red Sox 11-3
+2.  Toronto Blue Jays def. Chicago White Sox 5-1
+3.  Washington Nationals def. Atlanta Braves 8-4
 
 ------------------------------------------------------------------------
 
@@ -120,13 +120,13 @@ to interpret for others than myself).
 
 1.  Arizona Diamondbacks (3.8)
 2.  Texas Rangers (3.6)
-3.  San Diego Padres (3.44)
+3.  San Diego Padres (3.43)
 
 ##### Most Volatile Defenses
 
-1.  Miami Marlins (3.73)
+1.  Miami Marlins (3.72)
 2.  Los Angeles Angels (3.59)
-3.  Chicago Cubs (3.54)
+3.  Oakland Athletics (3.52)
 
 ------------------------------------------------------------------------
 
@@ -154,10 +154,10 @@ to interpret for others than myself).
 2.  Kansas City Royals (8-2)
 3.  San Francisco Giants (8-2)
 4.  St. Louis Cardinals (8-2)
-5.  Miami Marlins (7-3)
-6.  New York Yankees (7-3)
-7.  Philadelphia Phillies (7-3)
-8.  Houston Astros (6-4)
+5.  New York Yankees (7-3)
+6.  Philadelphia Phillies (7-3)
+7.  Baltimore Orioles (6-4)
+8.  Miami Marlins (6-4)
 9.  Pittsburgh Pirates (6-4)
 10. San Diego Padres (6-4)
 
@@ -181,25 +181,26 @@ to interpret for others than myself).
 
 ##### Most Home-Dependent Teams
 
-- Colorado Rockies (45.8% home / 25% away)
-- Kansas City Royals (71.4% home / 52% away)
-- San Francisco Giants (60% home / 41.4% away)
+- Colorado Rockies (48% home / 25% away)
+- Kansas City Royals (71.4% home / 50% away)
+- San Francisco Giants (61.5% home / 41.4% away)
 
 ##### Better-on-the-Road Teams
 
 - Los Angeles Angels (24% home / 50% away)
-- San Diego Padres (37.9% home / 63% away)
-- Boston Red Sox (42.3% home / 59.3% away)
+- San Diego Padres (40% home / 63% away)
+- Boston Red Sox (42.3% home / 57.1% away)
 
 ------------------------------------------------------------------------
 
 ### Winning and Losing Streaks
 
-- **Winning Streaks**: Cleveland Guardians (W9), St. Louis Cardinals
-  (W6), Baltimore Orioles (W4), Cincinnati Reds (W3), Detroit Tigers
-  (W3)
-- **Losing Streaks**: Chicago White Sox (L5), Los Angeles Dodgers (L5),
-  Chicago Cubs (L4), Los Angeles Angels (L3), Toronto Blue Jays (L3)
+- **Winning Streaks**: Baltimore Orioles (W5), Cincinnati Reds (W4),
+  Detroit Tigers (W3), Colorado Rockies (W2), San Diego Padres (W2),
+  Seattle Mariners (W2)
+- **Losing Streaks**: Chicago White Sox (L6), Chicago Cubs (L5), Los
+  Angeles Dodgers (L5), Los Angeles Angels (L3), Kansas City Royals
+  (L2), Philadelphia Phillies (L2)
 
 ------------------------------------------------------------------------
 
@@ -210,7 +211,7 @@ out on GitHub:
     ## [1] "Most Frequent Winners on Each Day of Week"
 
     ## Sunday: Boston Red Sox
-    ## Monday: Los Angeles Dodgers
+    ## Monday: Toronto Blue Jays
     ## Tuesday: Arizona Diamondbacks
     ## Wednesday: New York Yankees
     ## Thursday: Baltimore Orioles
@@ -229,8 +230,6 @@ out on GitHub:
     ## Friday: Arizona Diamondbacks
     ## Saturday: New York Mets
 
-### “Groups of Five” Records
-
-    ## [1] 50
+### “Groups of Seven” Records
 
 ![](README_files/figure-gfm/unnamed-chunk-26-1.png)<!-- -->

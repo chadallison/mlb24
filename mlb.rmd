@@ -829,22 +829,24 @@ for (dw in days_of_week) {
 }
 ```
 
-### "Groups of Five" Records
+### "Groups of Seven" Records
 
 ```{r echo = F}
+seven_seq = rep(1:24, each = 7)
+
 get_seven_group_pct = function(team, group) {
   data = end_games |>
     filter(home_team == team | away_team == team) |>
-    mutate(game_num = as.integer(rank(date)),
-           seven_group = cut(game_num, breaks = seq(0, 168, by = 7), labels = F)) |>
-    filter(seven_group == group)
+    arrange(date)
   
+  data = data |>
+    mutate(seven_group = seven_seq[1:nrow(data)]) |>
+    filter(seven_group == group)
+
   if (nrow(data) == 0) return(NA)
   wins = data |> filter(win_team == team) |> nrow()
   return(round(wins / nrow(data) * 100, 1))
 }
-
-get_seven_group_pct(team = "San Diego Padres", group = 7)
 
 max_gp = team_records |>
   transmute(gp = wins + losses) |>
@@ -886,7 +888,7 @@ sevens_wl |>
   ggplot(aes(seven_group, 1)) +
   geom_col(aes(fill = wl), position = "dodge") +
   facet_wrap(vars(abb)) +
-  scale_fill_manual(values = c("#90B28D", "#D29F9F", "#A5A5A5")) +
+  scale_fill_manual(values = c("#004D40", "#D81B60", "#FFC107")) +
   labs(x = NULL, y = NULL, fill = NULL,
        title = "What if the season was split into seven-game series?") +
   theme(axis.text = element_blank())
