@@ -100,9 +100,9 @@ to interpret for others than myself).
 
 ### Yesterday’s Largest Victories
 
-1.  Baltimore Orioles def. Boston Red Sox 11-3
-2.  Toronto Blue Jays def. Chicago White Sox 5-1
-3.  Washington Nationals def. Atlanta Braves 8-4
+1.  St. Louis Cardinals def. Cincinnati Reds 7-1
+2.  Cleveland Guardians def. Colorado Rockies 13-7
+3.  Boston Red Sox def. Baltimore Orioles 8-3
 
 ------------------------------------------------------------------------
 
@@ -112,21 +112,21 @@ to interpret for others than myself).
 
 ##### Most Volatile Teams
 
-1.  Arizona Diamondbacks (6.9)
-2.  Oakland Athletics (6.89)
-3.  Texas Rangers (6.66)
+1.  Oakland Athletics (6.89)
+2.  Arizona Diamondbacks (6.85)
+3.  Colorado Rockies (6.66)
 
 ##### Most Volatile Offenses
 
-1.  Arizona Diamondbacks (3.8)
-2.  Texas Rangers (3.6)
-3.  San Diego Padres (3.43)
+1.  Arizona Diamondbacks (3.78)
+2.  Texas Rangers (3.57)
+3.  San Diego Padres (3.4)
 
 ##### Most Volatile Defenses
 
-1.  Miami Marlins (3.72)
-2.  Los Angeles Angels (3.59)
-3.  Oakland Athletics (3.52)
+1.  Miami Marlins (3.68)
+2.  Los Angeles Angels (3.57)
+3.  Colorado Rockies (3.56)
 
 ------------------------------------------------------------------------
 
@@ -151,13 +151,13 @@ to interpret for others than myself).
 ### Best Records in Last Ten Games
 
 1.  Cleveland Guardians (9-1)
-2.  Kansas City Royals (8-2)
-3.  San Francisco Giants (8-2)
-4.  St. Louis Cardinals (8-2)
-5.  New York Yankees (7-3)
-6.  Philadelphia Phillies (7-3)
-7.  Baltimore Orioles (6-4)
-8.  Miami Marlins (6-4)
+2.  San Francisco Giants (8-2)
+3.  St. Louis Cardinals (8-2)
+4.  Kansas City Royals (7-3)
+5.  Boston Red Sox (6-4)
+6.  Minnesota Twins (6-4)
+7.  New York Yankees (6-4)
+8.  Philadelphia Phillies (6-4)
 9.  Pittsburgh Pirates (6-4)
 10. San Diego Padres (6-4)
 
@@ -181,26 +181,26 @@ to interpret for others than myself).
 
 ##### Most Home-Dependent Teams
 
-- Colorado Rockies (48% home / 25% away)
-- Kansas City Royals (71.4% home / 50% away)
-- San Francisco Giants (61.5% home / 41.4% away)
+- Kansas City Royals (71.4% home / 48.1% away)
+- San Francisco Giants (63% home / 41.4% away)
+- Colorado Rockies (46.2% home / 25% away)
 
 ##### Better-on-the-Road Teams
 
-- Los Angeles Angels (24% home / 50% away)
-- San Diego Padres (40% home / 63% away)
-- Boston Red Sox (42.3% home / 57.1% away)
+- Los Angeles Angels (26.9% home / 50% away)
+- San Diego Padres (41.9% home / 63% away)
+- Boston Red Sox (42.3% home / 58.6% away)
 
 ------------------------------------------------------------------------
 
 ### Winning and Losing Streaks
 
-- **Winning Streaks**: Baltimore Orioles (W5), Cincinnati Reds (W4),
-  Detroit Tigers (W3), Colorado Rockies (W2), San Diego Padres (W2),
-  Seattle Mariners (W2)
-- **Losing Streaks**: Chicago White Sox (L6), Chicago Cubs (L5), Los
-  Angeles Dodgers (L5), Los Angeles Angels (L3), Kansas City Royals
-  (L2), Philadelphia Phillies (L2)
+- **Winning Streaks**: Detroit Tigers (W3), San Diego Padres (W3),
+  Seattle Mariners (W3), Los Angeles Dodgers (W2), Minnesota Twins (W2),
+  San Francisco Giants (W2), Texas Rangers (W2), Toronto Blue Jays (W2)
+- **Losing Streaks**: Chicago White Sox (L7), Kansas City Royals (L3),
+  Philadelphia Phillies (L3), Arizona Diamondbacks (L2), Houston Astros
+  (L2), Miami Marlins (L2), New York Mets (L2), New York Yankees (L2)
 
 ------------------------------------------------------------------------
 
@@ -212,7 +212,7 @@ out on GitHub:
 
     ## Sunday: Boston Red Sox
     ## Monday: Toronto Blue Jays
-    ## Tuesday: Arizona Diamondbacks
+    ## Tuesday: Los Angeles Dodgers
     ## Wednesday: New York Yankees
     ## Thursday: Baltimore Orioles
     ## Friday: Milwaukee Brewers
@@ -233,3 +233,37 @@ out on GitHub:
 ### “Groups of Seven” Records
 
 ![](README_files/figure-gfm/unnamed-chunk-26-1.png)<!-- -->
+
+``` r
+get_seven_window_margin = function(team, group) {
+  data = end_games |> filter(home_team == team | away_team == team) |> arrange(date)
+  data$seven_group = seven_seq[1:nrow(data)]
+  data = data |> filter(seven_group == group)
+  if (nrow(data) == 0) return(NA)
+  
+  margin = data |>
+    mutate(team_score = ifelse(home_team == team, home_score, away_score),
+           opp_score = ifelse(home_team == team, away_score, home_score),
+           margin = team_score - opp_score) |>
+    summarise(x = sum(margin)) |>
+    pull(x)
+  
+  return(margin)
+}
+
+crossing(team = all_teams, seven_group = 1:upper_lim) |>
+  rowwise() |>
+  mutate(margin = get_seven_window_margin(team, seven_group)) |>
+  ungroup() |>
+  filter(!is.na(margin)) |>
+  inner_join(teams_info, by = "team") |>
+  ggplot(aes(seven_group, 1)) +
+  geom_col(aes(fill = margin), show.legend = F) +
+  facet_wrap(vars(abb)) +
+  theme(axis.text = element_blank()) +
+  scale_fill_gradient(low = "indianred3", high = "springgreen4") +
+  labs(x = NULL, y = NULL,
+       title = "Team Margins in Seven-Game Windows")
+```
+
+![](README_files/figure-gfm/unnamed-chunk-27-1.png)<!-- -->

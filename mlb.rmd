@@ -894,6 +894,37 @@ sevens_wl |>
   theme(axis.text = element_blank())
 ```
 
+```{r}
+get_seven_window_margin = function(team, group) {
+  data = end_games |> filter(home_team == team | away_team == team) |> arrange(date)
+  data$seven_group = seven_seq[1:nrow(data)]
+  data = data |> filter(seven_group == group)
+  if (nrow(data) == 0) return(NA)
+  
+  margin = data |>
+    mutate(team_score = ifelse(home_team == team, home_score, away_score),
+           opp_score = ifelse(home_team == team, away_score, home_score),
+           margin = team_score - opp_score) |>
+    summarise(x = sum(margin)) |>
+    pull(x)
+  
+  return(margin)
+}
+
+crossing(team = all_teams, seven_group = 1:upper_lim) |>
+  rowwise() |>
+  mutate(margin = get_seven_window_margin(team, seven_group)) |>
+  ungroup() |>
+  filter(!is.na(margin)) |>
+  inner_join(teams_info, by = "team") |>
+  ggplot(aes(seven_group, 1)) +
+  geom_col(aes(fill = margin), show.legend = F) +
+  facet_wrap(vars(abb)) +
+  theme(axis.text = element_blank()) +
+  scale_fill_gradient(low = "indianred3", high = "springgreen4") +
+  labs(x = NULL, y = NULL,
+       title = "Team Margins in Seven-Game Windows")
+```
 
 
 
