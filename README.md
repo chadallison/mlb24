@@ -259,7 +259,7 @@ crossing(team = all_teams, seven_group = 1:upper_lim) |>
   inner_join(teams_info, by = "team") |>
   ggplot(aes(seven_group, 1)) +
   geom_col(aes(fill = margin), show.legend = F) +
-  facet_wrap(vars(abb)) +
+  facet_wrap(vars(abb), scale = "free") +
   theme(axis.text = element_blank()) +
   scale_fill_gradient(low = "indianred3", high = "springgreen4") +
   labs(x = NULL, y = NULL,
@@ -267,3 +267,59 @@ crossing(team = all_teams, seven_group = 1:upper_lim) |>
 ```
 
 ![](README_files/figure-gfm/unnamed-chunk-27-1.png)<!-- -->
+
+``` r
+get_series_data = function(team, series) {
+  x = end_games |>
+    filter(home_team == team | away_team == team) |>
+    arrange(date) |>
+    mutate(my_team = ifelse(home_team == team, home_team, away_team),
+           opp_team = ifelse(home_team == team, away_team, home_team))
+  
+  x$series_num = NA
+  x$series_num[1] = 1
+  
+  for (i in 2:nrow(x)) {
+    if (x$opp_team[i] == x$opp_team[i - 1]) {
+      x$series_num[i] = x$series_num[i - 1]
+    } else {
+      x$series_num[i] = x$series_num[i - 1] + 1
+    }
+  }
+  
+  data = x |> filter(series_num == series)
+  if (nrow(data) == 0) return(NA)
+  wins = data |> filter(win_team == team) |> nrow()
+  losses = data |> filter(lose_team == team) |> nrow()
+  
+  if (wins > losses) {
+    return("Series Win")
+  } else if (wins < losses) {
+    return("Series Loss")
+  } else {
+    return("Series Tied or In Progress")
+  }
+  
+  return(x)
+}
+
+upper_lim = ceiling(team_records |>
+  transmute(gp = wins + losses) |>
+  slice_max(gp, n = 1, with_ties = F) |>
+  pull(gp) / 2)
+
+team_series_results = crossing(team = all_teams, series = 1:upper_lim) |>
+  rowwise() |>
+  mutate(wl = get_series_data(team, series)) |>
+  ungroup() |>
+  filter(!is.na(wl))
+
+team_series_results |>
+  ggplot(aes(series, 1)) +
+  geom_col(aes(fill = wl), width = 0.75, position = "dodge") +
+  facet_wrap(vars(team), scales = "free") +
+  scale_fill_manual(values = c("indianred3", "black", "springgreen4")) +
+  theme(axis.text = element_blank())
+```
+
+![](README_files/figure-gfm/unnamed-chunk-28-1.png)<!-- -->
