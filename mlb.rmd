@@ -23,6 +23,9 @@ knit: (function(input, ...) { rmarkdown::render(input, output_file = "README.md"
 - [First Score Dependence]
 - [Home Field Advantage]
 - [Winning and Losing Streaks]
+- [Seven Game Windows]
+- [Team Margins in Seven Game Windows]
+- [Team Series Results]
 
 ___
 
@@ -808,28 +811,28 @@ lose_streaks = paste(lose_streaks, collapse = ", ")
 - **Winning Streaks**: `r win_streaks`
 - **Losing Streaks**: `r lose_streaks`
 
+<!-- ___ -->
+
+
+<!-- ### Day of Week Results -->
+
+<!-- ```{r echo = F} -->
+<!-- days_of_week = c("Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday") -->
+
+
+<!-- ``` -->
+
+<!-- ##### Winners -->
+
+<!-- - -->
+
+<!-- ##### Losers -->
+
+<!-- - -->
+
 ___
 
-*Interested in the underlying code that builds this report?* Check it out on GitHub: [mlb24](https://github.com/chadallison/mlb24){target="_blank"}
-
-```{r echo = F}
-days_of_week = c("Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday")
-
-print("Most Frequent Winners on Each Day of Week")
-for (dw in days_of_week) {
-  team = end_games |> filter(weekdays(date) == dw) |> count(win_team) |> slice_max(n, n = 1, with_ties = F) |> pull(win_team)
-  print(glue("{dw}: {team}"))
-}
-
-print("--------------------------")
-print("Most Frequent Losers on Each Day of Week")
-for (dw in days_of_week) {
-  team = end_games |> filter(weekdays(date) == dw) |> count(lose_team) |> slice_max(n, n = 1, with_ties = F) |> pull(lose_team)
-  print(glue("{dw}: {team}"))
-}
-```
-
-### "Groups of Seven" Records
+### Seven Game Windows
 
 ```{r echo = F}
 seven_seq = rep(1:24, each = 7)
@@ -890,11 +893,15 @@ sevens_wl |>
   facet_wrap(vars(abb)) +
   scale_fill_manual(values = c("#004D40", "#D81B60", "#FFC107")) +
   labs(x = NULL, y = NULL, fill = NULL,
-       title = "What if the season was split into seven-game series?") +
+       title = "What if the season was split into seven-game windows?") +
   theme(axis.text = element_blank())
 ```
 
-```{r}
+___
+
+### Team Margins in Seven Game Windows
+
+```{r echo = F}
 get_seven_window_margin = function(team, group) {
   data = end_games |> filter(home_team == team | away_team == team) |> arrange(date)
   data$seven_group = seven_seq[1:nrow(data)]
@@ -926,7 +933,11 @@ crossing(team = all_teams, seven_group = 1:upper_lim) |>
        title = "Team Margins in Seven-Game Windows")
 ```
 
-```{r}
+___
+
+### Team Series Results
+
+```{r echo = F}
 get_series_data = function(team, series) {
   x = end_games |>
     filter(home_team == team | away_team == team) |>
@@ -973,20 +984,22 @@ team_series_results = crossing(team = all_teams, series = 1:upper_lim) |>
   filter(!is.na(wl))
 
 team_series_results |>
+  inner_join(teams_info, by = "team") |>
   ggplot(aes(series, 1)) +
   geom_col(aes(fill = wl), width = 0.75, position = "dodge") +
-  facet_wrap(vars(team), scales = "free") +
+  facet_wrap(vars(abb), scales = "free") +
   scale_fill_manual(values = c("indianred3", "black", "springgreen4")) +
-  theme(axis.text = element_blank())
+  theme(axis.text = element_blank()) +
+  labs(x = NULL, y = NULL,
+       title = "Team Series Results")
 ```
 
 
 
 
+___
 
-
-
-
+*Interested in the underlying code that builds this report?* Check it out on GitHub: [mlb24](https://github.com/chadallison/mlb24){target="_blank"}
 
 
 
