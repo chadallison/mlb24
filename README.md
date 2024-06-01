@@ -104,9 +104,9 @@ to interpret for others than myself).
 
 ### Yesterday’s Largest Victories
 
-1.  Detroit Tigers def. Boston Red Sox 5-0
-2.  New York Yankees def. Los Angeles Angels 8-3
-3.  Houston Astros def. Seattle Mariners 4-0
+1.  Milwaukee Brewers def. Chicago White Sox 12-5
+2.  Cleveland Guardians def. Washington Nationals 7-1
+3.  Miami Marlins def. Texas Rangers 8-2
 
 ------------------------------------------------------------------------
 
@@ -116,21 +116,21 @@ to interpret for others than myself).
 
 ##### Most Volatile Teams
 
-1.  Arizona Diamondbacks (6.79)
-2.  Oakland Athletics (6.78)
-3.  Colorado Rockies (6.62)
+1.  Arizona Diamondbacks (6.86)
+2.  Oakland Athletics (6.73)
+3.  Colorado Rockies (6.61)
 
 ##### Most Volatile Offenses
 
-1.  Arizona Diamondbacks (3.76)
-2.  Texas Rangers (3.54)
-3.  San Diego Padres (3.4)
+1.  Arizona Diamondbacks (3.77)
+2.  Texas Rangers (3.52)
+3.  San Diego Padres (3.48)
 
 ##### Most Volatile Defenses
 
-1.  Miami Marlins (3.69)
-2.  Los Angeles Angels (3.55)
-3.  Colorado Rockies (3.53)
+1.  Miami Marlins (3.68)
+2.  Colorado Rockies (3.55)
+3.  Los Angeles Angels (3.52)
 
 ------------------------------------------------------------------------
 
@@ -155,15 +155,15 @@ to interpret for others than myself).
 ### Best Records in Last Ten Games
 
 1.  Cleveland Guardians (8-2)
-2.  St. Louis Cardinals (8-2)
-3.  Minnesota Twins (7-3)
-4.  San Francisco Giants (7-3)
-5.  Baltimore Orioles (6-4)
-6.  Kansas City Royals (6-4)
-7.  Milwaukee Brewers (6-4)
-8.  New York Yankees (6-4)
-9.  Philadelphia Phillies (6-4)
-10. San Diego Padres (6-4)
+2.  Minnesota Twins (8-2)
+3.  St. Louis Cardinals (8-2)
+4.  Baltimore Orioles (7-3)
+5.  Milwaukee Brewers (7-3)
+6.  New York Yankees (7-3)
+7.  Cincinnati Reds (6-4)
+8.  Colorado Rockies (6-4)
+9.  Miami Marlins (6-4)
+10. Philadelphia Phillies (6-4)
 
 ------------------------------------------------------------------------
 
@@ -185,27 +185,28 @@ to interpret for others than myself).
 
 ##### Most Home-Dependent Teams
 
-- Kansas City Royals (71.4% home / 48.3% away)
-- Colorado Rockies (48.1% home / 25% away)
-- San Francisco Giants (60.7% home / 41.4% away)
+- Kansas City Royals (69% home / 48.3% away)
+- Colorado Rockies (48.1% home / 27.6% away)
+- Seattle Mariners (63.3% home / 44.8% away)
 
 ##### Better-on-the-Road Teams
 
-- Los Angeles Angels (25% home / 50% away)
-- San Diego Padres (40.6% home / 63% away)
-- Boston Red Sox (40.7% home / 56.7% away)
+- San Diego Padres (40.6% home / 64.3% away)
+- Los Angeles Angels (25% home / 48.3% away)
+- Boston Red Sox (42.9% home / 56.7% away)
 
 ------------------------------------------------------------------------
 
 ### Winning and Losing Streaks
 
-- **Winning Streaks**: Los Angeles Dodgers (W3), Texas Rangers (W3),
-  Toronto Blue Jays (W3), Detroit Tigers (W2), Milwaukee Brewers (W2),
-  New York Yankees (W2), St. Louis Cardinals (W2), Tampa Bay Rays (W2),
-  Washington Nationals (W2)
-- **Losing Streaks**: Chicago White Sox (L8), Arizona Diamondbacks (L4),
-  Atlanta Braves (L2), Boston Red Sox (L2), Chicago Cubs (L2),
-  Cincinnati Reds (L2), Los Angeles Angels (L2), Oakland Athletics (L2)
+- **Winning Streaks**: Toronto Blue Jays (W4), Milwaukee Brewers (W3),
+  New York Yankees (W3), Baltimore Orioles (W2), Colorado Rockies (W2),
+  Miami Marlins (W2), Minnesota Twins (W2), New York Mets (W2),
+  Philadelphia Phillies (W2)
+- **Losing Streaks**: Chicago White Sox (L9), Arizona Diamondbacks (L5),
+  Chicago Cubs (L3), Los Angeles Angels (L3), Oakland Athletics (L3),
+  Kansas City Royals (L2), Pittsburgh Pirates (L2), San Francisco Giants
+  (L2)
 
 <!-- ___ -->
 <!-- ### Day of Week Results -->
