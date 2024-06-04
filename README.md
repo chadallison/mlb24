@@ -104,9 +104,9 @@ to interpret for others than myself).
 
 ### Yesterday’s Largest Victories
 
-1.  Texas Rangers def. Miami Marlins 6-0
-2.  Detroit Tigers def. Boston Red Sox 8-4
-3.  Los Angeles Dodgers def. Colorado Rockies 4-0
+1.  Cincinnati Reds def. Colorado Rockies 13-3
+2.  Baltimore Orioles def. Toronto Blue Jays 7-2
+3.  Houston Astros def. St. Louis Cardinals 7-4
 
 ------------------------------------------------------------------------
 
@@ -117,20 +117,20 @@ to interpret for others than myself).
 ##### Most Volatile Teams
 
 1.  Oakland Athletics (6.83)
-2.  Arizona Diamondbacks (6.8)
-3.  Texas Rangers (6.61)
+2.  Arizona Diamondbacks (6.77)
+3.  Colorado Rockies (6.67)
 
 ##### Most Volatile Offenses
 
-1.  Arizona Diamondbacks (3.77)
+1.  Arizona Diamondbacks (3.74)
 2.  Texas Rangers (3.49)
 3.  San Diego Padres (3.44)
 
 ##### Most Volatile Defenses
 
 1.  Miami Marlins (3.63)
-2.  Colorado Rockies (3.5)
-3.  Los Angeles Angels (3.5)
+2.  Colorado Rockies (3.61)
+3.  Los Angeles Angels (3.51)
 
 ------------------------------------------------------------------------
 
@@ -155,15 +155,15 @@ to interpret for others than myself).
 ### Best Records in Last Ten Games
 
 1.  Baltimore Orioles (8-2)
-2.  Milwaukee Brewers (8-2)
-3.  New York Yankees (8-2)
+2.  New York Yankees (8-2)
+3.  Cincinnati Reds (7-3)
 4.  Cleveland Guardians (7-3)
-5.  Minnesota Twins (7-3)
-6.  Seattle Mariners (7-3)
-7.  St. Louis Cardinals (7-3)
-8.  Cincinnati Reds (6-4)
-9.  Detroit Tigers (6-4)
-10. San Diego Padres (6-4)
+5.  Detroit Tigers (7-3)
+6.  Milwaukee Brewers (7-3)
+7.  Minnesota Twins (7-3)
+8.  Seattle Mariners (7-3)
+9.  St. Louis Cardinals (6-4)
+10. Colorado Rockies (5-5)
 
 ------------------------------------------------------------------------
 
@@ -185,26 +185,25 @@ to interpret for others than myself).
 
 ##### Most Home-Dependent Teams
 
-- Colorado Rockies (48.1% home / 25.8% away)
 - Seattle Mariners (65.6% home / 44.8% away)
+- Colorado Rockies (46.4% home / 25.8% away)
 - Kansas City Royals (67.7% home / 48.3% away)
 
 ##### Better-on-the-Road Teams
 
-- San Diego Padres (40.6% home / 63.3% away)
-- Los Angeles Angels (25% home / 45.2% away)
+- San Diego Padres (40.6% home / 61.3% away)
+- Los Angeles Angels (27.6% home / 45.2% away)
 - Boston Red Sox (43.3% home / 56.7% away)
 
 ------------------------------------------------------------------------
 
 ### Winning and Losing Streaks
 
-- **Winning Streaks**: Milwaukee Brewers (W5), New York Yankees (W5),
-  Seattle Mariners (W3), Arizona Diamondbacks (W2), Los Angeles Dodgers
-  (W2), Texas Rangers (W2)
-- **Losing Streaks**: Chicago White Sox (L11), Los Angeles Angels (L5),
-  San Francisco Giants (L4), Colorado Rockies (L2), Miami Marlins (L2),
-  New York Mets (L2)
+- **Winning Streaks**: New York Yankees (W5), Arizona Diamondbacks (W3),
+  Seattle Mariners (W3), Cincinnati Reds (W2), Detroit Tigers (W2), Los
+  Angeles Dodgers (W2)
+- **Losing Streaks**: Chicago White Sox (L11), San Francisco Giants
+  (L5), Colorado Rockies (L3), Miami Marlins (L2), San Diego Padres (L2)
 
 <!-- ___ -->
 <!-- ### Day of Week Results -->
@@ -239,3 +238,55 @@ to interpret for others than myself).
 *Interested in the underlying code that builds this report?* Check it
 out on GitHub:
 <a href="https://github.com/chadallison/mlb24" target="_blank">mlb24</a>
+
+``` r
+end_pct = end_games |>
+  inner_join(team_records |>
+  distinct(team, pct), by = c("home_team" = "team")) |>
+  rename(home_pct = pct) |>
+  inner_join(team_records |>
+  distinct(team, pct), by = c("away_team" = "team")) |>
+  rename(away_pct = pct)
+
+get_win_pct_above_500 = function(team) {
+  data = end_pct |>
+    filter(home_team == team | away_team == team) |>
+    mutate(opp_pct = ifelse(home_team == team, away_pct, home_pct)) |>
+    filter(opp_pct >= 50)
+  
+  games = nrow(data)
+  wins = data |> filter(win_team == team) |> nrow()
+  
+  return(round(wins / games * 100, 1))
+}
+
+get_win_pct_below_500 = function(team) {
+  data = end_pct |>
+    filter(home_team == team | away_team == team) |>
+    mutate(opp_pct = ifelse(home_team == team, away_pct, home_pct)) |>
+    filter(opp_pct < 50)
+  
+  games = nrow(data)
+  wins = data |> filter(win_team == team) |> nrow()
+  
+  return(round(wins / games * 100, 1))
+}
+
+data.frame(team = all_teams) |>
+  mutate(above_500_pct = sapply(team, get_win_pct_above_500),
+         below_500_pct = sapply(team, get_win_pct_below_500)) |>
+  inner_join(teams_info, by = "team") |>
+  ggplot(aes(below_500_pct, above_500_pct)) +
+  geom_point(aes(col = team), size = 4, shape = "square", show.legend = F) +
+  geom_hline(yintercept = 50, linetype = "dashed", alpha = 0.5) +
+  geom_vline(xintercept = 50, linetype = "dashed", alpha = 0.5) +
+  scale_color_manual(values = team_hex) +
+  ggrepel::geom_text_repel(aes(label = abb), size = 3) +
+  labs(x = "Win Percentage vs. Below .500 Opponents",
+       y = "Win Percentage vs. Above .500 Opponents",
+       title = "Win Percentage vs. Above/Below .500 Opponents") +
+  scale_x_continuous(breaks = seq(0, 100, by = 5)) +
+  scale_y_continuous(breaks = seq(0, 100, by = 5))
+```
+
+![](README_files/figure-gfm/unnamed-chunk-28-1.png)<!-- -->
