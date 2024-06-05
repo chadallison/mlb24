@@ -26,6 +26,7 @@ knit: (function(input, ...) { rmarkdown::render(input, output_file = "README.md"
 - [Seven Game Windows]
 - [Team Margins in Seven Game Windows]
 - [Team Series Results]
+- [Records vs. Above/Below .500 Teams]
 
 ___
 
@@ -994,17 +995,11 @@ team_series_results |>
        title = "Team Series Results")
 ```
 
-
-
-
 ___
 
-*Interested in the underlying code that builds this report?* Check it out on GitHub: [mlb24](https://github.com/chadallison/mlb24){target="_blank"}
+### Records vs. Above/Below .500 Teams
 
-
-
-
-```{r}
+```{r echo = F}
 end_pct = end_games |>
   inner_join(team_records |>
   distinct(team, pct), by = c("home_team" = "team")) |>
@@ -1037,85 +1032,31 @@ get_win_pct_below_500 = function(team) {
   return(round(wins / games * 100, 1))
 }
 
-data.frame(team = all_teams) |>
+above_below_500 = data.frame(team = all_teams) |>
   mutate(above_500_pct = sapply(team, get_win_pct_above_500),
-         below_500_pct = sapply(team, get_win_pct_below_500)) |>
+         below_500_pct = sapply(team, get_win_pct_below_500))
+
+above_below_500 |>
   inner_join(teams_info, by = "team") |>
   ggplot(aes(below_500_pct, above_500_pct)) +
   geom_point(aes(col = team), size = 4, shape = "square", show.legend = F) +
-  geom_hline(yintercept = 50, linetype = "dashed", alpha = 0.5) +
-  geom_vline(xintercept = 50, linetype = "dashed", alpha = 0.5) +
+  # geom_hline(yintercept = 50, alpha = 0.05) +
+  # geom_vline(xintercept = 50, alpha = 0.05) +
+  geom_hline(yintercept = mean(above_below_500$above_500_pct), linetype = "dashed", alpha = 0.5) +
+  geom_vline(xintercept = mean(above_below_500$below_500_pct), linetype = "dashed", alpha = 0.5) +
   scale_color_manual(values = team_hex) +
   ggrepel::geom_text_repel(aes(label = abb), size = 3) +
   labs(x = "Win Percentage vs. Below .500 Opponents",
        y = "Win Percentage vs. Above .500 Opponents",
-       title = "Win Percentage vs. Above/Below .500 Opponents") +
+       title = "Win Percentage vs. Above/Below .500 Opponents",
+       subtitle = "Dashed lines represent league averages") +
   scale_x_continuous(breaks = seq(0, 100, by = 5)) +
   scale_y_continuous(breaks = seq(0, 100, by = 5))
 ```
 
+___
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+*Interested in the underlying code that builds this report?* Check it out on GitHub: [mlb24](https://github.com/chadallison/mlb24){target="_blank"}
 
 
 
