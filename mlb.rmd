@@ -997,7 +997,7 @@ team_series_results |>
 
 ___
 
-### Records vs. Above/Below .500 Teams
+## Records vs. Above/Below .500 Teams
 
 ```{r echo = F}
 end_pct = end_games |>
