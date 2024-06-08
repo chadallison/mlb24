@@ -106,9 +106,9 @@ to interpret for others than myself).
 
 ### Yesterday’s Largest Victories
 
-1.  Boston Red Sox def. Chicago White Sox 14-2
-2.  Los Angeles Dodgers def. Pittsburgh Pirates 11-7
-3.  Cincinnati Reds def. Chicago Cubs 8-4
+1.  Milwaukee Brewers def. Detroit Tigers 10-0
+2.  San Diego Padres def. Arizona Diamondbacks 10-3
+3.  Houston Astros def. Los Angeles Angels 7-1
 
 ------------------------------------------------------------------------
 
@@ -118,21 +118,21 @@ to interpret for others than myself).
 
 ##### Most Volatile Teams
 
-1.  Oakland Athletics (6.74)
-2.  Arizona Diamondbacks (6.69)
-3.  Colorado Rockies (6.69)
+1.  Oakland Athletics (6.73)
+2.  Arizona Diamondbacks (6.72)
+3.  Colorado Rockies (6.65)
 
 ##### Most Volatile Offenses
 
-1.  Arizona Diamondbacks (3.68)
-2.  Boston Red Sox (3.51)
-3.  Texas Rangers (3.5)
+1.  Arizona Diamondbacks (3.66)
+2.  Boston Red Sox (3.5)
+3.  Texas Rangers (3.49)
 
 ##### Most Volatile Defenses
 
-1.  Colorado Rockies (3.65)
+1.  Colorado Rockies (3.63)
 2.  Miami Marlins (3.6)
-3.  Los Angeles Angels (3.49)
+3.  Los Angeles Angels (3.47)
 
 ------------------------------------------------------------------------
 
@@ -157,15 +157,15 @@ to interpret for others than myself).
 ### Best Records in Last Ten Games
 
 1.  New York Yankees (8-2)
-2.  Seattle Mariners (8-2)
-3.  Cincinnati Reds (7-3)
-4.  Toronto Blue Jays (7-3)
+2.  Cincinnati Reds (7-3)
+3.  Los Angeles Dodgers (7-3)
+4.  Seattle Mariners (7-3)
 5.  Baltimore Orioles (6-4)
-6.  Cleveland Guardians (6-4)
-7.  Detroit Tigers (6-4)
-8.  Los Angeles Dodgers (6-4)
-9.  Milwaukee Brewers (6-4)
-10. Philadelphia Phillies (6-4)
+6.  Milwaukee Brewers (6-4)
+7.  Philadelphia Phillies (6-4)
+8.  Tampa Bay Rays (6-4)
+9.  Texas Rangers (6-4)
+10. Toronto Blue Jays (6-4)
 
 ------------------------------------------------------------------------
 
@@ -187,26 +187,25 @@ to interpret for others than myself).
 
 ##### Most Home-Dependent Teams
 
-- Kansas City Royals (67.7% home / 48.4% away)
-- Seattle Mariners (65.6% home / 46.9% away)
-- Chicago Cubs (58.1% home / 40.6% away)
+- Kansas City Royals (68.8% home / 48.4% away)
+- Seattle Mariners (65.6% home / 45.5% away)
+- Chicago Cubs (58.1% home / 39.4% away)
 
 ##### Better-on-the-Road Teams
 
-- San Diego Padres (39.4% home / 57.6% away)
-- Boston Red Sox (43.8% home / 58.1% away)
-- Los Angeles Angels (32.3% home / 45.2% away)
+- San Diego Padres (41.2% home / 57.6% away)
+- Los Angeles Angels (31.2% home / 45.2% away)
+- Boston Red Sox (43.8% home / 56.2% away)
 
 ------------------------------------------------------------------------
 
 ### Winning and Losing Streaks
 
-- **Winning Streaks**: New York Yankees (W8), Cincinnati Reds (W5), Los
-  Angeles Angels (W3), New York Mets (W3), Philadelphia Phillies (W3),
-  Tampa Bay Rays (W3), Boston Red Sox (W2), Toronto Blue Jays (W2)
-- **Losing Streaks**: Chicago White Sox (L14), San Diego Padres (L5),
-  Miami Marlins (L4), Washington Nationals (L4), Milwaukee Brewers (L3),
-  Minnesota Twins (L3), Baltimore Orioles (L2)
+- **Winning Streaks**: Cincinnati Reds (W6), New York Mets (W3),
+  Philadelphia Phillies (W3), Kansas City Royals (W2), Los Angeles
+  Dodgers (W2), San Francisco Giants (W2)
+- **Losing Streaks**: Minnesota Twins (L4), Chicago Cubs (L2), Cleveland
+  Guardians (L2), Detroit Tigers (L2)
 
 <!-- ___ -->
 <!-- ### Day of Week Results -->
