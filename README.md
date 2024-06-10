@@ -253,6 +253,8 @@ to interpret for others than myself).
 out on GitHub:
 <a href="https://github.com/chadallison/mlb24" target="_blank">mlb24</a>
 
+------------------------------------------------------------------------
+
 ``` r
 get_npr_on = function(team, dt) {
   return(end_npr |>
@@ -290,3 +292,37 @@ npr_on_dates |>
 ```
 
 ![](README_files/figure-gfm/unnamed-chunk-30-1.png)<!-- -->
+
+``` r
+get_py_on = function(team, dt) {
+  data = end_games |>
+    filter((home_team == team | away_team == team) & date <= dt) |>
+    mutate(team_score = ifelse(home_team == team, home_score, away_score),
+           opp_score = ifelse(home_team == team, away_score, home_score))
+  
+  rs = sum(data$team_score)
+  ra = sum(data$opp_score)
+  py = round(rs ^ 2 / (rs ^ 2 + ra ^ 2) * 100, 1)
+  return(py)
+}
+
+py_dates = crossing(team = all_teams, date = all_szn_dates) |>
+  rowwise() |>
+  mutate(py_on_date = get_py_on(team = team, dt = date)) |>
+  ungroup() |>
+  na.omit()
+
+py_dates |>
+  inner_join(teams_info, by = "team") |>
+  inner_join(team_divisons, by = "team") |>
+  ggplot(aes(date, py_on_date)) +
+  geom_line(aes(col = abb), linewidth = 1.25, show.legend = F) +
+  scale_color_manual(values = team_hex) +
+  theme(axis.text = element_blank()) +
+  facet_wrap(vars(division)) +
+  labs(x = NULL, y = NULL,
+       title = "Season-Long Pythagorean Winning Percentage",
+       caption = "Pythagorean Wins = (Runs Scored ^ 2) / (Runs Scored ^ 2 + Runs Allowed ^ 2)")
+```
+
+![](README_files/figure-gfm/unnamed-chunk-31-1.png)<!-- -->
