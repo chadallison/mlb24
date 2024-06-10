@@ -25,6 +25,7 @@ Chad’s 2024 MLB Report
 - [Team Series Results](#team-series-results)
 - [Records vs. Above/Below .500
   Teams](#records-vs.-abovebelow-.500-teams)
+- [Pythagorean Wins](#pythagorean-wins)
 
 ------------------------------------------------------------------------
 
@@ -106,9 +107,9 @@ to interpret for others than myself).
 
 ### Yesterday’s Largest Victories
 
-1.  San Diego Padres def. Arizona Diamondbacks 13-1
-2.  Cleveland Guardians def. Miami Marlins 8-0
-3.  Los Angeles Dodgers def. New York Yankees 11-3
+1.  Detroit Tigers def. Milwaukee Brewers 10-2
+2.  Baltimore Orioles def. Tampa Bay Rays 9-2
+3.  Minnesota Twins def. Pittsburgh Pirates 11-5
 
 ------------------------------------------------------------------------
 
@@ -118,21 +119,21 @@ to interpret for others than myself).
 
 ##### Most Volatile Teams
 
-1.  Arizona Diamondbacks (6.87)
-2.  Oakland Athletics (6.71)
-3.  Colorado Rockies (6.6)
+1.  Arizona Diamondbacks (6.86)
+2.  Oakland Athletics (6.67)
+3.  Colorado Rockies (6.57)
 
 ##### Most Volatile Offenses
 
-1.  Arizona Diamondbacks (3.66)
-2.  San Diego Padres (3.56)
-3.  Boston Red Sox (3.5)
+1.  Arizona Diamondbacks (3.67)
+2.  San Diego Padres (3.54)
+3.  Boston Red Sox (3.48)
 
 ##### Most Volatile Defenses
 
-1.  Colorado Rockies (3.6)
-2.  Miami Marlins (3.59)
-3.  Los Angeles Angels (3.45)
+1.  Colorado Rockies (3.57)
+2.  Miami Marlins (3.56)
+3.  Los Angeles Angels (3.43)
 
 ------------------------------------------------------------------------
 
@@ -159,13 +160,13 @@ to interpret for others than myself).
 1.  Cincinnati Reds (8-2)
 2.  New York Yankees (8-2)
 3.  Baltimore Orioles (7-3)
-4.  Los Angeles Dodgers (7-3)
-5.  Milwaukee Brewers (7-3)
-6.  Philadelphia Phillies (7-3)
+4.  Philadelphia Phillies (7-3)
+5.  Arizona Diamondbacks (6-4)
+6.  Cleveland Guardians (6-4)
 7.  Houston Astros (6-4)
-8.  Pittsburgh Pirates (6-4)
-9.  Seattle Mariners (6-4)
-10. Toronto Blue Jays (6-4)
+8.  Los Angeles Dodgers (6-4)
+9.  Milwaukee Brewers (6-4)
+10. New York Mets (6-4)
 
 ------------------------------------------------------------------------
 
@@ -187,29 +188,24 @@ to interpret for others than myself).
 
 ##### Most Home-Dependent Teams
 
-- Seattle Mariners (65.6% home / 44.1% away)
-- Kansas City Royals (69.7% home / 48.4% away)
-- Chicago White Sox (36.4% home / 16.1% away)
+- Seattle Mariners (65.6% home / 45.7% away)
+- Chicago White Sox (35.3% home / 16.1% away)
+- Kansas City Royals (67.6% home / 48.4% away)
 
 ##### Better-on-the-Road Teams
 
-- Los Angeles Angels (30.3% home / 45.2% away)
-- San Diego Padres (42.9% home / 57.6% away)
-- New York Mets (37.1% home / 50% away)
+- San Diego Padres (41.7% home / 57.6% away)
+- New York Mets (37.1% home / 51.7% away)
+- Los Angeles Angels (32.4% home / 45.2% away)
 
 ------------------------------------------------------------------------
 
 ### Winning and Losing Streaks
 
-- **Winning Streaks**: Cincinnati Reds (W7), Philadelphia Phillies (W4),
-  Kansas City Royals (W3), Los Angeles Dodgers (W3), San Francisco
-  Giants (W3), Baltimore Orioles (W2), Chicago White Sox (W2), Houston
-  Astros (W2), Milwaukee Brewers (W2), Pittsburgh Pirates (W2), San
-  Diego Padres (W2), Washington Nationals (W2)
-- **Losing Streaks**: Minnesota Twins (L5), Chicago Cubs (L3), Detroit
-  Tigers (L3), Arizona Diamondbacks (L2), Atlanta Braves (L2), Boston
-  Red Sox (L2), Los Angeles Angels (L2), New York Yankees (L2), Seattle
-  Mariners (L2), Tampa Bay Rays (L2), Texas Rangers (L2)
+- **Winning Streaks**: Baltimore Orioles (W3), Washington Nationals
+  (W3), Cleveland Guardians (W2), Toronto Blue Jays (W2)
+- **Losing Streaks**: Atlanta Braves (L3), Tampa Bay Rays (L3), Miami
+  Marlins (L2), Oakland Athletics (L2)
 
 <!-- ___ -->
 <!-- ### Day of Week Results -->
@@ -247,6 +243,50 @@ to interpret for others than myself).
 
 ------------------------------------------------------------------------
 
+### Pythagorean Wins
+
+![](README_files/figure-gfm/unnamed-chunk-29-1.png)<!-- -->
+
+------------------------------------------------------------------------
+
 *Interested in the underlying code that builds this report?* Check it
 out on GitHub:
 <a href="https://github.com/chadallison/mlb24" target="_blank">mlb24</a>
+
+``` r
+get_npr_on = function(team, dt) {
+  return(end_npr |>
+    filter((home_team == team | away_team == team) & date <= dt) |>
+    mutate(team_npr = ifelse(home_team == team, home_off_npr + home_def_npr, away_off_npr + away_def_npr)) |>
+    summarise(npr = sum(team_npr)) |>
+    pull(npr))
+}
+
+all_szn_dates = seq.Date(from = min(end_games$date), to = Sys.Date(), by = 1)
+
+npr_on_dates = crossing(team = all_teams, date = all_szn_dates) |>
+  rowwise() |>
+  mutate(npr_on_date = get_npr_on(team = team, dt = date)) |>
+  ungroup()
+
+npr_on_dates = npr_on_dates |>
+  inner_join(teams_info, by = "team") |>
+  inner_join(team_divisons, by = "team")
+
+last_dates = npr_on_dates |>
+  group_by(team) |>
+  filter(date == max(date)) |>
+  ungroup()
+
+npr_on_dates |>
+  ggplot(aes(date, npr_on_date)) +
+  geom_line(aes(col = team), linewidth = 1.25, show.legend = F) +
+  scale_color_manual(values = team_hex) +
+  theme(axis.text = element_blank()) +
+  facet_wrap(vars(division)) +
+  labs(x = NULL, y = NULL, title = "Season-Long Team NPR Trends") +
+  ggrepel::geom_text_repel(aes(label = abb, col = team),
+                           data = last_dates, segment.alpha = 0, nudge_x = 10, direction = "y", hjust = 0, size = 3, show.legend = F)
+```
+
+![](README_files/figure-gfm/unnamed-chunk-30-1.png)<!-- -->

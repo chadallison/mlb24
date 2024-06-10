@@ -27,6 +27,7 @@ knit: (function(input, ...) { rmarkdown::render(input, output_file = "README.md"
 - [Team Margins in Seven Game Windows]
 - [Team Series Results]
 - [Records vs. Above/Below .500 Teams]
+- [Pythagorean Wins]
 
 ___
 
@@ -96,6 +97,21 @@ team_hex = c(
   "#0C2340", "#003831", "#E81828", "#FDB827", "#2F241D" ,"#FD5A1E",
   "#005C5C", "#C41E3A", "#8FBCE6", "#003278", "#134A8E" ,"#FFB7C5"
 )
+
+divisions = c(
+  "NL West", "NL East", "AL East", "AL East",
+  "NL Central", "AL Central", "NL Central", "AL Central",
+  "NL West", "AL Central", "AL West", "AL Central",
+  "AL West", "NL West", "NL East", "NL Central",
+  "AL Central", "NL East", "AL East", "AL West",
+  "NL East", "NL Central", "NL West", "NL West",
+  "AL West", "NL Central", "AL East", "AL West",
+  "AL East", "NL East"
+)
+
+team_divisons = data.frame(team = all_teams, division = divisions) |>
+  mutate(division = factor(division, levels = c("AL West", "AL Central", "AL East",
+                                                "NL West", "NL Central", "NL East")))
 
 teams_info = data.frame(team = all_teams, abb = team_abbrevs, hex = team_hex)
 
@@ -1056,8 +1072,67 @@ above_below_500 |>
 
 ___
 
+### Pythagorean Wins
+
+```{r echo = F}
+team_rpg |>
+  mutate(py = round((rspg ^ 2) / (rspg ^ 2 + rapg ^ 2) * 100, 1)) |>
+  inner_join(team_records, by = "team") |>
+  distinct(team, pct, py) |>
+  inner_join(teams_info, by = "team") |>
+  ggplot(aes(py, pct)) +
+  geom_point(aes(col = team), shape = "square", size = 4, show.legend = F) +
+  scale_color_manual(values = team_hex) +
+  ggrepel::geom_text_repel(aes(label = abb), size = 3) +
+  geom_abline(linetype = "dashed", alpha = 0.5) +
+  labs(x = "Pythagorean Wins", y = "True Win Percentage",
+       title = "Pythagorean Wins v. True Win Percentage",
+       subtitle = "Teams above dashed line are better than they 'should' be") +
+  scale_x_continuous(breaks = seq(0, 100, by = 5)) +
+  scale_y_continuous(breaks = seq(0, 100, by = 5))
+```
+
+___
+
 *Interested in the underlying code that builds this report?* Check it out on GitHub: [mlb24](https://github.com/chadallison/mlb24){target="_blank"}
 
+
+
+```{r}
+get_npr_on = function(team, dt) {
+  return(end_npr |>
+    filter((home_team == team | away_team == team) & date <= dt) |>
+    mutate(team_npr = ifelse(home_team == team, home_off_npr + home_def_npr, away_off_npr + away_def_npr)) |>
+    summarise(npr = sum(team_npr)) |>
+    pull(npr))
+}
+
+all_szn_dates = seq.Date(from = min(end_games$date), to = Sys.Date(), by = 1)
+
+npr_on_dates = crossing(team = all_teams, date = all_szn_dates) |>
+  rowwise() |>
+  mutate(npr_on_date = get_npr_on(team = team, dt = date)) |>
+  ungroup()
+
+npr_on_dates = npr_on_dates |>
+  inner_join(teams_info, by = "team") |>
+  inner_join(team_divisons, by = "team")
+
+last_dates = npr_on_dates |>
+  group_by(team) |>
+  filter(date == max(date)) |>
+  ungroup()
+
+npr_on_dates |>
+  ggplot(aes(date, npr_on_date)) +
+  geom_line(aes(col = team), linewidth = 1.25, show.legend = F) +
+  scale_color_manual(values = team_hex) +
+  theme(axis.text = element_blank()) +
+  facet_wrap(vars(division)) +
+  labs(x = NULL, y = NULL, title = "Season-Long Team NPR Trends") +
+  ggrepel::geom_text_repel(aes(label = abb, col = team),
+                           data = last_dates, segment.alpha = 0, nudge_x = 10, direction = "y", hjust = 0, size = 3, show.legend = F)
+```
 
 
 
