@@ -28,6 +28,8 @@ knit: (function(input, ...) { rmarkdown::render(input, output_file = "README.md"
 - [Team Series Results]
 - [Records vs. Above/Below .500 Teams]
 - [Pythagorean Wins]
+- [Season Long NPR Trends]
+- [Season Long Pythagorean Trends]
 
 ___
 
@@ -1094,11 +1096,9 @@ team_rpg |>
 
 ___
 
-*Interested in the underlying code that builds this report?* Check it out on GitHub: [mlb24](https://github.com/chadallison/mlb24){target="_blank"}
+### Season Long NPR Trends
 
-___
-
-```{r}
+```{r echo = F}
 get_npr_on = function(team, dt) {
   return(end_npr |>
     filter((home_team == team | away_team == team) & date <= dt) |>
@@ -1130,11 +1130,14 @@ npr_on_dates |>
   theme(axis.text = element_blank()) +
   facet_wrap(vars(division)) +
   labs(x = NULL, y = NULL, title = "Season-Long Team NPR Trends") +
-  ggrepel::geom_text_repel(aes(label = abb, col = team),
-                           data = last_dates, segment.alpha = 0, nudge_x = 10, direction = "y", hjust = 0, size = 3, show.legend = F)
+  ggrepel::geom_text_repel(aes(label = abb), data = last_dates, segment.alpha = 0, nudge_x = 10, direction = "y", hjust = 0, size = 3, show.legend = F)
 ```
 
-```{r}
+___
+
+### Season Long Pythagorean Trends
+
+```{r echo = F}
 get_py_on = function(team, dt) {
   data = end_games |>
     filter((home_team == team | away_team == team) & date <= dt) |>
@@ -1153,11 +1156,19 @@ py_dates = crossing(team = all_teams, date = all_szn_dates) |>
   ungroup() |>
   na.omit()
 
-py_dates |>
+py_on_dates = py_dates |>
   inner_join(teams_info, by = "team") |>
-  inner_join(team_divisons, by = "team") |>
+  inner_join(team_divisons, by = "team")
+
+label_positions = py_on_dates |>
+  group_by(team) |>
+  filter(date == max(date)) |>
+  ungroup()
+
+py_on_dates |>
   ggplot(aes(date, py_on_date)) +
-  geom_line(aes(col = abb), linewidth = 1.25, show.legend = F) +
+  geom_line(aes(col = team), linewidth = 1.25, show.legend = F) +
+  ggrepel::geom_text_repel(data = label_positions, aes(label = abb), size = 3, hjust = 1, nudge_x = 10, show.legend = F) +
   scale_color_manual(values = team_hex) +
   theme(axis.text = element_blank()) +
   facet_wrap(vars(division)) +
@@ -1166,6 +1177,9 @@ py_dates |>
        caption = "Pythagorean Wins = (Runs Scored ^ 2) / (Runs Scored ^ 2 + Runs Allowed ^ 2)")
 ```
 
+___
+
+*Interested in the underlying code that builds this report?* Check it out on GitHub: [mlb24](https://github.com/chadallison/mlb24){target="_blank"}
 
 
 
