@@ -1183,6 +1183,13 @@ ___
 
 
 
+```{r}
+end_npr |>
+  slice_max(date, n = 1, with_ties = T) |>
+  mutate(winner_npr = ifelse(win_team == home_team, home_off_npr + home_def_npr, away_off_npr + away_def_npr)) |>
+  distinct(home_team, away_team, home_score, away_score, win_team, winner_npr) |>
+  arrange(desc(winner_npr))
+```
 
 
 
