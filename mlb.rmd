@@ -4,6 +4,9 @@ output: github_document
 knit: (function(input, ...) { rmarkdown::render(input, output_file = "README.md", envir = globalenv()) })
 ---
 
+*Interested in the underlying code that builds this report?* Check it out on GitHub: [mlb24](https://github.com/chadallison/mlb24){target="_blank"}
+
+___
 
 ### Contents
 
@@ -30,6 +33,7 @@ knit: (function(input, ...) { rmarkdown::render(input, output_file = "README.md"
 - [Pythagorean Wins]
 - [Season Long NPR Trends]
 - [Season Long Pythagorean Trends]
+- [Yesterday's Best and Worst Win]
 
 ___
 
@@ -1179,20 +1183,21 @@ py_on_dates |>
 
 ___
 
-*Interested in the underlying code that builds this report?* Check it out on GitHub: [mlb24](https://github.com/chadallison/mlb24){target="_blank"}
-
-
-
-```{r}
-end_npr |>
+```{r echo = F}
+npr_wins = end_npr |>
   slice_max(date, n = 1, with_ties = T) |>
   mutate(winner_npr = ifelse(win_team == home_team, home_off_npr + home_def_npr, away_off_npr + away_def_npr)) |>
-  distinct(home_team, away_team, home_score, away_score, win_team, winner_npr) |>
-  arrange(desc(winner_npr))
+  distinct(home_team, away_team, home_score, away_score, win_team, lose_team, winner_npr) |>
+  filter(winner_npr == min(winner_npr) | winner_npr == max(winner_npr)) |>
+  mutate(x = paste0(win_team, " def. ", lose_team, " (+", winner_npr, ")")) |>
+  arrange(desc(winner_npr)) |>
+  pull(x)
 ```
 
+### Yesterday's Best and Worst Win
 
-
+- Best Win: `r npr_wins[1]`
+- Worst Win: `r npr_wins[2]`
 
 
 
