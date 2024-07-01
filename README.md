@@ -34,7 +34,7 @@ out on GitHub:
 - [Pythagorean Wins](#pythagorean-wins)
 - [Season Long NPR Trends](#season-long-npr-trends)
 - [Season Long Pythagorean Trends](#season-long-pythagorean-trends)
-- [Yesterday’s Best and Worst Win](#yesterdays-best-and-worst-win)
+- \[Yesterday’s Best Win and Worst Loss\]
 
 ------------------------------------------------------------------------
 
@@ -116,9 +116,9 @@ to interpret for others than myself).
 
 ### Yesterday’s Largest Victories
 
-1.  San Diego Padres def. Boston Red Sox 11-1
-2.  Chicago White Sox def. Colorado Rockies 11-3
-3.  Washington Nationals def. Tampa Bay Rays 8-1
+1.  Texas Rangers def. Baltimore Orioles 11-2
+2.  New York Yankees def. Toronto Blue Jays 8-1
+3.  Milwaukee Brewers def. Chicago Cubs 7-1
 
 ------------------------------------------------------------------------
 
@@ -128,21 +128,21 @@ to interpret for others than myself).
 
 ##### Most Volatile Teams
 
-1.  Arizona Diamondbacks (6.94)
-2.  Colorado Rockies (6.86)
-3.  Texas Rangers (6.6)
+1.  Arizona Diamondbacks (6.92)
+2.  Colorado Rockies (6.82)
+3.  Texas Rangers (6.66)
 
 ##### Most Volatile Offenses
 
-1.  Arizona Diamondbacks (3.58)
-2.  New York Mets (3.45)
-3.  San Diego Padres (3.45)
+1.  Arizona Diamondbacks (3.56)
+2.  San Diego Padres (3.45)
+3.  Minnesota Twins (3.42)
 
 ##### Most Volatile Defenses
 
-1.  Colorado Rockies (3.63)
-2.  Los Angeles Angels (3.45)
-3.  Miami Marlins (3.39)
+1.  Colorado Rockies (3.61)
+2.  Los Angeles Angels (3.43)
+3.  Miami Marlins (3.38)
 
 ------------------------------------------------------------------------
 
@@ -166,16 +166,16 @@ to interpret for others than myself).
 
 ### Best Records in Last Ten Games
 
-1.  San Diego Padres (9-1)
-2.  Houston Astros (8-2)
-3.  Cleveland Guardians (7-3)
-4.  Los Angeles Angels (7-3)
-5.  Los Angeles Dodgers (7-3)
-6.  New York Mets (7-3)
-7.  Tampa Bay Rays (7-3)
-8.  Atlanta Braves (6-4)
-9.  Boston Red Sox (6-4)
-10. Miami Marlins (6-4)
+1.  Houston Astros (9-1)
+2.  San Diego Padres (8-2)
+3.  Los Angeles Angels (7-3)
+4.  St. Louis Cardinals (7-3)
+5.  Tampa Bay Rays (7-3)
+6.  Boston Red Sox (6-4)
+7.  Cleveland Guardians (6-4)
+8.  Los Angeles Dodgers (6-4)
+9.  Milwaukee Brewers (6-4)
+10. Minnesota Twins (6-4)
 
 ------------------------------------------------------------------------
 
@@ -197,24 +197,24 @@ to interpret for others than myself).
 
 ##### Most Home-Dependent Teams
 
-- Seattle Mariners (68.3% home / 43.2% away)
-- Kansas City Royals (63.6% home / 42.5% away)
-- Atlanta Braves (66.7% home / 46.3% away)
+- Seattle Mariners (66.7% home / 43.2% away)
+- Kansas City Royals (64.4% home / 42.5% away)
+- Cleveland Guardians (74.3% home / 55.3% away)
 
 ##### Better-on-the-Road Teams
 
-- Boston Red Sox (45.2% home / 60% away)
-- New York Mets (46.7% home / 54.3% away)
-- Tampa Bay Rays (46.8% home / 52.8% away)
+- Boston Red Sox (46.5% home / 60% away)
+- New York Mets (45.7% home / 54.3% away)
+- Los Angeles Angels (40.9% home / 46.2% away)
 
 ------------------------------------------------------------------------
 
 ### Winning and Losing Streaks
 
-- **Winning Streaks**: Los Angeles Angels (W6), San Diego Padres (W5),
-  Baltimore Orioles (W4), Chicago White Sox (W3), Atlanta Braves (W2)
-- **Losing Streaks**: Texas Rangers (L6), Colorado Rockies (L5), Detroit
-  Tigers (L4), Boston Red Sox (L3), Pittsburgh Pirates (L2)
+- **Winning Streaks**: Arizona Diamondbacks (W2), Houston Astros (W2),
+  Minnesota Twins (W2)
+- **Losing Streaks**: New York Mets (L2), Oakland Athletics (L2),
+  Seattle Mariners (L2)
 
 <!-- ___ -->
 <!-- ### Day of Week Results -->
@@ -269,8 +269,3 @@ to interpret for others than myself).
 ![](README_files/figure-gfm/unnamed-chunk-31-1.png)<!-- -->
 
 ------------------------------------------------------------------------
-
-### Yesterday’s Best and Worst Win
-
-- Best Win: San Diego Padres def. Boston Red Sox (+9.96)
-- Worst Win: Baltimore Orioles def. Texas Rangers (+0.18)
