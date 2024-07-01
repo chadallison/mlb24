@@ -34,7 +34,6 @@ out on GitHub:
 - [Pythagorean Wins](#pythagorean-wins)
 - [Season Long NPR Trends](#season-long-npr-trends)
 - [Season Long Pythagorean Trends](#season-long-pythagorean-trends)
-- \[Yesterday’s Best Win and Worst Loss\]
 
 ------------------------------------------------------------------------
 
@@ -269,3 +268,20 @@ to interpret for others than myself).
 ![](README_files/figure-gfm/unnamed-chunk-31-1.png)<!-- -->
 
 ------------------------------------------------------------------------
+
+### Consecutive Games Scoring x Runs
+
+Work in progress. Ignore for now …
+
+``` r
+get_team_game_runs = function(team) {
+  data = end_games |>
+    filter(home_team == team | away_team == team) |>
+    mutate(my_score = ifelse(home_team == team, home_score, away_score),
+           other_score = ifelse(home_team == team, away_score, home_score)) |>
+    distinct(date, my_score, other_score) |>
+    arrange(desc(date))
+}
+
+get_team_game_runs(team = "Chicago Cubs")
+```

@@ -33,7 +33,6 @@ ___
 - [Pythagorean Wins]
 - [Season Long NPR Trends]
 - [Season Long Pythagorean Trends]
-- [Yesterday's Best Win and Worst Loss]
 
 ___
 
@@ -1183,6 +1182,22 @@ py_on_dates |>
 
 ___
 
+### Consecutive Games Scoring x Runs
+
+Work in progress. Ignore for now ...
+
+```{r}
+get_team_game_runs = function(team) {
+  data = end_games |>
+    filter(home_team == team | away_team == team) |>
+    mutate(my_score = ifelse(home_team == team, home_score, away_score),
+           other_score = ifelse(home_team == team, away_score, home_score)) |>
+    distinct(date, my_score, other_score) |>
+    arrange(desc(date))
+}
+
+get_team_game_runs(team = "Chicago Cubs")
+```
 
 
 
