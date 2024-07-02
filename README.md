@@ -34,6 +34,7 @@ out on GitHub:
 - [Pythagorean Wins](#pythagorean-wins)
 - [Season Long NPR Trends](#season-long-npr-trends)
 - [Season Long Pythagorean Trends](#season-long-pythagorean-trends)
+- [Runs Scored and Allowed Streaks](#runs-scored-and-allowed-streaks)
 
 ------------------------------------------------------------------------
 
@@ -269,19 +270,22 @@ to interpret for others than myself).
 
 ------------------------------------------------------------------------
 
-### Consecutive Games Scoring x Runs
+### Runs Scored and Allowed Streaks
 
-Work in progress. Ignore for now …
+##### Longest Streaks of Scoring Two or More Runs
 
-``` r
-get_team_game_runs = function(team) {
-  data = end_games |>
-    filter(home_team == team | away_team == team) |>
-    mutate(my_score = ifelse(home_team == team, home_score, away_score),
-           other_score = ifelse(home_team == team, away_score, home_score)) |>
-    distinct(date, my_score, other_score) |>
-    arrange(desc(date))
-}
+- Minnesota Twins (20)
+- Milwaukee Brewers (18)
+- San Francisco Giants (17)
+- Los Angeles Dodgers (15)
+- Houston Astros (11)
 
-get_team_game_runs(team = "Chicago Cubs")
-```
+##### Longest Streaks of Allowing Fewer Than Five Runs
+
+- Atlanta Braves (8)
+- Cincinnati Reds (4)
+- Minnesota Twins (3)
+- San Diego Padres (3)
+- Arizona Diamondbacks (2)
+
+------------------------------------------------------------------------
