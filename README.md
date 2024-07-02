@@ -115,9 +115,9 @@ to interpret for others than myself).
 
 ### Yesterday’s Largest Victories
 
-1.  Texas Rangers def. Baltimore Orioles 11-2
-2.  New York Yankees def. Toronto Blue Jays 8-1
-3.  Milwaukee Brewers def. Chicago Cubs 7-1
+1.  Houston Astros def. Toronto Blue Jays 3-1
+2.  New York Mets def. Washington Nationals 9-7
+3.  Colorado Rockies def. Milwaukee Brewers 8-7
 
 ------------------------------------------------------------------------
 
@@ -128,18 +128,18 @@ to interpret for others than myself).
 ##### Most Volatile Teams
 
 1.  Arizona Diamondbacks (6.92)
-2.  Colorado Rockies (6.82)
+2.  Colorado Rockies (6.81)
 3.  Texas Rangers (6.66)
 
 ##### Most Volatile Offenses
 
 1.  Arizona Diamondbacks (3.56)
 2.  San Diego Padres (3.45)
-3.  Minnesota Twins (3.42)
+3.  New York Mets (3.43)
 
 ##### Most Volatile Defenses
 
-1.  Colorado Rockies (3.61)
+1.  Colorado Rockies (3.59)
 2.  Los Angeles Angels (3.43)
 3.  Miami Marlins (3.38)
 
@@ -203,17 +203,17 @@ to interpret for others than myself).
 ##### Better-on-the-Road Teams
 
 - Boston Red Sox (46.5% home / 60% away)
-- New York Mets (45.7% home / 54.3% away)
+- New York Mets (45.7% home / 55.6% away)
 - Los Angeles Angels (40.9% home / 46.2% away)
 
 ------------------------------------------------------------------------
 
 ### Winning and Losing Streaks
 
-- **Winning Streaks**: Arizona Diamondbacks (W2), Houston Astros (W2),
-  Minnesota Twins (W2)
-- **Losing Streaks**: New York Mets (L2), Oakland Athletics (L2),
-  Seattle Mariners (L2)
+- **Winning Streaks**: Houston Astros (W3), Arizona Diamondbacks (W2),
+  Colorado Rockies (W2), Minnesota Twins (W2)
+- **Losing Streaks**: Oakland Athletics (L2), Seattle Mariners (L2),
+  Toronto Blue Jays (L2), Washington Nationals (L2)
 
 <!-- ___ -->
 <!-- ### Day of Week Results -->
