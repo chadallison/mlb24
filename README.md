@@ -116,9 +116,9 @@ to interpret for others than myself).
 
 ### Yesterday’s Largest Victories
 
-1.  Houston Astros def. Toronto Blue Jays 3-1
-2.  New York Mets def. Washington Nationals 9-7
-3.  Colorado Rockies def. Milwaukee Brewers 8-7
+1.  Texas Rangers def. San Diego Padres 7-0
+2.  Boston Red Sox def. Miami Marlins 8-3
+3.  New York Mets def. Washington Nationals 7-2
 
 ------------------------------------------------------------------------
 
@@ -128,21 +128,21 @@ to interpret for others than myself).
 
 ##### Most Volatile Teams
 
-1.  Arizona Diamondbacks (6.92)
-2.  Colorado Rockies (6.81)
+1.  Arizona Diamondbacks (6.89)
+2.  Colorado Rockies (6.78)
 3.  Texas Rangers (6.66)
 
 ##### Most Volatile Offenses
 
-1.  Arizona Diamondbacks (3.56)
-2.  San Diego Padres (3.45)
-3.  New York Mets (3.43)
+1.  Arizona Diamondbacks (3.54)
+2.  San Diego Padres (3.47)
+3.  New York Mets (3.42)
 
 ##### Most Volatile Defenses
 
-1.  Colorado Rockies (3.59)
-2.  Los Angeles Angels (3.43)
-3.  Miami Marlins (3.38)
+1.  Colorado Rockies (3.58)
+2.  Los Angeles Angels (3.42)
+3.  Texas Rangers (3.38)
 
 ------------------------------------------------------------------------
 
@@ -166,16 +166,16 @@ to interpret for others than myself).
 
 ### Best Records in Last Ten Games
 
-1.  Houston Astros (9-1)
-2.  San Diego Padres (8-2)
-3.  Los Angeles Angels (7-3)
-4.  St. Louis Cardinals (7-3)
-5.  Tampa Bay Rays (7-3)
-6.  Boston Red Sox (6-4)
-7.  Cleveland Guardians (6-4)
-8.  Los Angeles Dodgers (6-4)
-9.  Milwaukee Brewers (6-4)
-10. Minnesota Twins (6-4)
+1.  Houston Astros (8-2)
+2.  Los Angeles Angels (7-3)
+3.  Los Angeles Dodgers (7-3)
+4.  Milwaukee Brewers (7-3)
+5.  Minnesota Twins (7-3)
+6.  New York Mets (7-3)
+7.  Philadelphia Phillies (7-3)
+8.  San Diego Padres (7-3)
+9.  St. Louis Cardinals (7-3)
+10. Tampa Bay Rays (7-3)
 
 ------------------------------------------------------------------------
 
@@ -197,24 +197,26 @@ to interpret for others than myself).
 
 ##### Most Home-Dependent Teams
 
-- Seattle Mariners (66.7% home / 43.2% away)
-- Kansas City Royals (64.4% home / 42.5% away)
-- Cleveland Guardians (74.3% home / 55.3% away)
+- Seattle Mariners (65.1% home / 43.2% away)
+- Kansas City Royals (63% home / 42.5% away)
+- Cleveland Guardians (75% home / 55.3% away)
 
 ##### Better-on-the-Road Teams
 
-- Boston Red Sox (46.5% home / 60% away)
-- New York Mets (45.7% home / 55.6% away)
-- Los Angeles Angels (40.9% home / 46.2% away)
+- Boston Red Sox (46.5% home / 61% away)
+- New York Mets (45.7% home / 56.8% away)
+- Tampa Bay Rays (47.9% home / 54.1% away)
 
 ------------------------------------------------------------------------
 
 ### Winning and Losing Streaks
 
-- **Winning Streaks**: Houston Astros (W3), Arizona Diamondbacks (W2),
-  Colorado Rockies (W2), Minnesota Twins (W2)
-- **Losing Streaks**: Oakland Athletics (L2), Seattle Mariners (L2),
-  Toronto Blue Jays (L2), Washington Nationals (L2)
+- **Winning Streaks**: Minnesota Twins (W3), Boston Red Sox (W2), New
+  York Mets (W2), Philadelphia Phillies (W2), San Francisco Giants (W2),
+  St. Louis Cardinals (W2), Tampa Bay Rays (W2), Texas Rangers (W2)
+- **Losing Streaks**: Seattle Mariners (L3), Washington Nationals (L3),
+  Atlanta Braves (L2), Chicago Cubs (L2), Chicago White Sox (L2), Los
+  Angeles Angels (L2), Miami Marlins (L2), San Diego Padres (L2)
 
 <!-- ___ -->
 <!-- ### Day of Week Results -->
@@ -274,18 +276,18 @@ to interpret for others than myself).
 
 ##### Longest Streaks of Scoring Two or More Runs
 
-- Minnesota Twins (20)
-- Milwaukee Brewers (18)
-- San Francisco Giants (17)
-- Los Angeles Dodgers (15)
-- Houston Astros (11)
+- Minnesota Twins (21)
+- Milwaukee Brewers (19)
+- San Francisco Giants (18)
+- Los Angeles Dodgers (16)
+- Houston Astros (12)
 
 ##### Longest Streaks of Allowing Fewer Than Five Runs
 
-- Atlanta Braves (8)
-- Cincinnati Reds (4)
-- Minnesota Twins (3)
-- San Diego Padres (3)
-- Arizona Diamondbacks (2)
+- Cincinnati Reds (5)
+- Minnesota Twins (4)
+- Boston Red Sox (2)
+- San Francisco Giants (2)
+- St. Louis Cardinals (2)
 
 ------------------------------------------------------------------------
