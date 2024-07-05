@@ -310,25 +310,33 @@ get_date_tenth_last_game = function(team) {
 teams_tenth_last = data.frame(team = all_teams) |>
   mutate(tenth_date = as_date(sapply(team, get_date_tenth_last_game)))
 
-teams_tenth_last |>
+last_ten_npr_diff = teams_tenth_last |>
   rowwise() |>
   mutate(npr_past = get_npr_on(team = team, dt = tenth_date)) |>
   ungroup() |>
   inner_join(team_npr |>
-  distinct(team, total_npr), by = "team")
+  distinct(team, total_npr), by = "team") |>
+  inner_join(team_records |>
+  transmute(team, gp = wins + losses), by = "team") |>
+  mutate(npr_past = round(npr_past / gp, 2),
+         diff = total_npr - npr_past) |>
+  distinct(team, npr_past, total_npr, diff)
+
+last_ten_diffs = last_ten_npr_diff |> distinct(team, diff)
+
+last_ten_npr_diff |>
+  distinct(team, npr_past, total_npr) |>
+  pivot_longer(!team, names_to = "when", values_to = "npr") |>
+  inner_join(last_ten_diffs, by = "team") |>
+  inner_join(teams_info, by = "team") |>
+  mutate(team = as.character(glue("{abb} ({diff})"))) |>
+  ggplot(aes(reorder(team, diff), npr)) +
+  geom_point(aes(col = when), shape = "square", size = 2, show.legend = F) +
+  coord_flip() +
+  scale_color_manual(values = c("#AB8DAD", "#759575")) +
+  scale_y_continuous(breaks = seq(-2.5, 2.5, by = 0.1)) +
+  labs(y = "NPR", x = NULL,
+       title = "Team NPR trends, past ten games")
 ```
 
-    ## # A tibble: 30 × 4
-    ##    team                 tenth_date npr_past total_npr
-    ##    <chr>                <date>        <dbl>     <dbl>
-    ##  1 Arizona Diamondbacks 2024-06-23   -7.27      -0.03
-    ##  2 Atlanta Braves       2024-06-24   22.0        0.23
-    ##  3 Baltimore Orioles    2024-06-24   58.0        0.64
-    ##  4 Boston Red Sox       2024-06-22   27.9        0.23
-    ##  5 Chicago Cubs         2024-06-24  -10.8       -0.13
-    ##  6 Chicago White Sox    2024-06-24  -77.5       -0.71
-    ##  7 Cincinnati Reds      2024-06-24   12.4        0.2 
-    ##  8 Cleveland Guardians  2024-06-24   49.0        0.42
-    ##  9 Colorado Rockies     2024-06-23  -56.9       -0.8 
-    ## 10 Detroit Tigers       2024-06-23    0.230     -0.11
-    ## # ℹ 20 more rows
+![](README_files/figure-gfm/unnamed-chunk-34-1.png)<!-- -->
