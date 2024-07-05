@@ -1267,6 +1267,31 @@ y = data.frame(team = all_teams) |>
 
 ___
 
+### WORK IN PROGRESS
+
+Coming soon ...
+
+```{r}
+get_date_tenth_last_game = function(team) {
+  date = end_games |>
+    filter(home_team == team | away_team == team) |>
+    slice_max(date, n = 10, with_ties = F) |>
+    slice_min(date, n = 1, with_ties = F) |>
+    pull(date)
+  
+  return(as.character(date))
+}
+
+teams_tenth_last = data.frame(team = all_teams) |>
+  mutate(tenth_date = as_date(sapply(team, get_date_tenth_last_game)))
+
+teams_tenth_last |>
+  rowwise() |>
+  mutate(npr_past = get_npr_on(team = team, dt = tenth_date)) |>
+  ungroup() |>
+  inner_join(team_npr |>
+  distinct(team, total_npr), by = "team")
+```
 
 
 
