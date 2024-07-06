@@ -35,6 +35,8 @@ out on GitHub:
 - [Season Long NPR Trends](#season-long-npr-trends)
 - [Season Long Pythagorean Trends](#season-long-pythagorean-trends)
 - [Runs Scored and Allowed Streaks](#runs-scored-and-allowed-streaks)
+- [Team NPR Trends in Past Ten
+  Games](#team-npr-trends-in-past-ten-games)
 
 ------------------------------------------------------------------------
 
@@ -116,9 +118,9 @@ to interpret for others than myself).
 
 ### Yesterday’s Largest Victories
 
-1.  Chicago Cubs def. Philadelphia Phillies 10-2
-2.  Arizona Diamondbacks def. Los Angeles Dodgers 9-3
-3.  Oakland Athletics def. Los Angeles Angels 5-0
+1.  Pittsburgh Pirates def. New York Mets 14-2
+2.  Chicago Cubs def. Los Angeles Angels 5-1
+3.  Texas Rangers def. Tampa Bay Rays 3-0
 
 ------------------------------------------------------------------------
 
@@ -128,21 +130,21 @@ to interpret for others than myself).
 
 ##### Most Volatile Teams
 
-1.  Arizona Diamondbacks (6.92)
-2.  Colorado Rockies (6.76)
-3.  Texas Rangers (6.61)
+1.  Arizona Diamondbacks (6.95)
+2.  Colorado Rockies (6.75)
+3.  Texas Rangers (6.6)
 
 ##### Most Volatile Offenses
 
 1.  Arizona Diamondbacks (3.61)
-2.  San Diego Padres (3.44)
-3.  New York Mets (3.42)
+2.  Minnesota Twins (3.46)
+3.  San Diego Padres (3.46)
 
 ##### Most Volatile Defenses
 
-1.  Colorado Rockies (3.56)
-2.  Los Angeles Angels (3.38)
-3.  Texas Rangers (3.35)
+1.  Colorado Rockies (3.57)
+2.  Los Angeles Angels (3.36)
+3.  Texas Rangers (3.36)
 
 ------------------------------------------------------------------------
 
@@ -167,15 +169,15 @@ to interpret for others than myself).
 ### Best Records in Last Ten Games
 
 1.  Houston Astros (8-2)
-2.  Boston Red Sox (7-3)
-3.  Milwaukee Brewers (7-3)
-4.  Minnesota Twins (7-3)
-5.  San Diego Padres (7-3)
-6.  San Francisco Giants (7-3)
-7.  Tampa Bay Rays (7-3)
-8.  Baltimore Orioles (6-4)
-9.  Cincinnati Reds (6-4)
-10. Kansas City Royals (6-4)
+2.  San Diego Padres (8-2)
+3.  Baltimore Orioles (7-3)
+4.  Boston Red Sox (7-3)
+5.  San Francisco Giants (7-3)
+6.  Los Angeles Dodgers (6-4)
+7.  Milwaukee Brewers (6-4)
+8.  Minnesota Twins (6-4)
+9.  Philadelphia Phillies (6-4)
+10. St. Louis Cardinals (6-4)
 
 ------------------------------------------------------------------------
 
@@ -197,26 +199,28 @@ to interpret for others than myself).
 
 ##### Most Home-Dependent Teams
 
-- Seattle Mariners (64.4% home / 43.2% away)
-- Oakland Athletics (47.7% home / 26.7% away)
-- Kansas City Royals (62.5% home / 42.5% away)
+- Seattle Mariners (65.2% home / 43.2% away)
+- Kansas City Royals (62.5% home / 41.5% away)
+- Oakland Athletics (46.7% home / 26.7% away)
 
 ##### Better-on-the-Road Teams
 
-- Boston Red Sox (46.5% home / 62.8% away)
-- New York Mets (45.7% home / 53.8% away)
-- Tampa Bay Rays (47.9% home / 53.8% away)
+- Boston Red Sox (46.5% home / 63.6% away)
+- New York Mets (45.7% home / 52.5% away)
+- New York Yankees (56.1% home / 62.5% away)
 
 ------------------------------------------------------------------------
 
 ### Winning and Losing Streaks
 
-- **Winning Streaks**: Boston Red Sox (W4), Cincinnati Reds (W3),
-  Oakland Athletics (W3), Arizona Diamondbacks (W2), Houston Astros
-  (W2), San Diego Padres (W2), Washington Nationals (W2)
-- **Losing Streaks**: Los Angeles Angels (L4), Miami Marlins (L4), New
-  York Yankees (L3), Los Angeles Dodgers (L2), New York Mets (L2), Texas
-  Rangers (L2), Toronto Blue Jays (L2)
+- **Winning Streaks**: Boston Red Sox (W5), Houston Astros (W3), San
+  Diego Padres (W3), Chicago Cubs (W2), Colorado Rockies (W2), Detroit
+  Tigers (W2), San Francisco Giants (W2), Seattle Mariners (W2),
+  St. Louis Cardinals (W2)
+- **Losing Streaks**: Los Angeles Angels (L5), Miami Marlins (L5), New
+  York Yankees (L4), New York Mets (L3), Toronto Blue Jays (L3), Atlanta
+  Braves (L2), Kansas City Royals (L2), Milwaukee Brewers (L2),
+  Minnesota Twins (L2)
 
 <!-- ___ -->
 <!-- ### Day of Week Results -->
@@ -274,69 +278,26 @@ to interpret for others than myself).
 
 ### Runs Scored and Allowed Streaks
 
-##### Longest Streaks of Scoring Two or More Runs
+##### Longest Streaks of Scoring Three or More Runs
 
-- Minnesota Twins (22)
-- Milwaukee Brewers (21)
-- Los Angeles Dodgers (18)
-- Houston Astros (14)
-- Baltimore Orioles (10)
+- Milwaukee Brewers (15)
+- Los Angeles Dodgers (11)
+- Arizona Diamondbacks (10)
+- Chicago White Sox (7)
+- Houston Astros (7)
 
 ##### Longest Streaks of Allowing Fewer Than Five Runs
 
-- Cincinnati Reds (7)
-- San Francisco Giants (4)
-- Colorado Rockies (3)
-- Milwaukee Brewers (3)
-- Seattle Mariners (3)
+- San Francisco Giants (5)
+- Colorado Rockies (4)
+- Seattle Mariners (4)
+- Oakland Athletics (3)
+- Pittsburgh Pirates (3)
 
 ------------------------------------------------------------------------
 
-### WORK IN PROGRESS
-
-Coming soon …
-
-``` r
-get_date_tenth_last_game = function(team) {
-  date = end_games |>
-    filter(home_team == team | away_team == team) |>
-    slice_max(date, n = 10, with_ties = F) |>
-    slice_min(date, n = 1, with_ties = F) |>
-    pull(date)
-  
-  return(as.character(date))
-}
-
-teams_tenth_last = data.frame(team = all_teams) |>
-  mutate(tenth_date = as_date(sapply(team, get_date_tenth_last_game)))
-
-last_ten_npr_diff = teams_tenth_last |>
-  rowwise() |>
-  mutate(npr_past = get_npr_on(team = team, dt = tenth_date)) |>
-  ungroup() |>
-  inner_join(team_npr |>
-  distinct(team, total_npr), by = "team") |>
-  inner_join(team_records |>
-  transmute(team, gp = wins + losses), by = "team") |>
-  mutate(npr_past = round(npr_past / gp, 2),
-         diff = total_npr - npr_past) |>
-  distinct(team, npr_past, total_npr, diff)
-
-last_ten_diffs = last_ten_npr_diff |> distinct(team, diff)
-
-last_ten_npr_diff |>
-  distinct(team, npr_past, total_npr) |>
-  pivot_longer(!team, names_to = "when", values_to = "npr") |>
-  inner_join(last_ten_diffs, by = "team") |>
-  inner_join(teams_info, by = "team") |>
-  mutate(team = as.character(glue("{abb} ({diff})"))) |>
-  ggplot(aes(reorder(team, diff), npr)) +
-  geom_point(aes(col = when), shape = "square", size = 2, show.legend = F) +
-  coord_flip() +
-  scale_color_manual(values = c("#AB8DAD", "#759575")) +
-  scale_y_continuous(breaks = seq(-2.5, 2.5, by = 0.1)) +
-  labs(y = "NPR", x = NULL,
-       title = "Team NPR trends, past ten games")
-```
+### Team NPR Trends in Past Ten Games
 
 ![](README_files/figure-gfm/unnamed-chunk-34-1.png)<!-- -->
+
+------------------------------------------------------------------------
