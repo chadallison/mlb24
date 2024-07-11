@@ -118,9 +118,9 @@ to interpret for others than myself).
 
 ### Yesterday’s Largest Victories
 
-1.  Pittsburgh Pirates def. Milwaukee Brewers 12-2
-2.  Philadelphia Phillies def. Los Angeles Dodgers 10-1
-3.  Chicago Cubs def. Baltimore Orioles 9-2
+1.  Milwaukee Brewers def. Pittsburgh Pirates 9-0
+2.  Houston Astros def. Miami Marlins 9-1
+3.  Los Angeles Angels def. Texas Rangers 7-2
 
 ------------------------------------------------------------------------
 
@@ -130,21 +130,21 @@ to interpret for others than myself).
 
 ##### Most Volatile Teams
 
-1.  Arizona Diamondbacks (6.86)
-2.  Colorado Rockies (6.78)
-3.  Oakland Athletics (6.68)
+1.  Arizona Diamondbacks (6.84)
+2.  Colorado Rockies (6.74)
+3.  Oakland Athletics (6.67)
 
 ##### Most Volatile Offenses
 
-1.  Arizona Diamondbacks (3.57)
-2.  Oakland Athletics (3.48)
-3.  Minnesota Twins (3.45)
+1.  Arizona Diamondbacks (3.56)
+2.  Oakland Athletics (3.47)
+3.  San Diego Padres (3.45)
 
 ##### Most Volatile Defenses
 
-1.  Colorado Rockies (3.61)
+1.  Colorado Rockies (3.59)
 2.  Los Angeles Angels (3.35)
-3.  Texas Rangers (3.3)
+3.  Miami Marlins (3.29)
 
 ------------------------------------------------------------------------
 
@@ -169,15 +169,15 @@ to interpret for others than myself).
 ### Best Records in Last Ten Games
 
 1.  Boston Red Sox (7-3)
-2.  Houston Astros (7-3)
-3.  Minnesota Twins (7-3)
-4.  St. Louis Cardinals (7-3)
+2.  Detroit Tigers (7-3)
+3.  Houston Astros (7-3)
+4.  Minnesota Twins (7-3)
 5.  Texas Rangers (7-3)
 6.  Arizona Diamondbacks (6-4)
-7.  Atlanta Braves (6-4)
-8.  Baltimore Orioles (6-4)
-9.  Cincinnati Reds (6-4)
-10. Cleveland Guardians (6-4)
+7.  Chicago Cubs (6-4)
+8.  New York Mets (6-4)
+9.  Philadelphia Phillies (6-4)
+10. St. Louis Cardinals (6-4)
 
 ------------------------------------------------------------------------
 
@@ -199,28 +199,26 @@ to interpret for others than myself).
 
 ##### Most Home-Dependent Teams
 
-- Oakland Athletics (46.8% home / 26.1% away)
-- Kansas City Royals (62.5% home / 41.9% away)
-- Cleveland Guardians (73.2% home / 55.1% away)
+- Cleveland Guardians (73.2% home / 54% away)
+- Oakland Athletics (46.8% home / 27.7% away)
+- Kansas City Royals (62.5% home / 44.4% away)
 
 ##### Better-on-the-Road Teams
 
-- Boston Red Sox (47.7% home / 63% away)
-- New York Mets (46.8% home / 53.5% away)
-- New York Yankees (55.8% home / 61.2% away)
+- Boston Red Sox (46.7% home / 63% away)
+- New York Yankees (55.8% home / 62% away)
+- New York Mets (47.9% home / 53.5% away)
 
 ------------------------------------------------------------------------
 
 ### Winning and Losing Streaks
 
-- **Winning Streaks**: Texas Rangers (W5), Atlanta Braves (W4),
-  Minnesota Twins (W3), Boston Red Sox (W2), Chicago Cubs (W2),
-  Cincinnati Reds (W2), Pittsburgh Pirates (W2), St. Louis Cardinals
-  (W2)
-- **Losing Streaks**: Chicago White Sox (L3), Colorado Rockies (L3), Los
-  Angeles Angels (L3), San Diego Padres (L3), Washington Nationals (L3),
-  Arizona Diamondbacks (L2), Los Angeles Dodgers (L2), New York Yankees
-  (L2), Oakland Athletics (L2)
+- **Winning Streaks**: Chicago Cubs (W3), Kansas City Royals (W3),
+  Houston Astros (W2), New York Mets (W2), Philadelphia Phillies (W2),
+  Seattle Mariners (W2)
+- **Losing Streaks**: San Diego Padres (L4), Washington Nationals (L4),
+  Los Angeles Dodgers (L3), Baltimore Orioles (L2), Miami Marlins (L2),
+  St. Louis Cardinals (L2)
 
 <!-- ___ -->
 <!-- ### Day of Week Results -->
@@ -280,19 +278,19 @@ to interpret for others than myself).
 
 ##### Longest Streaks of Scoring Three or More Runs
 
-- Chicago White Sox (10)
-- Boston Red Sox (8)
-- St. Louis Cardinals (7)
-- Atlanta Braves (5)
-- San Francisco Giants (5)
+- St. Louis Cardinals (9)
+- Atlanta Braves (6)
+- San Francisco Giants (6)
+- Oakland Athletics (4)
+- Toronto Blue Jays (4)
 
 ##### Longest Streaks of Allowing Fewer Than Five Runs
 
-- Texas Rangers (6)
-- Atlanta Braves (4)
-- Miami Marlins (4)
-- Toronto Blue Jays (4)
-- Kansas City Royals (3)
+- Chicago Cubs (3)
+- Houston Astros (3)
+- Chicago White Sox (2)
+- Minnesota Twins (2)
+- Philadelphia Phillies (2)
 
 ------------------------------------------------------------------------
 
