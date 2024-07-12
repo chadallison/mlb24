@@ -118,9 +118,9 @@ to interpret for others than myself).
 
 ### Yesterday’s Largest Victories
 
-1.  Milwaukee Brewers def. Pittsburgh Pirates 9-0
-2.  Houston Astros def. Miami Marlins 9-1
-3.  Los Angeles Angels def. Texas Rangers 7-2
+1.  Seattle Mariners def. Los Angeles Angels 11-0
+2.  Detroit Tigers def. Cleveland Guardians 10-1
+3.  Chicago Cubs def. Baltimore Orioles 8-0
 
 ------------------------------------------------------------------------
 
@@ -130,21 +130,21 @@ to interpret for others than myself).
 
 ##### Most Volatile Teams
 
-1.  Arizona Diamondbacks (6.84)
-2.  Colorado Rockies (6.74)
-3.  Oakland Athletics (6.67)
+1.  Arizona Diamondbacks (6.87)
+2.  Colorado Rockies (6.73)
+3.  Oakland Athletics (6.66)
 
 ##### Most Volatile Offenses
 
-1.  Arizona Diamondbacks (3.56)
+1.  Arizona Diamondbacks (3.57)
 2.  Oakland Athletics (3.47)
 3.  San Diego Padres (3.45)
 
 ##### Most Volatile Defenses
 
-1.  Colorado Rockies (3.59)
-2.  Los Angeles Angels (3.35)
-3.  Miami Marlins (3.29)
+1.  Colorado Rockies (3.58)
+2.  Los Angeles Angels (3.39)
+3.  Arizona Diamondbacks (3.3)
 
 ------------------------------------------------------------------------
 
@@ -168,16 +168,16 @@ to interpret for others than myself).
 
 ### Best Records in Last Ten Games
 
-1.  Boston Red Sox (7-3)
-2.  Detroit Tigers (7-3)
+1.  Boston Red Sox (8-2)
+2.  Detroit Tigers (8-2)
 3.  Houston Astros (7-3)
 4.  Minnesota Twins (7-3)
-5.  Texas Rangers (7-3)
-6.  Arizona Diamondbacks (6-4)
-7.  Chicago Cubs (6-4)
-8.  New York Mets (6-4)
-9.  Philadelphia Phillies (6-4)
-10. St. Louis Cardinals (6-4)
+5.  Philadelphia Phillies (7-3)
+6.  Texas Rangers (7-3)
+7.  Arizona Diamondbacks (6-4)
+8.  Chicago Cubs (6-4)
+9.  Cincinnati Reds (6-4)
+10. New York Mets (6-4)
 
 ------------------------------------------------------------------------
 
@@ -199,26 +199,28 @@ to interpret for others than myself).
 
 ##### Most Home-Dependent Teams
 
-- Cleveland Guardians (73.2% home / 54% away)
-- Oakland Athletics (46.8% home / 27.7% away)
+- Cleveland Guardians (73.2% home / 52.9% away)
+- Oakland Athletics (46.8% home / 27.1% away)
 - Kansas City Royals (62.5% home / 44.4% away)
 
 ##### Better-on-the-Road Teams
 
-- Boston Red Sox (46.7% home / 63% away)
-- New York Yankees (55.8% home / 62% away)
-- New York Mets (47.9% home / 53.5% away)
+- Boston Red Sox (47.8% home / 63% away)
+- New York Yankees (55.8% home / 60.8% away)
+- New York Mets (49% home / 53.5% away)
 
 ------------------------------------------------------------------------
 
 ### Winning and Losing Streaks
 
-- **Winning Streaks**: Chicago Cubs (W3), Kansas City Royals (W3),
-  Houston Astros (W2), New York Mets (W2), Philadelphia Phillies (W2),
-  Seattle Mariners (W2)
-- **Losing Streaks**: San Diego Padres (L4), Washington Nationals (L4),
-  Los Angeles Dodgers (L3), Baltimore Orioles (L2), Miami Marlins (L2),
-  St. Louis Cardinals (L2)
+- **Winning Streaks**: Chicago Cubs (W4), Houston Astros (W3), Kansas
+  City Royals (W3), New York Mets (W3), Philadelphia Phillies (W3),
+  Seattle Mariners (W3), Arizona Diamondbacks (W2), Detroit Tigers (W2),
+  Toronto Blue Jays (W2)
+- **Losing Streaks**: Washington Nationals (L5), Los Angeles Dodgers
+  (L4), San Diego Padres (L4), Baltimore Orioles (L3), Miami Marlins
+  (L3), Atlanta Braves (L2), Cleveland Guardians (L2), San Francisco
+  Giants (L2), St. Louis Cardinals (L2)
 
 <!-- ___ -->
 <!-- ### Day of Week Results -->
@@ -279,18 +281,18 @@ to interpret for others than myself).
 ##### Longest Streaks of Scoring Three or More Runs
 
 - St. Louis Cardinals (9)
-- Atlanta Braves (6)
-- San Francisco Giants (6)
-- Oakland Athletics (4)
-- Toronto Blue Jays (4)
+- San Francisco Giants (7)
+- Toronto Blue Jays (5)
+- Chicago Cubs (4)
+- Cincinnati Reds (4)
 
 ##### Longest Streaks of Allowing Fewer Than Five Runs
 
-- Chicago Cubs (3)
-- Houston Astros (3)
-- Chicago White Sox (2)
-- Minnesota Twins (2)
-- Philadelphia Phillies (2)
+- Chicago Cubs (4)
+- Houston Astros (4)
+- Philadelphia Phillies (3)
+- Seattle Mariners (3)
+- Tampa Bay Rays (3)
 
 ------------------------------------------------------------------------
 
