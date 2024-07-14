@@ -118,9 +118,9 @@ to interpret for others than myself).
 
 ### Yesterday’s Largest Victories
 
-1.  San Francisco Giants def. Minnesota Twins 7-1
-2.  Kansas City Royals def. Boston Red Sox 6-1
-3.  Atlanta Braves def. San Diego Padres 6-1
+1.  Arizona Diamondbacks def. Toronto Blue Jays 12-1
+2.  St. Louis Cardinals def. Chicago Cubs 11-3
+3.  Philadelphia Phillies def. Oakland Athletics 11-5
 
 ------------------------------------------------------------------------
 
@@ -130,21 +130,21 @@ to interpret for others than myself).
 
 ##### Most Volatile Teams
 
-1.  Arizona Diamondbacks (6.83)
-2.  Colorado Rockies (6.7)
-3.  Oakland Athletics (6.64)
+1.  Arizona Diamondbacks (6.89)
+2.  Oakland Athletics (6.68)
+3.  Colorado Rockies (6.67)
 
 ##### Most Volatile Offenses
 
-1.  Arizona Diamondbacks (3.55)
-2.  Oakland Athletics (3.46)
-3.  Minnesota Twins (3.45)
+1.  Arizona Diamondbacks (3.6)
+2.  Oakland Athletics (3.45)
+3.  Minnesota Twins (3.43)
 
 ##### Most Volatile Defenses
 
-1.  Colorado Rockies (3.56)
-2.  Los Angeles Angels (3.37)
-3.  Arizona Diamondbacks (3.28)
+1.  Colorado Rockies (3.54)
+2.  Los Angeles Angels (3.38)
+3.  Toronto Blue Jays (3.3)
 
 ------------------------------------------------------------------------
 
@@ -168,16 +168,16 @@ to interpret for others than myself).
 
 ### Best Records in Last Ten Games
 
-1.  Arizona Diamondbacks (7-3)
-2.  Boston Red Sox (7-3)
-3.  Chicago Cubs (7-3)
-4.  Detroit Tigers (7-3)
+1.  Detroit Tigers (8-2)
+2.  Arizona Diamondbacks (7-3)
+3.  Boston Red Sox (7-3)
+4.  Chicago Cubs (7-3)
 5.  Houston Astros (7-3)
-6.  Atlanta Braves (6-4)
+6.  New York Mets (7-3)
 7.  Cincinnati Reds (6-4)
-8.  Kansas City Royals (6-4)
-9.  Minnesota Twins (6-4)
-10. New York Mets (6-4)
+8.  Minnesota Twins (6-4)
+9.  Philadelphia Phillies (6-4)
+10. Pittsburgh Pirates (6-4)
 
 ------------------------------------------------------------------------
 
@@ -199,27 +199,27 @@ to interpret for others than myself).
 
 ##### Most Home-Dependent Teams
 
-- Cleveland Guardians (73.2% home / 51.9% away)
-- Oakland Athletics (46.8% home / 28.6% away)
-- Kansas City Royals (62.5% home / 45.7% away)
+- Cleveland Guardians (73.2% home / 52.8% away)
+- Oakland Athletics (46.8% home / 28% away)
+- Kansas City Royals (62.5% home / 44.7% away)
 
 ##### Better-on-the-Road Teams
 
-- Boston Red Sox (46.8% home / 63% away)
-- New York Yankees (55.8% home / 61.5% away)
-- San Diego Padres (48.1% home / 53.3% away)
+- Boston Red Sox (47.9% home / 63% away)
+- New York Yankees (55.8% home / 62.3% away)
+- Baltimore Orioles (56.9% home / 62.2% away)
 
 ------------------------------------------------------------------------
 
 ### Winning and Losing Streaks
 
-- **Winning Streaks**: Chicago Cubs (W5), Houston Astros (W4), Kansas
-  City Royals (W4), New York Mets (W4), Arizona Diamondbacks (W3),
-  Cincinnati Reds (W2), Tampa Bay Rays (W2)
-- **Losing Streaks**: San Diego Padres (L5), Baltimore Orioles (L4),
-  Miami Marlins (L4), Cleveland Guardians (L3), St. Louis Cardinals
-  (L3), Colorado Rockies (L2), Milwaukee Brewers (L2), Minnesota Twins
-  (L2), Texas Rangers (L2)
+- **Winning Streaks**: New York Mets (W5), Arizona Diamondbacks (W4),
+  Cincinnati Reds (W3), Pittsburgh Pirates (W3), Los Angeles Angels
+  (W2), New York Yankees (W2), St. Louis Cardinals (W2), Washington
+  Nationals (W2)
+- **Losing Streaks**: Baltimore Orioles (L5), Miami Marlins (L5),
+  Colorado Rockies (L3), Milwaukee Brewers (L3), Chicago Cubs (L2),
+  Chicago White Sox (L2), Seattle Mariners (L2), Toronto Blue Jays (L2)
 
 <!-- ___ -->
 <!-- ### Day of Week Results -->
@@ -279,19 +279,19 @@ to interpret for others than myself).
 
 ##### Longest Streaks of Scoring Three or More Runs
 
-- San Francisco Giants (8)
-- Toronto Blue Jays (6)
-- Chicago Cubs (5)
-- Cincinnati Reds (5)
-- Detroit Tigers (4)
+- Chicago Cubs (7)
+- Cincinnati Reds (6)
+- Detroit Tigers (5)
+- New York Mets (5)
+- Miami Marlins (3)
 
 ##### Longest Streaks of Allowing Fewer Than Five Runs
 
-- Chicago Cubs (5)
-- Houston Astros (5)
-- Tampa Bay Rays (4)
-- Detroit Tigers (3)
-- Arizona Diamondbacks (2)
+- Houston Astros (6)
+- Tampa Bay Rays (5)
+- Arizona Diamondbacks (3)
+- Atlanta Braves (3)
+- Pittsburgh Pirates (3)
 
 ------------------------------------------------------------------------
 
