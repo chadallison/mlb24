@@ -118,9 +118,9 @@ to interpret for others than myself).
 
 ### Yesterday’s Largest Victories
 
-1.  Arizona Diamondbacks def. Toronto Blue Jays 12-1
-2.  St. Louis Cardinals def. Chicago Cubs 11-3
-3.  Philadelphia Phillies def. Oakland Athletics 11-5
+1.  Oakland Athletics def. Philadelphia Phillies 18-3
+2.  Milwaukee Brewers def. Washington Nationals 9-3
+3.  Pittsburgh Pirates def. Chicago White Sox 9-4
 
 ------------------------------------------------------------------------
 
@@ -130,21 +130,21 @@ to interpret for others than myself).
 
 ##### Most Volatile Teams
 
-1.  Arizona Diamondbacks (6.89)
-2.  Oakland Athletics (6.68)
+1.  Oakland Athletics (6.93)
+2.  Arizona Diamondbacks (6.87)
 3.  Colorado Rockies (6.67)
 
 ##### Most Volatile Offenses
 
-1.  Arizona Diamondbacks (3.6)
-2.  Oakland Athletics (3.45)
-3.  Minnesota Twins (3.43)
+1.  Oakland Athletics (3.71)
+2.  Arizona Diamondbacks (3.59)
+3.  Minnesota Twins (3.42)
 
 ##### Most Volatile Defenses
 
-1.  Colorado Rockies (3.54)
-2.  Los Angeles Angels (3.38)
-3.  Toronto Blue Jays (3.3)
+1.  Colorado Rockies (3.53)
+2.  Los Angeles Angels (3.37)
+3.  Miami Marlins (3.29)
 
 ------------------------------------------------------------------------
 
@@ -169,15 +169,15 @@ to interpret for others than myself).
 ### Best Records in Last Ten Games
 
 1.  Detroit Tigers (8-2)
-2.  Arizona Diamondbacks (7-3)
-3.  Boston Red Sox (7-3)
-4.  Chicago Cubs (7-3)
-5.  Houston Astros (7-3)
-6.  New York Mets (7-3)
-7.  Cincinnati Reds (6-4)
-8.  Minnesota Twins (6-4)
-9.  Philadelphia Phillies (6-4)
-10. Pittsburgh Pirates (6-4)
+2.  Boston Red Sox (7-3)
+3.  Chicago Cubs (7-3)
+4.  New York Mets (7-3)
+5.  Pittsburgh Pirates (7-3)
+6.  Texas Rangers (7-3)
+7.  Arizona Diamondbacks (6-4)
+8.  Atlanta Braves (6-4)
+9.  Houston Astros (6-4)
+10. Cincinnati Reds (5-5)
 
 ------------------------------------------------------------------------
 
@@ -199,27 +199,24 @@ to interpret for others than myself).
 
 ##### Most Home-Dependent Teams
 
-- Cleveland Guardians (73.2% home / 52.8% away)
-- Oakland Athletics (46.8% home / 28% away)
-- Kansas City Royals (62.5% home / 44.7% away)
+- Cleveland Guardians (73.2% home / 51.9% away)
+- Kansas City Royals (62.5% home / 43.8% away)
+- Seattle Mariners (62.5% home / 44% away)
 
 ##### Better-on-the-Road Teams
 
-- Boston Red Sox (47.9% home / 63% away)
-- New York Yankees (55.8% home / 62.3% away)
-- Baltimore Orioles (56.9% home / 62.2% away)
+- Boston Red Sox (49% home / 63% away)
+- New York Yankees (55.8% home / 61.1% away)
+- San Diego Padres (48.1% home / 53.3% away)
 
 ------------------------------------------------------------------------
 
 ### Winning and Losing Streaks
 
-- **Winning Streaks**: New York Mets (W5), Arizona Diamondbacks (W4),
-  Cincinnati Reds (W3), Pittsburgh Pirates (W3), Los Angeles Angels
-  (W2), New York Yankees (W2), St. Louis Cardinals (W2), Washington
-  Nationals (W2)
-- **Losing Streaks**: Baltimore Orioles (L5), Miami Marlins (L5),
-  Colorado Rockies (L3), Milwaukee Brewers (L3), Chicago Cubs (L2),
-  Chicago White Sox (L2), Seattle Mariners (L2), Toronto Blue Jays (L2)
+- **Winning Streaks**: Pittsburgh Pirates (W4), Los Angeles Angels (W3),
+  Boston Red Sox (W2), Detroit Tigers (W2), Texas Rangers (W2)
+- **Losing Streaks**: Chicago White Sox (L3), Seattle Mariners (L3),
+  Houston Astros (L2), Kansas City Royals (L2), Los Angeles Dodgers (L2)
 
 <!-- ___ -->
 <!-- ### Day of Week Results -->
@@ -279,19 +276,19 @@ to interpret for others than myself).
 
 ##### Longest Streaks of Scoring Three or More Runs
 
-- Chicago Cubs (7)
-- Cincinnati Reds (6)
-- Detroit Tigers (5)
-- New York Mets (5)
-- Miami Marlins (3)
+- Chicago Cubs (8)
+- Detroit Tigers (6)
+- New York Mets (6)
+- Miami Marlins (4)
+- New York Yankees (4)
 
 ##### Longest Streaks of Allowing Fewer Than Five Runs
 
-- Houston Astros (6)
-- Tampa Bay Rays (5)
-- Arizona Diamondbacks (3)
-- Atlanta Braves (3)
-- Pittsburgh Pirates (3)
+- Houston Astros (7)
+- Tampa Bay Rays (6)
+- Atlanta Braves (4)
+- Pittsburgh Pirates (4)
+- Cleveland Guardians (3)
 
 ------------------------------------------------------------------------
 
