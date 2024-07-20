@@ -87,8 +87,7 @@ and more. That is why I have named it Naive Performance Rating, because
 it assumes matchup metrics are independent of each other and does not
 take external factors into account. Which, of course, will lead to flaws
 in the metric, but is done for the sake of simplicity and
-interpretability (which is ironic because I expect it is still difficult
-to interpret for others than myself).
+interpretability.
 
 ------------------------------------------------------------------------
 
@@ -118,9 +117,9 @@ to interpret for others than myself).
 
 ### Yesterday’s Largest Victories
 
-1.  Oakland Athletics def. Philadelphia Phillies 18-3
-2.  Milwaukee Brewers def. Washington Nationals 9-3
-3.  Pittsburgh Pirates def. Chicago White Sox 9-4
+1.  Oakland Athletics def. Los Angeles Angels 13-3
+2.  Baltimore Orioles def. Texas Rangers 9-1
+3.  Cleveland Guardians def. San Diego Padres 7-0
 
 ------------------------------------------------------------------------
 
@@ -130,21 +129,21 @@ to interpret for others than myself).
 
 ##### Most Volatile Teams
 
-1.  Oakland Athletics (6.93)
-2.  Arizona Diamondbacks (6.87)
-3.  Colorado Rockies (6.67)
+1.  Oakland Athletics (7.01)
+2.  Arizona Diamondbacks (6.85)
+3.  Colorado Rockies (6.65)
 
 ##### Most Volatile Offenses
 
-1.  Oakland Athletics (3.71)
-2.  Arizona Diamondbacks (3.59)
-3.  Minnesota Twins (3.42)
+1.  Oakland Athletics (3.8)
+2.  Arizona Diamondbacks (3.57)
+3.  San Diego Padres (3.43)
 
 ##### Most Volatile Defenses
 
-1.  Colorado Rockies (3.53)
-2.  Los Angeles Angels (3.37)
-3.  Miami Marlins (3.29)
+1.  Colorado Rockies (3.52)
+2.  Los Angeles Angels (3.46)
+3.  Texas Rangers (3.29)
 
 ------------------------------------------------------------------------
 
@@ -169,13 +168,13 @@ to interpret for others than myself).
 ### Best Records in Last Ten Games
 
 1.  Detroit Tigers (8-2)
-2.  Boston Red Sox (7-3)
-3.  Chicago Cubs (7-3)
-4.  New York Mets (7-3)
-5.  Pittsburgh Pirates (7-3)
-6.  Texas Rangers (7-3)
-7.  Arizona Diamondbacks (6-4)
-8.  Atlanta Braves (6-4)
+2.  Arizona Diamondbacks (7-3)
+3.  New York Mets (7-3)
+4.  Pittsburgh Pirates (7-3)
+5.  Texas Rangers (7-3)
+6.  Atlanta Braves (6-4)
+7.  Boston Red Sox (6-4)
+8.  Chicago Cubs (6-4)
 9.  Houston Astros (6-4)
 10. Cincinnati Reds (5-5)
 
@@ -199,24 +198,26 @@ to interpret for others than myself).
 
 ##### Most Home-Dependent Teams
 
-- Cleveland Guardians (73.2% home / 51.9% away)
-- Kansas City Royals (62.5% home / 43.8% away)
-- Seattle Mariners (62.5% home / 44% away)
+- Cleveland Guardians (73.8% home / 51.9% away)
+- Kansas City Royals (63.3% home / 43.8% away)
+- Oakland Athletics (47.9% home / 29.4% away)
 
 ##### Better-on-the-Road Teams
 
-- Boston Red Sox (49% home / 63% away)
-- New York Yankees (55.8% home / 61.1% away)
-- San Diego Padres (48.1% home / 53.3% away)
+- Boston Red Sox (49% home / 61.7% away)
+- Baltimore Orioles (57.7% home / 63% away)
+- New York Yankees (56.8% home / 61.1% away)
 
 ------------------------------------------------------------------------
 
 ### Winning and Losing Streaks
 
-- **Winning Streaks**: Pittsburgh Pirates (W4), Los Angeles Angels (W3),
-  Boston Red Sox (W2), Detroit Tigers (W2), Texas Rangers (W2)
-- **Losing Streaks**: Chicago White Sox (L3), Seattle Mariners (L3),
-  Houston Astros (L2), Kansas City Royals (L2), Los Angeles Dodgers (L2)
+- **Winning Streaks**: Pittsburgh Pirates (W5), Detroit Tigers (W3),
+  Baltimore Orioles (W2), Colorado Rockies (W2), Miami Marlins (W2),
+  Oakland Athletics (W2)
+- **Losing Streaks**: Chicago White Sox (L4), Seattle Mariners (L4),
+  Cincinnati Reds (L2), New York Mets (L2), Philadelphia Phillies (L2),
+  San Diego Padres (L2)
 
 <!-- ___ -->
 <!-- ### Day of Week Results -->
@@ -276,19 +277,19 @@ to interpret for others than myself).
 
 ##### Longest Streaks of Scoring Three or More Runs
 
-- Chicago Cubs (8)
-- Detroit Tigers (6)
-- New York Mets (6)
-- Miami Marlins (4)
-- New York Yankees (4)
+- Detroit Tigers (7)
+- New York Mets (7)
+- Miami Marlins (5)
+- New York Yankees (5)
+- Arizona Diamondbacks (4)
 
 ##### Longest Streaks of Allowing Fewer Than Five Runs
 
-- Houston Astros (7)
-- Tampa Bay Rays (6)
+- Houston Astros (8)
 - Atlanta Braves (4)
-- Pittsburgh Pirates (4)
-- Cleveland Guardians (3)
+- Cleveland Guardians (4)
+- Boston Red Sox (3)
+- Seattle Mariners (3)
 
 ------------------------------------------------------------------------
 
