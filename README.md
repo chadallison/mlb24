@@ -117,9 +117,9 @@ interpretability.
 
 ### Yesterday’s Largest Victories
 
-1.  New York Yankees def. Tampa Bay Rays 9-1
-2.  Detroit Tigers def. Cleveland Guardians 8-2
-3.  Kansas City Royals def. Arizona Diamondbacks 10-4
+1.  Boston Red Sox def. Colorado Rockies 6-0
+2.  Oakland Athletics def. Houston Astros 8-2
+3.  San Diego Padres def. Washington Nationals 4-0
 
 ------------------------------------------------------------------------
 
@@ -130,20 +130,20 @@ interpretability.
 ##### Most Volatile Teams
 
 1.  Oakland Athletics (6.99)
-2.  Arizona Diamondbacks (6.87)
-3.  Colorado Rockies (6.63)
+2.  Arizona Diamondbacks (6.84)
+3.  Colorado Rockies (6.62)
 
 ##### Most Volatile Offenses
 
 1.  Oakland Athletics (3.77)
-2.  Arizona Diamondbacks (3.55)
-3.  San Diego Padres (3.41)
+2.  Arizona Diamondbacks (3.53)
+3.  Minnesota Twins (3.4)
 
 ##### Most Volatile Defenses
 
-1.  Colorado Rockies (3.5)
+1.  Colorado Rockies (3.48)
 2.  Los Angeles Angels (3.44)
-3.  Arizona Diamondbacks (3.32)
+3.  Arizona Diamondbacks (3.31)
 
 ------------------------------------------------------------------------
 
@@ -167,16 +167,16 @@ interpretability.
 
 ### Best Records in Last Ten Games
 
-1.  Kansas City Royals (8-2)
-2.  Pittsburgh Pirates (8-2)
-3.  Detroit Tigers (7-3)
-4.  New York Mets (7-3)
-5.  Arizona Diamondbacks (6-4)
-6.  Chicago Cubs (6-4)
-7.  Houston Astros (6-4)
-8.  Los Angeles Angels (6-4)
-9.  Oakland Athletics (6-4)
-10. Tampa Bay Rays (6-4)
+1.  Arizona Diamondbacks (7-3)
+2.  Detroit Tigers (7-3)
+3.  Kansas City Royals (7-3)
+4.  Los Angeles Angels (7-3)
+5.  New York Mets (7-3)
+6.  Oakland Athletics (7-3)
+7.  Pittsburgh Pirates (7-3)
+8.  Los Angeles Dodgers (6-4)
+9.  Tampa Bay Rays (6-4)
+10. Texas Rangers (6-4)
 
 ------------------------------------------------------------------------
 
@@ -198,26 +198,26 @@ interpretability.
 
 ##### Most Home-Dependent Teams
 
-- Kansas City Royals (65.4% home / 43.8% away)
-- Oakland Athletics (49% home / 29.4% away)
-- Colorado Rockies (45.1% home / 28% away)
+- Oakland Athletics (50% home / 29.4% away)
+- Kansas City Royals (64.2% home / 43.8% away)
+- Cleveland Guardians (69.6% home / 51.9% away)
 
 ##### Better-on-the-Road Teams
 
-- Boston Red Sox (49% home / 58% away)
-- San Diego Padres (48.1% home / 54.2% away)
-- New York Yankees (55.3% home / 61.1% away)
+- Boston Red Sox (49% home / 58.8% away)
+- San Diego Padres (48.1% home / 55.1% away)
+- New York Yankees (54.2% home / 61.1% away)
 
 ------------------------------------------------------------------------
 
 ### Winning and Losing Streaks
 
-- **Winning Streaks**: Kansas City Royals (W4), Los Angeles Dodgers
-  (W4), Washington Nationals (W3), Chicago Cubs (W2), Los Angeles Angels
-  (W2), San Diego Padres (W2), Texas Rangers (W2)
-- **Losing Streaks**: Chicago White Sox (L7), Boston Red Sox (L4),
-  Cleveland Guardians (L3), Arizona Diamondbacks (L2), Atlanta Braves
-  (L2), Houston Astros (L2)
+- **Winning Streaks**: Los Angeles Dodgers (W5), Los Angeles Angels
+  (W3), San Diego Padres (W3), Texas Rangers (W3), New York Mets (W2),
+  Oakland Athletics (W2)
+- **Losing Streaks**: Chicago White Sox (L8), Houston Astros (L3),
+  Atlanta Braves (L2), Baltimore Orioles (L2), San Francisco Giants
+  (L2), Seattle Mariners (L2)
 
 <!-- ___ -->
 <!-- ### Day of Week Results -->
@@ -277,19 +277,19 @@ interpretability.
 
 ##### Longest Streaks of Scoring Three or More Runs
 
-- Detroit Tigers (10)
-- Los Angeles Dodgers (7)
-- Oakland Athletics (7)
-- Washington Nationals (6)
-- Kansas City Royals (5)
+- Detroit Tigers (11)
+- Los Angeles Dodgers (8)
+- Oakland Athletics (8)
+- Boston Red Sox (4)
+- Texas Rangers (4)
 
 ##### Longest Streaks of Allowing Fewer Than Five Runs
 
-- Seattle Mariners (6)
-- Kansas City Royals (4)
-- Baltimore Orioles (3)
-- Chicago Cubs (3)
-- New York Mets (3)
+- Chicago Cubs (4)
+- New York Mets (4)
+- St. Louis Cardinals (4)
+- Chicago White Sox (3)
+- San Diego Padres (3)
 
 ------------------------------------------------------------------------
 
