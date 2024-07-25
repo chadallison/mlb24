@@ -117,9 +117,9 @@ interpretability.
 
 ### Yesterday’s Largest Victories
 
-1.  Boston Red Sox def. Colorado Rockies 6-0
-2.  Oakland Athletics def. Houston Astros 8-2
-3.  San Diego Padres def. Washington Nationals 4-0
+1.  Colorado Rockies def. Boston Red Sox 20-7
+2.  San Diego Padres def. Washington Nationals 12-3
+3.  New York Mets def. New York Yankees 12-3
 
 ------------------------------------------------------------------------
 
@@ -129,21 +129,21 @@ interpretability.
 
 ##### Most Volatile Teams
 
-1.  Oakland Athletics (6.99)
-2.  Arizona Diamondbacks (6.84)
-3.  Colorado Rockies (6.62)
+1.  Oakland Athletics (6.98)
+2.  Colorado Rockies (6.96)
+3.  Arizona Diamondbacks (6.83)
 
 ##### Most Volatile Offenses
 
-1.  Oakland Athletics (3.77)
+1.  Oakland Athletics (3.76)
 2.  Arizona Diamondbacks (3.53)
-3.  Minnesota Twins (3.4)
+3.  Colorado Rockies (3.5)
 
 ##### Most Volatile Defenses
 
-1.  Colorado Rockies (3.48)
-2.  Los Angeles Angels (3.44)
-3.  Arizona Diamondbacks (3.31)
+1.  Colorado Rockies (3.46)
+2.  Los Angeles Angels (3.45)
+3.  Boston Red Sox (3.37)
 
 ------------------------------------------------------------------------
 
@@ -167,16 +167,16 @@ interpretability.
 
 ### Best Records in Last Ten Games
 
-1.  Arizona Diamondbacks (7-3)
-2.  Detroit Tigers (7-3)
-3.  Kansas City Royals (7-3)
-4.  Los Angeles Angels (7-3)
-5.  New York Mets (7-3)
-6.  Oakland Athletics (7-3)
-7.  Pittsburgh Pirates (7-3)
-8.  Los Angeles Dodgers (6-4)
-9.  Tampa Bay Rays (6-4)
-10. Texas Rangers (6-4)
+1.  Pittsburgh Pirates (8-2)
+2.  Arizona Diamondbacks (7-3)
+3.  Los Angeles Angels (7-3)
+4.  New York Mets (7-3)
+5.  Detroit Tigers (6-4)
+6.  Kansas City Royals (6-4)
+7.  Los Angeles Dodgers (6-4)
+8.  Milwaukee Brewers (6-4)
+9.  Oakland Athletics (6-4)
+10. Tampa Bay Rays (6-4)
 
 ------------------------------------------------------------------------
 
@@ -198,26 +198,28 @@ interpretability.
 
 ##### Most Home-Dependent Teams
 
-- Oakland Athletics (50% home / 29.4% away)
-- Kansas City Royals (64.2% home / 43.8% away)
-- Cleveland Guardians (69.6% home / 51.9% away)
+- Oakland Athletics (49.1% home / 29.4% away)
+- Kansas City Royals (63% home / 43.8% away)
+- Cleveland Guardians (70.2% home / 51.9% away)
 
 ##### Better-on-the-Road Teams
 
-- Boston Red Sox (49% home / 58.8% away)
-- San Diego Padres (48.1% home / 55.1% away)
-- New York Yankees (54.2% home / 61.1% away)
+- Boston Red Sox (49% home / 57.7% away)
+- New York Yankees (53.1% home / 61.1% away)
+- San Diego Padres (48.1% home / 56% away)
 
 ------------------------------------------------------------------------
 
 ### Winning and Losing Streaks
 
-- **Winning Streaks**: Los Angeles Dodgers (W5), Los Angeles Angels
-  (W3), San Diego Padres (W3), Texas Rangers (W3), New York Mets (W2),
-  Oakland Athletics (W2)
-- **Losing Streaks**: Chicago White Sox (L8), Houston Astros (L3),
-  Atlanta Braves (L2), Baltimore Orioles (L2), San Francisco Giants
-  (L2), Seattle Mariners (L2)
+- **Winning Streaks**: Los Angeles Angels (W4), San Diego Padres (W4),
+  Texas Rangers (W4), New York Mets (W3), Arizona Diamondbacks (W2),
+  Cincinnati Reds (W2), Cleveland Guardians (W2), Miami Marlins (W2),
+  Milwaukee Brewers (W2)
+- **Losing Streaks**: Chicago White Sox (L9), Atlanta Braves (L3),
+  Baltimore Orioles (L3), Seattle Mariners (L3), Chicago Cubs (L2),
+  Detroit Tigers (L2), Kansas City Royals (L2), New York Yankees (L2),
+  Washington Nationals (L2)
 
 <!-- ___ -->
 <!-- ### Day of Week Results -->
@@ -277,19 +279,19 @@ interpretability.
 
 ##### Longest Streaks of Scoring Three or More Runs
 
-- Detroit Tigers (11)
-- Los Angeles Dodgers (8)
-- Oakland Athletics (8)
-- Boston Red Sox (4)
-- Texas Rangers (4)
+- Los Angeles Dodgers (9)
+- Boston Red Sox (5)
+- Texas Rangers (5)
+- Miami Marlins (4)
+- Arizona Diamondbacks (3)
 
 ##### Longest Streaks of Allowing Fewer Than Five Runs
 
-- Chicago Cubs (4)
-- New York Mets (4)
-- St. Louis Cardinals (4)
-- Chicago White Sox (3)
-- San Diego Padres (3)
+- Chicago Cubs (5)
+- New York Mets (5)
+- San Diego Padres (4)
+- Texas Rangers (4)
+- Los Angeles Angels (3)
 
 ------------------------------------------------------------------------
 
