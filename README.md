@@ -117,9 +117,9 @@ interpretability.
 
 ### Yesterday’s Largest Victories
 
-1.  Seattle Mariners def. Chicago White Sox 10-0
-2.  San Francisco Giants def. Colorado Rockies 11-4
-3.  Minnesota Twins def. Detroit Tigers 9-3
+1.  Washington Nationals def. St. Louis Cardinals 14-3
+2.  Philadelphia Phillies def. Cleveland Guardians 8-0
+3.  San Diego Padres def. Baltimore Orioles 9-4
 
 ------------------------------------------------------------------------
 
@@ -129,21 +129,21 @@ interpretability.
 
 ##### Most Volatile Teams
 
-1.  Colorado Rockies (6.96)
-2.  Oakland Athletics (6.92)
-3.  Arizona Diamondbacks (6.8)
+1.  Colorado Rockies (6.95)
+2.  Oakland Athletics (6.91)
+3.  Arizona Diamondbacks (6.78)
 
 ##### Most Volatile Offenses
 
-1.  Oakland Athletics (3.73)
+1.  Oakland Athletics (3.72)
 2.  Arizona Diamondbacks (3.51)
-3.  Colorado Rockies (3.48)
+3.  Colorado Rockies (3.49)
 
 ##### Most Volatile Defenses
 
-1.  Colorado Rockies (3.48)
-2.  Los Angeles Angels (3.42)
-3.  Boston Red Sox (3.36)
+1.  Colorado Rockies (3.46)
+2.  Los Angeles Angels (3.41)
+3.  Boston Red Sox (3.4)
 
 ------------------------------------------------------------------------
 
@@ -167,16 +167,16 @@ interpretability.
 
 ### Best Records in Last Ten Games
 
-1.  Arizona Diamondbacks (7-3)
-2.  New York Mets (7-3)
-3.  Oakland Athletics (7-3)
-4.  Pittsburgh Pirates (7-3)
-5.  San Diego Padres (7-3)
-6.  Texas Rangers (7-3)
-7.  Cincinnati Reds (6-4)
-8.  Detroit Tigers (6-4)
-9.  Kansas City Royals (6-4)
-10. Los Angeles Angels (6-4)
+1.  Oakland Athletics (8-2)
+2.  San Diego Padres (8-2)
+3.  Arizona Diamondbacks (7-3)
+4.  Miami Marlins (7-3)
+5.  Detroit Tigers (6-4)
+6.  Los Angeles Dodgers (6-4)
+7.  New York Mets (6-4)
+8.  Pittsburgh Pirates (6-4)
+9.  Tampa Bay Rays (6-4)
+10. Texas Rangers (6-4)
 
 ------------------------------------------------------------------------
 
@@ -198,26 +198,28 @@ interpretability.
 
 ##### Most Home-Dependent Teams
 
-- Kansas City Royals (63.6% home / 43.8% away)
-- San Francisco Giants (56.9% home / 38.9% away)
-- Colorado Rockies (45.3% home / 27.5% away)
+- San Francisco Giants (58.5% home / 38.9% away)
+- Colorado Rockies (45.3% home / 26.4% away)
+- Kansas City Royals (62.5% home / 43.8% away)
 
 ##### Better-on-the-Road Teams
 
-- San Diego Padres (48.1% home / 57.7% away)
-- Boston Red Sox (50% home / 57.7% away)
-- New York Yankees (53.1% home / 60% away)
+- San Diego Padres (48.1% home / 58.5% away)
+- Boston Red Sox (49% home / 57.7% away)
+- New York Yankees (53.1% home / 60.7% away)
 
 ------------------------------------------------------------------------
 
 ### Winning and Losing Streaks
 
-- **Winning Streaks**: San Diego Padres (W6), New York Mets (W5),
-  Arizona Diamondbacks (W3), Cincinnati Reds (W3), Houston Astros (W2),
-  Minnesota Twins (W2), Oakland Athletics (W2)
-- **Losing Streaks**: Chicago White Sox (L11), Atlanta Braves (L5),
-  Chicago Cubs (L3), New York Yankees (L3), Los Angeles Angels (L2),
-  Philadelphia Phillies (L2), St. Louis Cardinals (L2)
+- **Winning Streaks**: San Diego Padres (W7), Arizona Diamondbacks (W4),
+  Houston Astros (W3), Oakland Athletics (W3), San Francisco Giants
+  (W3), Miami Marlins (W2), Seattle Mariners (W2), Toronto Blue Jays
+  (W2), Washington Nationals (W2)
+- **Losing Streaks**: Chicago White Sox (L12), Colorado Rockies (L3),
+  Los Angeles Angels (L3), St. Louis Cardinals (L3), Baltimore Orioles
+  (L2), Los Angeles Dodgers (L2), Milwaukee Brewers (L2), Pittsburgh
+  Pirates (L2), Texas Rangers (L2)
 
 <!-- ___ -->
 <!-- ### Day of Week Results -->
@@ -277,19 +279,19 @@ interpretability.
 
 ##### Longest Streaks of Scoring Three or More Runs
 
-- Boston Red Sox (6)
-- Miami Marlins (6)
-- New York Mets (5)
-- Arizona Diamondbacks (4)
-- Baltimore Orioles (4)
+- Boston Red Sox (7)
+- Miami Marlins (7)
+- Arizona Diamondbacks (5)
+- Baltimore Orioles (5)
+- San Diego Padres (5)
 
 ##### Longest Streaks of Allowing Fewer Than Five Runs
 
-- New York Mets (7)
-- San Diego Padres (6)
-- Cleveland Guardians (4)
-- Minnesota Twins (4)
-- Pittsburgh Pirates (4)
+- New York Mets (8)
+- San Diego Padres (7)
+- Cincinnati Reds (4)
+- San Francisco Giants (3)
+- Seattle Mariners (3)
 
 ------------------------------------------------------------------------
 
