@@ -117,9 +117,9 @@ interpretability.
 
 ### Yesterday’s Largest Victories
 
-1.  Atlanta Braves def. New York Mets 9-2
-2.  New York Yankees def. Boston Red Sox 8-2
-3.  Minnesota Twins def. Detroit Tigers 5-0
+1.  New York Mets def. Minnesota Twins 15-2
+2.  New York Yankees def. Philadelphia Phillies 14-4
+3.  Boston Red Sox def. Seattle Mariners 14-7
 
 ------------------------------------------------------------------------
 
@@ -131,7 +131,7 @@ interpretability.
 
 1.  Colorado Rockies (6.91)
 2.  Oakland Athletics (6.89)
-3.  Arizona Diamondbacks (6.76)
+3.  Boston Red Sox (6.77)
 
 ##### Most Volatile Offenses
 
@@ -167,16 +167,16 @@ interpretability.
 
 ### Best Records in Last Ten Games
 
-1.  Los Angeles Dodgers (7-3)
-2.  Oakland Athletics (7-3)
-3.  San Diego Padres (7-3)
-4.  Arizona Diamondbacks (6-4)
-5.  Miami Marlins (6-4)
-6.  Milwaukee Brewers (6-4)
-7.  New York Mets (6-4)
-8.  Pittsburgh Pirates (6-4)
-9.  San Francisco Giants (6-4)
-10. Tampa Bay Rays (6-4)
+1.  Arizona Diamondbacks (7-3)
+2.  Los Angeles Dodgers (7-3)
+3.  Milwaukee Brewers (7-3)
+4.  New York Mets (7-3)
+5.  Oakland Athletics (7-3)
+6.  San Diego Padres (7-3)
+7.  Kansas City Royals (6-4)
+8.  Miami Marlins (6-4)
+9.  Pittsburgh Pirates (6-4)
+10. San Francisco Giants (6-4)
 
 ------------------------------------------------------------------------
 
@@ -200,24 +200,24 @@ interpretability.
 
 - San Francisco Giants (59.3% home / 38.9% away)
 - Colorado Rockies (45.3% home / 25.9% away)
-- Kansas City Royals (61.4% home / 43.8% away)
+- Kansas City Royals (61.4% home / 44.9% away)
 
 ##### Better-on-the-Road Teams
 
-- Boston Red Sox (48.1% home / 57.7% away)
 - San Diego Padres (48.1% home / 57.4% away)
-- New York Yankees (53.1% home / 61.4% away)
+- New York Yankees (53.1% home / 62.1% away)
+- Boston Red Sox (49.1% home / 57.7% away)
 
 ------------------------------------------------------------------------
 
 ### Winning and Losing Streaks
 
-- **Winning Streaks**: San Francisco Giants (W4), Seattle Mariners (W3),
-  Toronto Blue Jays (W3), Atlanta Braves (W2), Chicago Cubs (W2), New
-  York Yankees (W2), Tampa Bay Rays (W2)
-- **Losing Streaks**: Chicago White Sox (L13), Colorado Rockies (L4),
-  Texas Rangers (L3), Boston Red Sox (L2), Cincinnati Reds (L2), Kansas
-  City Royals (L2), New York Mets (L2)
+- **Winning Streaks**: San Francisco Giants (W4), New York Yankees (W3),
+  Cleveland Guardians (W2), Milwaukee Brewers (W2), Pittsburgh Pirates
+  (W2), Tampa Bay Rays (W2)
+- **Losing Streaks**: Chicago White Sox (L14), Colorado Rockies (L4),
+  Detroit Tigers (L2), Houston Astros (L2), Philadelphia Phillies (L2),
+  Washington Nationals (L2)
 
 <!-- ___ -->
 <!-- ### Day of Week Results -->
@@ -277,19 +277,19 @@ interpretability.
 
 ##### Longest Streaks of Scoring Three or More Runs
 
-- Arizona Diamondbacks (6)
-- Baltimore Orioles (6)
+- Baltimore Orioles (8)
+- Arizona Diamondbacks (7)
 - San Diego Padres (6)
 - San Francisco Giants (6)
-- Kansas City Royals (4)
+- Kansas City Royals (5)
 
 ##### Longest Streaks of Allowing Fewer Than Five Runs
 
-- Cincinnati Reds (5)
+- Cincinnati Reds (6)
 - San Francisco Giants (4)
-- Seattle Mariners (4)
 - Tampa Bay Rays (4)
-- Philadelphia Phillies (3)
+- Cleveland Guardians (2)
+- Milwaukee Brewers (2)
 
 ------------------------------------------------------------------------
 
