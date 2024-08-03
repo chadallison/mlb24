@@ -117,9 +117,9 @@ interpretability.
 
 ### Yesterday’s Largest Victories
 
-1.  Cleveland Guardians def. Baltimore Orioles 10-3
-2.  Kansas City Royals def. Detroit Tigers 7-1
-3.  Atlanta Braves def. Miami Marlins 4-2
+1.  Minnesota Twins def. Chicago White Sox 10-2
+2.  Seattle Mariners def. Philadelphia Phillies 10-2
+3.  Kansas City Royals def. Detroit Tigers 9-2
 
 ------------------------------------------------------------------------
 
@@ -130,20 +130,20 @@ interpretability.
 ##### Most Volatile Teams
 
 1.  Arizona Diamondbacks (6.92)
-2.  Colorado Rockies (6.89)
-3.  Oakland Athletics (6.89)
+2.  Colorado Rockies (6.88)
+3.  Oakland Athletics (6.86)
 
 ##### Most Volatile Offenses
 
-1.  Oakland Athletics (3.69)
+1.  Oakland Athletics (3.68)
 2.  Arizona Diamondbacks (3.66)
-3.  Colorado Rockies (3.44)
+3.  Colorado Rockies (3.42)
 
 ##### Most Volatile Defenses
 
-1.  Colorado Rockies (3.45)
-2.  Boston Red Sox (3.41)
-3.  Los Angeles Angels (3.36)
+1.  Colorado Rockies (3.46)
+2.  Boston Red Sox (3.4)
+3.  Los Angeles Angels (3.35)
 
 ------------------------------------------------------------------------
 
@@ -167,16 +167,16 @@ interpretability.
 
 ### Best Records in Last Ten Games
 
-1.  San Diego Padres (9-1)
-2.  Arizona Diamondbacks (7-3)
-3.  Cleveland Guardians (7-3)
+1.  Arizona Diamondbacks (8-2)
+2.  Cleveland Guardians (8-2)
+3.  San Diego Padres (8-2)
 4.  New York Mets (7-3)
-5.  Kansas City Royals (6-4)
-6.  New York Yankees (6-4)
-7.  Oakland Athletics (6-4)
-8.  San Francisco Giants (6-4)
-9.  Tampa Bay Rays (6-4)
-10. Atlanta Braves (5-5)
+5.  Oakland Athletics (7-3)
+6.  San Francisco Giants (7-3)
+7.  Atlanta Braves (6-4)
+8.  Kansas City Royals (6-4)
+9.  Minnesota Twins (6-4)
+10. New York Yankees (6-4)
 
 ------------------------------------------------------------------------
 
@@ -198,27 +198,29 @@ interpretability.
 
 ##### Most Home-Dependent Teams
 
-- San Francisco Giants (58.9% home / 38.9% away)
-- Colorado Rockies (45.3% home / 28.1% away)
-- Oakland Athletics (49.1% home / 33.3% away)
+- San Francisco Giants (58.9% home / 40% away)
+- Oakland Athletics (50% home / 33.3% away)
+- Colorado Rockies (45.3% home / 29.3% away)
 
 ##### Better-on-the-Road Teams
 
-- New York Yankees (53.1% home / 63.3% away)
-- Boston Red Sox (49.1% home / 57.7% away)
-- San Diego Padres (50% home / 57.4% away)
+- New York Yankees (52% home / 63.3% away)
+- Boston Red Sox (49.1% home / 58.5% away)
+- San Diego Padres (49.1% home / 57.4% away)
 
 ------------------------------------------------------------------------
 
 ### Winning and Losing Streaks
 
-- **Winning Streaks**: New York Yankees (W5), Cleveland Guardians (W4),
-  Kansas City Royals (W4), Arizona Diamondbacks (W3), Atlanta Braves
-  (W3), Chicago Cubs (W2), Colorado Rockies (W2), San Diego Padres (W2)
-- **Losing Streaks**: Chicago White Sox (L16), Detroit Tigers (L4),
-  Philadelphia Phillies (L4), Washington Nationals (L4), Toronto Blue
-  Jays (L3), Los Angeles Angels (L2), Los Angeles Dodgers (L2),
-  Milwaukee Brewers (L2), Texas Rangers (L2)
+- **Winning Streaks**: Cleveland Guardians (W5), Kansas City Royals
+  (W5), Arizona Diamondbacks (W4), Atlanta Braves (W4), Chicago Cubs
+  (W3), Colorado Rockies (W3), Boston Red Sox (W2), Houston Astros (W2),
+  Minnesota Twins (W2), San Francisco Giants (W2)
+- **Losing Streaks**: Chicago White Sox (L17), Detroit Tigers (L5),
+  Philadelphia Phillies (L5), Washington Nationals (L5), Los Angeles
+  Angels (L3), Los Angeles Dodgers (L3), Texas Rangers (L3), Baltimore
+  Orioles (L2), Cincinnati Reds (L2), Miami Marlins (L2), Pittsburgh
+  Pirates (L2), St. Louis Cardinals (L2), Tampa Bay Rays (L2)
 
 <!-- ___ -->
 <!-- ### Day of Week Results -->
@@ -278,19 +280,19 @@ interpretability.
 
 ##### Longest Streaks of Scoring Three or More Runs
 
-- Baltimore Orioles (11)
-- Arizona Diamondbacks (9)
-- Kansas City Royals (8)
-- San Diego Padres (8)
-- Atlanta Braves (7)
+- Baltimore Orioles (12)
+- Arizona Diamondbacks (10)
+- Kansas City Royals (9)
+- Atlanta Braves (8)
+- New York Yankees (8)
 
 ##### Longest Streaks of Allowing Fewer Than Five Runs
 
-- Cleveland Guardians (4)
-- Atlanta Braves (3)
-- Kansas City Royals (3)
-- Arizona Diamondbacks (2)
-- Chicago Cubs (2)
+- Cleveland Guardians (5)
+- Atlanta Braves (4)
+- Kansas City Royals (4)
+- Chicago Cubs (3)
+- Colorado Rockies (3)
 
 ------------------------------------------------------------------------
 
