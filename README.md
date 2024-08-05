@@ -37,6 +37,7 @@ out on GitHub:
 - [Runs Scored and Allowed Streaks](#runs-scored-and-allowed-streaks)
 - [Team NPR Trends in Past Ten
   Games](#team-npr-trends-in-past-ten-games)
+- [First Inning Score Rates](#first-inning-score-rates)
 
 ------------------------------------------------------------------------
 
@@ -117,9 +118,9 @@ interpretability.
 
 ### Yesterday’s Largest Victories
 
-1.  Minnesota Twins def. Chicago White Sox 10-2
-2.  Seattle Mariners def. Philadelphia Phillies 10-2
-3.  Kansas City Royals def. Detroit Tigers 9-2
+1.  Los Angeles Dodgers def. Oakland Athletics 10-0
+2.  New York Yankees def. Toronto Blue Jays 8-3
+3.  Tampa Bay Rays def. Houston Astros 6-1
 
 ------------------------------------------------------------------------
 
@@ -129,21 +130,21 @@ interpretability.
 
 ##### Most Volatile Teams
 
-1.  Arizona Diamondbacks (6.92)
-2.  Colorado Rockies (6.88)
-3.  Oakland Athletics (6.86)
+1.  Arizona Diamondbacks (6.87)
+2.  Colorado Rockies (6.87)
+3.  Oakland Athletics (6.87)
 
 ##### Most Volatile Offenses
 
-1.  Oakland Athletics (3.68)
-2.  Arizona Diamondbacks (3.66)
-3.  Colorado Rockies (3.42)
+1.  Oakland Athletics (3.67)
+2.  Arizona Diamondbacks (3.64)
+3.  Minnesota Twins (3.47)
 
 ##### Most Volatile Defenses
 
 1.  Colorado Rockies (3.46)
-2.  Boston Red Sox (3.4)
-3.  Los Angeles Angels (3.35)
+2.  Boston Red Sox (3.39)
+3.  Los Angeles Angels (3.33)
 
 ------------------------------------------------------------------------
 
@@ -168,15 +169,15 @@ interpretability.
 ### Best Records in Last Ten Games
 
 1.  Arizona Diamondbacks (8-2)
-2.  Cleveland Guardians (8-2)
-3.  San Diego Padres (8-2)
-4.  New York Mets (7-3)
-5.  Oakland Athletics (7-3)
+2.  San Diego Padres (8-2)
+3.  Kansas City Royals (7-3)
+4.  Minnesota Twins (7-3)
+5.  New York Yankees (7-3)
 6.  San Francisco Giants (7-3)
 7.  Atlanta Braves (6-4)
-8.  Kansas City Royals (6-4)
-9.  Minnesota Twins (6-4)
-10. New York Yankees (6-4)
+8.  Baltimore Orioles (6-4)
+9.  Cleveland Guardians (6-4)
+10. Seattle Mariners (6-4)
 
 ------------------------------------------------------------------------
 
@@ -198,29 +199,28 @@ interpretability.
 
 ##### Most Home-Dependent Teams
 
-- San Francisco Giants (58.9% home / 40% away)
-- Oakland Athletics (50% home / 33.3% away)
-- Colorado Rockies (45.3% home / 29.3% away)
+- San Francisco Giants (58.9% home / 40.4% away)
+- Colorado Rockies (45.3% home / 28.3% away)
+- Oakland Athletics (48.2% home / 33.3% away)
 
 ##### Better-on-the-Road Teams
 
-- New York Yankees (52% home / 63.3% away)
-- Boston Red Sox (49.1% home / 58.5% away)
-- San Diego Padres (49.1% home / 57.4% away)
+- New York Yankees (53.8% home / 63.3% away)
+- Boston Red Sox (49.1% home / 58.2% away)
+- San Diego Padres (50.8% home / 57.4% away)
 
 ------------------------------------------------------------------------
 
 ### Winning and Losing Streaks
 
-- **Winning Streaks**: Cleveland Guardians (W5), Kansas City Royals
-  (W5), Arizona Diamondbacks (W4), Atlanta Braves (W4), Chicago Cubs
-  (W3), Colorado Rockies (W3), Boston Red Sox (W2), Houston Astros (W2),
-  Minnesota Twins (W2), San Francisco Giants (W2)
-- **Losing Streaks**: Chicago White Sox (L17), Detroit Tigers (L5),
-  Philadelphia Phillies (L5), Washington Nationals (L5), Los Angeles
-  Angels (L3), Los Angeles Dodgers (L3), Texas Rangers (L3), Baltimore
-  Orioles (L2), Cincinnati Reds (L2), Miami Marlins (L2), Pittsburgh
-  Pirates (L2), St. Louis Cardinals (L2), Tampa Bay Rays (L2)
+- **Winning Streaks**: Minnesota Twins (W4), Baltimore Orioles (W2), Los
+  Angeles Angels (W2), Los Angeles Dodgers (W2), Miami Marlins (W2), New
+  York Yankees (W2), San Diego Padres (W2), Tampa Bay Rays (W2),
+  Washington Nationals (W2)
+- **Losing Streaks**: Chicago White Sox (L19), Atlanta Braves (L2),
+  Cleveland Guardians (L2), Colorado Rockies (L2), Houston Astros (L2),
+  Milwaukee Brewers (L2), New York Mets (L2), Oakland Athletics (L2),
+  Toronto Blue Jays (L2)
 
 <!-- ___ -->
 <!-- ### Day of Week Results -->
@@ -280,24 +280,30 @@ interpretability.
 
 ##### Longest Streaks of Scoring Three or More Runs
 
-- Baltimore Orioles (12)
-- Arizona Diamondbacks (10)
-- Kansas City Royals (9)
-- Atlanta Braves (8)
-- New York Yankees (8)
+- Baltimore Orioles (14)
+- Kansas City Royals (11)
+- New York Yankees (10)
+- Pittsburgh Pirates (10)
+- St. Louis Cardinals (9)
 
 ##### Longest Streaks of Allowing Fewer Than Five Runs
 
-- Cleveland Guardians (5)
-- Atlanta Braves (4)
-- Kansas City Royals (4)
-- Chicago Cubs (3)
-- Colorado Rockies (3)
+- Tampa Bay Rays (3)
+- Los Angeles Angels (2)
+- Los Angeles Dodgers (2)
+- Miami Marlins (2)
+- New York Yankees (2)
 
 ------------------------------------------------------------------------
 
 ### Team NPR Trends in Past Ten Games
 
 ![](README_files/figure-gfm/unnamed-chunk-34-1.png)<!-- -->
+
+------------------------------------------------------------------------
+
+### First Inning Score Rates
+
+![](README_files/figure-gfm/unnamed-chunk-35-1.png)<!-- -->
 
 ------------------------------------------------------------------------

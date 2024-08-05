@@ -35,6 +35,7 @@ ___
 - [Season Long Pythagorean Trends]
 - [Runs Scored and Allowed Streaks]
 - [Team NPR Trends in Past Ten Games]
+- [First Inning Score Rates]
 
 ___
 
@@ -1316,7 +1317,59 @@ segment_data |>
 
 ___
 
+### First Inning Score Rates
 
+```{r echo = F}
+get_pk_first_inning_scores = function(pk) {
+  return(mlb_pbp(game_pk = pk) |>
+    filter(about.inning == 1) |>
+    group_by(game_pk, home_team, away_team) |>
+    summarise(home_flg = ifelse(max(result.homeScore) > 0, 1, 0),
+              away_flg = ifelse(max(result.awayScore) > 0, 1, 0),
+              .groups = "drop"))
+}
+
+first_inning_scores = read_csv("data/first_inning_scores.csv", show_col_types = F)
+already_done_pks = first_inning_scores$game_pk
+to_do_pks = end_games |> filter(!game_pk %in% already_done_pks) |> pull(game_pk)
+new_pks = data.frame()
+
+for (pk in to_do_pks) {
+  new_pks = bind_rows(new_pks, get_pk_first_inning_scores(pk))
+}
+
+first_inning_scores = bind_rows(first_inning_scores, new_pks)
+write_csv(first_inning_scores, "data/first_inning_scores.csv")
+
+get_team_fi_score_rate = function(team) {
+  home = first_inning_scores |> filter(home_team == team) |> pull(home_flg)
+  away = first_inning_scores |> filter(away_team == team) |> pull(away_flg)
+  return(round(mean(c(home, away)) * 100, 1))
+}
+
+get_team_fi_allow_rate = function(team) {
+  home = first_inning_scores |> filter(home_team == team) |> pull(away_flg)
+  away = first_inning_scores |> filter(away_team == team) |> pull(home_flg)
+  return(round(mean(c(home, away)) * 100, 1))
+}
+
+fi_rates = data.frame(team = all_teams) |>
+  mutate(fi_score_rate = sapply(team, get_team_fi_score_rate),
+         fi_allow_rate = sapply(team, get_team_fi_allow_rate))
+
+fi_rates |>
+  inner_join(teams_info, by = "team") |>
+  ggplot(aes(fi_score_rate, fi_allow_rate)) +
+  geom_point(aes(col = team), shape = "square", size = 4, show.legend = F) +
+  scale_color_manual(values = team_hex) +
+  ggrepel::geom_text_repel(aes(label = abb), size = 3) +
+  geom_vline(xintercept = mean(fi_rates$fi_score_rate), linetype = "dashed", alpha = 0.25) +
+  geom_hline(yintercept = mean(fi_rates$fi_allow_rate), linetype = "dashed", alpha = 0.25) +
+  labs(x = "First Inning Score Rate", y = "First Inning Run Allowance Rate",
+       title = "First Inning Run Score/Allowance Rates")
+```
+
+___
 
 
 
