@@ -118,9 +118,9 @@ interpretability.
 
 ### Yesterday’s Largest Victories
 
-1.  Los Angeles Dodgers def. Oakland Athletics 10-0
-2.  New York Yankees def. Toronto Blue Jays 8-3
-3.  Tampa Bay Rays def. Houston Astros 6-1
+1.  San Diego Padres def. Colorado Rockies 10-2
+2.  Miami Marlins def. Atlanta Braves 7-0
+3.  San Francisco Giants def. Cincinnati Reds 8-2
 
 ------------------------------------------------------------------------
 
@@ -176,8 +176,8 @@ interpretability.
 6.  San Francisco Giants (7-3)
 7.  Atlanta Braves (6-4)
 8.  Baltimore Orioles (6-4)
-9.  Cleveland Guardians (6-4)
-10. Seattle Mariners (6-4)
+9.  Chicago Cubs (6-4)
+10. Cleveland Guardians (6-4)
 
 ------------------------------------------------------------------------
 
@@ -284,7 +284,7 @@ interpretability.
 - Kansas City Royals (11)
 - New York Yankees (10)
 - Pittsburgh Pirates (10)
-- St. Louis Cardinals (9)
+- Cleveland Guardians (7)
 
 ##### Longest Streaks of Allowing Fewer Than Five Runs
 
