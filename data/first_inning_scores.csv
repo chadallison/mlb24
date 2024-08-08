@@ -1697,3 +1697,20 @@ game_pk,home_team,away_team,home_flg,away_flg
 745221,Seattle Mariners,Detroit Tigers,0,0
 745629,Oakland Athletics,Chicago White Sox,0,0
 746120,Los Angeles Dodgers,Philadelphia Phillies,0,0
+746604,Cleveland Guardians,Arizona Diamondbacks,0,0
+746602,Cleveland Guardians,Arizona Diamondbacks,0,0
+746842,Chicago Cubs,Minnesota Twins,1,1
+744981,Texas Rangers,Houston Astros,0,1
+745630,Oakland Athletics,Chicago White Sox,0,0
+745709,New York Yankees,Los Angeles Angels,1,0
+745713,New York Yankees,Los Angeles Angels,0,0
+745469,Pittsburgh Pirates,San Diego Padres,1,0
+746031,Miami Marlins,Cincinnati Reds,1,0
+744822,Washington Nationals,San Francisco Giants,0,0
+744903,Toronto Blue Jays,Baltimore Orioles,1,1
+747085,Atlanta Braves,Milwaukee Brewers,1,0
+745142,St. Louis Cardinals,Tampa Bay Rays,1,0
+746272,Kansas City Royals,Boston Red Sox,1,0
+746521,Colorado Rockies,New York Mets,1,1
+745223,Seattle Mariners,Detroit Tigers,0,1
+746115,Los Angeles Dodgers,Philadelphia Phillies,1,1
