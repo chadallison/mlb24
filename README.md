@@ -38,6 +38,7 @@ out on GitHub:
 - [Team NPR Trends in Past Ten
   Games](#team-npr-trends-in-past-ten-games)
 - [First Inning Score Rates](#first-inning-score-rates)
+- [One Run vs. Multi Run Games](#one-run-vs.-multi-run-games)
 
 ------------------------------------------------------------------------
 
@@ -304,5 +305,11 @@ interpretability.
 ### First Inning Score Rates
 
 ![](README_files/figure-gfm/unnamed-chunk-35-1.png)<!-- -->
+
+------------------------------------------------------------------------
+
+### One Run vs. Multi Run Games
+
+![](README_files/figure-gfm/unnamed-chunk-36-1.png)<!-- -->
 
 ------------------------------------------------------------------------
