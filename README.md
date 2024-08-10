@@ -119,9 +119,9 @@ interpretability.
 
 ### Yesterday’s Largest Victories
 
-1.  Milwaukee Brewers def. Atlanta Braves 16-7
-2.  New York Mets def. Colorado Rockies 9-1
-3.  Cincinnati Reds def. Miami Marlins 10-4
+1.  Seattle Mariners def. New York Mets 6-0
+2.  Milwaukee Brewers def. Cincinnati Reds 8-3
+3.  Houston Astros def. Boston Red Sox 8-4
 
 ------------------------------------------------------------------------
 
@@ -131,21 +131,21 @@ interpretability.
 
 ##### Most Volatile Teams
 
-1.  Colorado Rockies (6.82)
-2.  Oakland Athletics (6.82)
-3.  Arizona Diamondbacks (6.77)
+1.  Oakland Athletics (6.8)
+2.  Colorado Rockies (6.79)
+3.  Arizona Diamondbacks (6.75)
 
 ##### Most Volatile Offenses
 
-1.  Oakland Athletics (3.64)
-2.  Arizona Diamondbacks (3.58)
-3.  Minnesota Twins (3.44)
+1.  Oakland Athletics (3.63)
+2.  Arizona Diamondbacks (3.57)
+3.  Minnesota Twins (3.41)
 
 ##### Most Volatile Defenses
 
-1.  Colorado Rockies (3.44)
+1.  Colorado Rockies (3.42)
 2.  Boston Red Sox (3.35)
-3.  Atlanta Braves (3.3)
+3.  Atlanta Braves (3.29)
 
 ------------------------------------------------------------------------
 
@@ -171,14 +171,14 @@ interpretability.
 
 1.  Arizona Diamondbacks (8-2)
 2.  San Diego Padres (8-2)
-3.  Kansas City Royals (7-3)
-4.  New York Yankees (7-3)
-5.  San Francisco Giants (7-3)
-6.  Baltimore Orioles (6-4)
-7.  Boston Red Sox (6-4)
-8.  Chicago Cubs (6-4)
-9.  Cincinnati Reds (6-4)
-10. Los Angeles Angels (6-4)
+3.  Chicago Cubs (7-3)
+4.  Minnesota Twins (7-3)
+5.  New York Yankees (7-3)
+6.  San Francisco Giants (7-3)
+7.  Baltimore Orioles (6-4)
+8.  Boston Red Sox (6-4)
+9.  Kansas City Royals (6-4)
+10. Milwaukee Brewers (6-4)
 
 ------------------------------------------------------------------------
 
@@ -200,27 +200,26 @@ interpretability.
 
 ##### Most Home-Dependent Teams
 
-- Colorado Rockies (44.6% home / 28.3% away)
-- San Francisco Giants (58.9% home / 42.6% away)
-- Oakland Athletics (49.2% home / 33.3% away)
+- Colorado Rockies (45.6% home / 28.3% away)
+- San Francisco Giants (59.6% home / 42.6% away)
+- Oakland Athletics (49.2% home / 32.8% away)
 
 ##### Better-on-the-Road Teams
 
 - New York Yankees (52.7% home / 63.3% away)
-- Boston Red Sox (49.1% home / 58.6% away)
-- San Diego Padres (50.8% home / 59.6% away)
+- Boston Red Sox (48.2% home / 58.6% away)
+- San Diego Padres (50.8% home / 60.3% away)
 
 ------------------------------------------------------------------------
 
 ### Winning and Losing Streaks
 
-- **Winning Streaks**: San Diego Padres (W5), Milwaukee Brewers (W3),
-  Philadelphia Phillies (W3), Chicago Cubs (W2), Houston Astros (W2),
-  New York Mets (W2), San Francisco Giants (W2)
-- **Losing Streaks**: Atlanta Braves (L5), Cleveland Guardians (L5),
-  Pittsburgh Pirates (L4), Colorado Rockies (L2), Los Angeles Dodgers
-  (L2), Minnesota Twins (L2), Texas Rangers (L2), Washington Nationals
-  (L2)
+- **Winning Streaks**: San Diego Padres (W6), Milwaukee Brewers (W4),
+  Chicago Cubs (W3), Houston Astros (W3), San Francisco Giants (W3),
+  Minnesota Twins (W2), Seattle Mariners (W2), Toronto Blue Jays (W2)
+- **Losing Streaks**: Cleveland Guardians (L7), Atlanta Braves (L6),
+  Pittsburgh Pirates (L5), Boston Red Sox (L2), Chicago White Sox (L2),
+  Detroit Tigers (L2), Miami Marlins (L2), Texas Rangers (L2)
 
 <!-- ___ -->
 <!-- ### Day of Week Results -->
@@ -280,19 +279,19 @@ interpretability.
 
 ##### Longest Streaks of Scoring Three or More Runs
 
-- Kansas City Royals (14)
-- Cleveland Guardians (10)
-- Boston Red Sox (9)
-- San Francisco Giants (7)
-- Toronto Blue Jays (7)
+- Kansas City Royals (15)
+- Boston Red Sox (10)
+- San Francisco Giants (8)
+- Toronto Blue Jays (8)
+- Milwaukee Brewers (7)
 
 ##### Longest Streaks of Allowing Fewer Than Five Runs
 
-- Chicago Cubs (4)
-- Detroit Tigers (4)
-- Houston Astros (4)
-- Philadelphia Phillies (3)
-- Chicago White Sox (2)
+- Detroit Tigers (5)
+- Houston Astros (5)
+- Philadelphia Phillies (4)
+- Los Angeles Angels (2)
+- Minnesota Twins (2)
 
 ------------------------------------------------------------------------
 
