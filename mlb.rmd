@@ -1409,6 +1409,38 @@ data.frame(team = all_teams) |>
 ___
 
 
+```{r include = F}
+total_mod_data = end_games |>
+  transmute(home_team, away_team, total = home_score + away_score) |>
+  inner_join(team_rpg, by = c("home_team" = "team")) |>
+  rename(home_rspg = rspg, home_rapg = rapg) |>
+  inner_join(team_rpg, by = c("away_team" = "team")) |>
+  rename(away_rspg = rspg, away_rapg = rapg) |>
+  select(home_rspg, home_rapg, away_rspg, away_rapg, total)
+
+total_predict = lm(total ~ home_rspg + home_rapg + away_rspg + away_rapg, data = total_mod_data)
+
+predict_total = function(home_team, away_team) {
+  data = data.frame(home_team, away_team) |>
+    inner_join(team_rpg, by = c("home_team" = "team")) |>
+    rename(home_rspg = rspg, home_rapg = rapg) |>
+    inner_join(team_rpg, by = c("away_team" = "team")) |>
+    rename(away_rspg = rspg, away_rapg = rapg) |>
+    select(-c(home_team, away_team))
+  
+  return(round(predict(total_predict, data)[[1]], 2))
+}
+
+todays_totals = mlb_schedule(season = 2024, level_ids = "1") |>
+  filter(date == "2024-08-11") |>
+  distinct(teams_home_team_name, teams_away_team_name) |>
+  rowwise() |>
+  mutate(predicted_runs = predict_total(home_team = teams_home_team_name, away_team = teams_away_team_name)) |>
+  ungroup()
+
+todays_totals |>
+  arrange(desc(predicted_runs))
+```
 
 
 
