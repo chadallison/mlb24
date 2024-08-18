@@ -1830,3 +1830,18 @@ game_pk,home_team,away_team,home_flg,away_flg
 745144,St. Louis Cardinals,Los Angeles Dodgers,0,0
 746518,Colorado Rockies,San Diego Padres,1,0
 746189,Los Angeles Angels,Atlanta Braves,0,0
+745463,Pittsburgh Pirates,Seattle Mariners,1,0
+746434,Detroit Tigers,New York Yankees,1,0
+746841,Chicago Cubs,Toronto Blue Jays,1,0
+745049,Tampa Bay Rays,Arizona Diamondbacks,1,0
+745785,New York Mets,Miami Marlins,1,0
+745537,Philadelphia Phillies,Washington Nationals,0,0
+746675,Cincinnati Reds,Kansas City Royals,0,1
+746997,Baltimore Orioles,Boston Red Sox,0,0
+744977,Texas Rangers,Minnesota Twins,0,0
+745626,Oakland Athletics,San Francisco Giants,0,0
+746355,Houston Astros,Chicago White Sox,0,1
+745140,St. Louis Cardinals,Los Angeles Dodgers,1,1
+745952,Milwaukee Brewers,Cleveland Guardians,1,0
+746515,Colorado Rockies,San Diego Padres,0,0
+746190,Los Angeles Angels,Atlanta Braves,0,1
