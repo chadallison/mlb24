@@ -39,6 +39,7 @@ out on GitHub:
   Games](#team-npr-trends-in-past-ten-games)
 - [First Inning Score Rates](#first-inning-score-rates)
 - [One Run vs. Multi Run Games](#one-run-vs.-multi-run-games)
+- [Rolling Ten-Game Windows](#rolling-ten-game-windows)
 
 ------------------------------------------------------------------------
 
@@ -361,40 +362,8 @@ data.frame(team = all_teams) |>
     ## 29         Texas Rangers -1.229
     ## 30     Chicago White Sox -1.626
 
-``` r
-get_team_result_on_date = function(tm, dt) {
-  data = end_games |> filter(date == dt & (home_team == tm | away_team == tm))
-  if (nrow(data) == 0) return("DNP")
-  if (data$win_team[1] == tm) return("Win")
-  if (data$lose_team[1] == tm) return("Loss")
-}
+------------------------------------------------------------------------
 
-team_results_dates_raw = crossing(team = all_teams, date = unique(end_games$date)) |>
-  arrange(team, date) |>
-  rowwise() |>
-  mutate(result = get_team_result_on_date(tm = team, dt = date)) |>
-  ungroup()
+### Rolling Ten-Game Windows
 
-team_results_dates = team_results_dates_raw |>
-  filter(result != "DNP") |>
-  group_by(team) |>
-  mutate(game_num = row_number()) |>
-  ungroup()
-
-team_results_dates
-```
-
-    ## # A tibble: 3,694 × 4
-    ##    team                 date       result game_num
-    ##    <chr>                <date>     <chr>     <int>
-    ##  1 Arizona Diamondbacks 2024-03-28 Win           1
-    ##  2 Arizona Diamondbacks 2024-03-29 Win           2
-    ##  3 Arizona Diamondbacks 2024-03-30 Loss          3
-    ##  4 Arizona Diamondbacks 2024-03-31 Win           4
-    ##  5 Arizona Diamondbacks 2024-04-01 Loss          5
-    ##  6 Arizona Diamondbacks 2024-04-02 Win           6
-    ##  7 Arizona Diamondbacks 2024-04-03 Loss          7
-    ##  8 Arizona Diamondbacks 2024-04-05 Loss          8
-    ##  9 Arizona Diamondbacks 2024-04-06 Loss          9
-    ## 10 Arizona Diamondbacks 2024-04-07 Loss         10
-    ## # ℹ 3,684 more rows
+![](README_files/figure-gfm/unnamed-chunk-38-1.png)<!-- -->

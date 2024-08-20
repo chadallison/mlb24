@@ -37,6 +37,7 @@ ___
 - [Team NPR Trends in Past Ten Games]
 - [First Inning Score Rates]
 - [One Run vs. Multi Run Games]
+- [Rolling Ten-Game Windows]
 
 ___
 
@@ -1424,8 +1425,11 @@ data.frame(team = all_teams) |>
   arrange(desc(last25))
 ```
 
+___
 
-```{r}
+### Rolling Ten-Game Windows
+
+```{r echo = F}
 get_team_result_on_date = function(tm, dt) {
   data = end_games |> filter(date == dt & (home_team == tm | away_team == tm))
   if (nrow(data) == 0) return("DNP")
@@ -1445,7 +1449,56 @@ team_results_dates = team_results_dates_raw |>
   mutate(game_num = row_number()) |>
   ungroup()
 
-team_results_dates
+min_date = team_results_dates |>
+  filter(game_num == 10) |>
+  slice_max(date, n = 1, with_ties = F) |>
+  pull(date)
+
+window_dates = seq.Date(from = min_date, max(end_games$date), by = 1)
+
+get_team_ten_on_date = function(tm, dt) {
+  data = team_results_dates |>
+    filter(team == tm & date <= dt) |>
+    slice_max(date, n = 10, with_ties = F) |>
+    mutate(win_flg = ifelse(result == "Win", 1, 0)) |>
+    summarise(pct = mean(win_flg) * 100) |>
+    pull(pct)
+  
+  return(data)
+}
+
+ten_game_window_pcts = crossing(team = all_teams, date = window_dates) |>
+  rowwise() |>
+  mutate(pct = get_team_ten_on_date(tm = team, dt = date)) |>
+  ungroup()
+
+team_window_sds = ten_game_window_pcts |>
+  group_by(team) |>
+  summarise(sd = round(sd(pct), 1)) |>
+  arrange(sd)
+
+base_data = ten_game_window_pcts |>
+  inner_join(teams_info, by = "team") |>
+  inner_join(team_window_sds, by = "team") |>
+  inner_join(select(team_records, team, win_pct = pct), by = "team") |>
+  mutate(abb = paste0(abb, " (", sd, ")"))
+
+ordered_abbs = base_data |>
+  distinct(abb, win_pct) |>
+  arrange(desc(win_pct))
+
+base_data |>
+  mutate(abb = factor(abb, levels = ordered_abbs$abb)) |>
+  ggplot(aes(date, pct)) +
+  geom_line(aes(col = team), linewidth = 1, show.legend = F) +
+  geom_line(stat = "smooth", method = "loess", formula = y ~ x, se = F, alpha = 1) +
+  geom_hline(yintercept = 50, linetype = "dotted", alpha = 0.25) +
+  facet_wrap(vars(abb)) +
+  scale_color_manual(values = team_hex) +
+  labs(x = NULL, y = "Win Percentage in Ten-Game Window",
+       title = "Season-long win percentages in rolling ten-game windows",
+       subtitle = "Number in parentheses represents standard deviation as a pseudo-measure of streakiness") +
+  theme(axis.text = element_blank())
 ```
 
 
