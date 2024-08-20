@@ -1425,30 +1425,28 @@ data.frame(team = all_teams) |>
 ```
 
 
+```{r}
+get_team_result_on_date = function(tm, dt) {
+  data = end_games |> filter(date == dt & (home_team == tm | away_team == tm))
+  if (nrow(data) == 0) return("DNP")
+  if (data$win_team[1] == tm) return("Win")
+  if (data$lose_team[1] == tm) return("Loss")
+}
 
+team_results_dates_raw = crossing(team = all_teams, date = unique(end_games$date)) |>
+  arrange(team, date) |>
+  rowwise() |>
+  mutate(result = get_team_result_on_date(tm = team, dt = date)) |>
+  ungroup()
 
+team_results_dates = team_results_dates_raw |>
+  filter(result != "DNP") |>
+  group_by(team) |>
+  mutate(game_num = row_number()) |>
+  ungroup()
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+team_results_dates
+```
 
 
 
