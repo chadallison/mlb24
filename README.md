@@ -120,9 +120,9 @@ interpretability.
 
 ### Yesterday’s Largest Victories
 
-1.  Toronto Blue Jays def. Cincinnati Reds 10-3
-2.  Cleveland Guardians def. New York Yankees 9-5
-3.  Baltimore Orioles def. New York Mets 9-5
+1.  Minnesota Twins def. San Diego Padres 11-4
+2.  New York Yankees def. Cleveland Guardians 8-1
+3.  Detroit Tigers def. Chicago Cubs 8-2
 
 ------------------------------------------------------------------------
 
@@ -132,21 +132,21 @@ interpretability.
 
 ##### Most Volatile Teams
 
-1.  Oakland Athletics (6.79)
-2.  Colorado Rockies (6.74)
-3.  Arizona Diamondbacks (6.72)
+1.  Oakland Athletics (6.77)
+2.  Arizona Diamondbacks (6.74)
+3.  Colorado Rockies (6.73)
 
 ##### Most Volatile Offenses
 
-1.  Arizona Diamondbacks (3.61)
-2.  Oakland Athletics (3.61)
-3.  Minnesota Twins (3.4)
+1.  Arizona Diamondbacks (3.62)
+2.  Oakland Athletics (3.6)
+3.  Minnesota Twins (3.43)
 
 ##### Most Volatile Defenses
 
-1.  Colorado Rockies (3.43)
-2.  Boston Red Sox (3.31)
-3.  Atlanta Braves (3.27)
+1.  Colorado Rockies (3.42)
+2.  Boston Red Sox (3.32)
+3.  Toronto Blue Jays (3.27)
 
 ------------------------------------------------------------------------
 
@@ -170,16 +170,16 @@ interpretability.
 
 ### Best Records in Last Ten Games
 
-1.  Houston Astros (8-2)
-2.  Arizona Diamondbacks (7-3)
-3.  Atlanta Braves (7-3)
-4.  Los Angeles Dodgers (7-3)
-5.  Milwaukee Brewers (7-3)
-6.  San Diego Padres (7-3)
-7.  Chicago Cubs (6-4)
-8.  Cleveland Guardians (6-4)
-9.  Detroit Tigers (6-4)
-10. Kansas City Royals (6-4)
+1.  Arizona Diamondbacks (7-3)
+2.  Detroit Tigers (7-3)
+3.  Houston Astros (7-3)
+4.  Kansas City Royals (7-3)
+5.  Los Angeles Dodgers (7-3)
+6.  Atlanta Braves (6-4)
+7.  Boston Red Sox (6-4)
+8.  Cincinnati Reds (6-4)
+9.  Cleveland Guardians (6-4)
+10. Milwaukee Brewers (6-4)
 
 ------------------------------------------------------------------------
 
@@ -201,26 +201,24 @@ interpretability.
 
 ##### Most Home-Dependent Teams
 
-- Colorado Rockies (46.8% home / 28.1% away)
-- Seattle Mariners (58.7% home / 42.2% away)
-- San Francisco Giants (58.5% home / 42.9% away)
+- Colorado Rockies (46.8% home / 27.7% away)
+- Seattle Mariners (58.7% home / 41.5% away)
+- San Francisco Giants (57.6% home / 42.9% away)
 
 ##### Better-on-the-Road Teams
 
-- Boston Red Sox (47.5% home / 57.8% away)
-- New York Yankees (52.5% home / 62.1% away)
-- Los Angeles Angels (40.3% home / 45.8% away)
+- Boston Red Sox (47.5% home / 58.5% away)
+- New York Yankees (53.3% home / 62.1% away)
+- San Diego Padres (53.8% home / 58.7% away)
 
 ------------------------------------------------------------------------
 
 ### Winning and Losing Streaks
 
-- **Winning Streaks**: Milwaukee Brewers (W6), Atlanta Braves (W3), Los
-  Angeles Dodgers (W3), San Francisco Giants (W3), Arizona Diamondbacks
-  (W2), Colorado Rockies (W2), San Diego Padres (W2)
-- **Losing Streaks**: Chicago White Sox (L4), Minnesota Twins (L3), New
-  York Yankees (L3), Miami Marlins (L2), Philadelphia Phillies (L2),
-  Seattle Mariners (L2), St. Louis Cardinals (L2)
+- **Winning Streaks**: Los Angeles Dodgers (W4), Arizona Diamondbacks
+  (W3), Boston Red Sox (W2), Tampa Bay Rays (W2)
+- **Losing Streaks**: Miami Marlins (L3), Seattle Mariners (L3), Houston
+  Astros (L2), Oakland Athletics (L2)
 
 <!-- ___ -->
 <!-- ### Day of Week Results -->
@@ -280,19 +278,19 @@ interpretability.
 
 ##### Longest Streaks of Scoring Three or More Runs
 
-- Kansas City Royals (24)
-- Colorado Rockies (10)
-- Minnesota Twins (6)
-- Pittsburgh Pirates (5)
-- Arizona Diamondbacks (3)
+- Kansas City Royals (25)
+- Minnesota Twins (7)
+- Arizona Diamondbacks (4)
+- Baltimore Orioles (4)
+- Boston Red Sox (3)
 
 ##### Longest Streaks of Allowing Fewer Than Five Runs
 
-- Detroit Tigers (14)
-- Milwaukee Brewers (6)
-- San Francisco Giants (5)
-- Atlanta Braves (4)
-- Oakland Athletics (4)
+- Detroit Tigers (15)
+- Atlanta Braves (5)
+- Oakland Athletics (5)
+- Los Angeles Dodgers (4)
+- Pittsburgh Pirates (3)
 
 ------------------------------------------------------------------------
 
@@ -331,36 +329,36 @@ data.frame(team = all_teams) |>
 ```
 
     ##                     team last25
-    ## 1       San Diego Padres  1.913
-    ## 2   Arizona Diamondbacks  1.789
-    ## 3         Tampa Bay Rays  0.819
-    ## 4   San Francisco Giants  0.710
-    ## 5           Chicago Cubs  0.645
-    ## 6        Minnesota Twins  0.610
-    ## 7      Milwaukee Brewers  0.605
-    ## 8     Kansas City Royals  0.568
-    ## 9         Houston Astros  0.448
-    ## 10     Oakland Athletics  0.165
-    ## 11     Toronto Blue Jays  0.144
-    ## 12   Cleveland Guardians  0.045
-    ## 13      Seattle Mariners  0.032
-    ## 14   Los Angeles Dodgers  0.001
-    ## 15         Miami Marlins -0.066
-    ## 16     Baltimore Orioles -0.094
-    ## 17         New York Mets -0.120
-    ## 18        Detroit Tigers -0.124
-    ## 19      New York Yankees -0.144
-    ## 20        Atlanta Braves -0.214
-    ## 21    Los Angeles Angels -0.256
-    ## 22      Colorado Rockies -0.384
-    ## 23    Pittsburgh Pirates -0.402
-    ## 24       Cincinnati Reds -0.495
-    ## 25 Philadelphia Phillies -0.558
-    ## 26        Boston Red Sox -0.623
-    ## 27   St. Louis Cardinals -0.963
-    ## 28  Washington Nationals -1.105
-    ## 29         Texas Rangers -1.656
-    ## 30     Chicago White Sox -1.709
+    ## 1   Arizona Diamondbacks  1.737
+    ## 2       San Diego Padres  1.527
+    ## 3     Kansas City Royals  0.814
+    ## 4         Tampa Bay Rays  0.812
+    ## 5        Minnesota Twins  0.632
+    ## 6         Houston Astros  0.606
+    ## 7   San Francisco Giants  0.604
+    ## 8      Toronto Blue Jays  0.530
+    ## 9      Milwaukee Brewers  0.418
+    ## 10   Los Angeles Dodgers  0.343
+    ## 11          Chicago Cubs  0.339
+    ## 12        Detroit Tigers  0.117
+    ## 13      Seattle Mariners  0.093
+    ## 14        Boston Red Sox  0.045
+    ## 15     Baltimore Orioles -0.062
+    ## 16     Oakland Athletics -0.093
+    ## 17         New York Mets -0.117
+    ## 18      New York Yankees -0.185
+    ## 19        Atlanta Braves -0.208
+    ## 20   Cleveland Guardians -0.228
+    ## 21         Miami Marlins -0.270
+    ## 22      Colorado Rockies -0.359
+    ## 23    Los Angeles Angels -0.386
+    ## 24    Pittsburgh Pirates -0.403
+    ## 25       Cincinnati Reds -0.582
+    ## 26  Washington Nationals -0.617
+    ## 27 Philadelphia Phillies -0.632
+    ## 28   St. Louis Cardinals -0.834
+    ## 29     Chicago White Sox -1.529
+    ## 30         Texas Rangers -1.618
 
 ------------------------------------------------------------------------
 
