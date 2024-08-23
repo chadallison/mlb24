@@ -120,9 +120,9 @@ interpretability.
 
 ### Yesterday’s Largest Victories
 
-1.  Minnesota Twins def. San Diego Padres 11-4
-2.  New York Yankees def. Cleveland Guardians 8-1
-3.  Detroit Tigers def. Chicago Cubs 8-2
+1.  Chicago Cubs def. Detroit Tigers 10-2
+2.  Pittsburgh Pirates def. Cincinnati Reds 7-0
+3.  New York Yankees def. Cleveland Guardians 6-0
 
 ------------------------------------------------------------------------
 
@@ -132,21 +132,21 @@ interpretability.
 
 ##### Most Volatile Teams
 
-1.  Oakland Athletics (6.77)
+1.  Oakland Athletics (6.75)
 2.  Arizona Diamondbacks (6.74)
-3.  Colorado Rockies (6.73)
+3.  Colorado Rockies (6.71)
 
 ##### Most Volatile Offenses
 
 1.  Arizona Diamondbacks (3.62)
-2.  Oakland Athletics (3.6)
+2.  Oakland Athletics (3.58)
 3.  Minnesota Twins (3.43)
 
 ##### Most Volatile Defenses
 
-1.  Colorado Rockies (3.42)
+1.  Colorado Rockies (3.41)
 2.  Boston Red Sox (3.32)
-3.  Toronto Blue Jays (3.27)
+3.  Toronto Blue Jays (3.26)
 
 ------------------------------------------------------------------------
 
@@ -171,15 +171,15 @@ interpretability.
 ### Best Records in Last Ten Games
 
 1.  Arizona Diamondbacks (7-3)
-2.  Detroit Tigers (7-3)
-3.  Houston Astros (7-3)
-4.  Kansas City Royals (7-3)
-5.  Los Angeles Dodgers (7-3)
-6.  Atlanta Braves (6-4)
+2.  Atlanta Braves (7-3)
+3.  Detroit Tigers (7-3)
+4.  Houston Astros (7-3)
+5.  Kansas City Royals (7-3)
+6.  Los Angeles Dodgers (7-3)
 7.  Boston Red Sox (6-4)
-8.  Cincinnati Reds (6-4)
-9.  Cleveland Guardians (6-4)
-10. Milwaukee Brewers (6-4)
+8.  Milwaukee Brewers (6-4)
+9.  Minnesota Twins (6-4)
+10. New York Mets (6-4)
 
 ------------------------------------------------------------------------
 
@@ -201,24 +201,27 @@ interpretability.
 
 ##### Most Home-Dependent Teams
 
-- Colorado Rockies (46.8% home / 27.7% away)
+- Colorado Rockies (46.8% home / 27.3% away)
 - Seattle Mariners (58.7% home / 41.5% away)
-- San Francisco Giants (57.6% home / 42.9% away)
+- Cleveland Guardians (65.5% home / 50.7% away)
 
 ##### Better-on-the-Road Teams
 
 - Boston Red Sox (47.5% home / 58.5% away)
-- New York Yankees (53.3% home / 62.1% away)
-- San Diego Padres (53.8% home / 58.7% away)
+- New York Yankees (54.1% home / 62.1% away)
+- San Diego Padres (53% home / 58.7% away)
 
 ------------------------------------------------------------------------
 
 ### Winning and Losing Streaks
 
 - **Winning Streaks**: Los Angeles Dodgers (W4), Arizona Diamondbacks
-  (W3), Boston Red Sox (W2), Tampa Bay Rays (W2)
-- **Losing Streaks**: Miami Marlins (L3), Seattle Mariners (L3), Houston
-  Astros (L2), Oakland Athletics (L2)
+  (W3), Boston Red Sox (W2), New York Mets (W2), New York Yankees (W2),
+  St. Louis Cardinals (W2), Washington Nationals (W2)
+- **Losing Streaks**: Miami Marlins (L3), Seattle Mariners (L3),
+  Baltimore Orioles (L2), Cleveland Guardians (L2), Colorado Rockies
+  (L2), Los Angeles Angels (L2), Milwaukee Brewers (L2), San Diego
+  Padres (L2)
 
 <!-- ___ -->
 <!-- ### Day of Week Results -->
@@ -281,16 +284,16 @@ interpretability.
 - Kansas City Royals (25)
 - Minnesota Twins (7)
 - Arizona Diamondbacks (4)
-- Baltimore Orioles (4)
-- Boston Red Sox (3)
+- New York Mets (4)
+- San Diego Padres (4)
 
 ##### Longest Streaks of Allowing Fewer Than Five Runs
 
-- Detroit Tigers (15)
-- Atlanta Braves (5)
-- Oakland Athletics (5)
+- Atlanta Braves (6)
+- Oakland Athletics (6)
 - Los Angeles Dodgers (4)
-- Pittsburgh Pirates (3)
+- Pittsburgh Pirates (4)
+- Tampa Bay Rays (4)
 
 ------------------------------------------------------------------------
 
@@ -329,36 +332,36 @@ data.frame(team = all_teams) |>
 ```
 
     ##                     team last25
-    ## 1   Arizona Diamondbacks  1.737
-    ## 2       San Diego Padres  1.527
-    ## 3     Kansas City Royals  0.814
-    ## 4         Tampa Bay Rays  0.812
-    ## 5        Minnesota Twins  0.632
-    ## 6         Houston Astros  0.606
-    ## 7   San Francisco Giants  0.604
-    ## 8      Toronto Blue Jays  0.530
-    ## 9      Milwaukee Brewers  0.418
-    ## 10   Los Angeles Dodgers  0.343
-    ## 11          Chicago Cubs  0.339
-    ## 12        Detroit Tigers  0.117
-    ## 13      Seattle Mariners  0.093
-    ## 14        Boston Red Sox  0.045
-    ## 15     Baltimore Orioles -0.062
-    ## 16     Oakland Athletics -0.093
-    ## 17         New York Mets -0.117
-    ## 18      New York Yankees -0.185
-    ## 19        Atlanta Braves -0.208
-    ## 20   Cleveland Guardians -0.228
-    ## 21         Miami Marlins -0.270
-    ## 22      Colorado Rockies -0.359
-    ## 23    Los Angeles Angels -0.386
-    ## 24    Pittsburgh Pirates -0.403
-    ## 25       Cincinnati Reds -0.582
-    ## 26  Washington Nationals -0.617
-    ## 27 Philadelphia Phillies -0.632
-    ## 28   St. Louis Cardinals -0.834
-    ## 29     Chicago White Sox -1.529
-    ## 30         Texas Rangers -1.618
+    ## 1   Arizona Diamondbacks  1.746
+    ## 2       San Diego Padres  1.002
+    ## 3         Tampa Bay Rays  0.864
+    ## 4     Kansas City Royals  0.812
+    ## 5           Chicago Cubs  0.644
+    ## 6        Minnesota Twins  0.629
+    ## 7   San Francisco Giants  0.598
+    ## 8         Houston Astros  0.573
+    ## 9      Toronto Blue Jays  0.542
+    ## 10   Los Angeles Dodgers  0.347
+    ## 11     Milwaukee Brewers  0.264
+    ## 12      Seattle Mariners  0.088
+    ## 13      New York Yankees  0.075
+    ## 14        Boston Red Sox  0.048
+    ## 15        Atlanta Braves -0.004
+    ## 16     Baltimore Orioles -0.073
+    ## 17         New York Mets -0.098
+    ## 18        Detroit Tigers -0.138
+    ## 19     Oakland Athletics -0.279
+    ## 20         Miami Marlins -0.280
+    ## 21   Cleveland Guardians -0.302
+    ## 22    Pittsburgh Pirates -0.340
+    ## 23  Washington Nationals -0.366
+    ## 24    Los Angeles Angels -0.415
+    ## 25   St. Louis Cardinals -0.509
+    ## 26 Philadelphia Phillies -0.633
+    ## 27       Cincinnati Reds -0.860
+    ## 28      Colorado Rockies -1.081
+    ## 29     Chicago White Sox -1.520
+    ## 30         Texas Rangers -1.606
 
 ------------------------------------------------------------------------
 

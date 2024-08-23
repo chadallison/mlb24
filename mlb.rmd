@@ -1510,11 +1510,23 @@ base_data |>
 
 
 
-
-
-
-
-
+```{r include = F}
+# suppressMessages(library(zoo))
+# suppressMessages(library(patchwork))
+# 
+# resp = read_csv("C:/Users/chadr/Downloads/resp_by_date.csv", show_col_types = F) |>
+#   clean_names() |>
+#   filter(year(resp_dt) == 2024)
+# 
+# resp |>
+#   mutate(roll = rollapply(resp_cnt, width = 10, FUN = "mean", align = "right", fill = NA)) |>
+#   na.omit() |>
+#   ggplot(aes(resp_dt, roll)) +
+#   geom_line(linewidth = 1.5, col = "#5b7c9f") +
+#   geom_line(stat = "smooth", formula = y ~ x, method = "loess", col = "black", linetype = "dashed") +
+#   labs(x = "Response Date", y = "Ten-day rolling average",
+#        title = "2024 YTD responses, ten-day rolling average")
+```
 
 
 
