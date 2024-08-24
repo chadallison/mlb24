@@ -403,14 +403,70 @@ pythag |>
   inner_join(team_records, by = "team") |>
   mutate(abb = fct_reorder(abb, -pct)) |>
   ggplot(aes(date, roll)) +
-  geom_line(aes(col = abb), linewidth = 1, show.legend = F) +
+  geom_line(aes(col = abb), linewidth = 1.25, show.legend = F) +
   # geom_line(stat = "smooth", formula = y ~ x, method = "loess", se = F) +
   geom_hline(yintercept = 0.5, linetype = "dashed", alpha = 0.5) +
   scale_color_manual(values = hex_pct_ordered) +
   facet_wrap(vars(abb)) +
   theme(axis.text = element_blank()) +
   labs(x = NULL, y = "Pythagorean Win Percentage",
-       title = "Season-long pythagorean win percentage in ten-game rolling windows")
+       title = "Season-long pythagorean win percentage in ten-game rolling windows",
+       subtitle = "Average of individual games method")
 ```
 
 ![](README_files/figure-gfm/unnamed-chunk-40-1.png)<!-- -->
+
+``` r
+get_team_runs_scored_on = function(tm, dt) {
+  data = end_games |>
+    filter((home_team == tm | away_team == tm) & date == dt)
+  
+  if (nrow(data) == 0) return(NA)
+  
+  runs = data |>
+    mutate(runs = ifelse(home_team == tm, home_score, away_score)) |>
+    pull(runs)
+  
+  return(sum(runs))
+}
+
+get_team_runs_allowed_on = function(tm, dt) {
+  data = end_games |>
+    filter((home_team == tm | away_team == tm) & date == dt)
+  
+  if (nrow(data) == 0) return(NA)
+  
+  runs = data |>
+    mutate(runs = ifelse(home_team == tm, away_score, home_score)) |>
+    pull(runs)
+  
+  return(sum(runs))
+}
+
+scored_allowed_on_dates = crossing(team = all_teams, date = all_szn_dates) |>
+  rowwise() |>
+  mutate(scored = get_team_runs_scored_on(tm = team, dt = date),
+         allowed = get_team_runs_allowed_on(tm = team, dt = date)) |>
+  ungroup() |>
+  na.omit()
+
+scored_allowed_on_dates |>
+  mutate(roll_score = rollapply(scored, width = 10, FUN = "sum", align = "right", fill = NA),
+         roll_allow = rollapply(allowed, width = 10, FUN = "sum", align = "right", fill = NA),
+         pythag = (roll_score ^ 2) / (roll_score ^ 2 + roll_allow ^ 2)) |>
+  na.omit() |>
+  inner_join(teams_info, by = "team") |>
+  inner_join(team_records, by = "team") |>
+  mutate(abb = fct_reorder(abb, -pct)) |>
+  ggplot(aes(date, pythag)) +
+  geom_line(aes(col = abb), linewidth = 1.25, show.legend = F) +
+  geom_hline(yintercept = 0.5, linetype = "dashed", alpha = 0.5) +
+  scale_color_manual(values = hex_pct_ordered) +
+  facet_wrap(vars(abb)) +
+  theme(axis.text = element_blank()) +
+  labs(x = NULL, y = "Pythagorean Win Percentage in Ten-Game Window",
+       title = "Season-long pythagorean win percentages in rolling ten-game windows",
+       subtitle = "Aggregated runs scored / runs allowed method")
+```
+
+![](README_files/figure-gfm/unnamed-chunk-41-1.png)<!-- -->
