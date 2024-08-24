@@ -63,6 +63,7 @@ library(tidyverse)
 library(tvthemes)
 library(janitor)
 library(glue)
+library(zoo)
 library(baseballr)
 
 theme_custom = theme_avatar() +
@@ -1491,7 +1492,7 @@ base_data |>
   mutate(abb = factor(abb, levels = ordered_abbs$abb)) |>
   ggplot(aes(date, pct)) +
   geom_line(aes(col = team), linewidth = 1, show.legend = F) +
-  geom_line(stat = "smooth", method = "loess", formula = y ~ x, se = F, alpha = 1) +
+  # geom_line(stat = "smooth", method = "loess", formula = y ~ x, se = F, alpha = 1) +
   geom_hline(yintercept = 50, linetype = "dotted", alpha = 0.25) +
   facet_wrap(vars(abb)) +
   scale_color_manual(values = team_hex) +
@@ -1530,6 +1531,48 @@ base_data |>
 
 
 
+```{r}
+get_team_all_pythag = function(tm) {
+  data = end_games |>
+    filter(home_team == tm | away_team == tm) |>
+    mutate(my_score = ifelse(home_team == tm, home_score, away_score),
+           other_score = ifelse(home_team == tm, away_score, home_score),
+           pythag = (my_score ^ 2) / (my_score ^ 2 + other_score ^ 2)) |>
+    transmute(team = tm, date, pythag)
+  
+  return(data)
+}
+
+pythag = data.frame()
+
+for (team in all_teams) {
+  new = get_team_all_pythag(tm = team)
+  pythag = rbind(pythag, new)
+}
+
+hex_pct_ordered = team_records |>
+  inner_join(teams_info, by = "team") |>
+  arrange(desc(pct)) |>
+  pull(hex)
+
+pythag |>
+  group_by(team) |>
+  mutate(roll = rollapply(pythag, width = 10, FUN = "mean", align = "right", fill = NA)) |>
+  ungroup() |>
+  na.omit() |>
+  inner_join(teams_info, by = "team") |>
+  inner_join(team_records, by = "team") |>
+  mutate(abb = fct_reorder(abb, -pct)) |>
+  ggplot(aes(date, roll)) +
+  geom_line(aes(col = abb), linewidth = 1, show.legend = F) +
+  # geom_line(stat = "smooth", formula = y ~ x, method = "loess", se = F) +
+  geom_hline(yintercept = 0.5, linetype = "dashed", alpha = 0.5) +
+  scale_color_manual(values = hex_pct_ordered) +
+  facet_wrap(vars(abb)) +
+  theme(axis.text = element_blank()) +
+  labs(x = NULL, y = "Pythagorean Win Percentage",
+       title = "Season-long pythagorean win percentage in ten-game rolling windows")
+```
 
 
 

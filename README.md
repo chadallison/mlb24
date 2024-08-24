@@ -120,9 +120,9 @@ interpretability.
 
 ### Yesterday’s Largest Victories
 
-1.  Chicago Cubs def. Detroit Tigers 10-2
-2.  Pittsburgh Pirates def. Cincinnati Reds 7-0
-3.  New York Yankees def. Cleveland Guardians 6-0
+1.  Arizona Diamondbacks def. Boston Red Sox 12-2
+2.  Milwaukee Brewers def. Oakland Athletics 11-3
+3.  San Diego Padres def. New York Mets 7-0
 
 ------------------------------------------------------------------------
 
@@ -132,21 +132,21 @@ interpretability.
 
 ##### Most Volatile Teams
 
-1.  Oakland Athletics (6.75)
-2.  Arizona Diamondbacks (6.74)
-3.  Colorado Rockies (6.71)
+1.  Oakland Athletics (6.78)
+2.  Arizona Diamondbacks (6.76)
+3.  Colorado Rockies (6.72)
 
 ##### Most Volatile Offenses
 
-1.  Arizona Diamondbacks (3.62)
-2.  Oakland Athletics (3.58)
+1.  Arizona Diamondbacks (3.65)
+2.  Oakland Athletics (3.57)
 3.  Minnesota Twins (3.43)
 
 ##### Most Volatile Defenses
 
 1.  Colorado Rockies (3.41)
-2.  Boston Red Sox (3.32)
-3.  Toronto Blue Jays (3.26)
+2.  Boston Red Sox (3.37)
+3.  Toronto Blue Jays (3.25)
 
 ------------------------------------------------------------------------
 
@@ -173,13 +173,13 @@ interpretability.
 1.  Arizona Diamondbacks (7-3)
 2.  Atlanta Braves (7-3)
 3.  Detroit Tigers (7-3)
-4.  Houston Astros (7-3)
-5.  Kansas City Royals (7-3)
-6.  Los Angeles Dodgers (7-3)
-7.  Boston Red Sox (6-4)
-8.  Milwaukee Brewers (6-4)
-9.  Minnesota Twins (6-4)
-10. New York Mets (6-4)
+4.  Kansas City Royals (7-3)
+5.  Los Angeles Dodgers (7-3)
+6.  Milwaukee Brewers (7-3)
+7.  Houston Astros (6-4)
+8.  New York Mets (6-4)
+9.  New York Yankees (6-4)
+10. San Diego Padres (6-4)
 
 ------------------------------------------------------------------------
 
@@ -201,27 +201,28 @@ interpretability.
 
 ##### Most Home-Dependent Teams
 
-- Colorado Rockies (46.8% home / 27.3% away)
-- Seattle Mariners (58.7% home / 41.5% away)
-- Cleveland Guardians (65.5% home / 50.7% away)
+- Colorado Rockies (46.8% home / 26.9% away)
+- Seattle Mariners (59.4% home / 41.5% away)
+- San Francisco Giants (57.6% home / 42.2% away)
 
 ##### Better-on-the-Road Teams
 
-- Boston Red Sox (47.5% home / 58.5% away)
-- New York Yankees (54.1% home / 62.1% away)
-- San Diego Padres (53% home / 58.7% away)
+- Boston Red Sox (46.8% home / 58.5% away)
+- New York Yankees (54.8% home / 62.1% away)
+- San Diego Padres (53.7% home / 58.7% away)
 
 ------------------------------------------------------------------------
 
 ### Winning and Losing Streaks
 
-- **Winning Streaks**: Los Angeles Dodgers (W4), Arizona Diamondbacks
-  (W3), Boston Red Sox (W2), New York Mets (W2), New York Yankees (W2),
-  St. Louis Cardinals (W2), Washington Nationals (W2)
-- **Losing Streaks**: Miami Marlins (L3), Seattle Mariners (L3),
-  Baltimore Orioles (L2), Cleveland Guardians (L2), Colorado Rockies
-  (L2), Los Angeles Angels (L2), Milwaukee Brewers (L2), San Diego
-  Padres (L2)
+- **Winning Streaks**: Los Angeles Dodgers (W5), Arizona Diamondbacks
+  (W4), New York Yankees (W3), St. Louis Cardinals (W3), Atlanta Braves
+  (W2), Chicago Cubs (W2), Kansas City Royals (W2), Pittsburgh Pirates
+  (W2), Texas Rangers (W2), Toronto Blue Jays (W2)
+- **Losing Streaks**: Miami Marlins (L4), Cleveland Guardians (L3),
+  Colorado Rockies (L3), Los Angeles Angels (L3), Cincinnati Reds (L2),
+  Philadelphia Phillies (L2), San Francisco Giants (L2), Tampa Bay Rays
+  (L2)
 
 <!-- ___ -->
 <!-- ### Day of Week Results -->
@@ -281,19 +282,19 @@ interpretability.
 
 ##### Longest Streaks of Scoring Three or More Runs
 
-- Kansas City Royals (25)
-- Minnesota Twins (7)
-- Arizona Diamondbacks (4)
-- New York Mets (4)
-- San Diego Padres (4)
+- Kansas City Royals (26)
+- Arizona Diamondbacks (5)
+- San Diego Padres (5)
+- Toronto Blue Jays (5)
+- Los Angeles Dodgers (4)
 
 ##### Longest Streaks of Allowing Fewer Than Five Runs
 
-- Atlanta Braves (6)
-- Oakland Athletics (6)
-- Los Angeles Dodgers (4)
-- Pittsburgh Pirates (4)
-- Tampa Bay Rays (4)
+- Atlanta Braves (7)
+- Los Angeles Dodgers (5)
+- Washington Nationals (5)
+- Texas Rangers (4)
+- New York Yankees (3)
 
 ------------------------------------------------------------------------
 
@@ -332,39 +333,84 @@ data.frame(team = all_teams) |>
 ```
 
     ##                     team last25
-    ## 1   Arizona Diamondbacks  1.746
-    ## 2       San Diego Padres  1.002
-    ## 3         Tampa Bay Rays  0.864
-    ## 4     Kansas City Royals  0.812
-    ## 5           Chicago Cubs  0.644
-    ## 6        Minnesota Twins  0.629
-    ## 7   San Francisco Giants  0.598
-    ## 8         Houston Astros  0.573
-    ## 9      Toronto Blue Jays  0.542
-    ## 10   Los Angeles Dodgers  0.347
-    ## 11     Milwaukee Brewers  0.264
-    ## 12      Seattle Mariners  0.088
-    ## 13      New York Yankees  0.075
-    ## 14        Boston Red Sox  0.048
-    ## 15        Atlanta Braves -0.004
-    ## 16     Baltimore Orioles -0.073
-    ## 17         New York Mets -0.098
-    ## 18        Detroit Tigers -0.138
-    ## 19     Oakland Athletics -0.279
-    ## 20         Miami Marlins -0.280
-    ## 21   Cleveland Guardians -0.302
-    ## 22    Pittsburgh Pirates -0.340
-    ## 23  Washington Nationals -0.366
-    ## 24    Los Angeles Angels -0.415
-    ## 25   St. Louis Cardinals -0.509
-    ## 26 Philadelphia Phillies -0.633
-    ## 27       Cincinnati Reds -0.860
-    ## 28      Colorado Rockies -1.081
-    ## 29     Chicago White Sox -1.520
-    ## 30         Texas Rangers -1.606
+    ## 1   Arizona Diamondbacks  2.065
+    ## 2       San Diego Padres  1.148
+    ## 3     Kansas City Royals  1.004
+    ## 4           Chicago Cubs  0.752
+    ## 5      Milwaukee Brewers  0.730
+    ## 6        Minnesota Twins  0.645
+    ## 7       New York Yankees  0.507
+    ## 8    Los Angeles Dodgers  0.414
+    ## 9      Toronto Blue Jays  0.399
+    ## 10  San Francisco Giants  0.307
+    ## 11        Houston Astros  0.286
+    ## 12        Tampa Bay Rays  0.224
+    ## 13      Seattle Mariners  0.176
+    ## 14     Baltimore Orioles -0.086
+    ## 15        Atlanta Braves -0.137
+    ## 16         New York Mets -0.185
+    ## 17        Detroit Tigers -0.203
+    ## 18   St. Louis Cardinals -0.223
+    ## 19    Pittsburgh Pirates -0.266
+    ## 20     Oakland Athletics -0.291
+    ## 21         Miami Marlins -0.358
+    ## 22        Boston Red Sox -0.393
+    ## 23    Los Angeles Angels -0.420
+    ## 24  Washington Nationals -0.460
+    ## 25   Cleveland Guardians -0.468
+    ## 26 Philadelphia Phillies -0.641
+    ## 27       Cincinnati Reds -0.726
+    ## 28      Colorado Rockies -0.882
+    ## 29     Chicago White Sox -1.314
+    ## 30         Texas Rangers -1.480
 
 ------------------------------------------------------------------------
 
 ### Rolling Ten-Game Windows
 
 ![](README_files/figure-gfm/unnamed-chunk-38-1.png)<!-- -->
+
+``` r
+get_team_all_pythag = function(tm) {
+  data = end_games |>
+    filter(home_team == tm | away_team == tm) |>
+    mutate(my_score = ifelse(home_team == tm, home_score, away_score),
+           other_score = ifelse(home_team == tm, away_score, home_score),
+           pythag = (my_score ^ 2) / (my_score ^ 2 + other_score ^ 2)) |>
+    transmute(team = tm, date, pythag)
+  
+  return(data)
+}
+
+pythag = data.frame()
+
+for (team in all_teams) {
+  new = get_team_all_pythag(tm = team)
+  pythag = rbind(pythag, new)
+}
+
+hex_pct_ordered = team_records |>
+  inner_join(teams_info, by = "team") |>
+  arrange(desc(pct)) |>
+  pull(hex)
+
+pythag |>
+  group_by(team) |>
+  mutate(roll = rollapply(pythag, width = 10, FUN = "mean", align = "right", fill = NA)) |>
+  ungroup() |>
+  na.omit() |>
+  inner_join(teams_info, by = "team") |>
+  inner_join(team_records, by = "team") |>
+  mutate(abb = fct_reorder(abb, -pct)) |>
+  ggplot(aes(date, roll)) +
+  geom_line(aes(col = abb), linewidth = 1, show.legend = F) +
+  # geom_line(stat = "smooth", formula = y ~ x, method = "loess", se = F) +
+  geom_hline(yintercept = 0.5, linetype = "dashed", alpha = 0.5) +
+  scale_color_manual(values = hex_pct_ordered) +
+  facet_wrap(vars(abb)) +
+  theme(axis.text = element_blank()) +
+  labs(x = NULL, y = "Pythagorean Win Percentage",
+       title = "Season-long pythagorean win percentage in ten-game rolling windows")
+```
+
+![](README_files/figure-gfm/unnamed-chunk-40-1.png)<!-- -->
