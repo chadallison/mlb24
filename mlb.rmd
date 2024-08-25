@@ -1579,31 +1579,20 @@ pythag |>
 
 ```{r}
 get_team_runs_scored_on = function(tm, dt) {
-  data = end_games |>
-    filter((home_team == tm | away_team == tm) & date == dt)
-  
+  data = end_games |> filter((home_team == tm | away_team == tm) & date == dt)
   if (nrow(data) == 0) return(NA)
-  
-  runs = data |>
-    mutate(runs = ifelse(home_team == tm, home_score, away_score)) |>
-    pull(runs)
-  
+  runs = data |> mutate(runs = ifelse(home_team == tm, home_score, away_score)) |> pull(runs)
   return(sum(runs))
 }
 
 get_team_runs_allowed_on = function(tm, dt) {
-  data = end_games |>
-    filter((home_team == tm | away_team == tm) & date == dt)
-  
+  data = end_games |> filter((home_team == tm | away_team == tm) & date == dt)
   if (nrow(data) == 0) return(NA)
-  
-  runs = data |>
-    mutate(runs = ifelse(home_team == tm, away_score, home_score)) |>
-    pull(runs)
-  
+  runs = data |> mutate(runs = ifelse(home_team == tm, away_score, home_score)) |> pull(runs)
   return(sum(runs))
 }
 
+# this took 17s to run on 2024/08/24
 scored_allowed_on_dates = crossing(team = all_teams, date = all_szn_dates) |>
   rowwise() |>
   mutate(scored = get_team_runs_scored_on(tm = team, dt = date),
@@ -1621,6 +1610,7 @@ scored_allowed_on_dates |>
   mutate(abb = fct_reorder(abb, -pct)) |>
   ggplot(aes(date, pythag)) +
   geom_line(aes(col = abb), linewidth = 1.25, show.legend = F) +
+  # geom_line(stat = "smooth", formula = y ~ x, method = "loess", se = F) +
   geom_hline(yintercept = 0.5, linetype = "dashed", alpha = 0.5) +
   scale_color_manual(values = hex_pct_ordered) +
   facet_wrap(vars(abb)) +

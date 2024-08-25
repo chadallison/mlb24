@@ -120,9 +120,9 @@ interpretability.
 
 ### Yesterday’s Largest Victories
 
-1.  Arizona Diamondbacks def. Boston Red Sox 12-2
-2.  Milwaukee Brewers def. Oakland Athletics 11-3
-3.  San Diego Padres def. New York Mets 7-0
+1.  Chicago Cubs def. Miami Marlins 14-2
+2.  Philadelphia Phillies def. Kansas City Royals 11-2
+3.  Detroit Tigers def. Chicago White Sox 13-4
 
 ------------------------------------------------------------------------
 
@@ -134,19 +134,19 @@ interpretability.
 
 1.  Oakland Athletics (6.78)
 2.  Arizona Diamondbacks (6.76)
-3.  Colorado Rockies (6.72)
+3.  Colorado Rockies (6.73)
 
 ##### Most Volatile Offenses
 
-1.  Arizona Diamondbacks (3.65)
-2.  Oakland Athletics (3.57)
-3.  Minnesota Twins (3.43)
+1.  Arizona Diamondbacks (3.64)
+2.  Oakland Athletics (3.56)
+3.  Minnesota Twins (3.42)
 
 ##### Most Volatile Defenses
 
 1.  Colorado Rockies (3.41)
-2.  Boston Red Sox (3.37)
-3.  Toronto Blue Jays (3.25)
+2.  Boston Red Sox (3.35)
+3.  Miami Marlins (3.3)
 
 ------------------------------------------------------------------------
 
@@ -170,16 +170,16 @@ interpretability.
 
 ### Best Records in Last Ten Games
 
-1.  Arizona Diamondbacks (7-3)
-2.  Atlanta Braves (7-3)
-3.  Detroit Tigers (7-3)
-4.  Kansas City Royals (7-3)
-5.  Los Angeles Dodgers (7-3)
-6.  Milwaukee Brewers (7-3)
-7.  Houston Astros (6-4)
+1.  Milwaukee Brewers (8-2)
+2.  Arizona Diamondbacks (7-3)
+3.  Atlanta Braves (7-3)
+4.  Detroit Tigers (7-3)
+5.  Kansas City Royals (7-3)
+6.  Chicago Cubs (6-4)
+7.  Los Angeles Dodgers (6-4)
 8.  New York Mets (6-4)
 9.  New York Yankees (6-4)
-10. San Diego Padres (6-4)
+10. Philadelphia Phillies (6-4)
 
 ------------------------------------------------------------------------
 
@@ -201,28 +201,26 @@ interpretability.
 
 ##### Most Home-Dependent Teams
 
-- Colorado Rockies (46.8% home / 26.9% away)
-- Seattle Mariners (59.4% home / 41.5% away)
-- San Francisco Giants (57.6% home / 42.2% away)
+- Colorado Rockies (46.8% home / 27.9% away)
+- Seattle Mariners (58.5% home / 41.5% away)
+- San Francisco Giants (57.6% home / 43.1% away)
 
 ##### Better-on-the-Road Teams
 
-- Boston Red Sox (46.8% home / 58.5% away)
-- New York Yankees (54.8% home / 62.1% away)
-- San Diego Padres (53.7% home / 58.7% away)
+- Boston Red Sox (46% home / 58.5% away)
+- New York Yankees (54% home / 62.1% away)
+- San Diego Padres (52.9% home / 58.7% away)
 
 ------------------------------------------------------------------------
 
 ### Winning and Losing Streaks
 
-- **Winning Streaks**: Los Angeles Dodgers (W5), Arizona Diamondbacks
-  (W4), New York Yankees (W3), St. Louis Cardinals (W3), Atlanta Braves
-  (W2), Chicago Cubs (W2), Kansas City Royals (W2), Pittsburgh Pirates
-  (W2), Texas Rangers (W2), Toronto Blue Jays (W2)
-- **Losing Streaks**: Miami Marlins (L4), Cleveland Guardians (L3),
-  Colorado Rockies (L3), Los Angeles Angels (L3), Cincinnati Reds (L2),
-  Philadelphia Phillies (L2), San Francisco Giants (L2), Tampa Bay Rays
-  (L2)
+- **Winning Streaks**: Arizona Diamondbacks (W5), Atlanta Braves (W3),
+  Chicago Cubs (W3), Toronto Blue Jays (W3), Baltimore Orioles (W2),
+  Detroit Tigers (W2), Milwaukee Brewers (W2)
+- **Losing Streaks**: Miami Marlins (L5), Los Angeles Angels (L4),
+  Boston Red Sox (L2), Chicago White Sox (L2), Houston Astros (L2),
+  Oakland Athletics (L2), Washington Nationals (L2)
 
 <!-- ___ -->
 <!-- ### Day of Week Results -->
@@ -282,19 +280,19 @@ interpretability.
 
 ##### Longest Streaks of Scoring Three or More Runs
 
-- Kansas City Royals (26)
-- Arizona Diamondbacks (5)
-- San Diego Padres (5)
-- Toronto Blue Jays (5)
-- Los Angeles Dodgers (4)
+- Arizona Diamondbacks (6)
+- Toronto Blue Jays (6)
+- Los Angeles Dodgers (5)
+- Seattle Mariners (4)
+- Atlanta Braves (3)
 
 ##### Longest Streaks of Allowing Fewer Than Five Runs
 
-- Atlanta Braves (7)
-- Los Angeles Dodgers (5)
-- Washington Nationals (5)
-- Texas Rangers (4)
-- New York Yankees (3)
+- Atlanta Braves (8)
+- Washington Nationals (6)
+- Chicago Cubs (3)
+- Toronto Blue Jays (3)
+- Arizona Diamondbacks (2)
 
 ------------------------------------------------------------------------
 
@@ -333,36 +331,36 @@ data.frame(team = all_teams) |>
 ```
 
     ##                     team last25
-    ## 1   Arizona Diamondbacks  2.065
-    ## 2       San Diego Padres  1.148
-    ## 3     Kansas City Royals  1.004
-    ## 4           Chicago Cubs  0.752
-    ## 5      Milwaukee Brewers  0.730
-    ## 6        Minnesota Twins  0.645
-    ## 7       New York Yankees  0.507
-    ## 8    Los Angeles Dodgers  0.414
-    ## 9      Toronto Blue Jays  0.399
-    ## 10  San Francisco Giants  0.307
-    ## 11        Houston Astros  0.286
-    ## 12        Tampa Bay Rays  0.224
-    ## 13      Seattle Mariners  0.176
-    ## 14     Baltimore Orioles -0.086
-    ## 15        Atlanta Braves -0.137
-    ## 16         New York Mets -0.185
-    ## 17        Detroit Tigers -0.203
-    ## 18   St. Louis Cardinals -0.223
-    ## 19    Pittsburgh Pirates -0.266
-    ## 20     Oakland Athletics -0.291
-    ## 21         Miami Marlins -0.358
-    ## 22        Boston Red Sox -0.393
-    ## 23    Los Angeles Angels -0.420
-    ## 24  Washington Nationals -0.460
-    ## 25   Cleveland Guardians -0.468
-    ## 26 Philadelphia Phillies -0.641
-    ## 27       Cincinnati Reds -0.726
-    ## 28      Colorado Rockies -0.882
-    ## 29     Chicago White Sox -1.314
-    ## 30         Texas Rangers -1.480
+    ## 1   Arizona Diamondbacks  2.028
+    ## 2           Chicago Cubs  1.386
+    ## 3      Milwaukee Brewers  1.056
+    ## 4       San Diego Padres  0.844
+    ## 5        Minnesota Twins  0.649
+    ## 6    Los Angeles Dodgers  0.554
+    ## 7     Kansas City Royals  0.469
+    ## 8         Detroit Tigers  0.310
+    ## 9       New York Yankees  0.309
+    ## 10        Tampa Bay Rays  0.308
+    ## 11     Toronto Blue Jays  0.306
+    ## 12         New York Mets  0.303
+    ## 13        Houston Astros  0.188
+    ## 14  San Francisco Giants  0.187
+    ## 15     Baltimore Orioles  0.140
+    ## 16   Cleveland Guardians  0.125
+    ## 17   St. Louis Cardinals  0.030
+    ## 18      Seattle Mariners -0.216
+    ## 19        Atlanta Braves -0.354
+    ## 20        Boston Red Sox -0.400
+    ## 21       Cincinnati Reds -0.401
+    ## 22    Pittsburgh Pirates -0.405
+    ## 23    Los Angeles Angels -0.414
+    ## 24      Colorado Rockies -0.421
+    ## 25     Oakland Athletics -0.434
+    ## 26 Philadelphia Phillies -0.635
+    ## 27  Washington Nationals -0.953
+    ## 28         Miami Marlins -0.957
+    ## 29         Texas Rangers -1.598
+    ## 30     Chicago White Sox -1.602
 
 ------------------------------------------------------------------------
 
@@ -418,31 +416,20 @@ pythag |>
 
 ``` r
 get_team_runs_scored_on = function(tm, dt) {
-  data = end_games |>
-    filter((home_team == tm | away_team == tm) & date == dt)
-  
+  data = end_games |> filter((home_team == tm | away_team == tm) & date == dt)
   if (nrow(data) == 0) return(NA)
-  
-  runs = data |>
-    mutate(runs = ifelse(home_team == tm, home_score, away_score)) |>
-    pull(runs)
-  
+  runs = data |> mutate(runs = ifelse(home_team == tm, home_score, away_score)) |> pull(runs)
   return(sum(runs))
 }
 
 get_team_runs_allowed_on = function(tm, dt) {
-  data = end_games |>
-    filter((home_team == tm | away_team == tm) & date == dt)
-  
+  data = end_games |> filter((home_team == tm | away_team == tm) & date == dt)
   if (nrow(data) == 0) return(NA)
-  
-  runs = data |>
-    mutate(runs = ifelse(home_team == tm, away_score, home_score)) |>
-    pull(runs)
-  
+  runs = data |> mutate(runs = ifelse(home_team == tm, away_score, home_score)) |> pull(runs)
   return(sum(runs))
 }
 
+# this took 17s to run on 2024/08/24
 scored_allowed_on_dates = crossing(team = all_teams, date = all_szn_dates) |>
   rowwise() |>
   mutate(scored = get_team_runs_scored_on(tm = team, dt = date),
@@ -460,6 +447,7 @@ scored_allowed_on_dates |>
   mutate(abb = fct_reorder(abb, -pct)) |>
   ggplot(aes(date, pythag)) +
   geom_line(aes(col = abb), linewidth = 1.25, show.legend = F) +
+  # geom_line(stat = "smooth", formula = y ~ x, method = "loess", se = F) +
   geom_hline(yintercept = 0.5, linetype = "dashed", alpha = 0.5) +
   scale_color_manual(values = hex_pct_ordered) +
   facet_wrap(vars(abb)) +
