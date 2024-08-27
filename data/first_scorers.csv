@@ -539,7 +539,7 @@ date,game_pk,away_score,away_team,home_team,home_score,win_team,lose_team,win_sc
 2024-05-07,745186,7,New York Mets,St. Louis Cardinals,5,New York Mets,St. Louis Cardinals,7,5,St. Louis Cardinals
 2024-05-07,746559,5,San Francisco Giants,Colorado Rockies,0,San Francisco Giants,Colorado Rockies,5,0,San Francisco Giants
 2024-05-07,746147,2,Miami Marlins,Los Angeles Dodgers,8,Los Angeles Dodgers,Miami Marlins,8,2,Miami Marlins
-2024-05-08,745507,5,Los Angeles Angels,Pittsburgh Pirates,4,Los Angeles Angels,Pittsburgh Pirates,5,4,Los Angeles Angels
+2024-05-08,745507,5,Los Angeles Angels,Pittsburgh Pirates,4,Los Angeles Angels,Pittsburgh Pirates,5,4,L
 2024-05-08,745584,5,Toronto Blue Jays,Philadelphia Phillies,3,Toronto Blue Jays,Philadelphia Phillies,5,3,Toronto Blue Jays
 2024-05-08,746640,4,Detroit Tigers,Cleveland Guardians,5,Cleveland Guardians,Detroit Tigers,5,4,Cleveland Guardians
 2024-05-08,746312,4,Milwaukee Brewers,Kansas City Royals,6,Kansas City Royals,Milwaukee Brewers,6,4,Milwaukee Brewers
@@ -722,10 +722,10 @@ date,game_pk,away_score,away_team,home_team,home_score,win_team,lose_team,win_sc
 2024-05-21,744936,5,Chicago White Sox,Toronto Blue Jays,0,Chicago White Sox,Toronto Blue Jays,5,0,Chicago White Sox
 2024-05-21,746309,3,Detroit Tigers,Kansas City Royals,10,Kansas City Royals,Detroit Tigers,10,3,Kansas City Royals
 2024-05-21,746875,3,Atlanta Braves,Chicago Cubs,4,Chicago Cubs,Atlanta Braves,4,3,Atlanta Braves
+2024-05-21,745180,1,Baltimore Orioles,St. Louis Cardinals,3,St. Louis Cardinals,Baltimore Orioles,3,1,St. Louis Cardinals
 2024-05-21,746385,5,Los Angeles Angels,Houston Astros,6,Houston Astros,Los Angeles Angels,6,5,Los Angeles Angels
 2024-05-21,745662,4,Colorado Rockies,Oakland Athletics,5,Oakland Athletics,Colorado Rockies,5,4,Colorado Rockies
 2024-05-21,746145,7,Arizona Diamondbacks,Los Angeles Dodgers,3,Arizona Diamondbacks,Los Angeles Dodgers,7,3,Arizona Diamondbacks
-2024-05-21,745180,1,Baltimore Orioles,St. Louis Cardinals,3,St. Louis Cardinals,Baltimore Orioles,3,1,St. Louis Cardinals
 2024-05-22,745180,1,Baltimore Orioles,St. Louis Cardinals,3,St. Louis Cardinals,Baltimore Orioles,3,1,St. Louis Cardinals
 2024-05-22,744856,3,Minnesota Twins,Washington Nationals,2,Minnesota Twins,Washington Nationals,3,2,Minnesota Twins
 2024-05-22,746634,3,New York Mets,Cleveland Guardians,6,Cleveland Guardians,New York Mets,6,3,New York Mets
@@ -769,8 +769,8 @@ date,game_pk,away_score,away_team,home_team,home_score,win_team,lose_team,win_sc
 2024-05-25,745901,3,Texas Rangers,Minnesota Twins,5,Minnesota Twins,Texas Rangers,5,3,Minnesota Twins
 2024-05-25,746794,5,Baltimore Orioles,Chicago White Sox,3,Baltimore Orioles,Chicago White Sox,5,3,Chicago White Sox
 2024-05-25,744851,1,Seattle Mariners,Washington Nationals,3,Washington Nationals,Seattle Mariners,3,1,Washington Nationals
-2024-05-25,745658,1,Houston Astros,Oakland Athletics,3,Oakland Athletics,Houston Astros,3,1,Oakland Athletics
 2024-05-25,745493,1,Atlanta Braves,Pittsburgh Pirates,4,Pittsburgh Pirates,Atlanta Braves,4,1,Pittsburgh Pirates
+2024-05-25,745658,1,Houston Astros,Oakland Athletics,3,Oakland Athletics,Houston Astros,3,1,Oakland Athletics
 2024-05-25,745086,7,Kansas City Royals,Tampa Bay Rays,4,Kansas City Royals,Tampa Bay Rays,7,4,Kansas City Royals
 2024-05-25,746958,6,Milwaukee Brewers,Boston Red Sox,3,Milwaukee Brewers,Boston Red Sox,6,3,Milwaukee Brewers
 2024-05-25,746710,1,Los Angeles Dodgers,Cincinnati Reds,3,Cincinnati Reds,Los Angeles Dodgers,3,1,Cincinnati Reds
@@ -1200,6 +1200,7 @@ date,game_pk,away_score,away_team,home_team,home_score,win_team,lose_team,win_sc
 2024-06-26,746212,2,Oakland Athletics,Los Angeles Angels,5,Los Angeles Angels,Oakland Athletics,5,2,Oakland Athletics
 2024-06-26,745400,5,Washington Nationals,San Diego Padres,8,San Diego Padres,Washington Nationals,8,5,San Diego Padres
 2024-06-26,747019,2,Cleveland Guardians,Baltimore Orioles,4,Baltimore Orioles,Cleveland Guardians,4,2,Cleveland Guardians
+2024-06-26,746942,4,Toronto Blue Jays,Boston Red Sox,1,Toronto Blue Jays,Boston Red Sox,4,1,Toronto Blue Jays
 2024-06-26,745808,2,New York Yankees,New York Mets,12,New York Mets,New York Yankees,12,2,New York Mets
 2024-06-26,746777,4,Los Angeles Dodgers,Chicago White Sox,0,Los Angeles Dodgers,Chicago White Sox,4,0,Los Angeles Dodgers
 2024-06-26,747184,8,Minnesota Twins,Arizona Diamondbacks,3,Minnesota Twins,Arizona Diamondbacks,8,3,Minnesota Twins
@@ -1407,13 +1408,13 @@ date,game_pk,away_score,away_team,home_team,home_score,win_team,lose_team,win_sc
 2024-07-12,745800,6,Colorado Rockies,New York Mets,7,New York Mets,Colorado Rockies,7,6,Colorado Rockies
 2024-07-12,746685,4,Miami Marlins,Cincinnati Reds,7,Cincinnati Reds,Miami Marlins,7,4,Cincinnati Reds
 2024-07-12,746371,3,Texas Rangers,Houston Astros,6,Houston Astros,Texas Rangers,6,3,Houston Astros
+2024-07-12,746774,4,Pittsburgh Pirates,Chicago White Sox,1,Pittsburgh Pirates,Chicago White Sox,4,1,Chicago White Sox
 2024-07-12,745965,5,Washington Nationals,Milwaukee Brewers,2,Washington Nationals,Milwaukee Brewers,5,2,Washington Nationals
 2024-07-12,745153,5,Chicago Cubs,St. Louis Cardinals,1,Chicago Cubs,St. Louis Cardinals,5,1,Chicago Cubs
 2024-07-12,746207,5,Seattle Mariners,Los Angeles Angels,6,Los Angeles Angels,Seattle Mariners,6,5,Seattle Mariners
 2024-07-12,747175,4,Toronto Blue Jays,Arizona Diamondbacks,5,Arizona Diamondbacks,Toronto Blue Jays,5,4,Arizona Diamondbacks
 2024-07-12,745390,6,Atlanta Braves,San Diego Padres,1,Atlanta Braves,San Diego Padres,6,1,San Diego Padres
 2024-07-12,745312,1,Minnesota Twins,San Francisco Giants,7,San Francisco Giants,Minnesota Twins,7,1,San Francisco Giants
-2024-07-12,746774,4,Pittsburgh Pirates,Chicago White Sox,1,Pittsburgh Pirates,Chicago White Sox,4,1,Chicago White Sox
 2024-07-13,746447,9,Los Angeles Dodgers,Detroit Tigers,11,Detroit Tigers,Los Angeles Dodgers,11,9,Los Angeles Dodgers
 2024-07-13,746766,6,Pittsburgh Pirates,Chicago White Sox,2,Pittsburgh Pirates,Chicago White Sox,6,2,Pittsburgh Pirates
 2024-07-13,745152,3,Chicago Cubs,St. Louis Cardinals,11,St. Louis Cardinals,Chicago Cubs,11,3,Chicago Cubs
@@ -1787,14 +1788,14 @@ date,game_pk,away_score,away_team,home_team,home_score,win_team,lose_team,win_sc
 2024-08-13,745548,5,Miami Marlins,Philadelphia Phillies,0,Miami Marlins,Philadelphia Phillies,5,0,Miami Marlins
 2024-08-13,745055,3,Houston Astros,Tampa Bay Rays,2,Houston Astros,Tampa Bay Rays,3,2,Tampa Bay Rays
 2024-08-13,745788,9,Oakland Athletics,New York Mets,4,Oakland Athletics,New York Mets,9,4,Oakland Athletics
+2024-08-13,746924,4,Texas Rangers,Boston Red Sox,9,Boston Red Sox,Texas Rangers,9,4,Boston Red Sox
 2024-08-13,745867,3,Kansas City Royals,Minnesota Twins,13,Minnesota Twins,Kansas City Royals,13,3,Minnesota Twins
 2024-08-13,746757,4,New York Yankees,Chicago White Sox,1,New York Yankees,Chicago White Sox,4,1,New York Yankees
 2024-08-13,745954,7,Los Angeles Dodgers,Milwaukee Brewers,2,Los Angeles Dodgers,Milwaukee Brewers,7,2,Los Angeles Dodgers
 2024-08-13,746187,6,Toronto Blue Jays,Los Angeles Angels,1,Toronto Blue Jays,Los Angeles Angels,6,1,Toronto Blue Jays
 2024-08-13,747160,3,Colorado Rockies,Arizona Diamondbacks,4,Arizona Diamondbacks,Colorado Rockies,4,3,Colorado Rockies
-2024-08-13,745302,4,Atlanta Braves,San Francisco Giants,3,Atlanta Braves,San Francisco Giants,4,3,Atlanta Braves
-2024-08-13,746924,4,Texas Rangers,Boston Red Sox,9,Boston Red Sox,Texas Rangers,9,4,Boston Red Sox
 2024-08-13,745382,0,Pittsburgh Pirates,San Diego Padres,3,San Diego Padres,Pittsburgh Pirates,3,0,San Diego Padres
+2024-08-13,745302,4,Atlanta Braves,San Francisco Giants,3,Atlanta Braves,San Francisco Giants,4,3,Atlanta Braves
 2024-08-14,745869,4,Kansas City Royals,Minnesota Twins,1,Kansas City Royals,Minnesota Twins,4,1,Kansas City Royals
 2024-08-14,747163,4,Colorado Rockies,Arizona Diamondbacks,11,Arizona Diamondbacks,Colorado Rockies,11,4,Arizona Diamondbacks
 2024-08-14,745381,2,Pittsburgh Pirates,San Diego Padres,8,San Diego Padres,Pittsburgh Pirates,8,2,San Diego Padres
@@ -1956,3 +1957,15 @@ date,game_pk,away_score,away_team,home_team,home_score,win_team,lose_team,win_sc
 2024-08-25,745212,3,San Francisco Giants,Seattle Mariners,4,Seattle Mariners,San Francisco Giants,4,3,San Francisco Giants
 2024-08-25,746106,1,Tampa Bay Rays,Los Angeles Dodgers,3,Los Angeles Dodgers,Tampa Bay Rays,3,1,Los Angeles Dodgers
 2024-08-25,746994,6,Houston Astros,Baltimore Orioles,3,Houston Astros,Baltimore Orioles,6,3,Houston Astros
+2024-08-26,746628,4,Kansas City Royals,Cleveland Guardians,3,Kansas City Royals,Cleveland Guardians,4,3,Cleveland Guardians
+2024-08-26,746596,9,Kansas City Royals,Cleveland Guardians,4,Kansas City Royals,Cleveland Guardians,9,4,Cleveland Guardians
+2024-08-26,746942,4,Toronto Blue Jays,Boston Red Sox,1,Toronto Blue Jays,Boston Red Sox,4,1,Toronto Blue Jays
+2024-08-26,745458,18,Chicago Cubs,Pittsburgh Pirates,8,Chicago Cubs,Pittsburgh Pirates,18,8,Chicago Cubs
+2024-08-26,745538,2,Houston Astros,Philadelphia Phillies,3,Philadelphia Phillies,Houston Astros,3,2,Houston Astros
+2024-08-26,744813,5,New York Yankees,Washington Nationals,2,New York Yankees,Washington Nationals,5,2,New York Yankees
+2024-08-26,746915,7,Toronto Blue Jays,Boston Red Sox,3,Toronto Blue Jays,Boston Red Sox,7,3,Boston Red Sox
+2024-08-26,745865,10,Atlanta Braves,Minnesota Twins,6,Atlanta Braves,Minnesota Twins,10,6,Atlanta Braves
+2024-08-26,745133,7,San Diego Padres,St. Louis Cardinals,4,San Diego Padres,St. Louis Cardinals,7,4,San Diego Padres
+2024-08-26,746753,6,Detroit Tigers,Chicago White Sox,3,Detroit Tigers,Chicago White Sox,6,3,Chicago White Sox
+2024-08-26,746513,2,Miami Marlins,Colorado Rockies,3,Colorado Rockies,Miami Marlins,3,2,Miami Marlins
+2024-08-26,745215,1,Tampa Bay Rays,Seattle Mariners,5,Seattle Mariners,Tampa Bay Rays,5,1,Tampa Bay Rays

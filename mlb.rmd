@@ -1616,8 +1616,7 @@ scored_allowed_on_dates |>
   facet_wrap(vars(abb)) +
   theme(axis.text = element_blank()) +
   labs(x = NULL, y = "Pythagorean Win Percentage in Ten-Game Window",
-       title = "Season-long pythagorean win percentages in rolling ten-game windows",
-       subtitle = "Aggregated runs scored / runs allowed method")
+       title = "Season-long pythagorean win percentages in rolling ten-game windows")
 ```
 
 

@@ -1200,6 +1200,7 @@ date,game_pk,away_score,away_team,home_team,home_score,win_team,lose_team,win_sc
 2024-06-26,746212,2,Oakland Athletics,Los Angeles Angels,5,Los Angeles Angels,Oakland Athletics,5,2
 2024-06-26,745400,5,Washington Nationals,San Diego Padres,8,San Diego Padres,Washington Nationals,8,5
 2024-06-26,747019,2,Cleveland Guardians,Baltimore Orioles,4,Baltimore Orioles,Cleveland Guardians,4,2
+2024-06-26,746942,4,Toronto Blue Jays,Boston Red Sox,1,Toronto Blue Jays,Boston Red Sox,4,1
 2024-06-26,745808,2,New York Yankees,New York Mets,12,New York Mets,New York Yankees,12,2
 2024-06-26,746777,4,Los Angeles Dodgers,Chicago White Sox,0,Los Angeles Dodgers,Chicago White Sox,4,0
 2024-06-26,747184,8,Minnesota Twins,Arizona Diamondbacks,3,Minnesota Twins,Arizona Diamondbacks,8,3
@@ -1956,3 +1957,15 @@ date,game_pk,away_score,away_team,home_team,home_score,win_team,lose_team,win_sc
 2024-08-25,745212,3,San Francisco Giants,Seattle Mariners,4,Seattle Mariners,San Francisco Giants,4,3
 2024-08-25,746106,1,Tampa Bay Rays,Los Angeles Dodgers,3,Los Angeles Dodgers,Tampa Bay Rays,3,1
 2024-08-25,746994,6,Houston Astros,Baltimore Orioles,3,Houston Astros,Baltimore Orioles,6,3
+2024-08-26,746628,4,Kansas City Royals,Cleveland Guardians,3,Kansas City Royals,Cleveland Guardians,4,3
+2024-08-26,746596,9,Kansas City Royals,Cleveland Guardians,4,Kansas City Royals,Cleveland Guardians,9,4
+2024-08-26,746942,4,Toronto Blue Jays,Boston Red Sox,1,Toronto Blue Jays,Boston Red Sox,4,1
+2024-08-26,745458,18,Chicago Cubs,Pittsburgh Pirates,8,Chicago Cubs,Pittsburgh Pirates,18,8
+2024-08-26,745538,2,Houston Astros,Philadelphia Phillies,3,Philadelphia Phillies,Houston Astros,3,2
+2024-08-26,744813,5,New York Yankees,Washington Nationals,2,New York Yankees,Washington Nationals,5,2
+2024-08-26,746915,7,Toronto Blue Jays,Boston Red Sox,3,Toronto Blue Jays,Boston Red Sox,7,3
+2024-08-26,745865,10,Atlanta Braves,Minnesota Twins,6,Atlanta Braves,Minnesota Twins,10,6
+2024-08-26,745133,7,San Diego Padres,St. Louis Cardinals,4,San Diego Padres,St. Louis Cardinals,7,4
+2024-08-26,746753,6,Detroit Tigers,Chicago White Sox,3,Detroit Tigers,Chicago White Sox,6,3
+2024-08-26,746513,2,Miami Marlins,Colorado Rockies,3,Colorado Rockies,Miami Marlins,3,2
+2024-08-26,745215,1,Tampa Bay Rays,Seattle Mariners,5,Seattle Mariners,Tampa Bay Rays,5,1
