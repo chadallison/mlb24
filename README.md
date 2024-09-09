@@ -26,8 +26,6 @@ out on GitHub:
 - [Home Field Advantage](#home-field-advantage)
 - [Winning and Losing Streaks](#winning-and-losing-streaks)
 - [Seven Game Windows](#seven-game-windows)
-- [Team Margins in Seven Game
-  Windows](#team-margins-in-seven-game-windows)
 - [Team Series Results](#team-series-results)
 - [Records vs. Above/Below .500
   Teams](#records-vs.-abovebelow-.500-teams)
@@ -120,9 +118,9 @@ interpretability.
 
 ### Yesterday’s Largest Victories
 
-1.  Tampa Bay Rays def. Baltimore Orioles 7-1
-2.  Houston Astros def. Arizona Diamondbacks 11-5
-3.  Los Angeles Dodgers def. Cleveland Guardians 7-2
+1.  Miami Marlins def. Philadelphia Phillies 10-1
+2.  Detroit Tigers def. Oakland Athletics 9-1
+3.  Seattle Mariners def. St. Louis Cardinals 10-4
 
 ------------------------------------------------------------------------
 
@@ -132,20 +130,20 @@ interpretability.
 
 ##### Most Volatile Teams
 
-1.  Oakland Athletics (6.78)
-2.  Arizona Diamondbacks (6.78)
+1.  Arizona Diamondbacks (6.8)
+2.  Oakland Athletics (6.78)
 3.  Colorado Rockies (6.67)
 
 ##### Most Volatile Offenses
 
-1.  Arizona Diamondbacks (3.63)
+1.  Arizona Diamondbacks (3.66)
 2.  Oakland Athletics (3.49)
 3.  Chicago Cubs (3.46)
 
 ##### Most Volatile Defenses
 
-1.  Colorado Rockies (3.4)
-2.  Pittsburgh Pirates (3.39)
+1.  Colorado Rockies (3.41)
+2.  Pittsburgh Pirates (3.38)
 3.  Miami Marlins (3.33)
 
 ------------------------------------------------------------------------
@@ -171,14 +169,14 @@ interpretability.
 ### Best Records in Last Ten Games
 
 1.  New York Mets (9-1)
-2.  Houston Astros (7-3)
-3.  Los Angeles Dodgers (7-3)
-4.  Philadelphia Phillies (7-3)
-5.  St. Louis Cardinals (7-3)
-6.  Texas Rangers (7-3)
-7.  Chicago Cubs (6-4)
-8.  Cleveland Guardians (6-4)
-9.  Milwaukee Brewers (6-4)
+2.  Los Angeles Dodgers (7-3)
+3.  Philadelphia Phillies (7-3)
+4.  Texas Rangers (7-3)
+5.  Chicago Cubs (6-4)
+6.  Cleveland Guardians (6-4)
+7.  Houston Astros (6-4)
+8.  Miami Marlins (6-4)
+9.  St. Louis Cardinals (6-4)
 10. Atlanta Braves (5-5)
 
 ------------------------------------------------------------------------
@@ -201,36 +199,26 @@ interpretability.
 
 ##### Most Home-Dependent Teams
 
-- Colorado Rockies (46.4% home / 28.4% away)
-- Seattle Mariners (59.4% home / 41.9% away)
-- San Francisco Giants (55.6% home / 42.3% away)
+- Colorado Rockies (46.4% home / 29.3% away)
+- Seattle Mariners (59.4% home / 42.7% away)
+- Cleveland Guardians (63.2% home / 50.7% away)
 
 ##### Better-on-the-Road Teams
 
-- Boston Red Sox (45.8% home / 54.9% away)
-- New York Yankees (53.7% home / 60.8% away)
-- San Diego Padres (54.1% home / 58.6% away)
+- Boston Red Sox (45.2% home / 54.9% away)
+- New York Yankees (53.7% home / 60% away)
+- San Diego Padres (53.3% home / 58.6% away)
 
 ------------------------------------------------------------------------
 
 ### Winning and Losing Streaks
 
-- **Winning Streaks**: New York Mets (W9), Kansas City Royals (W3),
-  Boston Red Sox (W2), Houston Astros (W2), New York Yankees (W2),
-  Washington Nationals (W2)
-- **Losing Streaks**: Arizona Diamondbacks (L3), Chicago Cubs (L2),
-  Chicago White Sox (L2), Cincinnati Reds (L2), Minnesota Twins (L2),
-  Pittsburgh Pirates (L2)
-
-<!-- ___ -->
-<!-- ### Day of Week Results -->
-<!-- ```{r echo = F} -->
-<!-- days_of_week = c("Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday") -->
-<!-- ``` -->
-<!-- ##### Winners -->
-<!-- - -->
-<!-- ##### Losers -->
-<!-- - -->
+- **Winning Streaks**: Kansas City Royals (W4), Detroit Tigers (W2), Los
+  Angeles Dodgers (W2), Miami Marlins (W2), San Francisco Giants (W2),
+  Tampa Bay Rays (W2), Texas Rangers (W2)
+- **Losing Streaks**: Minnesota Twins (L3), Baltimore Orioles (L2),
+  Cleveland Guardians (L2), Los Angeles Angels (L2), Oakland Athletics
+  (L2), Philadelphia Phillies (L2), San Diego Padres (L2)
 
 ------------------------------------------------------------------------
 
@@ -240,39 +228,33 @@ interpretability.
 
 ------------------------------------------------------------------------
 
-### Team Margins in Seven Game Windows
+### Team Series Results
 
 ![](README_files/figure-gfm/unnamed-chunk-26-1.png)<!-- -->
 
 ------------------------------------------------------------------------
 
-### Team Series Results
+## Records vs. Above/Below .500 Teams
 
 ![](README_files/figure-gfm/unnamed-chunk-27-1.png)<!-- -->
 
 ------------------------------------------------------------------------
 
-## Records vs. Above/Below .500 Teams
+### Pythagorean Wins
 
 ![](README_files/figure-gfm/unnamed-chunk-28-1.png)<!-- -->
 
 ------------------------------------------------------------------------
 
-### Pythagorean Wins
+### Season Long NPR Trends
 
 ![](README_files/figure-gfm/unnamed-chunk-29-1.png)<!-- -->
 
 ------------------------------------------------------------------------
 
-### Season Long NPR Trends
-
-![](README_files/figure-gfm/unnamed-chunk-30-1.png)<!-- -->
-
-------------------------------------------------------------------------
-
 ### Season Long Pythagorean Trends
 
-![](README_files/figure-gfm/unnamed-chunk-31-1.png)<!-- -->
+![](README_files/figure-gfm/unnamed-chunk-30-1.png)<!-- -->
 
 ------------------------------------------------------------------------
 
@@ -280,37 +262,37 @@ interpretability.
 
 ##### Longest Streaks of Scoring Three or More Runs
 
-- San Diego Padres (8)
-- Philadelphia Phillies (7)
-- New York Mets (5)
-- Washington Nationals (5)
-- Boston Red Sox (3)
+- San Diego Padres (9)
+- Washington Nationals (6)
+- Pittsburgh Pirates (4)
+- Atlanta Braves (3)
+- Houston Astros (3)
 
 ##### Longest Streaks of Allowing Fewer Than Five Runs
 
-- New York Mets (9)
-- Seattle Mariners (5)
-- Tampa Bay Rays (5)
-- Chicago Cubs (3)
-- Kansas City Royals (3)
+- New York Mets (10)
+- Seattle Mariners (6)
+- Tampa Bay Rays (6)
+- Chicago Cubs (4)
+- Kansas City Royals (4)
 
 ------------------------------------------------------------------------
 
 ### Team NPR Trends in Past Ten Games
 
-![](README_files/figure-gfm/unnamed-chunk-34-1.png)<!-- -->
+![](README_files/figure-gfm/unnamed-chunk-33-1.png)<!-- -->
 
 ------------------------------------------------------------------------
 
 ### First Inning Score Rates
 
-![](README_files/figure-gfm/unnamed-chunk-35-1.png)<!-- -->
+![](README_files/figure-gfm/unnamed-chunk-34-1.png)<!-- -->
 
 ------------------------------------------------------------------------
 
 ### One Run vs. Multi Run Games
 
-![](README_files/figure-gfm/unnamed-chunk-36-1.png)<!-- -->
+![](README_files/figure-gfm/unnamed-chunk-35-1.png)<!-- -->
 
 ------------------------------------------------------------------------
 
@@ -331,42 +313,42 @@ data.frame(team = all_teams) |>
 ```
 
     ##                     team last25
-    ## 1      Toronto Blue Jays  1.663
-    ## 2           Chicago Cubs  1.431
-    ## 3         Detroit Tigers  1.221
-    ## 4         Houston Astros  1.149
-    ## 5         Atlanta Braves  0.902
-    ## 6          New York Mets  0.821
-    ## 7      Milwaukee Brewers  0.706
-    ## 8  Philadelphia Phillies  0.668
-    ## 9    Los Angeles Dodgers  0.462
-    ## 10  Arizona Diamondbacks  0.408
-    ## 11      Seattle Mariners  0.198
-    ## 12      San Diego Padres  0.079
-    ## 13        Tampa Bay Rays  0.043
-    ## 14   Cleveland Guardians -0.038
-    ## 15   St. Louis Cardinals -0.065
-    ## 16      New York Yankees -0.068
-    ## 17     Oakland Athletics -0.166
-    ## 18    Kansas City Royals -0.214
-    ## 19      Colorado Rockies -0.283
-    ## 20  Washington Nationals -0.313
-    ## 21     Baltimore Orioles -0.428
-    ## 22         Texas Rangers -0.517
-    ## 23       Minnesota Twins -0.653
-    ## 24  San Francisco Giants -0.668
-    ## 25    Los Angeles Angels -0.802
-    ## 26         Miami Marlins -0.861
-    ## 27        Boston Red Sox -0.875
-    ## 28       Cincinnati Reds -0.990
-    ## 29    Pittsburgh Pirates -1.051
-    ## 30     Chicago White Sox -1.134
+    ## 1      Toronto Blue Jays  1.562
+    ## 2           Chicago Cubs  1.494
+    ## 3         Detroit Tigers  1.462
+    ## 4          New York Mets  1.192
+    ## 5         Atlanta Braves  0.894
+    ## 6         Houston Astros  0.752
+    ## 7      Milwaukee Brewers  0.676
+    ## 8    Los Angeles Dodgers  0.586
+    ## 9  Philadelphia Phillies  0.582
+    ## 10  Arizona Diamondbacks  0.346
+    ## 11        Tampa Bay Rays  0.313
+    ## 12    Kansas City Royals  0.046
+    ## 13      San Diego Padres  0.010
+    ## 14      Seattle Mariners -0.038
+    ## 15   St. Louis Cardinals -0.094
+    ## 16      Colorado Rockies -0.204
+    ## 17         Texas Rangers -0.230
+    ## 18   Cleveland Guardians -0.248
+    ## 19      New York Yankees -0.407
+    ## 20     Baltimore Orioles -0.450
+    ## 21         Miami Marlins -0.492
+    ## 22  Washington Nationals -0.493
+    ## 23     Oakland Athletics -0.603
+    ## 24  San Francisco Giants -0.700
+    ## 25    Pittsburgh Pirates -0.884
+    ## 26       Minnesota Twins -0.923
+    ## 27    Los Angeles Angels -0.979
+    ## 28       Cincinnati Reds -1.111
+    ## 29        Boston Red Sox -1.296
+    ## 30     Chicago White Sox -1.377
 
 ------------------------------------------------------------------------
 
 ### Rolling Ten-Game Windows
 
-![](README_files/figure-gfm/unnamed-chunk-38-1.png)<!-- -->
+![](README_files/figure-gfm/unnamed-chunk-37-1.png)<!-- -->
 
 ``` r
 get_team_all_pythag = function(tm) {
@@ -412,7 +394,7 @@ pythag |>
        subtitle = "Average of individual games method")
 ```
 
-![](README_files/figure-gfm/unnamed-chunk-40-1.png)<!-- -->
+![](README_files/figure-gfm/unnamed-chunk-39-1.png)<!-- -->
 
 ``` r
 get_team_runs_scored_on = function(tm, dt) {
@@ -456,7 +438,7 @@ scored_allowed_on_dates |>
        title = "Season-long pythagorean win percentages in rolling ten-game windows")
 ```
 
-![](README_files/figure-gfm/unnamed-chunk-41-1.png)<!-- -->
+![](README_files/figure-gfm/unnamed-chunk-40-1.png)<!-- -->
 
 ``` r
 py_ranks = data.frame(team = all_teams) |>
