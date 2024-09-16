@@ -842,134 +842,6 @@ lose_streaks = paste(lose_streaks, collapse = ", ")
 
 ___
 
-### Seven Game Windows
-
-```{r echo = F}
-seven_seq = rep(1:24, each = 7)
-
-get_seven_group_pct = function(team, group) {
-  data = end_games |>
-    filter(home_team == team | away_team == team) |>
-    arrange(date)
-  
-  data = data |>
-    mutate(seven_group = seven_seq[1:nrow(data)]) |>
-    filter(seven_group == group)
-
-  if (nrow(data) == 0) return(NA)
-  wins = data |> filter(win_team == team) |> nrow()
-  return(round(wins / nrow(data) * 100, 1))
-}
-
-max_gp = team_records |>
-  transmute(gp = wins + losses) |>
-  slice_max(gp, n = 1, with_ties = F) |>
-  pull(gp)
-
-upper_lim = ceiling(max_gp / 7)
-
-team_sevens = crossing(team = all_teams, seven_group = 1:upper_lim) |>
-  rowwise() |>
-  mutate(pct = get_seven_group_pct(team = team, group = seven_group)) |>
-  ungroup() |>
-  filter(!is.na(pct))
-
-sevens_wl = team_sevens |>
-  mutate(wl = case_when(pct > 50 ~ "W",
-                        pct < 50 ~ "L",
-                        pct == 50 ~ "Incomplete"))
-
-sevens_pcts = sevens_wl |>
-  filter(wl == "W") |>
-  count(team) |>
-  rename(sev_wins = n) |>
-  inner_join(sevens_wl |>
-  filter(wl == "L") |>
-  count(team) |>
-  rename(sev_losses = n), by = "team") |>
-  mutate(sev_pct = round(sev_wins / (sev_wins + sev_losses) * 100, 1)) |>
-  inner_join(teams_info, by = "team") |>
-  inner_join(team_records, by = "team") |>
-  arrange(desc(sev_pct), desc(pct), team) |>
-  pull(abb)
-
-sevens_wl |>
-  inner_join(teams_info, by = "team") |>
-  mutate(abb = factor(abb, levels = sevens_pcts),
-         wl = case_when(wl == "W" ~ "Series Win", wl == "L" ~ "Series Loss", wl == "Incomplete" ~ "Series Currently Tied"),
-         wl = factor(wl, levels = c("Series Win", "Series Loss", "Series Currently Tied"))) |>
-  ggplot(aes(seven_group, 1)) +
-  geom_col(aes(fill = wl), position = "dodge") +
-  facet_wrap(vars(abb)) +
-  scale_fill_manual(values = c("#004D40", "#D81B60", "#FFC107")) +
-  labs(x = NULL, y = NULL, fill = NULL,
-       title = "What if the season was split into seven-game windows?") +
-  theme(axis.text = element_blank())
-```
-
-___
-
-### Team Series Results
-
-```{r echo = F}
-get_series_data = function(team, series) {
-  x = end_games |>
-    filter(home_team == team | away_team == team) |>
-    arrange(date) |>
-    mutate(my_team = ifelse(home_team == team, home_team, away_team),
-           opp_team = ifelse(home_team == team, away_team, home_team))
-  
-  x$series_num = NA
-  x$series_num[1] = 1
-  
-  for (i in 2:nrow(x)) {
-    if (x$opp_team[i] == x$opp_team[i - 1]) {
-      x$series_num[i] = x$series_num[i - 1]
-    } else {
-      x$series_num[i] = x$series_num[i - 1] + 1
-    }
-  }
-  
-  data = x |> filter(series_num == series)
-  if (nrow(data) == 0) return(NA)
-  wins = data |> filter(win_team == team) |> nrow()
-  losses = data |> filter(lose_team == team) |> nrow()
-  
-  if (wins > losses) {
-    return("Series Win")
-  } else if (wins < losses) {
-    return("Series Loss")
-  } else {
-    return("Series Tied or In Progress")
-  }
-  
-  return(x)
-}
-
-upper_lim = ceiling(team_records |>
-  transmute(gp = wins + losses) |>
-  slice_max(gp, n = 1, with_ties = F) |>
-  pull(gp) / 2)
-
-team_series_results = crossing(team = all_teams, series = 1:upper_lim) |>
-  rowwise() |>
-  mutate(wl = get_series_data(team, series)) |>
-  ungroup() |>
-  filter(!is.na(wl))
-
-team_series_results |>
-  inner_join(teams_info, by = "team") |>
-  ggplot(aes(series, 1)) +
-  geom_col(aes(fill = wl), width = 0.75, position = "dodge") +
-  facet_wrap(vars(abb), scales = "free") +
-  scale_fill_manual(values = c("indianred3", "black", "springgreen4")) +
-  theme(axis.text = element_blank()) +
-  labs(x = NULL, y = NULL,
-       title = "Team Series Results")
-```
-
-___
-
 ## Records vs. Above/Below .500 Teams
 
 ```{r echo = F}
@@ -1086,50 +958,6 @@ npr_on_dates |>
   facet_wrap(vars(division)) +
   labs(x = NULL, y = NULL, title = "Season-Long Team NPR Trends") +
   ggrepel::geom_text_repel(aes(label = abb), data = last_dates, segment.alpha = 0, nudge_x = 10, direction = "y", hjust = 0, size = 3, show.legend = F)
-```
-
-___
-
-### Season Long Pythagorean Trends
-
-```{r echo = F}
-get_py_on = function(team, dt) {
-  data = end_games |>
-    filter((home_team == team | away_team == team) & date <= dt) |>
-    mutate(team_score = ifelse(home_team == team, home_score, away_score),
-           opp_score = ifelse(home_team == team, away_score, home_score))
-  
-  rs = sum(data$team_score)
-  ra = sum(data$opp_score)
-  py = round(rs ^ 2 / (rs ^ 2 + ra ^ 2) * 100, 1)
-  return(py)
-}
-
-py_dates = crossing(team = all_teams, date = all_szn_dates) |>
-  rowwise() |>
-  mutate(py_on_date = get_py_on(team = team, dt = date)) |>
-  ungroup() |>
-  na.omit()
-
-py_on_dates = py_dates |>
-  inner_join(teams_info, by = "team") |>
-  inner_join(team_divisons, by = "team")
-
-label_positions = py_on_dates |>
-  group_by(team) |>
-  filter(date == max(date)) |>
-  ungroup()
-
-py_on_dates |>
-  ggplot(aes(date, py_on_date)) +
-  geom_line(aes(col = team), linewidth = 1.25, show.legend = F) +
-  ggrepel::geom_text_repel(data = label_positions, aes(label = abb), size = 3, hjust = 1, nudge_x = 10, show.legend = F) +
-  scale_color_manual(values = team_hex) +
-  theme(axis.text = element_blank()) +
-  facet_wrap(vars(division)) +
-  labs(x = NULL, y = NULL,
-       title = "Season-Long Pythagorean Winning Percentage",
-       caption = "Pythagorean Wins = (Runs Scored ^ 2) / (Runs Scored ^ 2 + Runs Allowed ^ 2)")
 ```
 
 ___
@@ -1356,7 +1184,7 @@ data.frame(team = all_teams) |>
 
 ___
 
-```{r}
+```{r include = F}
 get_npr_last_25 = function(team) {
   return(end_npr |>
     filter(home_team == team | away_team == team) |>
@@ -1367,7 +1195,7 @@ get_npr_last_25 = function(team) {
     pull(total_npr))
 }
 
-data.frame(team = all_teams) |>
+last25 = data.frame(team = all_teams) |>
   mutate(last25 = sapply(team, get_npr_last_25)) |>
   arrange(desc(last25))
 ```
@@ -1475,53 +1303,7 @@ base_data |>
 #        title = "2024 YTD responses, ten-day rolling average")
 ```
 
-
-
-```{r}
-get_team_all_pythag = function(tm) {
-  data = end_games |>
-    filter(home_team == tm | away_team == tm) |>
-    mutate(my_score = ifelse(home_team == tm, home_score, away_score),
-           other_score = ifelse(home_team == tm, away_score, home_score),
-           pythag = (my_score ^ 2) / (my_score ^ 2 + other_score ^ 2)) |>
-    transmute(team = tm, date, pythag)
-  
-  return(data)
-}
-
-pythag = data.frame()
-
-for (team in all_teams) {
-  new = get_team_all_pythag(tm = team)
-  pythag = rbind(pythag, new)
-}
-
-hex_pct_ordered = team_records |>
-  inner_join(teams_info, by = "team") |>
-  arrange(desc(pct)) |>
-  pull(hex)
-
-pythag |>
-  group_by(team) |>
-  mutate(roll = rollapply(pythag, width = 10, FUN = "mean", align = "right", fill = NA)) |>
-  ungroup() |>
-  na.omit() |>
-  inner_join(teams_info, by = "team") |>
-  inner_join(team_records, by = "team") |>
-  mutate(abb = fct_reorder(abb, -pct)) |>
-  ggplot(aes(date, roll)) +
-  geom_line(aes(col = abb), linewidth = 1.25, show.legend = F) +
-  # geom_line(stat = "smooth", formula = y ~ x, method = "loess", se = F) +
-  geom_hline(yintercept = 0.5, linetype = "dashed", alpha = 0.5) +
-  scale_color_manual(values = hex_pct_ordered) +
-  facet_wrap(vars(abb)) +
-  theme(axis.text = element_blank()) +
-  labs(x = NULL, y = "Pythagorean Win Percentage",
-       title = "Season-long pythagorean win percentage in ten-game rolling windows",
-       subtitle = "Average of individual games method")
-```
-
-```{r}
+```{r echo = F}
 get_team_runs_scored_on = function(tm, dt) {
   data = end_games |> filter((home_team == tm | away_team == tm) & date == dt)
   if (nrow(data) == 0) return(NA)
@@ -1535,6 +1317,11 @@ get_team_runs_allowed_on = function(tm, dt) {
   runs = data |> mutate(runs = ifelse(home_team == tm, away_score, home_score)) |> pull(runs)
   return(sum(runs))
 }
+
+hex_pct_ordered = team_records |>
+  inner_join(teams_info, by = "team") |>
+  arrange(desc(pct)) |>
+  pull(hex)
 
 # this took 17s to run on 2024/08/24
 scored_allowed_on_dates = crossing(team = all_teams, date = all_szn_dates) |>
@@ -1563,15 +1350,13 @@ scored_allowed_on_dates |>
        title = "Season-long pythagorean win percentages in rolling ten-game windows")
 ```
 
-```{r}
+```{r include = F}
 py_ranks = data.frame(team = all_teams) |>
   mutate(rs = sapply(team, get_team_runs_scored),
          ra = sapply(team, get_team_runs_allowed),
          py = round((rs ^ 2) / (rs ^ 2 + ra ^ 2) * 100, 2),
          rank = as.integer(rank(-py))) |>
   arrange(rank)
-
-
 ```
 
 

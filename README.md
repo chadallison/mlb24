@@ -25,13 +25,13 @@ out on GitHub:
 - [First Score Dependence](#first-score-dependence)
 - [Home Field Advantage](#home-field-advantage)
 - [Winning and Losing Streaks](#winning-and-losing-streaks)
-- [Seven Game Windows](#seven-game-windows)
-- [Team Series Results](#team-series-results)
+- \[Seven Game Windows\]
+- \[Team Series Results\]
 - [Records vs. Above/Below .500
   Teams](#records-vs.-abovebelow-.500-teams)
 - [Pythagorean Wins](#pythagorean-wins)
 - [Season Long NPR Trends](#season-long-npr-trends)
-- [Season Long Pythagorean Trends](#season-long-pythagorean-trends)
+- \[Season Long Pythagorean Trends\]
 - [Runs Scored and Allowed Streaks](#runs-scored-and-allowed-streaks)
 - [Team NPR Trends in Past Ten
   Games](#team-npr-trends-in-past-ten-games)
@@ -223,39 +223,21 @@ interpretability.
 
 ------------------------------------------------------------------------
 
-### Seven Game Windows
+## Records vs. Above/Below .500 Teams
 
 ![](README_files/figure-gfm/unnamed-chunk-25-1.png)<!-- -->
 
 ------------------------------------------------------------------------
 
-### Team Series Results
+### Pythagorean Wins
 
 ![](README_files/figure-gfm/unnamed-chunk-26-1.png)<!-- -->
 
 ------------------------------------------------------------------------
 
-## Records vs. Above/Below .500 Teams
-
-![](README_files/figure-gfm/unnamed-chunk-27-1.png)<!-- -->
-
-------------------------------------------------------------------------
-
-### Pythagorean Wins
-
-![](README_files/figure-gfm/unnamed-chunk-28-1.png)<!-- -->
-
-------------------------------------------------------------------------
-
 ### Season Long NPR Trends
 
-![](README_files/figure-gfm/unnamed-chunk-29-1.png)<!-- -->
-
-------------------------------------------------------------------------
-
-### Season Long Pythagorean Trends
-
-![](README_files/figure-gfm/unnamed-chunk-30-1.png)<!-- -->
+![](README_files/figure-gfm/unnamed-chunk-27-1.png)<!-- -->
 
 ------------------------------------------------------------------------
 
@@ -281,171 +263,26 @@ interpretability.
 
 ### Team NPR Trends in Past Ten Games
 
-![](README_files/figure-gfm/unnamed-chunk-33-1.png)<!-- -->
+![](README_files/figure-gfm/unnamed-chunk-30-1.png)<!-- -->
 
 ------------------------------------------------------------------------
 
 ### First Inning Score Rates
 
-![](README_files/figure-gfm/unnamed-chunk-34-1.png)<!-- -->
+![](README_files/figure-gfm/unnamed-chunk-31-1.png)<!-- -->
 
 ------------------------------------------------------------------------
 
 ### One Run vs. Multi Run Games
 
-![](README_files/figure-gfm/unnamed-chunk-35-1.png)<!-- -->
+![](README_files/figure-gfm/unnamed-chunk-32-1.png)<!-- -->
 
 ------------------------------------------------------------------------
-
-``` r
-get_npr_last_25 = function(team) {
-  return(end_npr |>
-    filter(home_team == team | away_team == team) |>
-    slice_max(date, n = 25, with_ties = F) |>
-    mutate(my_off_npr = ifelse(home_team == team, home_off_npr, away_off_npr),
-           my_def_npr = ifelse(home_team == team, home_def_npr, away_def_npr)) |>
-    summarise(total_npr = round(sum(my_off_npr + my_def_npr) / 25, 3)) |>
-    pull(total_npr))
-}
-
-data.frame(team = all_teams) |>
-  mutate(last25 = sapply(team, get_npr_last_25)) |>
-  arrange(desc(last25))
-```
-
-    ##                     team last25
-    ## 1           Chicago Cubs  1.826
-    ## 2      Toronto Blue Jays  1.475
-    ## 3          New York Mets  1.218
-    ## 4         Detroit Tigers  1.107
-    ## 5         Atlanta Braves  0.856
-    ## 6       Seattle Mariners  0.852
-    ## 7         Houston Astros  0.707
-    ## 8   Arizona Diamondbacks  0.702
-    ## 9      Milwaukee Brewers  0.516
-    ## 10      San Diego Padres  0.316
-    ## 11 Philadelphia Phillies  0.302
-    ## 12   St. Louis Cardinals  0.239
-    ## 13   Los Angeles Dodgers  0.000
-    ## 14        Tampa Bay Rays -0.096
-    ## 15       Cincinnati Reds -0.172
-    ## 16      New York Yankees -0.199
-    ## 17  Washington Nationals -0.234
-    ## 18      Colorado Rockies -0.306
-    ## 19   Cleveland Guardians -0.343
-    ## 20    Los Angeles Angels -0.370
-    ## 21    Kansas City Royals -0.481
-    ## 22  San Francisco Giants -0.486
-    ## 23     Baltimore Orioles -0.646
-    ## 24    Pittsburgh Pirates -0.672
-    ## 25         Miami Marlins -0.674
-    ## 26     Oakland Athletics -0.789
-    ## 27        Boston Red Sox -0.806
-    ## 28         Texas Rangers -1.032
-    ## 29     Chicago White Sox -1.069
-    ## 30       Minnesota Twins -1.548
 
 ------------------------------------------------------------------------
 
 ### Rolling Ten-Game Windows
 
-![](README_files/figure-gfm/unnamed-chunk-37-1.png)<!-- -->
+![](README_files/figure-gfm/unnamed-chunk-34-1.png)<!-- -->
 
-``` r
-get_team_all_pythag = function(tm) {
-  data = end_games |>
-    filter(home_team == tm | away_team == tm) |>
-    mutate(my_score = ifelse(home_team == tm, home_score, away_score),
-           other_score = ifelse(home_team == tm, away_score, home_score),
-           pythag = (my_score ^ 2) / (my_score ^ 2 + other_score ^ 2)) |>
-    transmute(team = tm, date, pythag)
-  
-  return(data)
-}
-
-pythag = data.frame()
-
-for (team in all_teams) {
-  new = get_team_all_pythag(tm = team)
-  pythag = rbind(pythag, new)
-}
-
-hex_pct_ordered = team_records |>
-  inner_join(teams_info, by = "team") |>
-  arrange(desc(pct)) |>
-  pull(hex)
-
-pythag |>
-  group_by(team) |>
-  mutate(roll = rollapply(pythag, width = 10, FUN = "mean", align = "right", fill = NA)) |>
-  ungroup() |>
-  na.omit() |>
-  inner_join(teams_info, by = "team") |>
-  inner_join(team_records, by = "team") |>
-  mutate(abb = fct_reorder(abb, -pct)) |>
-  ggplot(aes(date, roll)) +
-  geom_line(aes(col = abb), linewidth = 1.25, show.legend = F) +
-  # geom_line(stat = "smooth", formula = y ~ x, method = "loess", se = F) +
-  geom_hline(yintercept = 0.5, linetype = "dashed", alpha = 0.5) +
-  scale_color_manual(values = hex_pct_ordered) +
-  facet_wrap(vars(abb)) +
-  theme(axis.text = element_blank()) +
-  labs(x = NULL, y = "Pythagorean Win Percentage",
-       title = "Season-long pythagorean win percentage in ten-game rolling windows",
-       subtitle = "Average of individual games method")
-```
-
-![](README_files/figure-gfm/unnamed-chunk-39-1.png)<!-- -->
-
-``` r
-get_team_runs_scored_on = function(tm, dt) {
-  data = end_games |> filter((home_team == tm | away_team == tm) & date == dt)
-  if (nrow(data) == 0) return(NA)
-  runs = data |> mutate(runs = ifelse(home_team == tm, home_score, away_score)) |> pull(runs)
-  return(sum(runs))
-}
-
-get_team_runs_allowed_on = function(tm, dt) {
-  data = end_games |> filter((home_team == tm | away_team == tm) & date == dt)
-  if (nrow(data) == 0) return(NA)
-  runs = data |> mutate(runs = ifelse(home_team == tm, away_score, home_score)) |> pull(runs)
-  return(sum(runs))
-}
-
-# this took 17s to run on 2024/08/24
-scored_allowed_on_dates = crossing(team = all_teams, date = all_szn_dates) |>
-  rowwise() |>
-  mutate(scored = get_team_runs_scored_on(tm = team, dt = date),
-         allowed = get_team_runs_allowed_on(tm = team, dt = date)) |>
-  ungroup() |>
-  na.omit()
-
-scored_allowed_on_dates |>
-  mutate(roll_score = rollapply(scored, width = 10, FUN = "sum", align = "right", fill = NA),
-         roll_allow = rollapply(allowed, width = 10, FUN = "sum", align = "right", fill = NA),
-         pythag = (roll_score ^ 2) / (roll_score ^ 2 + roll_allow ^ 2)) |>
-  na.omit() |>
-  inner_join(teams_info, by = "team") |>
-  inner_join(team_records, by = "team") |>
-  mutate(abb = fct_reorder(abb, -pct)) |>
-  ggplot(aes(date, pythag)) +
-  geom_line(aes(col = abb), linewidth = 1.25, show.legend = F) +
-  # geom_line(stat = "smooth", formula = y ~ x, method = "loess", se = F) +
-  geom_hline(yintercept = 0.5, linetype = "dashed", alpha = 0.5) +
-  scale_color_manual(values = hex_pct_ordered) +
-  facet_wrap(vars(abb)) +
-  theme(axis.text = element_blank()) +
-  labs(x = NULL, y = "Pythagorean Win Percentage in Ten-Game Window",
-       title = "Season-long pythagorean win percentages in rolling ten-game windows")
-```
-
-![](README_files/figure-gfm/unnamed-chunk-40-1.png)<!-- -->
-
-``` r
-py_ranks = data.frame(team = all_teams) |>
-  mutate(rs = sapply(team, get_team_runs_scored),
-         ra = sapply(team, get_team_runs_allowed),
-         py = round((rs ^ 2) / (rs ^ 2 + ra ^ 2) * 100, 2),
-         rank = as.integer(rank(-py))) |>
-  arrange(rank)
-```
+![](README_files/figure-gfm/unnamed-chunk-36-1.png)<!-- -->
