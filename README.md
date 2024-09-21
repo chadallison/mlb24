@@ -118,9 +118,9 @@ interpretability.
 
 ### Yesterday’s Largest Victories
 
-1.  Los Angeles Dodgers def. Miami Marlins 20-4
-2.  Atlanta Braves def. Cincinnati Reds 15-3
-3.  Toronto Blue Jays def. Texas Rangers 4-0
+1.  Philadelphia Phillies def. New York Mets 12-2
+2.  Baltimore Orioles def. Detroit Tigers 7-1
+3.  Seattle Mariners def. Texas Rangers 8-2
 
 ------------------------------------------------------------------------
 
@@ -130,20 +130,20 @@ interpretability.
 
 ##### Most Volatile Teams
 
-1.  Arizona Diamondbacks (6.94)
-2.  Oakland Athletics (6.65)
-3.  Colorado Rockies (6.62)
+1.  Arizona Diamondbacks (6.92)
+2.  Oakland Athletics (6.63)
+3.  Colorado Rockies (6.6)
 
 ##### Most Volatile Offenses
 
-1.  Arizona Diamondbacks (3.7)
+1.  Arizona Diamondbacks (3.69)
 2.  Chicago Cubs (3.41)
-3.  Oakland Athletics (3.4)
+3.  Oakland Athletics (3.39)
 
 ##### Most Volatile Defenses
 
-1.  Miami Marlins (3.48)
-2.  Colorado Rockies (3.39)
+1.  Miami Marlins (3.47)
+2.  Colorado Rockies (3.38)
 3.  Pittsburgh Pirates (3.34)
 
 ------------------------------------------------------------------------
@@ -168,16 +168,16 @@ interpretability.
 
 ### Best Records in Last Ten Games
 
-1.  Detroit Tigers (8-2)
-2.  Cleveland Guardians (7-3)
-3.  New York Mets (7-3)
+1.  Cleveland Guardians (7-3)
+2.  Detroit Tigers (7-3)
+3.  Houston Astros (7-3)
 4.  New York Yankees (7-3)
-5.  Arizona Diamondbacks (6-4)
-6.  Colorado Rockies (6-4)
-7.  Houston Astros (6-4)
-8.  Milwaukee Brewers (6-4)
+5.  San Diego Padres (7-3)
+6.  Arizona Diamondbacks (6-4)
+7.  Los Angeles Dodgers (6-4)
+8.  New York Mets (6-4)
 9.  Philadelphia Phillies (6-4)
-10. San Diego Padres (6-4)
+10. Seattle Mariners (6-4)
 
 ------------------------------------------------------------------------
 
@@ -199,26 +199,28 @@ interpretability.
 
 ##### Most Home-Dependent Teams
 
-- Colorado Rockies (48% home / 29.5% away)
-- Seattle Mariners (59% home / 42.7% away)
-- Philadelphia Phillies (66.7% home / 52% away)
+- Colorado Rockies (48% home / 29.1% away)
+- Seattle Mariners (59% home / 43.4% away)
+- Philadelphia Phillies (66.7% home / 52.6% away)
 
 ##### Better-on-the-Road Teams
 
-- Boston Red Sox (46.1% home / 52.6% away)
-- San Diego Padres (53.8% home / 60% away)
-- New York Yankees (55.4% home / 60.3% away)
+- Boston Red Sox (45.5% home / 52.6% away)
+- San Diego Padres (54.4% home / 60% away)
+- New York Yankees (55.4% home / 60.8% away)
 
 ------------------------------------------------------------------------
 
 ### Winning and Losing Streaks
 
-- **Winning Streaks**: Detroit Tigers (W4), New York Mets (W4), Arizona
-  Diamondbacks (W2), Atlanta Braves (W2), Cleveland Guardians (W2), Los
-  Angeles Dodgers (W2), Oakland Athletics (W2)
-- **Losing Streaks**: Kansas City Royals (L4), Washington Nationals
-  (L4), Chicago White Sox (L2), Cincinnati Reds (L2), Miami Marlins
-  (L2), Minnesota Twins (L2), Philadelphia Phillies (L2)
+- **Winning Streaks**: Arizona Diamondbacks (W3), Cleveland Guardians
+  (W3), Los Angeles Dodgers (W3), Baltimore Orioles (W2), Chicago Cubs
+  (W2), Houston Astros (W2), San Diego Padres (W2), Seattle Mariners
+  (W2), Tampa Bay Rays (W2)
+- **Losing Streaks**: Kansas City Royals (L5), Washington Nationals
+  (L5), Chicago White Sox (L3), Boston Red Sox (L2), Colorado Rockies
+  (L2), Los Angeles Angels (L2), Milwaukee Brewers (L2), St. Louis
+  Cardinals (L2), Texas Rangers (L2)
 
 ------------------------------------------------------------------------
 
@@ -244,19 +246,19 @@ interpretability.
 
 ##### Longest Streaks of Scoring Three or More Runs
 
-- Chicago Cubs (10)
-- San Diego Padres (6)
-- Los Angeles Dodgers (5)
-- Detroit Tigers (4)
-- Miami Marlins (4)
+- Chicago Cubs (11)
+- San Diego Padres (7)
+- Los Angeles Dodgers (6)
+- Miami Marlins (5)
+- Atlanta Braves (4)
 
 ##### Longest Streaks of Allowing Fewer Than Five Runs
 
-- Houston Astros (8)
-- Cleveland Guardians (7)
-- San Diego Padres (6)
-- New York Yankees (4)
-- Tampa Bay Rays (4)
+- Cleveland Guardians (8)
+- San Diego Padres (7)
+- New York Yankees (5)
+- Tampa Bay Rays (5)
+- Arizona Diamondbacks (3)
 
 ------------------------------------------------------------------------
 
