@@ -2308,3 +2308,17 @@ game_pk,home_team,away_team,home_flg,away_flg
 745364,San Diego Padres,Chicago White Sox,0,0
 745606,Oakland Athletics,New York Yankees,0,0
 746094,Los Angeles Dodgers,Colorado Rockies,0,0
+746660,Cincinnati Reds,Pittsburgh Pirates,0,0
+746826,Chicago Cubs,Washington Nationals,0,0
+746983,Baltimore Orioles,Detroit Tigers,0,0
+745038,Tampa Bay Rays,Toronto Blue Jays,0,0
+745768,New York Mets,Philadelphia Phillies,0,1
+746012,Miami Marlins,Atlanta Braves,1,0
+746255,Kansas City Royals,San Francisco Giants,0,1
+744958,Texas Rangers,Seattle Mariners,0,1
+746338,Houston Astros,Los Angeles Angels,1,0
+745936,Milwaukee Brewers,Arizona Diamondbacks,0,1
+745124,St. Louis Cardinals,Cleveland Guardians,0,0
+745360,San Diego Padres,Chicago White Sox,0,0
+745610,Oakland Athletics,New York Yankees,0,1
+746096,Los Angeles Dodgers,Colorado Rockies,0,1
