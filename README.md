@@ -118,9 +118,9 @@ interpretability.
 
 ### Yesterday’s Largest Victories
 
-1.  Boston Red Sox def. Minnesota Twins 8-1
-2.  Boston Red Sox def. Minnesota Twins 9-3
-3.  Chicago Cubs def. Washington Nationals 5-0
+1.  Seattle Mariners def. Houston Astros 6-1
+2.  Philadelphia Phillies def. Chicago Cubs 6-2
+3.  Boston Red Sox def. Toronto Blue Jays 4-1
 
 ------------------------------------------------------------------------
 
@@ -130,14 +130,14 @@ interpretability.
 
 ##### Most Volatile Teams
 
-1.  Arizona Diamondbacks (6.94)
+1.  Arizona Diamondbacks (6.92)
 2.  Oakland Athletics (6.65)
 3.  Colorado Rockies (6.56)
 
 ##### Most Volatile Offenses
 
-1.  Arizona Diamondbacks (3.68)
-2.  Chicago Cubs (3.4)
+1.  Arizona Diamondbacks (3.67)
+2.  Chicago Cubs (3.39)
 3.  Oakland Athletics (3.39)
 
 ##### Most Volatile Defenses
@@ -171,13 +171,13 @@ interpretability.
 1.  New York Yankees (8-2)
 2.  San Diego Padres (8-2)
 3.  Detroit Tigers (7-3)
-4.  Houston Astros (7-3)
-5.  New York Mets (7-3)
+4.  New York Mets (7-3)
+5.  Seattle Mariners (7-3)
 6.  Tampa Bay Rays (7-3)
 7.  Atlanta Braves (6-4)
 8.  Cleveland Guardians (6-4)
 9.  Colorado Rockies (6-4)
-10. Los Angeles Dodgers (6-4)
+10. Houston Astros (6-4)
 
 ------------------------------------------------------------------------
 
@@ -200,27 +200,27 @@ interpretability.
 ##### Most Home-Dependent Teams
 
 - Colorado Rockies (48% home / 29.6% away)
-- Philadelphia Phillies (66.7% home / 51.3% away)
-- Seattle Mariners (59% home / 43.6% away)
+- Philadelphia Phillies (67.1% home / 51.3% away)
+- Seattle Mariners (59% home / 44.3% away)
 
 ##### Better-on-the-Road Teams
 
+- Boston Red Sox (46.8% home / 53.2% away)
 - New York Yankees (55.4% home / 61.7% away)
-- Boston Red Sox (46.8% home / 52.6% away)
 - San Diego Padres (55.6% home / 60% away)
 
 ------------------------------------------------------------------------
 
 ### Winning and Losing Streaks
 
-- **Winning Streaks**: San Diego Padres (W4), Tampa Bay Rays (W4), New
-  York Yankees (W3), San Francisco Giants (W3), Atlanta Braves (W2),
-  Boston Red Sox (W2), Detroit Tigers (W2), New York Mets (W2),
+- **Winning Streaks**: San Diego Padres (W4), San Francisco Giants (W4),
+  Tampa Bay Rays (W4), Boston Red Sox (W3), New York Yankees (W3),
+  Atlanta Braves (W2), Detroit Tigers (W2), New York Mets (W2),
   St. Louis Cardinals (W2)
 - **Losing Streaks**: Kansas City Royals (L7), Chicago White Sox (L5),
-  Oakland Athletics (L3), Toronto Blue Jays (L3), Baltimore Orioles
-  (L2), Cleveland Guardians (L2), Miami Marlins (L2), Minnesota Twins
-  (L2), Philadelphia Phillies (L2)
+  Toronto Blue Jays (L4), Oakland Athletics (L3), Arizona Diamondbacks
+  (L2), Baltimore Orioles (L2), Cleveland Guardians (L2), Houston Astros
+  (L2), Miami Marlins (L2), Minnesota Twins (L2)
 
 ------------------------------------------------------------------------
 
@@ -248,17 +248,17 @@ interpretability.
 
 - San Diego Padres (9)
 - Los Angeles Dodgers (8)
+- Arizona Diamondbacks (6)
 - Atlanta Braves (6)
 - Colorado Rockies (6)
-- Arizona Diamondbacks (5)
 
 ##### Longest Streaks of Allowing Fewer Than Five Runs
 
 - San Diego Padres (9)
 - New York Yankees (7)
 - Tampa Bay Rays (7)
-- Atlanta Braves (5)
-- Boston Red Sox (5)
+- Boston Red Sox (6)
+- Toronto Blue Jays (6)
 
 ------------------------------------------------------------------------
 
