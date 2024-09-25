@@ -25,13 +25,10 @@ out on GitHub:
 - [First Score Dependence](#first-score-dependence)
 - [Home Field Advantage](#home-field-advantage)
 - [Winning and Losing Streaks](#winning-and-losing-streaks)
-- \[Seven Game Windows\]
-- \[Team Series Results\]
 - [Records vs. Above/Below .500
   Teams](#records-vs.-abovebelow-.500-teams)
 - [Pythagorean Wins](#pythagorean-wins)
 - [Season Long NPR Trends](#season-long-npr-trends)
-- \[Season Long Pythagorean Trends\]
 - [Runs Scored and Allowed Streaks](#runs-scored-and-allowed-streaks)
 - [Team NPR Trends in Past Ten
   Games](#team-npr-trends-in-past-ten-games)
@@ -278,10 +275,10 @@ interpretability.
 
 ------------------------------------------------------------------------
 
-------------------------------------------------------------------------
-
 ### Rolling Ten-Game Windows
 
-![](README_files/figure-gfm/unnamed-chunk-34-1.png)<!-- -->
+![](README_files/figure-gfm/unnamed-chunk-33-1.png)<!-- -->
 
-![](README_files/figure-gfm/unnamed-chunk-36-1.png)<!-- -->
+------------------------------------------------------------------------
+
+![](README_files/figure-gfm/unnamed-chunk-34-1.png)<!-- -->
