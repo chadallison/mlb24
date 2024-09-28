@@ -35,6 +35,7 @@ out on GitHub:
 - [First Inning Score Rates](#first-inning-score-rates)
 - [One Run vs. Multi Run Games](#one-run-vs.-multi-run-games)
 - [Rolling Ten-Game Windows](#rolling-ten-game-windows)
+- [Pythagorean Rolling Windows](#pythagorean-rolling-windows)
 
 ------------------------------------------------------------------------
 
@@ -115,9 +116,9 @@ interpretability.
 
 ### Yesterday’s Largest Victories
 
-1.  New York Yankees def. Baltimore Orioles 10-1
-2.  Chicago White Sox def. Los Angeles Angels 7-0
-3.  Los Angeles Dodgers def. San Diego Padres 7-2
+1.  Miami Marlins def. Toronto Blue Jays 15-5
+2.  Washington Nationals def. Philadelphia Phillies 9-1
+3.  Los Angeles Dodgers def. Colorado Rockies 11-4
 
 ------------------------------------------------------------------------
 
@@ -127,20 +128,20 @@ interpretability.
 
 ##### Most Volatile Teams
 
-1.  Arizona Diamondbacks (6.96)
-2.  Oakland Athletics (6.59)
+1.  Arizona Diamondbacks (6.94)
+2.  Oakland Athletics (6.6)
 3.  Colorado Rockies (6.55)
 
 ##### Most Volatile Offenses
 
-1.  Arizona Diamondbacks (3.68)
+1.  Arizona Diamondbacks (3.67)
 2.  Chicago Cubs (3.4)
-3.  Oakland Athletics (3.36)
+3.  Oakland Athletics (3.37)
 
 ##### Most Volatile Defenses
 
-1.  Miami Marlins (3.44)
-2.  Colorado Rockies (3.34)
+1.  Miami Marlins (3.43)
+2.  Colorado Rockies (3.35)
 3.  Pittsburgh Pirates (3.33)
 
 ------------------------------------------------------------------------
@@ -166,15 +167,15 @@ interpretability.
 ### Best Records in Last Ten Games
 
 1.  Detroit Tigers (9-1)
-2.  Cleveland Guardians (7-3)
-3.  Los Angeles Dodgers (7-3)
-4.  New York Yankees (7-3)
-5.  San Diego Padres (7-3)
-6.  San Francisco Giants (7-3)
-7.  St. Louis Cardinals (7-3)
-8.  Atlanta Braves (6-4)
+2.  Los Angeles Dodgers (7-3)
+3.  San Diego Padres (7-3)
+4.  San Francisco Giants (7-3)
+5.  St. Louis Cardinals (7-3)
+6.  Atlanta Braves (6-4)
+7.  Cleveland Guardians (6-4)
+8.  Houston Astros (6-4)
 9.  New York Mets (6-4)
-10. Seattle Mariners (6-4)
+10. New York Yankees (6-4)
 
 ------------------------------------------------------------------------
 
@@ -196,25 +197,26 @@ interpretability.
 
 ##### Most Home-Dependent Teams
 
-- Colorado Rockies (47.4% home / 29.6% away)
-- Philadelphia Phillies (66.7% home / 51.3% away)
-- Seattle Mariners (59% home / 44.4% away)
+- Colorado Rockies (46.8% home / 29.6% away)
+- Philadelphia Phillies (66.7% home / 50.6% away)
+- Seattle Mariners (59.5% home / 44.4% away)
 
 ##### Better-on-the-Road Teams
 
-- New York Yankees (54.5% home / 61.7% away)
-- Boston Red Sox (46.8% home / 53.1% away)
-- San Diego Padres (55.6% home / 59% away)
+- New York Yankees (53.8% home / 61.7% away)
+- Boston Red Sox (46.2% home / 53.1% away)
+- San Diego Padres (55.6% home / 59.5% away)
 
 ------------------------------------------------------------------------
 
 ### Winning and Losing Streaks
 
-- **Winning Streaks**: Detroit Tigers (W5), Atlanta Braves (W3), Chicago
-  White Sox (W3), Kansas City Royals (W3), Cleveland Guardians (W2), Los
-  Angeles Dodgers (W2)
-- **Losing Streaks**: Washington Nationals (L4), Cincinnati Reds (L3),
-  Los Angeles Angels (L3), Tampa Bay Rays (L3), San Diego Padres (L2)
+- **Winning Streaks**: Detroit Tigers (W6), Atlanta Braves (W4), Los
+  Angeles Dodgers (W3), Miami Marlins (W2), Milwaukee Brewers (W2),
+  Seattle Mariners (W2)
+- **Losing Streaks**: Cincinnati Reds (L4), Los Angeles Angels (L4),
+  Boston Red Sox (L2), Minnesota Twins (L2), New York Mets (L2), San
+  Francisco Giants (L2)
 
 ------------------------------------------------------------------------
 
@@ -240,19 +242,19 @@ interpretability.
 
 ##### Longest Streaks of Scoring Three or More Runs
 
-- Atlanta Braves (7)
-- Seattle Mariners (7)
-- New York Yankees (6)
-- Miami Marlins (4)
-- Chicago White Sox (3)
+- Atlanta Braves (8)
+- Miami Marlins (5)
+- St. Louis Cardinals (4)
+- Detroit Tigers (3)
+- Los Angeles Dodgers (3)
 
 ##### Longest Streaks of Allowing Fewer Than Five Runs
 
-- Atlanta Braves (6)
-- Detroit Tigers (5)
-- Chicago White Sox (4)
-- Kansas City Royals (4)
-- Cleveland Guardians (3)
+- Atlanta Braves (7)
+- Detroit Tigers (6)
+- Chicago White Sox (5)
+- Kansas City Royals (5)
+- Los Angeles Dodgers (4)
 
 ------------------------------------------------------------------------
 
@@ -279,5 +281,7 @@ interpretability.
 ![](README_files/figure-gfm/unnamed-chunk-33-1.png)<!-- -->
 
 ------------------------------------------------------------------------
+
+### Pythagorean Rolling Windows
 
 ![](README_files/figure-gfm/unnamed-chunk-34-1.png)<!-- -->
