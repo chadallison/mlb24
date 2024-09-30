@@ -116,9 +116,9 @@ interpretability.
 
 ### Yesterday’s Largest Victories
 
-1.  Los Angeles Dodgers def. Colorado Rockies 13-2
-2.  Miami Marlins def. Toronto Blue Jays 8-1
-3.  Baltimore Orioles def. Minnesota Twins 9-2
+1.  Arizona Diamondbacks def. San Diego Padres 11-2
+2.  Texas Rangers def. Los Angeles Angels 8-0
+3.  St. Louis Cardinals def. San Francisco Giants 6-1
 
 ------------------------------------------------------------------------
 
@@ -130,19 +130,19 @@ interpretability.
 
 1.  Arizona Diamondbacks (6.95)
 2.  Colorado Rockies (6.58)
-3.  Oakland Athletics (6.58)
+3.  Oakland Athletics (6.57)
 
 ##### Most Volatile Offenses
 
-1.  Arizona Diamondbacks (3.69)
-2.  Chicago Cubs (3.39)
-3.  Oakland Athletics (3.36)
+1.  Arizona Diamondbacks (3.7)
+2.  Chicago Cubs (3.4)
+3.  Oakland Athletics (3.35)
 
 ##### Most Volatile Defenses
 
 1.  Miami Marlins (3.44)
 2.  Colorado Rockies (3.39)
-3.  Pittsburgh Pirates (3.32)
+3.  Pittsburgh Pirates (3.31)
 
 ------------------------------------------------------------------------
 
@@ -166,16 +166,16 @@ interpretability.
 
 ### Best Records in Last Ten Games
 
-1.  Detroit Tigers (8-2)
-2.  Los Angeles Dodgers (8-2)
+1.  Los Angeles Dodgers (8-2)
+2.  Seattle Mariners (8-2)
 3.  Atlanta Braves (7-3)
-4.  San Diego Padres (7-3)
-5.  San Francisco Giants (7-3)
-6.  Seattle Mariners (7-3)
-7.  Baltimore Orioles (6-4)
-8.  Chicago Cubs (6-4)
-9.  Houston Astros (6-4)
-10. Milwaukee Brewers (6-4)
+4.  Baltimore Orioles (7-3)
+5.  Detroit Tigers (7-3)
+6.  San Diego Padres (7-3)
+7.  Chicago Cubs (6-4)
+8.  Houston Astros (6-4)
+9.  Miami Marlins (6-4)
+10. New York Mets (6-4)
 
 ------------------------------------------------------------------------
 
@@ -197,30 +197,26 @@ interpretability.
 
 ##### Most Home-Dependent Teams
 
-- Philadelphia Phillies (66.7% home / 50% away)
-- Colorado Rockies (46.2% home / 29.6% away)
-- Seattle Mariners (60% home / 44.4% away)
+- Colorado Rockies (45.7% home / 29.6% away)
+- Philadelphia Phillies (66.7% home / 50.6% away)
+- Seattle Mariners (60.5% home / 44.4% away)
 
 ##### Better-on-the-Road Teams
 
-- New York Yankees (53.2% home / 61.7% away)
-- Boston Red Sox (45.7% home / 53.1% away)
-- San Diego Padres (55.6% home / 60% away)
+- New York Yankees (53.8% home / 61.7% away)
+- Boston Red Sox (46.3% home / 53.1% away)
+- San Diego Padres (55.6% home / 59.3% away)
 
 ------------------------------------------------------------------------
 
 ### Winning and Losing Streaks
 
-- **Winning Streaks**: Atlanta Braves (W5), Los Angeles Dodgers (W4),
-  Miami Marlins (W3), Milwaukee Brewers (W3), Seattle Mariners (W3),
-  Baltimore Orioles (W2), Chicago Cubs (W2), Houston Astros (W2),
-  Pittsburgh Pirates (W2), San Diego Padres (W2), Tampa Bay Rays (W2),
-  Texas Rangers (W2), Washington Nationals (W2)
-- **Losing Streaks**: Cincinnati Reds (L5), Los Angeles Angels (L5),
-  Boston Red Sox (L3), Minnesota Twins (L3), New York Mets (L3), Arizona
-  Diamondbacks (L2), Cleveland Guardians (L2), Colorado Rockies (L2),
-  Kansas City Royals (L2), New York Yankees (L2), Oakland Athletics
-  (L2), Philadelphia Phillies (L2), Toronto Blue Jays (L2)
+- **Winning Streaks**: Los Angeles Dodgers (W5), Miami Marlins (W4),
+  Seattle Mariners (W4), Baltimore Orioles (W3), Texas Rangers (W3),
+  Chicago White Sox (W2), Houston Astros (W2)
+- **Losing Streaks**: Los Angeles Angels (L6), Minnesota Twins (L4),
+  Colorado Rockies (L3), Oakland Athletics (L3), Toronto Blue Jays (L3),
+  Cleveland Guardians (L2), Detroit Tigers (L2)
 
 ------------------------------------------------------------------------
 
@@ -246,19 +242,19 @@ interpretability.
 
 ##### Longest Streaks of Scoring Three or More Runs
 
-- Miami Marlins (6)
-- St. Louis Cardinals (5)
-- Los Angeles Dodgers (4)
-- Milwaukee Brewers (3)
-- Washington Nationals (3)
+- Miami Marlins (7)
+- St. Louis Cardinals (6)
+- Washington Nationals (4)
+- Baltimore Orioles (3)
+- Pittsburgh Pirates (3)
 
 ##### Longest Streaks of Allowing Fewer Than Five Runs
 
-- Atlanta Braves (8)
-- Detroit Tigers (7)
-- Chicago White Sox (6)
-- Kansas City Royals (6)
-- Los Angeles Dodgers (5)
+- Atlanta Braves (9)
+- Kansas City Royals (7)
+- Los Angeles Dodgers (6)
+- Tampa Bay Rays (4)
+- Baltimore Orioles (3)
 
 ------------------------------------------------------------------------
 
