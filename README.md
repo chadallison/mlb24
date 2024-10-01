@@ -116,9 +116,9 @@ interpretability.
 
 ### Yesterday’s Largest Victories
 
-1.  Arizona Diamondbacks def. San Diego Padres 11-2
-2.  Texas Rangers def. Los Angeles Angels 8-0
-3.  St. Louis Cardinals def. San Francisco Giants 6-1
+1.  Atlanta Braves def. New York Mets 3-0
+2.  New York Mets def. Atlanta Braves 8-7
+3.  NA
 
 ------------------------------------------------------------------------
 
@@ -175,7 +175,7 @@ interpretability.
 7.  Chicago Cubs (6-4)
 8.  Houston Astros (6-4)
 9.  Miami Marlins (6-4)
-10. New York Mets (6-4)
+10. San Francisco Giants (6-4)
 
 ------------------------------------------------------------------------
 
@@ -250,11 +250,11 @@ interpretability.
 
 ##### Longest Streaks of Allowing Fewer Than Five Runs
 
-- Atlanta Braves (9)
 - Kansas City Royals (7)
 - Los Angeles Dodgers (6)
 - Tampa Bay Rays (4)
 - Baltimore Orioles (3)
+- Chicago Cubs (3)
 
 ------------------------------------------------------------------------
 
